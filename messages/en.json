@@ -1,0 +1,178 @@
+{
+  "metadata": {
+    "title": "Spark901 | Code for Good. Powered in Memphis.",
+    "description": "Open-source software infrastructure that helps nonprofits and community organizations scale their impact—faster, cheaper, and sustainably."
+  },
+  "nav": {
+    "home": "Home",
+    "fundATool": "Fund a Tool",
+    "whyFund": "Why Fund This",
+    "about": "About",
+    "transparency": "Transparency",
+    "partnerWithUs": "Partner With Us"
+  },
+  "home": {
+    "hero": {
+      "tagline": "Code for Good. Powered in Memphis.",
+      "headline": "Fund the tools that power nonprofits",
+      "description": "Your contribution builds permanent, open-source infrastructure that helps hundreds of organizations do more good—forever.",
+      "cta": "Fund a Tool Now",
+      "secondaryCta": "See How It Works",
+      "socialProof": "{count}+ people have already joined the movement"
+    },
+    "stats": {
+      "nonprofitsHelped": "Nonprofits Empowered",
+      "openSourceTools": "Tools Built",
+      "communityMembers": "Community Members",
+      "fundingRaised": "Raised This Year"
+    },
+    "impact": {
+      "title": "One tool. Hundreds of nonprofits. Unlimited impact.",
+      "description": "Traditional donations help one org once. Tech funding creates infrastructure that scales across hundreds of organizations—forever. That's compounding impact.",
+      "cta": "Browse Projects"
+    },
+    "howItWorks": {
+      "title": "Three steps to lasting impact",
+      "step1": {
+        "title": "Pick Your Project",
+        "description": "Browse our catalog of plain-English project descriptions. No tech jargon, just clear impact."
+      },
+      "step2": {
+        "title": "Fund the Build",
+        "description": "Contribute any amount—one-time or monthly. 100% goes to development. No overhead fees."
+      },
+      "step3": {
+        "title": "Watch It Multiply",
+        "description": "Your investment powers tools that serve hundreds of organizations. Track your impact in real-time."
+      }
+    },
+    "testimonials": {
+      "title": "Trusted by Memphis leaders",
+      "cta": "Join them today"
+    },
+    "cta": {
+      "title": "You don't need to code to build technology that changes lives.",
+      "subtitle": "Join {count}+ supporters funding the future of nonprofit tech.",
+      "button": "Fund a Tool Today",
+      "guarantee": "100% of contributions go to development"
+    }
+  },
+  "fundATool": {
+    "title": "Fund a Tool",
+    "description": "Choose a project that resonates with you. Every dollar builds permanent infrastructure for social good.",
+    "filterAll": "All Projects",
+    "filterActive": "Needs Funding",
+    "filterFunded": "Fully Funded",
+    "fundingGoal": "Goal",
+    "raised": "Raised",
+    "fundThis": "Fund This",
+    "viewDetails": "Learn More",
+    "backersCount": "{count} backers",
+    "urgency": "Only ${amount} to go!",
+    "almostThere": "Almost funded!"
+  },
+  "projectDetail": {
+    "whatItDoes": "What it does",
+    "whoItHelps": "Who it helps",
+    "fundingTiers": "Choose Your Impact",
+    "impactMetrics": "Your Impact",
+    "fundNow": "Fund Now",
+    "viewCode": "View the Code",
+    "sponsorName": "Add your name or dedication (optional)",
+    "securePayment": "Secure, encrypted payment",
+    "guarantee": "100% goes to building this tool",
+    "backers": "{count} people have funded this project",
+    "monthlySupporter": "Join {count} monthly supporters"
+  },
+  "whyFund": {
+    "title": "Why Fund Open-Source Tech?",
+    "subtitle": "The smartest investment you can make in social good.",
+    "problem": {
+      "title": "The Problem",
+      "description": "Nonprofits waste 40% of their budget on outdated, overpriced software. They deserve better."
+    },
+    "solution": {
+      "title": "The Spark901 Solution",
+      "description": "We build free, open-source tools designed specifically for social impact organizations. Fund once, help forever."
+    },
+    "compounding": {
+      "title": "The Compounding Effect",
+      "description": "Unlike traditional donations that get spent once, tech funding creates permanent infrastructure. Every dollar keeps working—forever."
+    },
+    "comparison": {
+      "traditional": "Traditional Donation",
+      "traditionalDesc": "$1,000 helps one org for one program",
+      "tech": "Spark901 Tech Funding",
+      "techDesc": "$1,000 helps 100+ orgs forever"
+    }
+  },
+  "about": {
+    "title": "About Spark901",
+    "mission": "We're a for-good software studio rooted in Memphis. We believe technology should multiply impact, not drain budgets.",
+    "values": {
+      "title": "What We Stand For",
+      "openSource": "Open Source Always",
+      "openSourceDesc": "Every line of code is public. When you fund our work, the whole sector benefits.",
+      "community": "Community-Powered",
+      "communityDesc": "We're professional engineers funded by people who believe in better nonprofit tech.",
+      "memphis": "Memphis Proud",
+      "memphisDesc": "Born in the 901, building technology that honors our city's legacy of community power."
+    }
+  },
+  "transparency": {
+    "title": "Radical Transparency",
+    "subtitle": "See exactly where every dollar goes.",
+    "howFundsUsed": "How Your Money Works",
+    "fundsDescription": "100% of contributions fund tools. Here's the breakdown:",
+    "development": "Development",
+    "developmentDesc": "Engineer salaries, code review, testing",
+    "infrastructure": "Infrastructure",
+    "infrastructureDesc": "Hosting, security, reliability",
+    "community": "Community",
+    "communityDesc": "Docs, support, events",
+    "operations": "Operations",
+    "operationsDesc": "Legal, accounting, admin",
+    "openSourceNote": "All code is public on GitHub. Audit us anytime.",
+    "legalNote": "Spark901 is an LLC, not a 501(c)(3). Contributions are not tax-deductible but do fund permanent public infrastructure."
+  },
+  "funding": {
+    "selectAmount": "Choose Your Contribution",
+    "customAmount": "Custom amount",
+    "frequency": "How Often",
+    "oneTime": "One-time",
+    "monthly": "Monthly",
+    "monthlyBadge": "Most Impact",
+    "yourContribution": "Your contribution",
+    "perMonth": "/month",
+    "allGoesDirect": "100% goes directly to building {project}.",
+    "submitButton": "Complete Funding",
+    "processing": "Processing...",
+    "minimumAmount": "Minimum contribution is $5",
+    "secureNotice": "Secure 256-bit SSL encryption",
+    "stripeNotice": "Payments processed by Stripe"
+  },
+  "footer": {
+    "tagline": "Code for Good. Powered in Memphis.",
+    "description": "Building permanent technology infrastructure for organizations doing good.",
+    "navigation": "Explore",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "copyright": "© {year} Spark901. Built with love in Memphis."
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "viewAll": "View All"
+  },
+  "thankYou": {
+    "title": "You're Incredible!",
+    "subtitle": "Your contribution to {project} is building technology that empowers communities.",
+    "impact": "You're part of the movement",
+    "receipt": "A receipt has been sent to your email.",
+    "share": "Share This Project",
+    "explore": "Fund Another Tool",
+    "questions": "Questions about your contribution?"
+  }
+}
