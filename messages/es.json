@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "title": "Spark901 | Código para el Bien. Impulsado en Memphis.",
+    "description": "Infraestructura de software de código abierto que ayuda a organizaciones sin fines de lucro y comunitarias a escalar su impacto—más rápido, más económico y de manera sostenible."
+  },
+  "nav": {
+    "home": "Inicio",
+    "fundATool": "Financia una Herramienta",
+    "whyFund": "Por Qué Financiar",
+    "about": "Nosotros",
+    "transparency": "Transparencia",
+    "partnerWithUs": "Asóciate con Nosotros"
+  },
+  "home": {
+    "hero": {
+      "tagline": "Código para el Bien. Impulsado en Memphis.",
+      "headline": "Financia las herramientas detrás de la misión",
+      "description": "Construimos infraestructura de software de código abierto que ayuda a organizaciones sin fines de lucro y comunitarias a escalar su impacto—más rápido, más económico y de manera sostenible.",
+      "cta": "Financia una Herramienta",
+      "secondaryCta": "Descubre Cómo Funciona"
+    },
+    "stats": {
+      "nonprofitsHelped": "ONGs Ayudadas",
+      "openSourceTools": "Herramientas Open-Source",
+      "communityMembers": "Miembros de la Comunidad",
+      "fundingRaised": "Fondos Recaudados"
+    },
+    "impact": {
+      "title": "Una herramienta. Muchas ONGs. Impacto compuesto.",
+      "description": "Cuando financias una herramienta de Spark901, no estás ayudando a una organización—estás construyendo infraestructura que escala a cientos de organizaciones.",
+      "cta": "Ver Nuestros Proyectos"
+    },
+    "howItWorks": {
+      "title": "Cómo funciona",
+      "step1": {
+        "title": "Elige una Herramienta",
+        "description": "Explora nuestro catálogo de proyectos patrocinables, cada uno explicado en lenguaje sencillo."
+      },
+      "step2": {
+        "title": "Financia el Desarrollo",
+        "description": "Apoya el desarrollo con financiamiento único o recurrente a cualquier nivel."
+      },
+      "step3": {
+        "title": "Mira Cómo Escala",
+        "description": "Tu contribución impulsa tecnología que sirve a innumerables organizaciones."
+      }
+    },
+    "cta": {
+      "title": "No necesitas saber programar para financiar tecnología que cambia vidas.",
+      "button": "Financia una Herramienta Hoy"
+    }
+  },
+  "fundATool": {
+    "title": "Financia una Herramienta",
+    "description": "Explora nuestro catálogo de proyectos tecnológicos patrocinables. Cada herramienta está diseñada para ayudar a las ONGs a hacer más con menos.",
+    "filterAll": "Todos los Proyectos",
+    "filterActive": "Activos",
+    "filterFunded": "Completamente Financiados",
+    "fundingGoal": "Meta de Financiamiento",
+    "raised": "Recaudado",
+    "fundThis": "Financia Esta Herramienta",
+    "viewDetails": "Ver Detalles"
+  },
+  "projectDetail": {
+    "whatItDoes": "Qué hace",
+    "whoItHelps": "A quién ayuda",
+    "fundingTiers": "Niveles de Financiamiento",
+    "impactMetrics": "Métricas de Impacto",
+    "fundNow": "Financiar Ahora",
+    "viewCode": "Ver el Código",
+    "sponsorName": "Agrega tu nombre o dedicatoria (opcional)",
+    "securePayment": "Pago seguro con Stripe"
+  },
+  "whyFund": {
+    "title": "¿Por Qué Financiar Tecnología Open-Source?",
+    "problem": {
+      "title": "El Problema",
+      "description": "La mayoría de las ONGs están atrapadas con software obsoleto y costoso que no fue diseñado para sus necesidades. Pierden tiempo y dinero en herramientas que no funcionan juntas."
+    },
+    "solution": {
+      "title": "Nuestra Solución",
+      "description": "Spark901 construye infraestructura de código abierto específicamente para el bien social. Una herramienta puede servir a cientos de organizaciones, multiplicando tu impacto exponencialmente."
+    },
+    "compounding": {
+      "title": "Impacto Compuesto",
+      "description": "A diferencia de las donaciones tradicionales, financiar tecnología crea infraestructura permanente. Cada dólar invertido continúa generando valor indefinidamente."
+    }
+  },
+  "about": {
+    "title": "Sobre Spark901",
+    "mission": "Somos un estudio de software de código abierto para el bien, con sede en Memphis, Tennessee. Creemos que la tecnología debe ser un multiplicador de fuerza para el impacto social—no una barrera.",
+    "values": {
+      "title": "Nuestros Valores",
+      "openSource": "Código Abierto Primero",
+      "openSourceDesc": "Todo nuestro código está disponible gratuitamente. Cuando financias nuestro trabajo, todos se benefician.",
+      "community": "Impulsado por la Comunidad",
+      "communityDesc": "No somos voluntarios—somos ingenieros construyendo herramientas de grado profesional con apoyo comunitario.",
+      "memphis": "Raíces en Memphis",
+      "memphisDesc": "Orgullosos de ser de Memphis, construyendo tecnología que sirve a comunidades en todas partes."
+    }
+  },
+  "transparency": {
+    "title": "Transparencia",
+    "howFundsUsed": "Cómo Se Usan los Fondos",
+    "fundsDescription": "Cada dólar va hacia la construcción y mantenimiento de herramientas de código abierto que sirven a las ONGs. Así es como se asignan tus contribuciones:",
+    "development": "Desarrollo",
+    "infrastructure": "Infraestructura",
+    "community": "Comunidad",
+    "operations": "Operaciones",
+    "openSourceNote": "Todo nuestro código es de código abierto y públicamente auditable en GitHub.",
+    "legalNote": "Spark901 no es una organización 501(c)(3). Las contribuciones no son deducibles de impuestos."
+  },
+  "footer": {
+    "tagline": "Código para el Bien. Impulsado en Memphis.",
+    "description": "Construyendo infraestructura tecnológica de código abierto para el bien social.",
+    "navigation": "Navegación",
+    "legal": "Legal",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "contact": "Contacto",
+    "copyright": "© {year} Spark901. Todos los derechos reservados."
+  },
+  "common": {
+    "learnMore": "Saber Más",
+    "getStarted": "Comenzar",
+    "viewAll": "Ver Todo"
+  }
+}
