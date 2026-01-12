@@ -6,6 +6,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  turbopack: {
+    root: ".",
+  },
+  staticPageGenerationTimeout: 120,
 }
 
 export default nextConfig

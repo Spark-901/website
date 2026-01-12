@@ -31,8 +31,8 @@ export async function POST(request: NextRequest) {
             price_data: {
               currency: "usd",
               product_data: {
-                name: `Monthly Support: ${project.title}`,
-                description: `Recurring monthly contribution to ${project.title}`,
+                name: `Monthly Support: ${project.name}`,
+                description: `Recurring monthly contribution to ${project.name}`,
               },
               unit_amount: amount * 100,
               recurring: {
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
         cancel_url: `${origin}/fund/${projectSlug}`,
         metadata: {
           projectSlug,
-          projectTitle: project.title,
+          projectTitle: project.name,
           type: "recurring",
         },
       })
@@ -62,8 +62,8 @@ export async function POST(request: NextRequest) {
             price_data: {
               currency: "usd",
               product_data: {
-                name: `Fund: ${project.title}`,
-                description: `One-time contribution to ${project.title}`,
+                name: `Fund: ${project.name}`,
+                description: `One-time contribution to ${project.name}`,
               },
               unit_amount: amount * 100,
             },
@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
         cancel_url: `${origin}/fund/${projectSlug}`,
         metadata: {
           projectSlug,
-          projectTitle: project.title,
+          projectTitle: project.name,
           type: "one-time",
         },
       })
