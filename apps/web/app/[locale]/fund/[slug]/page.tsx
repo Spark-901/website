@@ -7,12 +7,20 @@ import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { getProjectBySlug, projects } from "@/lib/projects"
 import { FundingForm } from "@/components/funding-form"
+import { locales } from "@/i18n/config"
 import { ArrowLeft, Github, Check, Zap, Users, Target, Shield, Flame } from "lucide-react"
 
 export function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }))
+  const params = []
+  for (const locale of locales) {
+    for (const project of projects) {
+      params.push({
+        locale,
+        slug: project.slug,
+      })
+    }
+  }
+  return params
 }
 
 interface ProjectPageProps {
