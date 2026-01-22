@@ -1,5 +1,10 @@
 import type { Metadata } from "next"
 import { FundAToolClient } from "./fund-client"
+import { locales } from "@/i18n/config"
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
 
 export const metadata: Metadata = {
   title: "Fund a Tool",

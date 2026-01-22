@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  outputFileTracingRoot: "../../",
   images: {
     remotePatterns: [
       {
@@ -15,6 +16,9 @@ const nextConfig: NextConfig = {
       },
     ],
     unoptimized: true,
+  },
+  turbopack: {
+    root: "../../",
   },
 }
 
