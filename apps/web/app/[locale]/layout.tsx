@@ -6,10 +6,15 @@ import { NextIntlClientProvider } from "next-intl"
 import { getLocale, getMessages } from "next-intl/server"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { locales } from "@/i18n/config"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }))
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://spark901.org"),

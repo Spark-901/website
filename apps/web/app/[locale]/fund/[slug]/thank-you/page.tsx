@@ -5,11 +5,19 @@ import { CheckCircle2, Heart, Share2, ArrowRight, Users } from "lucide-react"
 import { getProjectBySlug, projects } from "@/lib/projects"
 import { notFound } from "next/navigation"
 import { brand } from "@/lib/brand"
+import { locales } from "@/i18n/config"
 
 export function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }))
+  const params = []
+  for (const locale of locales) {
+    for (const project of projects) {
+      params.push({
+        locale,
+        slug: project.slug,
+      })
+    }
+  }
+  return params
 }
 
 interface ThankYouPageProps {
