@@ -98,13 +98,55 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-foreground">{t("legal")}</h3>
             <ul className="mt-4 space-y-3">
               <li>
+                <Link href="/terms" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  {t("terms")}
+                </Link>
+              </li>
+              <li>
                 <Link href="/privacy" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                   {t("privacy")}
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                  {t("terms")}
+                <Link
+                  href="/california-privacy"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {t("californiaPrivacy")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/cookie-policy"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {t("cookiePolicy")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/digital-acceptance"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {t("digitalAcceptance")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/fair-use" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  {t("fairUse")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/dpa" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                  {t("dpa")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ai-disclosure"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {t("aiDisclosure")}
                 </Link>
               </li>
               <li>
