@@ -23,6 +23,24 @@ export interface Project {
   }[]
   githubUrl?: string
   imageQuery: string
+  adoptingOrganizations?: {
+    name: string
+    logoUrl: string
+  }[]
+  liveSavings?: {
+    label: string
+    baseValue: number
+    incrementAmount: number
+    intervalMs: number
+    prefix?: string
+    suffix?: string
+  }
+  milestones?: {
+    title: string
+    targetAmount: number
+    status: "completed" | "in-progress" | "pending"
+    description?: string
+  }[]
 }
 
 // Sample projects - replace with your actual projects
@@ -75,6 +93,24 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/spark901/volunteer-scheduler",
     imageQuery: "volunteer management app dashboard modern",
+    adoptingOrganizations: [
+      { name: "Memphis Food Bank", logoUrl: "/placeholder-logo.png" },
+      { name: "Shelter Memphis", logoUrl: "/placeholder-logo.png" },
+      { name: "Community Center", logoUrl: "/placeholder-logo.png" },
+    ],
+    liveSavings: {
+      label: "Total Hours Saved Across All Orgs",
+      baseValue: 12450,
+      incrementAmount: 1,
+      intervalMs: 5000,
+      suffix: " hrs",
+    },
+    milestones: [
+      { title: "Core Framework", targetAmount: 3000, status: "completed", description: "Base infrastructure and auth" },
+      { title: "Beta Release", targetAmount: 7500, status: "completed", description: "Mobile-responsive volunteer views" },
+      { title: "Admin Portal", targetAmount: 12000, status: "in-progress", description: "Nonprofit dashboard and analytics" },
+      { title: "v1.0 Launch", targetAmount: 15000, status: "pending", description: "Public release with data exports" },
+    ],
   },
   {
     id: "proj_002",
@@ -124,6 +160,17 @@ export const projects: Project[] = [
     ],
     githubUrl: "https://github.com/spark901/grant-tracker",
     imageQuery: "grant management software nonprofit dashboard",
+    adoptingOrganizations: [
+      { name: "Education First", logoUrl: "/placeholder-logo.png" },
+      { name: "Green Earth", logoUrl: "/placeholder-logo.png" },
+    ],
+    liveSavings: {
+      label: "Funding Secured to Date",
+      baseValue: 2450000,
+      incrementAmount: 10,
+      intervalMs: 10000,
+      prefix: "$",
+    },
   },
   {
     id: "proj_003",

@@ -7,7 +7,14 @@ import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import { getProjectBySlug, projects } from "@/lib/projects"
 import { FundingForm } from "@/components/funding-form"
+import { OrganizationDirectory } from "@/components/organization-directory"
+import { LiveSavingsCounter } from "@/components/live-savings-counter"
+import { DevelopmentMilestones } from "@/components/development-milestones"
+import { GitHubActivity } from "@/components/github-activity"
+import { GiftToolDialog } from "@/components/gift-tool-dialog"
+import { BetaTesterSignupForm } from "@/components/beta-tester-signup-form"
 import { locales } from "@/i18n/config"
+import { isFeatureEnabled } from "@/lib/features"
 import { ArrowLeft, Github, Check, Zap, Users, Target, Shield, Flame } from "lucide-react"
 
 export function generateStaticParams() {
@@ -93,6 +100,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     notFound()
   }
 
+  const isAdoptionTrackerEnabled = isFeatureEnabled("ADOPTION_TRACKER")
+  const isAlivenessSignalsEnabled = isFeatureEnabled("ALIVENESS_SIGNALS")
+  const isGiftToolEnabled = isFeatureEnabled("GIFT_A_TOOL")
+  const isFeedbackEnabled = isFeatureEnabled("NONPROFIT_FEEDBACK_LOOP")
   const progressPercentage = Math.min((project.fundingRaised / project.fundingGoal) * 100, 100)
   const isFunded = project.status === "funded"
   const remaining = project.fundingGoal - project.fundingRaised
@@ -147,6 +158,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 </p>
               </div>
 
+              {/* Organization Directory */}
+              {isAdoptionTrackerEnabled && project.adoptingOrganizations && (
+                <OrganizationDirectory
+                  organizations={project.adoptingOrganizations}
+                  title={t("adoptingOrganizationsTitle")}
+                />
+              )}
+
               {/* What It Does */}
               <section className="mt-8" aria-labelledby="what-it-does">
                 <h2 id="what-it-does" className="flex items-center gap-2 text-xl font-semibold text-foreground">
@@ -165,6 +184,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 <p className="mt-3 leading-relaxed text-muted-foreground">{project.whoItHelps}</p>
               </section>
 
+              {/* Development Milestones */}
+              {isAlivenessSignalsEnabled && project.milestones && (
+                <DevelopmentMilestones milestones={project.milestones} fundingRaised={project.fundingRaised} />
+              )}
+
               {/* Impact Metrics */}
               <section className="mt-8" aria-labelledby="impact-metrics">
                 <h2 id="impact-metrics" className="flex items-center gap-2 text-xl font-semibold text-foreground">
@@ -172,6 +196,16 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   {t("impactMetrics")}
                 </h2>
                 <div className="mt-4 grid gap-4 sm:grid-cols-3">
+                  {isAdoptionTrackerEnabled && project.liveSavings && (
+                    <LiveSavingsCounter
+                      baseValue={project.liveSavings.baseValue}
+                      incrementAmount={project.liveSavings.incrementAmount}
+                      intervalMs={project.liveSavings.intervalMs}
+                      label={project.liveSavings.label}
+                      prefix={project.liveSavings.prefix}
+                      suffix={project.liveSavings.suffix}
+                    />
+                  )}
                   {project.impactMetrics.map((metric, index) => (
                     <Card key={index} className="border-primary/20 bg-primary/5">
                       <CardContent className="p-4 text-center">
@@ -215,6 +249,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   ))}
                 </div>
               </section>
+
+              {/* GitHub Activity */}
+              {isAlivenessSignalsEnabled && project.githubUrl && (
+                <GitHubActivity githubUrl={project.githubUrl} />
+              )}
             </div>
 
             {/* Sidebar */}
@@ -243,6 +282,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     <p className="mt-1 text-center text-xs text-muted-foreground">{project.backers} backers</p>
                   </CardContent>
                 </Card>
+
+                {isFeedbackEnabled && (
+                  <BetaTesterSignupForm projectName={project.name} />
+                )}
+
+                {isGiftToolEnabled && (
+                  <GiftToolDialog projectTitle={project.name} projectSlug={project.slug} />
+                )}
 
                 {!isFunded ? (
                   <Card id="fund">

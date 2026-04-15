@@ -82,7 +82,16 @@
     "securePayment": "Secure, encrypted payment",
     "guarantee": "100% goes to building this tool",
     "backers": "{count} people have funded this project",
-    "monthlySupporter": "Join {count} monthly supporters"
+    "monthlySupporter": "Join {count} monthly supporters",
+    "adoptingOrganizationsTitle": "Trusted by leading nonprofits",
+    "milestones": "Development Milestones",
+    "projectActivity": "Project Activity",
+    "latestCommits": "Latest Commits",
+    "resolvedIssues": "Resolved Issues",
+    "viewOnGithub": "View on GitHub",
+    "noCommits": "No recent commits found.",
+    "noIssues": "No recent resolved issues found.",
+    "milestoneGoal": "Goal"
   },
   "whyFund": {
     "title": "Why Fund Open-Source Tech?",
@@ -158,8 +167,56 @@
     "legal": "Legal",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
+    "californiaPrivacy": "California Privacy",
+    "cookiePolicy": "Cookie Policy",
+    "digitalAcceptance": "Digital Acceptance",
+    "fairUse": "Fair Use",
+    "dpa": "Data Processing Agreement",
+    "aiDisclosure": "AI Disclosure",
     "contact": "Contact",
     "copyright": "© {year} Spark901. Built with love in Memphis."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "April 10, 2026",
+      "content": "<h2>Introduction</h2><p>Spark901 is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our website and services.</p><h2>Information We Collect</h2><p>We collect information you provide directly to us, such as when you fund a tool, sign up for our newsletter, or contact us. This may include your name, email address, and payment information processed through our third-party provider, Stripe.</p><h2>How We Use Information</h2><p>We use the information we collect to provide and improve our services, process transactions, communicate with you, and ensure the security of our platform.</p><h2>Sharing of Information</h2><p>We do not sell your personal information. We may share information with third-party service providers who perform services on our behalf, such as payment processing and data hosting.</p><h2>Your Rights</h2><p>You have the right to access, correct, or delete your personal information. Please contact us at hello@spark901.org to exercise these rights.</p>"
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "April 10, 2026",
+      "content": "<h2>Acceptance of Terms</h2><p>By accessing or using Spark901, you agree to be bound by these Terms of Service. If you do not agree, please do not use our services.</p><h2>Use of Services</h2><p>You agree to use our services only for lawful purposes and in accordance with these Terms. You are responsible for maintaining the confidentiality of any account information.</p><h2>Contributions</h2><p>Contributions made to fund tools on Spark901 are non-refundable. 100% of your contribution goes toward the development and maintenance of open-source technology.</p><h2>Intellectual Property</h2><p>The Spark901 platform and its original content are owned by Spark901. Tools funded through our platform are released under open-source licenses.</p><h2>Limitation of Liability</h2><p>Spark901 shall not be liable for any indirect, incidental, or consequential damages arising out of your use of our services.</p>"
+    },
+    "californiaPrivacy": {
+      "title": "California Privacy Policy",
+      "lastUpdated": "April 10, 2026",
+      "content": "<h2>California Privacy Disclosures</h2><p>Under the California Consumer Privacy Act (CCPA) and the California Privacy Rights Act (CPRA), California residents have specific rights regarding their personal information.</p><h2>Right to Know and Access</h2><p>You have the right to request that we disclose what personal information we collect, use, and share about you.</p><h2>Right to Delete</h2><p>You have the right to request the deletion of your personal information collected by Spark901.</p><h2>Right to Opt-Out</h2><p>Spark901 does not sell your personal information. We do not share your personal information for cross-context behavioral advertising.</p><h2>No Discrimination</h2><p>We will not discriminate against you for exercising any of your CCPA rights.</p>"
+    },
+    "cookiePolicy": {
+      "title": "Cookie Policy",
+      "lastUpdated": "April 10, 2026",
+      "content": "<h2>Introduction</h2><p>This Cookie Policy explains how Spark901 uses cookies and similar technologies to recognize you when you visit our website.</p><h2>What are Cookies?</h2><p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners to make their websites work, or to work more efficiently.</p><h2>How We Use Cookies</h2><p>We use cookies for technical reasons in order for our website to operate. These are referred to as 'essential' or 'strictly necessary' cookies. Other cookies also enable us to track and target the interests of our users to enhance the experience on our website.</p><h2>Your Choices</h2><p>You can set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our website though your access to some functionality and areas of our website may be restricted.</p>"
+    },
+    "digitalAcceptance": {
+      "title": "Digital Acceptance",
+      "lastUpdated": "April 10, 2026",
+      "content": "<h2>Electronic Communications</h2><p>By using Spark901, you consent to receive electronic communications from us. These communications include notices about your account, payment confirmations, and other information concerning our services.</p><h2>Consent to Electronic Signature</h2><p>By clicking 'I Agree' or 'Fund a Tool', you agree that your electronic signature is as legally binding as a physical signature on a paper document. This consent applies to all transactions and disclosures related to our services.</p><h2>Withdrawing Consent</h2><p>You may withdraw your consent to receive electronic communications at any time by contacting us at hello@spark901.org. If you withdraw your consent, we may terminate your access to our services.</p>"
+    },
+    "fairUse": {
+      "title": "Fair Use Policy",
+      "lastUpdated": "April 10, 2026",
+      "content": "<h2>Acceptable Use</h2><p>Spark901 provides platform tools to the community. You agree to use these tools only for their intended purposes and in a manner that does not infringe on the rights of others.</p><h2>Prohibited Activities</h2><p>You may not use Spark901 to engage in any activity that is illegal, harmful, or disruptive. This includes, but is not limited to, the transmission of malware, the unauthorized collection of personal data, or any attempt to interfere with the operation of our platform.</p><h2>Open Source License</h2><p>Tools and code developed through Spark901 are released under open-source licenses. Your use of such tools and code must comply with the terms of the applicable license.</p><h2>Reporting Abuse</h2><p>If you encounter any use of our platform that violates this Fair Use Policy, please report it to hello@spark901.org.</p>"
+    },
+    "dpa": {
+      "title": "Data Processing Agreement",
+      "lastUpdated": "April 10, 2026",
+      "content": "<h2>Purpose</h2><p>This Data Processing Agreement (DPA) sets out the terms for the processing of personal data by Spark901 on behalf of our users and partner organizations.</p><h2>Processing Obligations</h2><p>Spark901 will process personal data only in accordance with the documented instructions of the data controller and for the purposes of providing our services.</p><h2>Confidentiality</h2><p>We ensure that persons authorized to process the personal data have committed themselves to confidentiality or are under an appropriate statutory obligation of confidentiality.</p><h2>Security</h2><p>Spark901 implements appropriate technical and organizational measures to ensure a level of security appropriate to the risk of data processing.</p><h2>Sub-processors</h2><p>We use certain sub-processors to assist in our processing activities, such as data hosting and payment processing. We maintain a list of all sub-processors and will provide notice of any changes.</p>"
+    },
+    "aiDisclosure": {
+      "title": "AI Disclosure",
+      "lastUpdated": "April 10, 2026",
+      "content": "<h2>Use of Artificial Intelligence</h2><p>Spark901 may use artificial intelligence (AI) and machine learning technologies to improve our platform and assist in the development of open-source tools.</p><h2>Development Assistance</h2><p>We use AI tools to help our engineers write, review, and test code. This allows us to build and deploy high-quality tools faster and more efficiently for the nonprofit community.</p><h2>Transparency</h2><p>We are committed to transparency in our use of AI. If AI is used to generate content or make decisions that significantly impact our users, we will provide notice and context regarding that use.</p><h2>Human Oversight</h2><p>All code and features developed with the assistance of AI are subject to human review and testing by our professional engineering team to ensure security, reliability, and accuracy.</p>"
+    }
   },
   "common": {
     "learnMore": "Learn More",
@@ -174,5 +231,29 @@
     "share": "Share This Project",
     "explore": "Fund Another Tool",
     "questions": "Questions about your contribution?"
+  },
+  "feedback": {
+    "suggestTool": {
+      "title": "Suggest a Tool",
+      "description": "What's the biggest technical pain point your nonprofit faces? We build what the community needs.",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "your@nonprofit.org",
+      "detailsLabel": "Describe the technical pain point",
+      "detailsPlaceholder": "e.g., We struggle with tracking volunteer hours across multiple sites...",
+      "submit": "Submit Suggestion",
+      "submitting": "Submitting...",
+      "success": "Thank you! We've received your suggestion.",
+      "error": "Failed to submit. Please try again later."
+    },
+    "betaSignup": {
+      "title": "Join the Beta Waitlist",
+      "description": "Be the first to use {project} when it's ready for testing.",
+      "emailLabel": "Email Address",
+      "emailPlaceholder": "your@nonprofit.org",
+      "submit": "Join Waitlist",
+      "submitting": "Joining...",
+      "success": "You're on the list! We'll reach out when testing begins.",
+      "error": "Failed to join. Please try again later."
+    }
   }
 }
