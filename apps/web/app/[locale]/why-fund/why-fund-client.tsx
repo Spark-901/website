@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, AlertTriangle, Lightbulb, TrendingUp, DollarSign, Users, Repeat } from "lucide-react"
+import { MemphisNonprofitHubStats } from "@/components/memphis-nonprofit-hub-stats"
 
 export function WhyFundClient() {
   const t = useTranslations("whyFund")
@@ -123,6 +124,8 @@ export function WhyFundClient() {
           </div>
         </div>
       </section>
+
+      <MemphisNonprofitHubStats />
 
       {/* Compounding Impact */}
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8" aria-labelledby="compounding-title">

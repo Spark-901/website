@@ -69,7 +69,16 @@
     "fundNow": "Financiar Ahora",
     "viewCode": "Ver el Código",
     "sponsorName": "Agrega tu nombre o dedicatoria (opcional)",
-    "securePayment": "Pago seguro con Stripe"
+    "securePayment": "Pago seguro con Stripe",
+    "adoptingOrganizationsTitle": "Con la confianza de organizaciones líderes",
+    "milestones": "Hitos del desarrollo",
+    "projectActivity": "Actividad del proyecto",
+    "latestCommits": "Últimos cambios",
+    "resolvedIssues": "Problemas resueltos",
+    "viewOnGithub": "Ver en GitHub",
+    "noCommits": "No se han encontrado cambios recientes.",
+    "noIssues": "No se han encontrado problemas resueltos recientes.",
+    "milestoneGoal": "Meta"
   },
   "whyFund": {
     "title": "¿Por Qué Financiar Tecnología Open-Source?",
@@ -86,9 +95,20 @@
       "description": "A diferencia de las donaciones tradicionales, financiar tecnología crea infraestructura permanente. Cada dólar invertido continúa generando valor indefinidamente."
     }
   },
+  "memphisNonprofitHub": {
+    "title": "Memphis es un centro de organizaciones sin fines de lucro",
+    "description": "El Mid-South concentra una densidad extraordinaria de misión. Spark901 forma parte del Digital Delta: equipos locales que creen que un buen software debe fortalecer a las ONG, no dejarlas atrás.",
+    "per10kSuffix": " por 10.000",
+    "densityCaption": "Liderazgo entre grandes metros de EE. UU.",
+    "densityBody": "Memphis encabeza las grandes áreas metropolitanas en organizaciones sin fines de lucro en relación con la población: un ecosistema que necesita herramientas pensadas para misiones reales.",
+    "orgsCaption": "Organizaciones exentas de impuestos",
+    "orgsBody": "Más de 6.500 en el área de Memphis sostienen seguridad alimentaria, salud, juventud, artes y mucho más.",
+    "jobsCaption": "Empleos respaldados",
+    "jobsBody": "En conjunto administran más de {billions} mil millones de USD en activos—un trabajo que merece infraestructura moderna y confiable."
+  },
   "about": {
     "title": "Sobre Spark901",
-    "mission": "Somos un estudio de software de código abierto para el bien, con sede en Memphis, Tennessee. Creemos que la tecnología debe ser un multiplicador de fuerza para el impacto social—no una barrera.",
+    "mission": "Somos un estudio con sede en Memphis, orientado al bien: las contribuciones financian software abierto y de calidad para quien lo necesita—especialmente ONG—para que cada aporte se convierta en herramientas públicas duraderas, no en otro SaaS cerrado.",
     "values": {
       "title": "Nuestros Valores",
       "openSource": "Código Abierto Primero",
@@ -96,7 +116,7 @@
       "community": "Impulsado por la Comunidad",
       "communityDesc": "No somos voluntarios—somos ingenieros construyendo herramientas de grado profesional con apoyo comunitario.",
       "memphis": "Raíces en Memphis",
-      "memphisDesc": "Orgullosos de ser de Memphis, construyendo tecnología que sirve a comunidades en todas partes."
+      "memphisDesc": "Memphis es un polo de ONG: estamos en el Digital Delta y construimos tecnología para que ese ecosistema rinda más."
     }
   },
   "transparency": {
@@ -117,8 +137,80 @@
     "legal": "Legal",
     "privacy": "Política de Privacidad",
     "terms": "Términos de Servicio",
+    "californiaPrivacy": "Privacidad de California",
+    "cookiePolicy": "Política de Cookies",
+    "digitalAcceptance": "Aceptación Digital",
+    "fairUse": "Uso Justo",
+    "dpa": "Acuerdo de Procesamiento de Datos",
+    "aiDisclosure": "Divulgación de IA",
     "contact": "Contacto",
     "copyright": "© {year} Spark901. Todos los derechos reservados."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Política de Privacidad",
+      "lastUpdated": "10 de abril de 2026",
+      "content": "<h2>Introducción</h2><p>Spark901 se compromete a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y compartimos información sobre usted cuando utiliza nuestro sitio web y servicios.</p><h2>Información que recopilamos</h2><p>Recopilamos información que usted nos proporciona directamente, como cuando financia una herramienta, se suscribe a nuestro boletín o nos contacta. Esto puede incluir su nombre, dirección de correo electrónico e información de pago procesada a través de nuestro proveedor externo, Stripe.</p><h2>Cómo usamos la información</h2><p>Usamos la información que recopilamos para proporcionar y mejorar nuestros servicios, procesar transacciones, comunicarnos con usted y garantizar la seguridad de nuestra plataforma.</p><h2>Intercambio de información</h2><p>No vendemos su información personal. Podemos compartir información con proveedores de servicios externos que realizan servicios en nuestro nombre, como el procesamiento de pagos y el alojamiento de datos.</p><h2>Sus derechos</h2><p>Usted tiene derecho a acceder, corregir o eliminar su información personal. Póngase en contacto con nosotros en hello@spark901.org para ejercer estos derechos.</p>"
+    },
+    "terms": {
+      "title": "Términos de Servicio",
+      "lastUpdated": "10 de abril de 2026",
+      "content": "<h2>Aceptación de los términos</h2><p>Al acceder o utilizar Spark901, usted acepta estar sujeto a estos Términos de Servicio. Si no está de acuerdo, no utilice nuestros servicios.</p><h2>Uso de los servicios</h2><p>Usted acepta utilizar nuestros servicios solo para fines lícitos y de acuerdo con estos Términos. Usted es responsable de mantener la confidencialidad de cualquier información de su cuenta.</p><h2>Contribuciones</h2><p>Las contribuciones realizadas para financiar herramientas en Spark901 no son reembolsables. El 100% de su contribución se destina al desarrollo y mantenimiento de tecnología de código abierto.</p><h2>Propiedad intelectual</h2><p>La plataforma Spark901 y su contenido original son propiedad de Spark901. Las herramientas financiadas a través de nuestra plataforma se lanzan bajo licencias de código abierto.</p><h2>Limitación de responsabilidad</h2><p>Spark901 no será responsable de ningún daño indirecto, incidental o consecuente que surja de su uso de nuestros servicios.</p>"
+    },
+    "californiaPrivacy": {
+      "title": "Política de Privacidad de California",
+      "lastUpdated": "10 de abril de 2026",
+      "content": "<h2>Divulgaciones de Privacidad de California</h2><p>Según la Ley de Privacidad del Consumidor de California (CCPA) y la Ley de Derechos de Privacidad de California (CPRA), los residentes de California tienen derechos específicos con respecto a su información personal.</p><h2>Derecho a saber y acceder</h2><p>Usted tiene derecho a solicitar que divulguemos qué información personal recopilamos, usamos y compartimos sobre usted.</p><h2>Derecho a eliminar</h2><p>Usted tiene derecho a solicitar la eliminación de su información personal recopilada por Spark901.</p><h2>Derecho a optar por no participar</h2><p>Spark901 no vende su información personal. No compartimos su información personal para publicidad conductual de contexto cruzado.</p><h2>No discriminación</h2><p>No le discriminaremos por ejercer cualquiera de sus derechos de la CCPA.</p>"
+    },
+    "cookiePolicy": {
+      "title": "Política de Cookies",
+      "lastUpdated": "10 de abril de 2026",
+      "content": "<h2>Introducción</h2><p>Esta Política de Cookies explica cómo Spark901 utiliza cookies y tecnologías similares para reconocerle cuando visita nuestro sitio web.</p><h2>¿Qué son las cookies?</h2><p>Las cookies son pequeños archivos de datos que se colocan en su computadora o dispositivo móvil cuando visita un sitio web. Son ampliamente utilizados por los propietarios de sitios web para que sus sitios web funcionen, o para que funcionen de manera más eficiente.</p><h2>Cómo usamos las cookies</h2><p>Usamos cookies por razones técnicas para que nuestro sitio web funcione. Estas se denominan cookies 'esenciales' o 'estrictamente necesarias'. Otras cookies también nos permiten rastrear y dirigir los intereses de nuestros usuarios para mejorar la experiencia en nuestro sitio web.</p><h2>Sus opciones</h2><p>Puede configurar o modificar los controles de su navegador web para aceptar o rechazar cookies. Si decide rechazar las cookies, aún puede usar nuestro sitio web, aunque su acceso a algunas funcionalidades y áreas de nuestro sitio web puede estar restringido.</p>"
+    },
+    "digitalAcceptance": {
+      "title": "Aceptación Digital",
+      "lastUpdated": "10 de abril de 2026",
+      "content": "<h2>Comunicaciones electrónicas</h2><p>Al usar Spark901, usted acepta recibir comunicaciones electrónicas de nuestra parte. Estas comunicaciones incluyen avisos sobre su cuenta, confirmaciones de pago y otra información relativa a nuestros servicios.</p><h2>Consentimiento para la firma electrónica</h2><p>Al hacer clic en 'Acepto' o 'Financiar una herramienta', usted acepta que su firma electrónica es tan legalmente vinculante como una firma física en un documento de papel. Este consentimiento se aplica a todas las transacciones y divulgaciones relacionadas con nuestros servicios.</p><h2>Retirada del consentimiento</h2><p>Puede retirar su consentimiento para recibir comunicaciones electrónicas en cualquier momento poniéndose en contacto con nosotros en hello@spark901.org. Si retira su consentimiento, podemos terminar su acceso a nuestros servicios.</p>"
+    },
+    "fairUse": {
+      "title": "Política de Uso Justo",
+      "lastUpdated": "10 de abril de 2026",
+      "content": "<h2>Uso aceptable</h2><p>Spark901 proporciona herramientas de plataforma a la comunidad. Usted acepta usar estas herramientas solo para los fines previstos y de una manera que no infrinja los derechos de otros.</p><h2>Actividades prohibidas</h2><p>No puede usar Spark901 para participar en ninguna actividad que sea ilegal, dañina o disruptiva. Esto incluye, entre otros, la transmisión de malware, la recopilación no autorizada de datos personales o cualquier intento de interferir con el funcionamiento de nuestra plataforma.</p><h2>Licencia de código abierto</h2><p>Las herramientas y el código desarrollados a través de Spark901 se lanzan bajo licencias de código abierto. Su uso de tales herramientas y código debe cumplir con los términos de la licencia aplicable.</p><h2>Informar de abusos</h2><p>Si encuentra algún uso de nuestra plataforma que viole esta Política de Uso Justo, infórmelo a hello@spark901.org.</p>"
+    },
+    "dpa": {
+      "title": "Acuerdo de Procesamiento de Datos",
+      "lastUpdated": "10 de abril de 2026",
+      "content": "<h2>Propósito</h2><p>Este Acuerdo de Procesamiento de Datos (DPA) establece los términos para el procesamiento de datos personales por parte de Spark901 en nombre de nuestros usuarios y organizaciones asociadas.</p><h2>Obligaciones de procesamiento</h2><p>Spark901 procesará los datos personales solo de acuerdo con las instrucciones documentadas del responsable del tratamiento y para los fines de la prestación de nuestros servicios.</p><h2>Confidencialidad</h2><p>Nos aseguramos de que las personas autorizadas para procesar los datos personales se hayan comprometido a la confidencialidad o estén bajo una obligación estatutaria de confidencialidad adecuada.</p><h2>Seguridad</h2><p>Spark901 implementa las medidas técnicas y organizativas adecuadas para garantizar un nivel de seguridad adecuado al riesgo del procesamiento de datos.</p><h2>Subencargados</h2><p>Utilizamos ciertos subencargados para ayudar en nuestras actividades de procesamiento, como el alojamiento de datos y el procesamiento de pagos. Mantenemos una lista de todos los subencargados y avisaremos de cualquier cambio.</p>"
+    },
+    "aiDisclosure": {
+      "title": "Divulgación de IA",
+      "lastUpdated": "10 de abril de 2026",
+      "content": "<h2>Uso de Inteligencia Artificial</h2><p>Spark901 puede utilizar tecnologías de inteligencia artificial (IA) y aprendizaje automático para mejorar nuestra plataforma y ayudar en el desarrollo de herramientas de código abierto.</p><h2>Asistencia al desarrollo</h2><p>Usamos herramientas de IA para ayudar a nuestros ingenieros a escribir, revisar y probar código. Esto nos permite construir y desplegar herramientas de alta calidad de manera más rápida y eficiente para la comunidad sin fines de lucro.</p><h2>Transparencia</h2><p>Estamos comprometidos con la transparencia en nuestro uso de la IA. Si se utiliza la IA para generar contenido o tomar decisiones que afecten significativamente a nuestros usuarios, proporcionaremos aviso y contexto con respecto a ese uso.</p><h2>Supervisión humana</h2><p>Todo el código y las características desarrolladas con la ayuda de la IA están sujetos a revisión y pruebas humanas por parte de nuestro equipo de ingeniería profesional para garantizar la seguridad, confiabilidad y precisión.</p>"
+    }
+  },
+  "feedback": {
+    "suggestTool": {
+      "title": "Sugiere una Herramienta",
+      "description": "¿Cuál es el mayor problema técnico que enfrenta tu organización? Construimos lo que la comunidad necesita.",
+      "emailLabel": "Correo Electrónico",
+      "emailPlaceholder": "tu@organizacion.org",
+      "detailsLabel": "Describe el problema técnico",
+      "detailsPlaceholder": "ej., Tenemos dificultades para rastrear las horas de los voluntarios...",
+      "submit": "Enviar Sugerencia",
+      "submitting": "Enviando...",
+      "success": "¡Gracias! Hemos recibido tu sugerencia.",
+      "error": "Error al enviar. Por favor, inténtalo de nuevo más tarde."
+    },
+    "betaSignup": {
+      "title": "Únete a la Lista de Espera Beta",
+      "description": "Sé el primero en usar {project} cuando esté listo para pruebas.",
+      "emailLabel": "Correo Electrónico",
+      "emailPlaceholder": "tu@organizacion.org",
+      "submit": "Unirse a la Lista",
+      "submitting": "Uniéndose...",
+      "success": "¡Estás en la lista! Nos pondremos en contacto cuando comiencen las pruebas.",
+      "error": "Error al unirse. Por favor, inténtalo de nuevo más tarde."
+    }
   },
   "common": {
     "learnMore": "Saber Más",

@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight, Code2, Users, MapPin, Heart, Zap, Github } from "lucide-react"
+import { MemphisNonprofitHubStats } from "@/components/memphis-nonprofit-hub-stats"
 
 export function AboutClient() {
   const t = useTranslations("about")
@@ -83,6 +84,8 @@ export function AboutClient() {
           </div>
         </div>
       </section>
+
+      <MemphisNonprofitHubStats />
 
       {/* Values */}
       <section className="bg-muted/30 px-4 py-16 sm:px-6 sm:py-20 lg:px-8" aria-labelledby="values-title">

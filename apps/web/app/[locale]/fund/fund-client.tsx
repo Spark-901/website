@@ -7,6 +7,8 @@ import { Badge } from "@/components/ui/badge"
 import { ProjectCard } from "@/components/project-card"
 import { getAllProjects, type Project } from "@/lib/projects"
 import { Sparkles, TrendingUp } from "lucide-react"
+import { SuggestToolForm } from "@/components/suggest-tool-form"
+import { isFeatureEnabled } from "@/lib/features"
 
 type FilterStatus = "all" | "active" | "funded"
 
@@ -15,6 +17,7 @@ export function FundAToolClient() {
   const [filter, setFilter] = useState<FilterStatus>("all")
 
   const allProjects = getAllProjects()
+  const isFeedbackEnabled = isFeatureEnabled("NONPROFIT_FEEDBACK_LOOP")
 
   const filteredProjects = allProjects.filter((project: Project) => {
     if (filter === "all") return true
@@ -92,6 +95,14 @@ export function FundAToolClient() {
         {filteredProjects.length === 0 && (
           <div className="py-12 text-center">
             <p className="text-muted-foreground">No projects found matching your filter.</p>
+          </div>
+        )}
+
+        {isFeedbackEnabled && (
+          <div className="mt-20 border-t pt-16">
+            <div className="mx-auto max-w-3xl">
+              <SuggestToolForm />
+            </div>
           </div>
         )}
       </div>
