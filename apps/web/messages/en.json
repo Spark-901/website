@@ -115,9 +115,20 @@
       "techDesc": "$1,000 helps 100+ orgs forever"
     }
   },
+  "memphisNonprofitHub": {
+    "title": "Memphis is a nonprofit hub",
+    "description": "The Mid-South packs extraordinary mission-driven density. Spark901 is part of the Digital Delta—local builders who believe great software should strengthen nonprofits, not leave them behind.",
+    "per10kSuffix": " per 10,000",
+    "densityCaption": "#1 among major U.S. metros",
+    "densityBody": "Memphis leads major U.S. metros in nonprofits relative to population—an ecosystem that needs tools built for real missions.",
+    "orgsCaption": "Tax-exempt nonprofits",
+    "orgsBody": "More than 6,500 in the Memphis area anchor food security, health, youth programs, arts, and more.",
+    "jobsCaption": "Jobs supported",
+    "jobsBody": "Together they steward over {billions} billion in assets—work that deserves reliable, modern infrastructure."
+  },
   "about": {
     "title": "About Spark901",
-    "mission": "We're a for-good software studio rooted in Memphis. We believe technology should multiply impact, not drain budgets.",
+    "mission": "We're a for-good, Memphis-rooted studio: contributions fund quality, open-source software for organizations that need it—especially nonprofits—so donations keep turning into durable public tools, not gated SaaS.",
     "values": {
       "title": "What We Stand For",
       "openSource": "Open Source Always",
@@ -125,7 +136,7 @@
       "community": "Community-Powered",
       "communityDesc": "We're professional engineers funded by people who believe in better nonprofit tech.",
       "memphis": "Memphis Proud",
-      "memphisDesc": "Born in the 901, building technology that honors our city's legacy of community power."
+      "memphisDesc": "Memphis is a nonprofit hub—we're in the Digital Delta, building tech that helps that ecosystem punch above its weight."
     }
   },
   "transparency": {

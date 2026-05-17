@@ -95,9 +95,20 @@
       "description": "A diferencia de las donaciones tradicionales, financiar tecnología crea infraestructura permanente. Cada dólar invertido continúa generando valor indefinidamente."
     }
   },
+  "memphisNonprofitHub": {
+    "title": "Memphis es un centro de organizaciones sin fines de lucro",
+    "description": "El Mid-South concentra una densidad extraordinaria de misión. Spark901 forma parte del Digital Delta: equipos locales que creen que un buen software debe fortalecer a las ONG, no dejarlas atrás.",
+    "per10kSuffix": " por 10.000",
+    "densityCaption": "Liderazgo entre grandes metros de EE. UU.",
+    "densityBody": "Memphis encabeza las grandes áreas metropolitanas en organizaciones sin fines de lucro en relación con la población: un ecosistema que necesita herramientas pensadas para misiones reales.",
+    "orgsCaption": "Organizaciones exentas de impuestos",
+    "orgsBody": "Más de 6.500 en el área de Memphis sostienen seguridad alimentaria, salud, juventud, artes y mucho más.",
+    "jobsCaption": "Empleos respaldados",
+    "jobsBody": "En conjunto administran más de {billions} mil millones de USD en activos—un trabajo que merece infraestructura moderna y confiable."
+  },
   "about": {
     "title": "Sobre Spark901",
-    "mission": "Somos un estudio de software de código abierto para el bien, con sede en Memphis, Tennessee. Creemos que la tecnología debe ser un multiplicador de fuerza para el impacto social—no una barrera.",
+    "mission": "Somos un estudio con sede en Memphis, orientado al bien: las contribuciones financian software abierto y de calidad para quien lo necesita—especialmente ONG—para que cada aporte se convierta en herramientas públicas duraderas, no en otro SaaS cerrado.",
     "values": {
       "title": "Nuestros Valores",
       "openSource": "Código Abierto Primero",
@@ -105,7 +116,7 @@
       "community": "Impulsado por la Comunidad",
       "communityDesc": "No somos voluntarios—somos ingenieros construyendo herramientas de grado profesional con apoyo comunitario.",
       "memphis": "Raíces en Memphis",
-      "memphisDesc": "Orgullosos de ser de Memphis, construyendo tecnología que sirve a comunidades en todas partes."
+      "memphisDesc": "Memphis es un polo de ONG: estamos en el Digital Delta y construimos tecnología para que ese ecosistema rinda más."
     }
   },
   "transparency": {

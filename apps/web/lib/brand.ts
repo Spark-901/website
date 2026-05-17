@@ -23,6 +23,18 @@ export const brand = {
     organizationsServed: 100,
     hoursSavedAnnually: 10000,
   },
+
+  // Memphis metro nonprofit sector — keep in sync with public messaging and .cursor rules
+  memphisNonprofitHub: {
+    /** Nonprofits per 10,000 residents; Memphis leads major U.S. metros on this measure */
+    nonprofitsPer10k: 69.9,
+    /** Tax-exempt nonprofits in the Memphis area (rounded headline figure) */
+    taxExemptNonprofitCountMin: 6500,
+    /** People employed by those organizations (rounded headline figure) */
+    peopleEmployedMin: 96000,
+    /** Aggregate assets in billions USD (rounded headline figure) */
+    assetsBillionsMin: 46,
+  },
 } as const
 
 // Funding tier presets for consistency
