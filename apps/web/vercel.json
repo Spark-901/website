@@ -1,7 +1,5 @@
 {
-  "buildCommand": "turbo build --filter=web",
-  "devCommand": "turbo dev --filter=web",
+  "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "framework": "nextjs",
-  "ignoreCommand": "git diff HEAD^ HEAD --quiet -- apps/web/ || exit 1; exit 0"
+  "framework": "nextjs"
 }
