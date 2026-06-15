@@ -1,7 +1,8 @@
 import { fetchRecentCommits, fetchRecentResolvedIssues } from "@/lib/github"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { GitCommit, Github, CheckCircle, ExternalLink } from "lucide-react"
+import { GitCommit, CheckCircle, ExternalLink } from "lucide-react"
+import { Github } from "@/components/ui/brand-icons"
 import { getTranslations } from "next-intl/server"
 
 interface GitHubActivityProps {

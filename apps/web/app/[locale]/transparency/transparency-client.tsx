@@ -7,7 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
   ArrowRight,
   Shield,
-  Github,
   FileText,
   AlertCircle,
   Code2,
@@ -16,6 +15,7 @@ import {
   Building2,
   ExternalLink,
 } from "lucide-react"
+import { Github } from "@/components/ui/brand-icons"
 
 export function TransparencyClient() {
   const t = useTranslations("transparency")

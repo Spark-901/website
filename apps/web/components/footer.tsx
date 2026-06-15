@@ -2,7 +2,8 @@
 
 import Link from "next/link"
 import { useTranslations } from "next-intl"
-import { Zap, Github, Twitter, Linkedin } from "lucide-react"
+import { Zap } from "lucide-react"
+import { Github, Twitter, Linkedin } from "@/components/ui/brand-icons"
 
 export function Footer() {
   const t = useTranslations("footer")

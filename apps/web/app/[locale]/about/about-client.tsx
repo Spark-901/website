@@ -4,7 +4,8 @@ import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Code2, Users, MapPin, Heart, Zap, Github } from "lucide-react"
+import { ArrowRight, Code2, Users, MapPin, Heart, Zap } from "lucide-react"
+import { Github } from "@/components/ui/brand-icons"
 import { MemphisNonprofitHubStats } from "@/components/memphis-nonprofit-hub-stats"
 
 export function AboutClient() {

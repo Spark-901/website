@@ -9,6 +9,7 @@
     "whyFund": "Why Fund This",
     "about": "About",
     "transparency": "Transparency",
+    "volunteer": "Volunteer",
     "partnerWithUs": "Partner With Us"
   },
   "home": {
@@ -265,6 +266,76 @@
       "submitting": "Joining...",
       "success": "You're on the list! We'll reach out when testing begins.",
       "error": "Failed to join. Please try again later."
+    }
+  },
+  "volunteer": {
+    "hero": {
+      "tagline": "Build for good. Powered in Memphis.",
+      "headline": "Volunteer your skills to open-source tools nonprofits actually use",
+      "description": "Engineers, designers, writers, and mentors — help us ship maintained, open-source software that mission-driven organizations rely on every day."
+    },
+    "benefits": {
+      "heading": "Why volunteer with Spark901",
+      "subheading": "Real code, real impact, no busywork.",
+      "shipOss": {
+        "title": "Ship real OSS",
+        "body": "Contributions land in public repos with permissive licenses—your work is portfolio-grade and lives forever."
+      },
+      "realImpact": {
+        "title": "Direct nonprofit impact",
+        "body": "Every tool we ship serves nonprofits at scale, not one-off pilots. Compounding outcomes per hour you give."
+      },
+      "community": {
+        "title": "Engineers helping nonprofits",
+        "body": "Join a focused crew of builders. Mentorship, code review, async-first collaboration, no recruiting pipelines."
+      },
+      "memphisRoots": {
+        "title": "Rooted in Memphis",
+        "body": "Part of the Digital Delta supporting one of the densest nonprofit ecosystems in the country—remote contributors welcome."
+      }
+    },
+    "formSection": {
+      "heading": "Tell us how you want to help",
+      "subheading": "We'll route you to the right project and reach out within a week.",
+      "privacyNote": "We use your email only to coordinate volunteer work. Spark901 is an LLC, not a 501(c)(3); contributions of time are appreciated but are not tax-deductible."
+    },
+    "form": {
+      "title": "Volunteer signup",
+      "description": "Share your skills and availability. Nothing more than we need to reach you.",
+      "nameLabel": "Your name",
+      "namePlaceholder": "Jordan Rivera",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "skillsLabel": "What can you help with?",
+      "skillsHelp": "Pick all that apply. We match you to the right project.",
+      "skills": {
+        "engineering": "Engineering",
+        "design": "Design / UX",
+        "product": "Product / PM",
+        "writing": "Writing / Docs",
+        "outreach": "Outreach / Community",
+        "mentoring": "Mentoring",
+        "other": "Other"
+      },
+      "availabilityLabel": "Weekly availability",
+      "availabilityPlaceholder": "Select how much time you can give",
+      "availability": {
+        "lt_2_hrs": "Less than 2 hours / week",
+        "2_to_5_hrs": "2–5 hours / week",
+        "5_to_10_hrs": "5–10 hours / week",
+        "10_plus_hrs": "10+ hours / week"
+      },
+      "profileLabel": "GitHub or portfolio (optional)",
+      "profilePlaceholder": "https://github.com/your-handle",
+      "profileHelp": "Helps us match you to a project. Skip if you'd rather chat first.",
+      "messageLabel": "Anything else (optional)",
+      "messagePlaceholder": "Causes you care about, tools you've shipped, days you're free...",
+      "submit": "Sign up to help",
+      "submitting": "Submitting...",
+      "success": "Thanks! We'll reach out within a week.",
+      "error": "Couldn't submit right now. Please try again later.",
+      "thanksTitle": "You're in. Welcome aboard.",
+      "thanksBody": "We'll review your skills and reach out with a project match within a week. If you'd like, follow along in our public repos in the meantime."
     }
   }
 }
