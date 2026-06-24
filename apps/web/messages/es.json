@@ -9,6 +9,7 @@
     "whyFund": "Por Qué Financiar",
     "about": "Nosotros",
     "transparency": "Transparencia",
+    "volunteer": "Voluntariado",
     "partnerWithUs": "Asóciate con Nosotros"
   },
   "home": {
@@ -210,6 +211,76 @@
       "submitting": "Uniéndose...",
       "success": "¡Estás en la lista! Nos pondremos en contacto cuando comiencen las pruebas.",
       "error": "Error al unirse. Por favor, inténtalo de nuevo más tarde."
+    }
+  },
+  "volunteer": {
+    "hero": {
+      "tagline": "Construye para el bien. Impulsado en Memphis.",
+      "headline": "Comparte tus habilidades en herramientas de código abierto que las organizaciones realmente usan",
+      "description": "Ingenieros, diseñadores, escritores y mentores—ayúdanos a entregar software de código abierto mantenido que las organizaciones de misión usan a diario."
+    },
+    "benefits": {
+      "heading": "Por qué ser voluntario con Spark901",
+      "subheading": "Código real, impacto real, sin relleno.",
+      "shipOss": {
+        "title": "Entrega código abierto real",
+        "body": "Tus contribuciones se publican en repositorios con licencias permisivas—tu trabajo queda en el portafolio para siempre."
+      },
+      "realImpact": {
+        "title": "Impacto directo en organizaciones",
+        "body": "Cada herramienta que entregamos sirve a muchas organizaciones, no a pilotos aislados. Cada hora multiplica el resultado."
+      },
+      "community": {
+        "title": "Ingenieros apoyando organizaciones",
+        "body": "Únete a un equipo enfocado de constructores. Mentoría, revisión de código, colaboración asíncrona, sin pipelines de reclutamiento."
+      },
+      "memphisRoots": {
+        "title": "Raíces en Memphis",
+        "body": "Parte del Digital Delta, apoyando uno de los ecosistemas sin fines de lucro más densos del país—colaboradores remotos bienvenidos."
+      }
+    },
+    "formSection": {
+      "heading": "Cuéntanos cómo quieres ayudar",
+      "subheading": "Te conectaremos al proyecto adecuado y contactaremos en una semana.",
+      "privacyNote": "Usamos tu correo solo para coordinar el voluntariado. Spark901 es una LLC, no una 501(c)(3); el tiempo donado se agradece pero no es deducible de impuestos."
+    },
+    "form": {
+      "title": "Registro de voluntariado",
+      "description": "Comparte tus habilidades y disponibilidad. Solo lo necesario para contactarte.",
+      "nameLabel": "Tu nombre",
+      "namePlaceholder": "Jordan Rivera",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "tu@ejemplo.com",
+      "skillsLabel": "¿En qué puedes ayudar?",
+      "skillsHelp": "Elige todas las que apliquen. Te conectamos con el proyecto adecuado.",
+      "skills": {
+        "engineering": "Ingeniería",
+        "design": "Diseño / UX",
+        "product": "Producto / PM",
+        "writing": "Redacción / Docs",
+        "outreach": "Comunidad / Difusión",
+        "mentoring": "Mentoría",
+        "other": "Otro"
+      },
+      "availabilityLabel": "Disponibilidad semanal",
+      "availabilityPlaceholder": "Selecciona cuánto tiempo puedes dar",
+      "availability": {
+        "lt_2_hrs": "Menos de 2 horas / semana",
+        "2_to_5_hrs": "2–5 horas / semana",
+        "5_to_10_hrs": "5–10 horas / semana",
+        "10_plus_hrs": "10+ horas / semana"
+      },
+      "profileLabel": "GitHub o portafolio (opcional)",
+      "profilePlaceholder": "https://github.com/tu-usuario",
+      "profileHelp": "Nos ayuda a encontrar el proyecto adecuado. Omítelo si prefieres conversar primero.",
+      "messageLabel": "Algo más (opcional)",
+      "messagePlaceholder": "Causas que te importan, herramientas que has hecho, días libres...",
+      "submit": "Registrarme para ayudar",
+      "submitting": "Enviando...",
+      "success": "¡Gracias! Te contactaremos en una semana.",
+      "error": "No se pudo enviar ahora. Por favor inténtalo más tarde.",
+      "thanksTitle": "Estás dentro. Bienvenido a bordo.",
+      "thanksBody": "Revisaremos tus habilidades y te contactaremos con una asignación en una semana. Mientras tanto, síguenos en nuestros repos públicos."
     }
   },
   "common": {
