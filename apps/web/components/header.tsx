@@ -18,6 +18,7 @@ export function Header() {
     { href: "/fund", label: t("fundATool") },
     { href: "/why-fund", label: t("whyFund") },
     { href: "/about", label: t("about") },
+    { href: "/volunteer", label: t("volunteer") },
     { href: "/transparency", label: t("transparency") },
   ]
 

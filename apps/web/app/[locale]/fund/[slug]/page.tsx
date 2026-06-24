@@ -15,7 +15,8 @@ import { GiftToolDialog } from "@/components/gift-tool-dialog"
 import { BetaTesterSignupForm } from "@/components/beta-tester-signup-form"
 import { locales } from "@/i18n/config"
 import { isFeatureEnabled } from "@/lib/features"
-import { ArrowLeft, Github, Check, Zap, Users, Target, Shield, Flame } from "lucide-react"
+import { ArrowLeft, Check, Zap, Users, Target, Shield, Flame } from "lucide-react"
+import { Github } from "@/components/ui/brand-icons"
 
 export function generateStaticParams() {
   const params = []
