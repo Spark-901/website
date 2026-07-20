@@ -1,26 +1,34 @@
 /**
- * Slack ops notifications.
+ * Slack ops notifications — one Workflow trigger for all site inbound events.
  *
- * Supports:
- * - Slack Workflow Builder triggers (`hooks.slack.com/triggers/...`)
- *   payload: { eventType, details, metadata }
- * - Classic Incoming Webhooks (`hooks.slack.com/services/...`)
- *   payload: { text, blocks? }
+ * Payload shape (Workflow Builder variables):
+ *   { eventType, details, metadata }
+ *
+ * Organize in Slack by `eventType` title, e.g.:
+ *   contribution.new | supporter.contribution | feedback.suggest_tool |
+ *   feedback.beta_signup | gift_tool.request | volunteer.signup
  */
 
+/** Stable Spark901 ops Workflow trigger (override with SLACK_OPS_WEBHOOK_URL if needed). */
+export const SLACK_OPS_WEBHOOK_URL_DEFAULT =
+  "***REMOVED-SLACK-WEBHOOK***"
+
 export type SlackOpsEvent = {
+  /** Short title used to route/organize in Slack (Workflow `eventType`). */
   eventType: string
   details: string
   metadata?: Record<string, string | number | boolean | null | undefined>
 }
 
-function resolveWebhookUrl(explicit?: string | null): string | undefined {
+function resolveWebhookUrl(explicit?: string | null): string {
   return (
     explicit ||
     process.env.SLACK_OPS_WEBHOOK_URL ||
     process.env.SLACK_STRIPE_WEBHOOK_URL ||
     process.env.SLACK_FEEDBACK_WEBHOOK_URL ||
-    undefined
+    process.env.SLACK_GIFT_TOOL_WEBHOOK_URL ||
+    process.env.SLACK_VOLUNTEER_WEBHOOK_URL ||
+    SLACK_OPS_WEBHOOK_URL_DEFAULT
   )
 }
 
@@ -37,7 +45,6 @@ function formatMetadata(metadata?: SlackOpsEvent["metadata"]): string {
 }
 
 function toClassicBlocks(event: SlackOpsEvent) {
-  const meta = formatMetadata(event.metadata)
   const fields = Object.entries(event.metadata || {})
     .filter(([, value]) => value !== undefined && value !== null && value !== "")
     .slice(0, 10)
@@ -53,27 +60,17 @@ function toClassicBlocks(event: SlackOpsEvent) {
         type: "section",
         text: { type: "mrkdwn" as const, text: `*${event.eventType}*\n${event.details}` },
       },
-      ...(fields.length
-        ? [{ type: "section" as const, fields }]
-        : meta
-          ? [
-              {
-                type: "section" as const,
-                text: { type: "mrkdwn" as const, text: meta },
-              },
-            ]
-          : []),
+      ...(fields.length ? [{ type: "section" as const, fields }] : []),
     ],
   }
 }
 
-/** Fire-and-forget friendly; returns false if no URL or Slack errors. */
+/** Fire-and-forget friendly; returns false if Slack errors. */
 export async function notifySlackOps(
   event: SlackOpsEvent,
   options?: { webhookUrl?: string | null },
 ): Promise<boolean> {
   const webhookUrl = resolveWebhookUrl(options?.webhookUrl)
-  if (!webhookUrl) return false
 
   const body = isWorkflowTrigger(webhookUrl)
     ? {
