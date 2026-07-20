@@ -31,17 +31,27 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     revalidateTag(`funding-${projectSlug}`, "max")
   }
 
+  const amount = formatUsdFromCents(session.amount_total)
+  const shared = {
+    Name: name,
+    Project: project,
+    Frequency: frequency,
+    Amount: amount,
+    Email: email,
+    Session: session.id,
+  }
+
   await notifySlackOps({
     eventType: "contribution.new",
     details: `New Spark901 contribution to ${project} (${frequency})`,
-    metadata: {
-      Name: name,
-      Project: project,
-      Frequency: frequency,
-      Amount: formatUsdFromCents(session.amount_total),
-      Email: email,
-      Session: session.id,
-    },
+    metadata: shared,
+  })
+
+  // Same webhook, separate title for supporter / recognition ops.
+  await notifySlackOps({
+    eventType: "supporter.contribution",
+    details: `${name} supported ${project} — ${amount} (${frequency})`,
+    metadata: shared,
   })
 }
 
