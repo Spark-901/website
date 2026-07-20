@@ -37,19 +37,6 @@ const payloadSchema = z.object({
 })
 
 export async function POST(request: NextRequest) {
-  const webhookUrl =
-    process.env.SLACK_VOLUNTEER_WEBHOOK_URL ||
-    process.env.SLACK_OPS_WEBHOOK_URL ||
-    process.env.SLACK_FEEDBACK_WEBHOOK_URL
-
-  if (!webhookUrl) {
-    console.error("Volunteer webhook URL not configured.")
-    return NextResponse.json(
-      { error: "Service is currently unavailable." },
-      { status: 503 },
-    )
-  }
-
   let body: unknown
   try {
     body = await request.json()
@@ -72,21 +59,18 @@ export async function POST(request: NextRequest) {
   const { name, email, skills, availability, profileUrl, message } = parsed.data
 
   try {
-    const ok = await notifySlackOps(
-      {
-        eventType: "volunteer.signup",
-        details: `New volunteer signup: ${name}`,
-        metadata: {
-          Name: name,
-          Email: email,
-          Skills: skills.join(", "),
-          Availability: availability,
-          Profile: profileUrl || "",
-          Message: message || "",
-        },
+    const ok = await notifySlackOps({
+      eventType: "volunteer.signup",
+      details: `New volunteer signup: ${name}`,
+      metadata: {
+        Name: name,
+        Email: email,
+        Skills: skills.join(", "),
+        Availability: availability,
+        Profile: profileUrl || "",
+        Message: message || "",
       },
-      { webhookUrl },
-    )
+    })
 
     if (!ok) {
       return NextResponse.json(

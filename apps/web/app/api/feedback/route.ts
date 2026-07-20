@@ -2,14 +2,6 @@ import { type NextRequest, NextResponse } from "next/server"
 import { notifySlackOps } from "@/lib/slack-notify"
 
 export async function POST(request: NextRequest) {
-  const webhookUrl =
-    process.env.SLACK_FEEDBACK_WEBHOOK_URL || process.env.SLACK_OPS_WEBHOOK_URL
-
-  if (!webhookUrl) {
-    console.error("SLACK_FEEDBACK_WEBHOOK_URL / SLACK_OPS_WEBHOOK_URL is not configured.")
-    return NextResponse.json({ error: "Service is currently unavailable." }, { status: 503 })
-  }
-
   try {
     const { type, email, details } = (await request.json()) as {
       type?: string
@@ -21,19 +13,34 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Email and details are required." }, { status: 400 })
     }
 
-    const isBeta = type === "beta_signup"
-    const ok = await notifySlackOps(
-      {
-        eventType: isBeta ? "feedback.beta_signup" : "feedback.tool_suggestion",
-        details: isBeta ? "New beta tester signup" : "New tool suggestion",
-        metadata: {
-          Email: email,
-          Type: isBeta ? "beta_signup" : "tool_suggestion",
-          Details: details,
-        },
+    const kind =
+      type === "beta_signup"
+        ? "beta_signup"
+        : type === "suggest_tool" || type === "tool_suggestion"
+          ? "suggest_tool"
+          : "feedback"
+
+    const eventType =
+      kind === "beta_signup"
+        ? "feedback.beta_signup"
+        : kind === "suggest_tool"
+          ? "feedback.suggest_tool"
+          : "feedback.general"
+
+    const ok = await notifySlackOps({
+      eventType,
+      details:
+        kind === "beta_signup"
+          ? "New beta tester signup"
+          : kind === "suggest_tool"
+            ? "New tool suggestion"
+            : "New feedback",
+      metadata: {
+        Email: email,
+        Type: kind,
+        Details: details,
       },
-      { webhookUrl },
-    )
+    })
 
     if (!ok) {
       return NextResponse.json(
