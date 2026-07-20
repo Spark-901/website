@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { notifySlackOps } from "@/lib/slack-notify"
+import { verifyTurnstileToken } from "@/lib/turnstile"
 
 export async function POST(request: NextRequest) {
   try {
@@ -10,6 +11,11 @@ export async function POST(request: NextRequest) {
       if (!data[field]) {
         return NextResponse.json({ error: `Missing required field: ${field}` }, { status: 400 })
       }
+    }
+
+    const turnstile = await verifyTurnstileToken(data.turnstileToken, request)
+    if (!turnstile.ok) {
+      return NextResponse.json({ error: turnstile.error }, { status: turnstile.status })
     }
 
     const ok = await notifySlackOps({
