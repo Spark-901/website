@@ -5,18 +5,18 @@ import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ProjectCard } from "@/components/project-card"
-import { getAllProjects, type Project } from "@/lib/projects"
+import type { Project } from "@/lib/projects"
 import { Sparkles, TrendingUp } from "lucide-react"
 import { SuggestToolForm } from "@/components/suggest-tool-form"
 import { isFeatureEnabled } from "@/lib/features"
 
 type FilterStatus = "all" | "active" | "funded"
 
-export function FundAToolClient() {
+export function FundAToolClient({ projects }: { projects: Project[] }) {
   const t = useTranslations("fundATool")
   const [filter, setFilter] = useState<FilterStatus>("all")
 
-  const allProjects = getAllProjects()
+  const allProjects = projects
   const isFeedbackEnabled = isFeatureEnabled("NONPROFIT_FEEDBACK_LOOP")
 
   const filteredProjects = allProjects.filter((project: Project) => {
@@ -29,6 +29,7 @@ export function FundAToolClient() {
   const activeCount = allProjects.filter((p: Project) => p.status === "active").length
   const fundedCount = allProjects.filter((p: Project) => p.status === "funded").length
   const totalBackers = allProjects.reduce((sum, p) => sum + p.backers, 0)
+  const totalRaised = allProjects.reduce((sum, p) => sum + p.fundingRaised, 0)
 
   return (
     <div className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
@@ -45,10 +46,11 @@ export function FundAToolClient() {
           <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
             {t("description")}
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm">
+          <div className="mt-4 inline-flex flex-wrap items-center justify-center gap-2 rounded-full bg-accent/10 px-4 py-2 text-sm">
             <TrendingUp className="h-4 w-4 text-accent" aria-hidden="true" />
             <span className="text-muted-foreground">
-              <span className="font-semibold text-foreground">{totalBackers}+ backers</span> have funded our projects
+              <span className="font-semibold text-foreground">${totalRaised.toLocaleString()}</span> raised ·{" "}
+              <span className="font-semibold text-foreground">{totalBackers}</span> backers (live from Stripe)
             </span>
           </div>
         </div>

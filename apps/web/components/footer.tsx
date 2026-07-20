@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import { useTranslations } from "next-intl"
-import { Zap } from "lucide-react"
 import { Github, Twitter, Linkedin } from "@/components/ui/brand-icons"
+import { SparkLogo } from "@/components/spark-logo"
 
 export function Footer() {
   const t = useTranslations("footer")
@@ -17,13 +17,9 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="md:col-span-2">
-            <Link href="/" className="flex items-center gap-2" aria-label="Spark901 - Go to homepage">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <Zap className="h-5 w-5 text-primary-foreground" aria-hidden="true" />
-              </div>
-              <span className="text-xl font-bold tracking-tight text-foreground">Spark901</span>
+            <Link href="/" className="inline-flex items-center" aria-label="Spark901 - Go to homepage">
+              <SparkLogo variant="lockup" size={36} tagline={t("tagline")} />
             </Link>
-            <p className="mt-2 text-sm font-medium text-primary">{t("tagline")}</p>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">{t("description")}</p>
             <div className="mt-4 flex gap-4">
               <a
