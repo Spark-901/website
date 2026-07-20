@@ -1,73 +1,53 @@
-import { type NextRequest, NextResponse } from "next/server";
+import { type NextRequest, NextResponse } from "next/server"
+import { notifySlackOps } from "@/lib/slack-notify"
 
 export async function POST(request: NextRequest) {
-  const webhookUrl = process.env.SLACK_FEEDBACK_WEBHOOK_URL;
+  const webhookUrl =
+    process.env.SLACK_FEEDBACK_WEBHOOK_URL || process.env.SLACK_OPS_WEBHOOK_URL
 
   if (!webhookUrl) {
-    console.error("Slack feedback webhook URL is not configured.");
-    return NextResponse.json(
-      { error: "Service is currently unavailable." },
-      { status: 503 }
-    );
+    console.error("SLACK_FEEDBACK_WEBHOOK_URL / SLACK_OPS_WEBHOOK_URL is not configured.")
+    return NextResponse.json({ error: "Service is currently unavailable." }, { status: 503 })
   }
 
   try {
-    const { type, email, details } = await request.json();
+    const { type, email, details } = (await request.json()) as {
+      type?: string
+      email?: string
+      details?: string
+    }
 
     if (!email || !details) {
-      return NextResponse.json(
-        { error: "Email and details are required." },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Email and details are required." }, { status: 400 })
     }
 
-    const title = type === "beta_signup" ? "🆕 New Beta Tester Signup" : "💡 New Tool Suggestion";
-    const detailLabel = type === "beta_signup" ? "Tool to test" : "Pain Point";
-
-    const slackPayload = {
-      text: `${title}\n*Email:* ${email}\n*${detailLabel}:* ${details}`,
-      blocks: [
-        {
-          type: "section",
-          text: {
-            type: "mrkdwn",
-            text: `*${title}*`,
-          },
+    const isBeta = type === "beta_signup"
+    const ok = await notifySlackOps(
+      {
+        eventType: isBeta ? "feedback.beta_signup" : "feedback.tool_suggestion",
+        details: isBeta ? "New beta tester signup" : "New tool suggestion",
+        metadata: {
+          Email: email,
+          Type: isBeta ? "beta_signup" : "tool_suggestion",
+          Details: details,
         },
-        {
-          type: "section",
-          fields: [
-            {
-              type: "mrkdwn",
-              text: `*Email:*\n${email}`,
-            },
-            {
-              type: "mrkdwn",
-              text: `*${detailLabel}:*\n${details}`,
-            },
-          ],
-        },
-      ],
-    };
-
-    const response = await fetch(webhookUrl, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
       },
-      body: JSON.stringify(slackPayload),
-    });
+      { webhookUrl },
+    )
 
-    if (!response.ok) {
-      throw new Error(`Slack API responded with status ${response.status}`);
+    if (!ok) {
+      return NextResponse.json(
+        { error: "Failed to submit feedback. Please try again later." },
+        { status: 500 },
+      )
     }
 
-    return NextResponse.json({ success: true });
+    return NextResponse.json({ success: true })
   } catch (error) {
-    console.error("Feedback submission error:", error);
+    console.error("Feedback submission error:", error)
     return NextResponse.json(
       { error: "Failed to submit feedback. Please try again later." },
-      { status: 500 }
-    );
+      { status: 500 },
+    )
   }
 }
