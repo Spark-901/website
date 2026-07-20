@@ -20,6 +20,12 @@ Single source of truth: `apps/web/lib/brand.ts` → `memphisNonprofitHub`.
 
 UI: use the `MemphisNonprofitHubStats` component and `messages/*.json` under `memphisNonprofitHub` so EN/ES stay aligned.
 
+## Domain
+
+- Canonical site: **`https://spark901.com`** (not `.org`).
+- Contact email pattern: `@spark901.com` (e.g. `hello@spark901.com`).
+- Stripe webhook / Checkout return URLs use `spark901.com`.
+
 ## Conventions for agents
 
 - Match existing patterns: `next-intl`, `components/ui/*`, `lib/brand.ts` for brand constants.

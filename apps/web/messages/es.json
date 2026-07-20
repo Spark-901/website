@@ -6,6 +6,7 @@
   "nav": {
     "home": "Inicio",
     "fundATool": "Financia una Herramienta",
+    "generalFund": "Fondo General",
     "whyFund": "Por Qué Financiar",
     "about": "Nosotros",
     "transparency": "Transparencia",
@@ -18,7 +19,8 @@
       "headline": "Financia las herramientas detrás de la misión",
       "description": "Construimos infraestructura de software de código abierto que ayuda a organizaciones sin fines de lucro y comunitarias a escalar su impacto—más rápido, más económico y de manera sostenible.",
       "cta": "Financia una Herramienta",
-      "secondaryCta": "Descubre Cómo Funciona"
+      "secondaryCta": "Descubre Cómo Funciona",
+      "socialProof": "Más de {count} personas ya se unieron al movimiento"
     },
     "stats": {
       "nonprofitsHelped": "ONGs Ayudadas",
@@ -46,9 +48,15 @@
         "description": "Tu contribución impulsa tecnología que sirve a innumerables organizaciones."
       }
     },
+    "testimonials": {
+      "title": "Con la confianza de líderes de Memphis",
+      "cta": "Únete hoy"
+    },
     "cta": {
       "title": "No necesitas saber programar para financiar tecnología que cambia vidas.",
-      "button": "Financia una Herramienta Hoy"
+      "subtitle": "Únete a más de {count} personas que financian el futuro de la tecnología para ONG.",
+      "button": "Financia una Herramienta Hoy",
+      "guarantee": "Las contribuciones financian herramientas de código abierto — consulta Transparencia para el desglose"
     }
   },
   "fundATool": {
@@ -60,7 +68,10 @@
     "fundingGoal": "Meta de Financiamiento",
     "raised": "Recaudado",
     "fundThis": "Financia Esta Herramienta",
-    "viewDetails": "Ver Detalles"
+    "viewDetails": "Ver Detalles",
+    "backersCount": "{count} patrocinadores",
+    "urgency": "¡Solo faltan ${amount}!",
+    "almostThere": "¡Casi financiado!"
   },
   "projectDetail": {
     "whatItDoes": "Qué hace",
@@ -71,7 +82,10 @@
     "viewCode": "Ver el Código",
     "sponsorName": "Agrega tu nombre o dedicatoria (opcional)",
     "securePayment": "Pago seguro con Stripe",
-    "adoptingOrganizationsTitle": "Con la confianza de organizaciones líderes",
+    "guarantee": "Tu contribución financia la construcción de esta herramienta",
+    "backers": "{count} personas han financiado este proyecto",
+    "monthlySupporter": "Únete a {count} patrocinadores mensuales",
+    "adoptingOrganizationsTitle": "Hecho para organizaciones como estas",
     "milestones": "Hitos del desarrollo",
     "projectActivity": "Actividad del proyecto",
     "latestCommits": "Últimos cambios",
@@ -83,6 +97,7 @@
   },
   "whyFund": {
     "title": "¿Por Qué Financiar Tecnología Open-Source?",
+    "subtitle": "La inversión más inteligente que puedes hacer en el bien social.",
     "problem": {
       "title": "El Problema",
       "description": "La mayoría de las ONGs están atrapadas con software obsoleto y costoso que no fue diseñado para sus necesidades. Pierden tiempo y dinero en herramientas que no funcionan juntas."
@@ -94,6 +109,12 @@
     "compounding": {
       "title": "Impacto Compuesto",
       "description": "A diferencia de las donaciones tradicionales, financiar tecnología crea infraestructura permanente. Cada dólar invertido continúa generando valor indefinidamente."
+    },
+    "comparison": {
+      "traditional": "Donación tradicional",
+      "traditionalDesc": "$1,000 ayuda a una organización durante un programa",
+      "tech": "Financiamiento tecnológico Spark901",
+      "techDesc": "$1,000 ayuda a más de 100 organizaciones para siempre"
     }
   },
   "memphisNonprofitHub": {
@@ -122,14 +143,85 @@
   },
   "transparency": {
     "title": "Transparencia",
+    "subtitle": "Mira exactamente a dónde va cada dólar.",
     "howFundsUsed": "Cómo Se Usan los Fondos",
     "fundsDescription": "Cada dólar va hacia la construcción y mantenimiento de herramientas de código abierto que sirven a las ONGs. Así es como se asignan tus contribuciones:",
     "development": "Desarrollo",
+    "developmentDesc": "Salarios de ingeniería, revisión de código y pruebas",
     "infrastructure": "Infraestructura",
+    "infrastructureDesc": "Hosting, seguridad y confiabilidad",
     "community": "Comunidad",
+    "communityDesc": "Documentación, soporte y eventos",
     "operations": "Operaciones",
+    "operationsDesc": "Legal, contabilidad y administración",
     "openSourceNote": "Todo nuestro código es de código abierto y públicamente auditable en GitHub.",
     "legalNote": "Spark901 no es una organización 501(c)(3). Las contribuciones no son deducibles de impuestos."
+  },
+  "generalFund": {
+    "badge": "Capacidad del estudio",
+    "title": "Fondo General",
+    "tagline": "Apoyo flexible para las herramientas que más lo necesiten",
+    "description": "Contribuye a la capacidad compartida de Spark901: tiempo de ingeniería, hosting, seguridad y mantenimiento en todo el catálogo de código abierto. Si no sabes qué herramienta elegir, el Fondo General mantiene al estudio construyendo infraestructura pública duradera para las ONG.",
+    "catalogBlurb": "¿No estás seguro de qué herramienta financiar? Apoya la ingeniería, el hosting y el mantenimiento compartidos en todo el catálogo.",
+    "cta": "Contribuir al Fondo General",
+    "backToCatalog": "Volver a todos los proyectos",
+    "whoItHelpsTitle": "A quién ayuda",
+    "whoItHelps": "A toda organización con misión que usará las herramientas de Spark901 con el tiempo. Los aportes flexibles cubren huecos entre campañas específicas para que el trabajo no se detenga cuando un proyecto está financiado y otro apenas empieza.",
+    "allocationTitle": "Cómo se usan los aportes",
+    "allocationBody": "Las contribuciones al Fondo General respaldan primero la capacidad del estudio y luego fluyen hacia las herramientas e infraestructura que más lo necesiten. Consulta Transparencia para el modelo de asignación.",
+    "transparencyLink": "Ver cómo se asignan los fondos",
+    "raisedOf": "recaudados de una meta de ${goal}",
+    "percentFunded": "{percent}% financiado",
+    "backersLine": "{backers} patrocinadores · {monthly} mensuales",
+    "totalsNote": "Los totales se actualizan desde Stripe aproximadamente cada minuto.",
+    "guarantee": "Tu contribución financia la capacidad del estudio Spark901 y sus herramientas de código abierto.",
+    "taxNote": "Spark901 es una LLC, no una 501(c)(3). Las contribuciones no son deducibles de impuestos."
+  },
+  "thankYou": {
+    "title": "¡Eres increíble!",
+    "titleVerified": "Gracias por financiar esta herramienta",
+    "titleNamed": "¡Gracias, {name}!",
+    "subtitle": "Tu contribución a <project></project> está construyendo tecnología que empodera a las comunidades.",
+    "subtitleVerified": "Tu contribución de {amount} a <project></project> ayuda a construir infraestructura de código abierto para las ONGs.",
+    "summaryTitle": "Resumen de la contribución",
+    "summaryName": "Nombre",
+    "summaryAmount": "Monto",
+    "summaryProject": "Proyecto",
+    "summaryFrequency": "Frecuencia",
+    "summaryDate": "Fecha",
+    "summaryEmail": "Correo del recibo",
+    "frequencyOneTime": "Una sola vez",
+    "frequencyMonthly": "Mensual",
+    "impact": "Formas parte del movimiento",
+    "impactOneTime": "Las contribuciones únicas no son reembolsables y se destinan a construir esta herramienta.",
+    "impactRecurring": "Tu apoyo mensual se renueva automáticamente. Puedes cancelar en cualquier momento desde el portal de facturación.",
+    "receipt": "Se ha enviado un recibo a tu correo electrónico.",
+    "receiptTo": "Recibo de Stripe enviado a {email}",
+    "taxNote": "Spark901 es una LLC. Las contribuciones no son deducibles de impuestos, pero financian infraestructura pública permanente.",
+    "manageMonthly": "Administrar contribución mensual",
+    "share": "Compartir este proyecto",
+    "explore": "Financiar otra herramienta",
+    "questions": "¿Preguntas sobre tu contribución?",
+    "contact": "Contáctanos"
+  },
+  "funding": {
+    "selectAmount": "Elige tu contribución",
+    "customAmount": "Monto personalizado",
+    "frequency": "Con qué frecuencia",
+    "oneTime": "Una sola vez",
+    "monthly": "Mensual",
+    "monthlyBadge": "Mayor impacto",
+    "monthlySupporter": "Únete a {count} otros patrocinadores mensuales",
+    "monthlyCancelAnytime": "Cancela cuando quieras desde el portal de facturación de Stripe después del pago.",
+    "yourContribution": "Tu contribución",
+    "perMonth": "/mes",
+    "allGoesDirect": "Tu contribución financia el desarrollo de {project}.",
+    "taxDisclaimer": "Spark901 es una LLC. Las contribuciones no son deducibles de impuestos.",
+    "submitButton": "Continuar al pago seguro",
+    "processing": "Procesando...",
+    "minimumAmount": "La contribución mínima es de $5",
+    "secureNotice": "Cifrado SSL de 256 bits",
+    "stripeNotice": "Pagos procesados por Stripe"
   },
   "footer": {
     "tagline": "Código para el Bien. Impulsado en Memphis.",
@@ -151,7 +243,7 @@
     "privacy": {
       "title": "Política de Privacidad",
       "lastUpdated": "10 de abril de 2026",
-      "content": "<h2>Introducción</h2><p>Spark901 se compromete a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y compartimos información sobre usted cuando utiliza nuestro sitio web y servicios.</p><h2>Información que recopilamos</h2><p>Recopilamos información que usted nos proporciona directamente, como cuando financia una herramienta, se suscribe a nuestro boletín o nos contacta. Esto puede incluir su nombre, dirección de correo electrónico e información de pago procesada a través de nuestro proveedor externo, Stripe.</p><h2>Cómo usamos la información</h2><p>Usamos la información que recopilamos para proporcionar y mejorar nuestros servicios, procesar transacciones, comunicarnos con usted y garantizar la seguridad de nuestra plataforma.</p><h2>Intercambio de información</h2><p>No vendemos su información personal. Podemos compartir información con proveedores de servicios externos que realizan servicios en nuestro nombre, como el procesamiento de pagos y el alojamiento de datos.</p><h2>Sus derechos</h2><p>Usted tiene derecho a acceder, corregir o eliminar su información personal. Póngase en contacto con nosotros en hello@spark901.org para ejercer estos derechos.</p>"
+      "content": "<h2>Introducción</h2><p>Spark901 se compromete a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y compartimos información sobre usted cuando utiliza nuestro sitio web y servicios.</p><h2>Información que recopilamos</h2><p>Recopilamos información que usted nos proporciona directamente, como cuando financia una herramienta, se suscribe a nuestro boletín o nos contacta. Esto puede incluir su nombre, dirección de correo electrónico e información de pago procesada a través de nuestro proveedor externo, Stripe.</p><h2>Cómo usamos la información</h2><p>Usamos la información que recopilamos para proporcionar y mejorar nuestros servicios, procesar transacciones, comunicarnos con usted y garantizar la seguridad de nuestra plataforma.</p><h2>Intercambio de información</h2><p>No vendemos su información personal. Podemos compartir información con proveedores de servicios externos que realizan servicios en nuestro nombre, como el procesamiento de pagos y el alojamiento de datos.</p><h2>Sus derechos</h2><p>Usted tiene derecho a acceder, corregir o eliminar su información personal. Póngase en contacto con nosotros en hello@spark901.com para ejercer estos derechos.</p>"
     },
     "terms": {
       "title": "Términos de Servicio",
@@ -171,12 +263,12 @@
     "digitalAcceptance": {
       "title": "Aceptación Digital",
       "lastUpdated": "10 de abril de 2026",
-      "content": "<h2>Comunicaciones electrónicas</h2><p>Al usar Spark901, usted acepta recibir comunicaciones electrónicas de nuestra parte. Estas comunicaciones incluyen avisos sobre su cuenta, confirmaciones de pago y otra información relativa a nuestros servicios.</p><h2>Consentimiento para la firma electrónica</h2><p>Al hacer clic en 'Acepto' o 'Financiar una herramienta', usted acepta que su firma electrónica es tan legalmente vinculante como una firma física en un documento de papel. Este consentimiento se aplica a todas las transacciones y divulgaciones relacionadas con nuestros servicios.</p><h2>Retirada del consentimiento</h2><p>Puede retirar su consentimiento para recibir comunicaciones electrónicas en cualquier momento poniéndose en contacto con nosotros en hello@spark901.org. Si retira su consentimiento, podemos terminar su acceso a nuestros servicios.</p>"
+      "content": "<h2>Comunicaciones electrónicas</h2><p>Al usar Spark901, usted acepta recibir comunicaciones electrónicas de nuestra parte. Estas comunicaciones incluyen avisos sobre su cuenta, confirmaciones de pago y otra información relativa a nuestros servicios.</p><h2>Consentimiento para la firma electrónica</h2><p>Al hacer clic en 'Acepto' o 'Financiar una herramienta', usted acepta que su firma electrónica es tan legalmente vinculante como una firma física en un documento de papel. Este consentimiento se aplica a todas las transacciones y divulgaciones relacionadas con nuestros servicios.</p><h2>Retirada del consentimiento</h2><p>Puede retirar su consentimiento para recibir comunicaciones electrónicas en cualquier momento poniéndose en contacto con nosotros en hello@spark901.com. Si retira su consentimiento, podemos terminar su acceso a nuestros servicios.</p>"
     },
     "fairUse": {
       "title": "Política de Uso Justo",
       "lastUpdated": "10 de abril de 2026",
-      "content": "<h2>Uso aceptable</h2><p>Spark901 proporciona herramientas de plataforma a la comunidad. Usted acepta usar estas herramientas solo para los fines previstos y de una manera que no infrinja los derechos de otros.</p><h2>Actividades prohibidas</h2><p>No puede usar Spark901 para participar en ninguna actividad que sea ilegal, dañina o disruptiva. Esto incluye, entre otros, la transmisión de malware, la recopilación no autorizada de datos personales o cualquier intento de interferir con el funcionamiento de nuestra plataforma.</p><h2>Licencia de código abierto</h2><p>Las herramientas y el código desarrollados a través de Spark901 se lanzan bajo licencias de código abierto. Su uso de tales herramientas y código debe cumplir con los términos de la licencia aplicable.</p><h2>Informar de abusos</h2><p>Si encuentra algún uso de nuestra plataforma que viole esta Política de Uso Justo, infórmelo a hello@spark901.org.</p>"
+      "content": "<h2>Uso aceptable</h2><p>Spark901 proporciona herramientas de plataforma a la comunidad. Usted acepta usar estas herramientas solo para los fines previstos y de una manera que no infrinja los derechos de otros.</p><h2>Actividades prohibidas</h2><p>No puede usar Spark901 para participar en ninguna actividad que sea ilegal, dañina o disruptiva. Esto incluye, entre otros, la transmisión de malware, la recopilación no autorizada de datos personales o cualquier intento de interferir con el funcionamiento de nuestra plataforma.</p><h2>Licencia de código abierto</h2><p>Las herramientas y el código desarrollados a través de Spark901 se lanzan bajo licencias de código abierto. Su uso de tales herramientas y código debe cumplir con los términos de la licencia aplicable.</p><h2>Informar de abusos</h2><p>Si encuentra algún uso de nuestra plataforma que viole esta Política de Uso Justo, infórmelo a hello@spark901.com.</p>"
     },
     "dpa": {
       "title": "Acuerdo de Procesamiento de Datos",

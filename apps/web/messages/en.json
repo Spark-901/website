@@ -6,6 +6,7 @@
   "nav": {
     "home": "Home",
     "fundATool": "Fund a Tool",
+    "generalFund": "General Fund",
     "whyFund": "Why Fund This",
     "about": "About",
     "transparency": "Transparency",
@@ -40,7 +41,7 @@
       },
       "step2": {
         "title": "Fund the Build",
-        "description": "Contribute any amount—one-time or monthly. 100% goes to development. No overhead fees."
+        "description": "Contribute any amount—one-time or monthly. See /transparency for how funds are allocated."
       },
       "step3": {
         "title": "Watch It Multiply",
@@ -55,7 +56,7 @@
       "title": "You don't need to code to build technology that changes lives.",
       "subtitle": "Join {count}+ supporters funding the future of nonprofit tech.",
       "button": "Fund a Tool Today",
-      "guarantee": "100% of contributions go to development"
+      "guarantee": "Contributions fund open-source tools — see Transparency for the breakdown"
     }
   },
   "fundATool": {
@@ -81,10 +82,10 @@
     "viewCode": "View the Code",
     "sponsorName": "Add your name or dedication (optional)",
     "securePayment": "Secure, encrypted payment",
-    "guarantee": "100% goes to building this tool",
+    "guarantee": "Your contribution funds building this specific tool",
     "backers": "{count} people have funded this project",
     "monthlySupporter": "Join {count} monthly supporters",
-    "adoptingOrganizationsTitle": "Trusted by leading nonprofits",
+    "adoptingOrganizationsTitle": "Built for organizations like these",
     "milestones": "Development Milestones",
     "projectActivity": "Project Activity",
     "latestCommits": "Latest Commits",
@@ -156,6 +157,26 @@
     "openSourceNote": "All code is public on GitHub. Audit us anytime.",
     "legalNote": "Spark901 is an LLC, not a 501(c)(3). Contributions are not tax-deductible but do fund permanent public infrastructure."
   },
+  "generalFund": {
+    "badge": "Studio capacity",
+    "title": "General Fund",
+    "tagline": "Flexible support for whatever tools need it most",
+    "description": "Contribute to Spark901's shared capacity—engineering time, hosting, security, and maintenance across the open-source catalog. When you are not sure which tool to pick, the General Fund keeps the studio shipping durable public infrastructure for nonprofits.",
+    "catalogBlurb": "Not sure which tool to fund? Support shared engineering, hosting, and maintenance across the catalog.",
+    "cta": "Contribute to the General Fund",
+    "backToCatalog": "Back to all projects",
+    "whoItHelpsTitle": "Who it helps",
+    "whoItHelps": "Every mission-driven organization that will use Spark901 tools over time. Flexible gifts fill gaps between tool-specific campaigns so work does not stall when one project is fully funded and another is just starting.",
+    "allocationTitle": "How gifts are used",
+    "allocationBody": "General Fund contributions underwrite studio capacity first—then flow to the tools and infrastructure that need attention most. See Transparency for the allocation model.",
+    "transparencyLink": "See how funds are allocated",
+    "raisedOf": "raised of ${goal} goal",
+    "percentFunded": "{percent}% funded",
+    "backersLine": "{backers} backers · {monthly} monthly",
+    "totalsNote": "Totals refresh from Stripe about every minute.",
+    "guarantee": "Your contribution funds Spark901 studio capacity and open-source tools.",
+    "taxNote": "Spark901 is an LLC, not a 501(c)(3). Contributions are not tax-deductible."
+  },
   "funding": {
     "selectAmount": "Choose Your Contribution",
     "customAmount": "Custom amount",
@@ -163,10 +184,13 @@
     "oneTime": "One-time",
     "monthly": "Monthly",
     "monthlyBadge": "Most Impact",
+    "monthlySupporter": "Join {count} other monthly supporters",
+    "monthlyCancelAnytime": "Cancel anytime from the Stripe billing portal after checkout.",
     "yourContribution": "Your contribution",
     "perMonth": "/month",
-    "allGoesDirect": "100% goes directly to building {project}.",
-    "submitButton": "Complete Funding",
+    "allGoesDirect": "Your contribution funds building {project}.",
+    "taxDisclaimer": "Spark901 is an LLC. Contributions are not tax-deductible.",
+    "submitButton": "Continue to secure checkout",
     "processing": "Processing...",
     "minimumAmount": "Minimum contribution is $5",
     "secureNotice": "Secure 256-bit SSL encryption",
@@ -192,7 +216,7 @@
     "privacy": {
       "title": "Privacy Policy",
       "lastUpdated": "April 10, 2026",
-      "content": "<h2>Introduction</h2><p>Spark901 is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our website and services.</p><h2>Information We Collect</h2><p>We collect information you provide directly to us, such as when you fund a tool, sign up for our newsletter, or contact us. This may include your name, email address, and payment information processed through our third-party provider, Stripe.</p><h2>How We Use Information</h2><p>We use the information we collect to provide and improve our services, process transactions, communicate with you, and ensure the security of our platform.</p><h2>Sharing of Information</h2><p>We do not sell your personal information. We may share information with third-party service providers who perform services on our behalf, such as payment processing and data hosting.</p><h2>Your Rights</h2><p>You have the right to access, correct, or delete your personal information. Please contact us at hello@spark901.org to exercise these rights.</p>"
+      "content": "<h2>Introduction</h2><p>Spark901 is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our website and services.</p><h2>Information We Collect</h2><p>We collect information you provide directly to us, such as when you fund a tool, sign up for our newsletter, or contact us. This may include your name, email address, and payment information processed through our third-party provider, Stripe.</p><h2>How We Use Information</h2><p>We use the information we collect to provide and improve our services, process transactions, communicate with you, and ensure the security of our platform.</p><h2>Sharing of Information</h2><p>We do not sell your personal information. We may share information with third-party service providers who perform services on our behalf, such as payment processing and data hosting.</p><h2>Your Rights</h2><p>You have the right to access, correct, or delete your personal information. Please contact us at hello@spark901.com to exercise these rights.</p>"
     },
     "terms": {
       "title": "Terms of Service",
@@ -212,12 +236,12 @@
     "digitalAcceptance": {
       "title": "Digital Acceptance",
       "lastUpdated": "April 10, 2026",
-      "content": "<h2>Electronic Communications</h2><p>By using Spark901, you consent to receive electronic communications from us. These communications include notices about your account, payment confirmations, and other information concerning our services.</p><h2>Consent to Electronic Signature</h2><p>By clicking 'I Agree' or 'Fund a Tool', you agree that your electronic signature is as legally binding as a physical signature on a paper document. This consent applies to all transactions and disclosures related to our services.</p><h2>Withdrawing Consent</h2><p>You may withdraw your consent to receive electronic communications at any time by contacting us at hello@spark901.org. If you withdraw your consent, we may terminate your access to our services.</p>"
+      "content": "<h2>Electronic Communications</h2><p>By using Spark901, you consent to receive electronic communications from us. These communications include notices about your account, payment confirmations, and other information concerning our services.</p><h2>Consent to Electronic Signature</h2><p>By clicking 'I Agree' or 'Fund a Tool', you agree that your electronic signature is as legally binding as a physical signature on a paper document. This consent applies to all transactions and disclosures related to our services.</p><h2>Withdrawing Consent</h2><p>You may withdraw your consent to receive electronic communications at any time by contacting us at hello@spark901.com. If you withdraw your consent, we may terminate your access to our services.</p>"
     },
     "fairUse": {
       "title": "Fair Use Policy",
       "lastUpdated": "April 10, 2026",
-      "content": "<h2>Acceptable Use</h2><p>Spark901 provides platform tools to the community. You agree to use these tools only for their intended purposes and in a manner that does not infringe on the rights of others.</p><h2>Prohibited Activities</h2><p>You may not use Spark901 to engage in any activity that is illegal, harmful, or disruptive. This includes, but is not limited to, the transmission of malware, the unauthorized collection of personal data, or any attempt to interfere with the operation of our platform.</p><h2>Open Source License</h2><p>Tools and code developed through Spark901 are released under open-source licenses. Your use of such tools and code must comply with the terms of the applicable license.</p><h2>Reporting Abuse</h2><p>If you encounter any use of our platform that violates this Fair Use Policy, please report it to hello@spark901.org.</p>"
+      "content": "<h2>Acceptable Use</h2><p>Spark901 provides platform tools to the community. You agree to use these tools only for their intended purposes and in a manner that does not infringe on the rights of others.</p><h2>Prohibited Activities</h2><p>You may not use Spark901 to engage in any activity that is illegal, harmful, or disruptive. This includes, but is not limited to, the transmission of malware, the unauthorized collection of personal data, or any attempt to interfere with the operation of our platform.</p><h2>Open Source License</h2><p>Tools and code developed through Spark901 are released under open-source licenses. Your use of such tools and code must comply with the terms of the applicable license.</p><h2>Reporting Abuse</h2><p>If you encounter any use of our platform that violates this Fair Use Policy, please report it to hello@spark901.com.</p>"
     },
     "dpa": {
       "title": "Data Processing Agreement",
@@ -236,13 +260,31 @@
     "viewAll": "View All"
   },
   "thankYou": {
-    "title": "You're Incredible!",
-    "subtitle": "Your contribution to {project} is building technology that empowers communities.",
+    "title": "You're incredible!",
+    "titleVerified": "Thank you for funding this tool",
+    "titleNamed": "Thank you, {name}!",
+    "subtitle": "Your contribution to <project></project> is building technology that empowers communities.",
+    "subtitleVerified": "Your {amount} contribution to <project></project> is helping build open-source infrastructure for nonprofits.",
+    "summaryTitle": "Contribution summary",
+    "summaryName": "Name",
+    "summaryAmount": "Amount",
+    "summaryProject": "Project",
+    "summaryFrequency": "Frequency",
+    "summaryDate": "Date",
+    "summaryEmail": "Receipt email",
+    "frequencyOneTime": "One-time",
+    "frequencyMonthly": "Monthly",
     "impact": "You're part of the movement",
+    "impactOneTime": "One-time contributions are non-refundable and go toward building this tool.",
+    "impactRecurring": "Your monthly support renews automatically. You can cancel anytime from the billing portal.",
     "receipt": "A receipt has been sent to your email.",
-    "share": "Share This Project",
-    "explore": "Fund Another Tool",
-    "questions": "Questions about your contribution?"
+    "receiptTo": "Stripe receipt sent to {email}",
+    "taxNote": "Spark901 is an LLC. Contributions are not tax-deductible, but they fund permanent public infrastructure.",
+    "manageMonthly": "Manage monthly contribution",
+    "share": "Share this project",
+    "explore": "Fund another tool",
+    "questions": "Questions about your contribution?",
+    "contact": "Contact us"
   },
   "feedback": {
     "suggestTool": {

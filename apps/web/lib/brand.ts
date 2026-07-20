@@ -4,10 +4,36 @@ export const brand = {
   tagline: "Code for Good. Powered in Memphis.",
   areaCode: "901",
   location: "Memphis, Tennessee",
-  email: "hello@spark901.org",
+  email: "hello@spark901.com",
+  siteUrl: "https://spark901.com",
   github: "https://github.com/spark901",
   twitter: "https://twitter.com/spark901",
   linkedin: "https://linkedin.com/company/spark901",
+  /** Brand amber used in the spark mark / app icon (keep in sync with CSS `--brand`) */
+  accent: "#E6A328",
+  colors: {
+    amber: "#E6A328",
+    tile: "#121212",
+    tileInverse: "#F5F5F5",
+    ink: "#171717",
+  },
+  logo: {
+    /** Favicon / app icon — theme-aware via prefers-color-scheme */
+    icon: "/icon.svg",
+    /** Bare spark, inherits CSS color */
+    mark: "/brand/spark-mark.svg",
+    /** Bare spark, fixed amber */
+    markAmber: "/brand/spark-mark-amber.svg",
+    /** Horizontal lockup on white (schema.org Organization.logo) */
+    lockup: "/logo.png",
+    /** Horizontal lockup on dark */
+    lockupDark: "/logo-dark.png",
+    /** Default Open Graph / Twitter share image (1200×630) */
+    og: "/og-image.png",
+    apple: "/apple-touch-icon.png",
+    png192: "/icon-192.png",
+    png512: "/icon-512.png",
+  },
 
   // Legal
   legalEntity: "LLC",
@@ -19,7 +45,7 @@ export const brand = {
     nonprofitsHelped: 25,
     openSourceTools: 8,
     communityMembers: 500,
-    fundingRaised: 75000,
+    fundingRaised: 0,
     organizationsServed: 100,
     hoursSavedAnnually: 10000,
   },

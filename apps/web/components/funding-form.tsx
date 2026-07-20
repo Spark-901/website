@@ -1,35 +1,60 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
+import { useEffect, useState } from "react"
+import { AlertCircle, Heart, Loader2, Lock, Shield } from "lucide-react"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Badge } from "@/components/ui/badge"
-import { Heart, Loader2, AlertCircle, Shield, Lock } from "lucide-react"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { trustSignals } from "@/lib/brand"
+import { brand, trustSignals } from "@/lib/brand"
+import { CONTRIBUTION_MIN_USD, CONTRIBUTION_PRESETS_USD } from "@/lib/stripe-catalog"
 
 interface FundingFormProps {
   projectSlug: string
   projectTitle: string
   backers?: number
   monthlyBackers?: number
+  /** Prefill from tier click or ?amount= */
+  initialAmount?: number
 }
 
-const presetAmounts = [10, 25, 50, 100, 250]
-
-export function FundingForm({ projectSlug, projectTitle, backers = 0, monthlyBackers = 0 }: FundingFormProps) {
+export function FundingForm({
+  projectSlug,
+  projectTitle,
+  backers = 0,
+  monthlyBackers = 0,
+  initialAmount,
+}: FundingFormProps) {
   const t = useTranslations("funding")
-  const [amount, setAmount] = useState<number>(25)
-  const [customAmount, setCustomAmount] = useState<string>("")
+  const locale = useLocale()
+  const [amount, setAmount] = useState<number>(initialAmount && initialAmount >= 5 ? initialAmount : 25)
+  const [customAmount, setCustomAmount] = useState<string>(
+    initialAmount && initialAmount >= 5 && !CONTRIBUTION_PRESETS_USD.includes(initialAmount as (typeof CONTRIBUTION_PRESETS_USD)[number])
+      ? String(initialAmount)
+      : "",
+  )
   const [isRecurring, setIsRecurring] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  const selectedAmount = customAmount ? Number.parseInt(customAmount) : amount
+  useEffect(() => {
+    if (initialAmount == null || initialAmount < CONTRIBUTION_MIN_USD) return
+    if (CONTRIBUTION_PRESETS_USD.includes(initialAmount as (typeof CONTRIBUTION_PRESETS_USD)[number])) {
+      setAmount(initialAmount)
+      setCustomAmount("")
+    } else {
+      setCustomAmount(String(initialAmount))
+    }
+  }, [initialAmount])
+
+  const selectedAmount = customAmount ? Number.parseInt(customAmount, 10) : amount
+  const customTooLow =
+    customAmount !== "" &&
+    (!Number.isFinite(selectedAmount) || selectedAmount < CONTRIBUTION_MIN_USD)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -44,10 +69,11 @@ export function FundingForm({ projectSlug, projectTitle, backers = 0, monthlyBac
           projectSlug,
           amount: selectedAmount,
           isRecurring,
+          locale,
         }),
       })
 
-      const data = await response.json()
+      const data = (await response.json()) as { url?: string; error?: string }
 
       if (!response.ok) {
         throw new Error(data.error || "Failed to create checkout session")
@@ -82,7 +108,7 @@ export function FundingForm({ projectSlug, projectTitle, backers = 0, monthlyBac
       <div className="space-y-3">
         <Label className="text-base font-semibold">{t("selectAmount")}</Label>
         <div className="grid grid-cols-3 gap-2 sm:grid-cols-5">
-          {presetAmounts.map((preset) => (
+          {CONTRIBUTION_PRESETS_USD.map((preset) => (
             <button
               key={preset}
               type="button"
@@ -104,16 +130,15 @@ export function FundingForm({ projectSlug, projectTitle, backers = 0, monthlyBac
           <span className="text-muted-foreground">$</span>
           <Input
             type="number"
-            min="5"
+            min={CONTRIBUTION_MIN_USD}
+            step={1}
             placeholder={t("customAmount")}
             value={customAmount}
             onChange={(e) => setCustomAmount(e.target.value)}
             className="flex-1"
           />
         </div>
-        {customAmount && Number.parseInt(customAmount) < 5 && (
-          <p className="text-sm text-destructive">{t("minimumAmount")}</p>
-        )}
+        {customTooLow && <p className="text-sm text-destructive">{t("minimumAmount")}</p>}
       </div>
 
       <div className="space-y-3">
@@ -145,8 +170,10 @@ export function FundingForm({ projectSlug, projectTitle, backers = 0, monthlyBac
             </Badge>
           </Label>
         </RadioGroup>
-        {isRecurring && monthlyBackers > 0 && (
-          <p className="text-center text-xs text-muted-foreground">Join {monthlyBackers} other monthly supporters</p>
+        {isRecurring && (
+          <p className="text-center text-xs text-muted-foreground">
+            {monthlyBackers > 0 ? t("monthlySupporter", { count: monthlyBackers }) : t("monthlyCancelAnytime")}
+          </p>
         )}
       </div>
 
@@ -154,21 +181,30 @@ export function FundingForm({ projectSlug, projectTitle, backers = 0, monthlyBac
         <div className="flex items-center justify-between text-sm">
           <span className="text-muted-foreground">{t("yourContribution")}</span>
           <span className="text-lg font-bold text-foreground">
-            ${selectedAmount || 0}
-            {isRecurring && <span className="text-sm font-normal text-muted-foreground">{t("perMonth")}</span>}
+            ${Number.isFinite(selectedAmount) ? selectedAmount : 0}
+            {isRecurring && (
+              <span className="text-sm font-normal text-muted-foreground">{t("perMonth")}</span>
+            )}
           </span>
         </div>
-        <p className="mt-2 text-xs text-muted-foreground">{t("allGoesDirect", { project: projectTitle })}</p>
+        <p className="mt-2 text-xs text-muted-foreground">
+          {t("allGoesDirect", { project: projectTitle })}
+        </p>
+        {!brand.isTaxDeductible && (
+          <p className="mt-2 text-xs text-muted-foreground">{t("taxDisclaimer")}</p>
+        )}
       </div>
 
       <Button
         type="submit"
         size="lg"
         className="w-full gap-2 bg-accent text-accent-foreground shadow-lg hover:bg-accent/90"
-        disabled={isLoading || (customAmount !== "" && Number.parseInt(customAmount) < 5)}
+        disabled={isLoading || customTooLow || !selectedAmount}
       >
         {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Heart className="h-5 w-5" />}
-        {isLoading ? t("processing") : `${t("submitButton")} — $${selectedAmount || 0}`}
+        {isLoading
+          ? t("processing")
+          : `${t("submitButton")} — $${Number.isFinite(selectedAmount) ? selectedAmount : 0}`}
       </Button>
 
       <div className="flex flex-col items-center gap-2 text-xs text-muted-foreground">
