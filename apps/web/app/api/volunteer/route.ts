@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { z } from "zod"
+import { notifySlackOps } from "@/lib/slack-notify"
 
 const ALLOWED_SKILLS = [
   "engineering",
@@ -36,7 +37,10 @@ const payloadSchema = z.object({
 })
 
 export async function POST(request: NextRequest) {
-  const webhookUrl = process.env.SLACK_VOLUNTEER_WEBHOOK_URL || process.env.SLACK_FEEDBACK_WEBHOOK_URL
+  const webhookUrl =
+    process.env.SLACK_VOLUNTEER_WEBHOOK_URL ||
+    process.env.SLACK_OPS_WEBHOOK_URL ||
+    process.env.SLACK_FEEDBACK_WEBHOOK_URL
 
   if (!webhookUrl) {
     console.error("Volunteer webhook URL not configured.")
@@ -67,50 +71,28 @@ export async function POST(request: NextRequest) {
 
   const { name, email, skills, availability, profileUrl, message } = parsed.data
 
-  const slackPayload = {
-    text: `🧑‍💻 New volunteer signup: ${name} <${email}>`,
-    blocks: [
-      {
-        type: "section",
-        text: { type: "mrkdwn", text: "*🧑‍💻 New volunteer signup*" },
-      },
-      {
-        type: "section",
-        fields: [
-          { type: "mrkdwn", text: `*Name:*\n${name}` },
-          { type: "mrkdwn", text: `*Email:*\n${email}` },
-          { type: "mrkdwn", text: `*Skills:*\n${skills.join(", ")}` },
-          { type: "mrkdwn", text: `*Availability:*\n${availability}` },
-        ],
-      },
-      ...(profileUrl
-        ? [
-            {
-              type: "section",
-              text: { type: "mrkdwn", text: `*Profile:* ${profileUrl}` },
-            },
-          ]
-        : []),
-      ...(message
-        ? [
-            {
-              type: "section",
-              text: { type: "mrkdwn", text: `*Message:*\n${message}` },
-            },
-          ]
-        : []),
-    ],
-  }
-
   try {
-    const response = await fetch(webhookUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(slackPayload),
-    })
+    const ok = await notifySlackOps(
+      {
+        eventType: "volunteer.signup",
+        details: `New volunteer signup: ${name}`,
+        metadata: {
+          Name: name,
+          Email: email,
+          Skills: skills.join(", "),
+          Availability: availability,
+          Profile: profileUrl || "",
+          Message: message || "",
+        },
+      },
+      { webhookUrl },
+    )
 
-    if (!response.ok) {
-      throw new Error(`Slack API responded with status ${response.status}`)
+    if (!ok) {
+      return NextResponse.json(
+        { error: "Failed to submit. Please try again later." },
+        { status: 500 },
+      )
     }
 
     return NextResponse.json({ success: true })
