@@ -31,3 +31,4 @@ UI: use the `MemphisNonprofitHubStats` component and `messages/*.json` under `me
 - Match existing patterns: `next-intl`, `components/ui/*`, `lib/brand.ts` for brand constants.
 - Do not add tax-deduction promises or “we are a nonprofit” claims without explicit legal verification.
 - When adding fundraising or impact copy, tie it to **open infrastructure** and **verified** legal disclosures.
+- **Public forms / lead APIs**: protect with Cloudflare Turnstile (`TurnstileField` + `verifyTurnstileToken` in `apps/web`). Env: `NEXT_PUBLIC_TURNSTILE_SITE_KEY`, `SPARK901_TURNSTILE_SECRET_KEY`. See `.cursor/rules/spark901-turnstile.mdc`. Skip for Stripe Checkout/portal and signed webhooks only.

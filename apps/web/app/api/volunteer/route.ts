@@ -1,6 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { z } from "zod"
 import { notifySlackOps } from "@/lib/slack-notify"
+import { verifyTurnstileToken } from "@/lib/turnstile"
 
 const ALLOWED_SKILLS = [
   "engineering",
@@ -34,6 +35,7 @@ const payloadSchema = z.object({
     }),
   message: z.string().trim().max(2000).optional(),
   website: z.string().max(0).optional(),
+  turnstileToken: z.string().min(1),
 })
 
 export async function POST(request: NextRequest) {
@@ -54,6 +56,11 @@ export async function POST(request: NextRequest) {
 
   if (parsed.data.website && parsed.data.website.length > 0) {
     return NextResponse.json({ success: true })
+  }
+
+  const turnstile = await verifyTurnstileToken(parsed.data.turnstileToken, request)
+  if (!turnstile.ok) {
+    return NextResponse.json({ error: turnstile.error }, { status: turnstile.status })
   }
 
   const { name, email, skills, availability, profileUrl, message } = parsed.data

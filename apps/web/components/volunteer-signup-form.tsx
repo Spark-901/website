@@ -33,6 +33,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { TurnstileField } from "@/components/turnstile-field"
 
 const SKILL_VALUES = [
   "engineering",
@@ -83,6 +84,8 @@ export function VolunteerSignupForm() {
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null)
+  const [turnstileKey, setTurnstileKey] = useState(0)
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -98,12 +101,17 @@ export function VolunteerSignupForm() {
   })
 
   async function onSubmit(values: FormValues) {
+    if (!turnstileToken) {
+      toast({ title: t("error"), variant: "destructive" })
+      return
+    }
+
     setIsSubmitting(true)
     try {
       const response = await fetch("/api/volunteer", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
+        body: JSON.stringify({ ...values, turnstileToken }),
       })
 
       if (!response.ok) {
@@ -112,8 +120,11 @@ export function VolunteerSignupForm() {
 
       toast({ title: t("success") })
       setSubmitted(true)
+      setTurnstileToken(null)
       form.reset()
     } catch {
+      setTurnstileToken(null)
+      setTurnstileKey((k) => k + 1)
       toast({ title: t("error"), variant: "destructive" })
     } finally {
       setIsSubmitting(false)
@@ -289,7 +300,13 @@ export function VolunteerSignupForm() {
                 )}
               />
 
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
+              <TurnstileField key={turnstileKey} onTokenChange={setTurnstileToken} />
+
+              <Button
+                type="submit"
+                className="w-full"
+                disabled={isSubmitting || !turnstileToken}
+              >
                 {isSubmitting ? t("submitting") : t("submit")}
               </Button>
             </form>
