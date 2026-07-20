@@ -16,6 +16,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
 import { useToast } from '@/components/ui/use-toast'
+import { TurnstileField } from '@/components/turnstile-field'
 
 interface GiftToolDialogProps {
   projectTitle: string
@@ -25,10 +26,21 @@ interface GiftToolDialogProps {
 export function GiftToolDialog({ projectTitle, projectSlug }: GiftToolDialogProps) {
   const [isOpen, setIsOpen] = React.useState(false)
   const [isLoading, setIsLoading] = React.useState(false)
+  const [turnstileToken, setTurnstileToken] = React.useState<string | null>(null)
+  const [turnstileKey, setTurnstileKey] = React.useState(0)
   const { toast } = useToast()
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    if (!turnstileToken) {
+      toast({
+        title: "Verification required",
+        description: "Please complete the security check and try again.",
+        variant: "destructive",
+      })
+      return
+    }
+
     setIsLoading(true)
 
     const formData = new FormData(event.currentTarget)
@@ -41,6 +53,7 @@ export function GiftToolDialog({ projectTitle, projectSlug }: GiftToolDialogProp
       targetNonprofit: formData.get('targetNonprofit'),
       targetWebsite: formData.get('targetWebsite'),
       message: formData.get('message'),
+      turnstileToken,
     }
 
     try {
@@ -60,8 +73,12 @@ export function GiftToolDialog({ projectTitle, projectSlug }: GiftToolDialogProp
         title: "Request Sent!",
         description: "We've received your gift request and will be in touch soon.",
       })
+      setTurnstileToken(null)
+      setTurnstileKey((k) => k + 1)
       setIsOpen(false)
     } catch (error) {
+      setTurnstileToken(null)
+      setTurnstileKey((k) => k + 1)
       toast({
         title: "Submission Failed",
         description: "There was an error sending your request. Please try again.",
@@ -116,9 +133,10 @@ export function GiftToolDialog({ projectTitle, projectSlug }: GiftToolDialogProp
               <Label htmlFor="message">Message (Optional)</Label>
               <Textarea id="message" name="message" placeholder="Tell us why you'd like to gift this tool..." />
             </div>
+            <TurnstileField key={turnstileKey} onTokenChange={setTurnstileToken} />
           </div>
           <DialogFooter>
-            <Button type="submit" disabled={isLoading} className="w-full">
+            <Button type="submit" disabled={isLoading || !turnstileToken} className="w-full">
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Submit Gift Request
             </Button>
