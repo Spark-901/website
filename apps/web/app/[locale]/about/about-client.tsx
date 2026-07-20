@@ -12,32 +12,6 @@ import { MemphisNonprofitHubStats } from "@/components/memphis-nonprofit-hub-sta
 export function AboutClient() {
   const t = useTranslations("about")
 
-  const team = [
-    {
-      name: "Alex Johnson",
-      role: "Founder & Lead Engineer",
-      image: "/professional-headshot-male-software-engineer.jpg",
-    },
-    {
-      name: "Maria Garcia",
-      role: "Community Director",
-      image: "/professional-headshot-female-community-manager.jpg",
-    },
-    {
-      name: "David Chen",
-      role: "Senior Developer",
-      image: "/professional-headshot-asian-male-developer.jpg",
-    },
-  ]
-
-  const partners = [
-    "Memphis Food Bank",
-    "Mid-South Community Foundation",
-    "United Way of the Mid-South",
-    "Memphis Urban League",
-    "Church Health",
-  ]
-
   return (
     <div className="flex flex-col">
       {/* Hero */}
@@ -125,59 +99,6 @@ export function AboutClient() {
                 <p className="mt-2 leading-relaxed text-muted-foreground">{t("values.memphisDesc")}</p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Team */}
-      <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8" aria-labelledby="team-title">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center">
-            <h2 id="team-title" className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              The Team
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              We're engineers, designers, and community builders united by a shared belief: technology should serve
-              everyone.
-            </p>
-          </div>
-          <div className="mt-12 grid justify-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {team.map((member) => (
-              <Card key={member.name} className="overflow-hidden border-none bg-card shadow-sm">
-                <div className="aspect-square overflow-hidden bg-muted">
-                  <img
-                    src={member.image || "/placeholder.svg"}
-                    alt={`${member.name}, ${member.role}`}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <CardContent className="p-4 text-center">
-                  <h3 className="font-semibold text-foreground">{member.name}</h3>
-                  <p className="text-sm text-muted-foreground">{member.role}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Partners */}
-      <section className="bg-muted/30 px-4 py-16 sm:px-6 sm:py-20 lg:px-8" aria-labelledby="partners-title">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center">
-            <h2 id="partners-title" className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-              Our Partners
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              Proud to work alongside these incredible organizations making a difference in Memphis and beyond.
-            </p>
-          </div>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
-            {partners.map((partner) => (
-              <div key={partner} className="rounded-lg bg-card px-6 py-4 text-center shadow-sm">
-                <p className="font-medium text-foreground">{partner}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
