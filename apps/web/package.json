@@ -9,7 +9,8 @@
     "start": "next start",
     "type-check": "tsc --noEmit",
     "stripe:setup-sandbox": "node scripts/setup-stripe-sandbox.mjs",
-    "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks/stripe"
+    "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks/stripe",
+    "stripe:set-production": "node scripts/set-vercel-stripe-production.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",

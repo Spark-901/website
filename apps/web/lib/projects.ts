@@ -99,7 +99,7 @@ export const projects: Project[] = [
       {
         name: "RiseTN",
         website: "https://risetn.org",
-        note: "Memphis mobile services — coordinating volunteers & community programs",
+        note: "Memphis mobile services — volunteer & program coordination",
       },
       {
         name: "Restore Corps (Freed Life)",
@@ -276,12 +276,12 @@ export const projects: Project[] = [
       {
         name: "Restore Corps (Freed Life)",
         website: "https://restorecorps.org",
-        note: "Community education & survivor-support engagement across West Tennessee",
+        note: "Community education & survivor-support engagement in West TN",
       },
       {
         name: "RiseTN",
         website: "https://risetn.org",
-        note: "Neighborhood-connected programming and partner coordination in Memphis",
+        note: "Neighborhood programming & partner coordination in Memphis",
       },
     ],
     milestones: [
@@ -291,10 +291,96 @@ export const projects: Project[] = [
       { title: "v1.0 Launch", targetAmount: 30000, status: "pending", description: "Public open-source release" },
     ],
   },
+  {
+    id: "proj_general",
+    slug: "general",
+    name: "General Fund",
+    tagline: "Flexible support for whatever tools need it most",
+    description:
+      "Contribute to Spark901's shared capacity—engineering time, hosting, security, and maintenance across the open-source catalog. When you are not sure which tool to pick, the General Fund keeps the studio shipping durable public infrastructure for nonprofits.",
+    whoItHelps:
+      "Every mission-driven organization that will use Spark901 tools over time. Flexible gifts fill gaps between tool-specific campaigns so work does not stall when one project is fully funded and another is just starting.",
+    fundingGoal: 25000,
+    fundingRaised: 0,
+    backers: 0,
+    monthlyBackers: 0,
+    status: "active",
+    category: "Studio",
+    impactMetrics: [
+      { label: "Allocation", value: "Studio capacity" },
+      { label: "Transparency", value: "/transparency" },
+      { label: "Legal status", value: "LLC (not 501c3)" },
+    ],
+    fundingTiers: [
+      {
+        name: "Supporter",
+        amount: 25,
+        description: "Keep the lights on for shared infrastructure",
+        benefits: ["Progress updates by email", "Listed as a General Fund backer"],
+      },
+      {
+        name: "Builder",
+        amount: 100,
+        description: "Fund a week of focused engineering capacity",
+        benefits: ["All Supporter benefits", "Priority updates on where gifts landed"],
+      },
+      {
+        name: "Champion",
+        amount: 500,
+        description: "Underwrite a meaningful sprint across tools",
+        benefits: ["All Builder benefits", "Roadmap input with the team"],
+      },
+      {
+        name: "Studio Sponsor",
+        amount: 2500,
+        description: "Named recognition for flexible studio support",
+        benefits: ["All Champion benefits", "Named recognition on studio materials"],
+      },
+    ],
+    githubUrl: "https://github.com/spark901",
+    imageQuery: "memphis skyline community technology studio",
+    milestones: [
+      {
+        title: "Hosting & security baseline",
+        targetAmount: 5000,
+        status: "pending",
+        description: "Stable hosting, monitoring, and hardening for public tools",
+      },
+      {
+        title: "Cross-tool maintenance",
+        targetAmount: 12000,
+        status: "pending",
+        description: "Shared libraries, docs, and dependency upkeep",
+      },
+      {
+        title: "Next tool sprint buffer",
+        targetAmount: 20000,
+        status: "pending",
+        description: "Capacity to start the next highest-need tool without waiting",
+      },
+      {
+        title: "Annual studio capacity",
+        targetAmount: 25000,
+        status: "pending",
+        description: "Flexible runway for Memphis-rooted open infrastructure",
+      },
+    ],
+  },
 ]
+
+export const GENERAL_FUND_SLUG = "general"
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug)
+}
+
+export function getGeneralFund(): Project | undefined {
+  return getProjectBySlug(GENERAL_FUND_SLUG)
+}
+
+/** Tool campaigns only — excludes the studio General Fund. */
+export function getToolProjects(): Project[] {
+  return projects.filter((p) => p.slug !== GENERAL_FUND_SLUG)
 }
 
 export function getProjectsByStatus(status: Project["status"]): Project[] {

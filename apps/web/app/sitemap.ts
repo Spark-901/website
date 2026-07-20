@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next"
-import { projects } from "@/lib/projects"
+import { GENERAL_FUND_SLUG, projects } from "@/lib/projects"
 import { locales } from "@/i18n/config"
 import {
   SEO_ROUTES,
@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     for (const project of projects) {
+      // Covered by SEO_ROUTES `/fund/general`
+      if (project.slug === GENERAL_FUND_SLUG) continue
       entries.push({
         url: absoluteLocalizedUrl(locale, `/fund/${project.slug}`),
         lastModified: now,

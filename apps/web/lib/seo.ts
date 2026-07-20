@@ -5,7 +5,7 @@ import type { Project } from "@/lib/projects"
 
 /** Canonical public origin — override with NEXT_PUBLIC_SITE_URL in non-prod. */
 export const SITE_URL = (
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://spark901.org"
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://spark901.com"
 ).replace(/\/$/, "")
 
 export const SITE_NAME = brand.name
@@ -16,6 +16,7 @@ const DEFAULT_OG_ALT = `${brand.name} — ${brand.tagline}`
 export const SEO_ROUTES = [
   { path: "", changeFrequency: "weekly" as const, priority: 1 },
   { path: "/fund", changeFrequency: "daily" as const, priority: 0.9 },
+  { path: "/fund/general", changeFrequency: "weekly" as const, priority: 0.85 },
   { path: "/why-fund", changeFrequency: "monthly" as const, priority: 0.8 },
   { path: "/about", changeFrequency: "monthly" as const, priority: 0.7 },
   { path: "/volunteer", changeFrequency: "monthly" as const, priority: 0.7 },

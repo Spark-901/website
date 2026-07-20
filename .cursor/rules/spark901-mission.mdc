@@ -10,5 +10,6 @@ alwaysApply: true
 - **Local identity**: Based in **Memphis (901 / Mid-South)**. Memphis is a **nonprofit hub**; the team sees **developers in the Digital Delta** as natural allies for strengthening that ecosystem—not replacing missions, but multiplying them with better tools.
 - **Legal honesty**: Spark901 is **not a 501(c)(3)** today (e.g. Tennessee **LLC**). **Contributions are not tax-deductible** unless legal status changes. Never imply charitable tax status in copy, metadata, or UI without verification.
 - **Tone**: Hopeful, direct, community-first. Acknowledge limits; celebrate open source and transparency (`/transparency`).
+- **Domain**: Public site is **`https://spark901.com`** (not `.org`). Keep env, SEO, Stripe, and copy on `.com`.
 
 When adding features or copy, **stay aligned with this mission** and **do not overstate** nonprofit or tax status.

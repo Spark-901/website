@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { Github, Twitter, Linkedin } from "@/components/ui/brand-icons"
 import { SparkLogo } from "@/components/spark-logo"
+import { brand } from "@/lib/brand"
 
 export function Footer() {
   const t = useTranslations("footer")
@@ -64,6 +65,14 @@ export function Footer() {
               <li>
                 <Link href="/fund" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
                   {nav("fundATool")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/fund/general"
+                  className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {nav("generalFund")}
                 </Link>
               </li>
               <li>
@@ -148,7 +157,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:hello@spark901.org"
+                  href={`mailto:${brand.email}`}
                   className="text-sm text-muted-foreground transition-colors hover:text-foreground"
                 >
                   {t("contact")}
