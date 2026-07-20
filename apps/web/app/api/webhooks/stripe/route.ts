@@ -1,31 +1,10 @@
 import { revalidateTag } from "next/cache"
 import { type NextRequest, NextResponse } from "next/server"
 import type Stripe from "stripe"
+import { notifySlackOps } from "@/lib/slack-notify"
 import { isStripeConfigured, requireStripe } from "@/lib/stripe"
 
 export const runtime = "nodejs"
-
-async function notifyOps(text: string, fields: Record<string, string>) {
-  const webhookUrl = process.env.SLACK_STRIPE_WEBHOOK_URL || process.env.SLACK_FEEDBACK_WEBHOOK_URL
-  if (!webhookUrl) return
-
-  const fieldBlocks = Object.entries(fields).map(([label, value]) => ({
-    type: "mrkdwn" as const,
-    text: `*${label}:*\n${value}`,
-  }))
-
-  await fetch(webhookUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      text,
-      blocks: [
-        { type: "section", text: { type: "mrkdwn", text: `*${text}*` } },
-        { type: "section", fields: fieldBlocks.slice(0, 10) },
-      ],
-    }),
-  }).catch((err) => console.error("Stripe ops Slack notify failed:", err))
-}
 
 function formatUsdFromCents(cents: number | null | undefined): string {
   if (cents == null) return "unknown"
@@ -52,13 +31,17 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
     revalidateTag(`funding-${projectSlug}`, "max")
   }
 
-  await notifyOps("New Spark901 contribution", {
-    Name: name,
-    Project: project,
-    Frequency: frequency,
-    Amount: formatUsdFromCents(session.amount_total),
-    Email: email,
-    Session: session.id,
+  await notifySlackOps({
+    eventType: "contribution.new",
+    details: `New Spark901 contribution to ${project} (${frequency})`,
+    metadata: {
+      Name: name,
+      Project: project,
+      Frequency: frequency,
+      Amount: formatUsdFromCents(session.amount_total),
+      Email: email,
+      Session: session.id,
+    },
   })
 }
 
@@ -82,12 +65,16 @@ async function handleInvoicePaid(invoice: Stripe.Invoice) {
     amountPaid: invoice.amount_paid,
   })
 
-  await notifyOps("Monthly contribution renewed", {
-    Amount: formatUsdFromCents(invoice.amount_paid),
-    Invoice: invoice.id || "unknown",
-    Subscription: sub || "unknown",
-    Customer:
-      typeof invoice.customer === "string" ? invoice.customer : invoice.customer?.id || "unknown",
+  await notifySlackOps({
+    eventType: "contribution.renewed",
+    details: "Monthly contribution renewed",
+    metadata: {
+      Amount: formatUsdFromCents(invoice.amount_paid),
+      Invoice: invoice.id || "unknown",
+      Subscription: sub || "unknown",
+      Customer:
+        typeof invoice.customer === "string" ? invoice.customer : invoice.customer?.id || "unknown",
+    },
   })
 }
 
@@ -97,10 +84,17 @@ async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
     project: subscription.metadata?.projectSlug,
   })
 
-  await notifyOps("Monthly contribution canceled", {
-    Subscription: subscription.id,
-    Project: subscription.metadata?.projectTitle || subscription.metadata?.projectSlug || "unknown",
-    Customer: typeof subscription.customer === "string" ? subscription.customer : subscription.customer.id,
+  await notifySlackOps({
+    eventType: "contribution.canceled",
+    details: "Monthly contribution canceled",
+    metadata: {
+      Subscription: subscription.id,
+      Project: subscription.metadata?.projectTitle || subscription.metadata?.projectSlug || "unknown",
+      Customer:
+        typeof subscription.customer === "string"
+          ? subscription.customer
+          : subscription.customer.id,
+    },
   })
 }
 
