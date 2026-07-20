@@ -17,6 +17,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { TurnstileField } from '@/components/turnstile-field';
 
 const formSchema = z.object({
   email: z.string().email({
@@ -32,6 +33,8 @@ export function BetaTesterSignupForm({ projectName }: BetaTesterSignupFormProps)
   const t = useTranslations('feedback.betaSignup');
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const [turnstileKey, setTurnstileKey] = useState(0);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -41,6 +44,14 @@ export function BetaTesterSignupForm({ projectName }: BetaTesterSignupFormProps)
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    if (!turnstileToken) {
+      toast({
+        title: t('error'),
+        variant: 'destructive',
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     try {
       const response = await fetch('/api/feedback', {
@@ -52,6 +63,7 @@ export function BetaTesterSignupForm({ projectName }: BetaTesterSignupFormProps)
           type: 'beta_signup',
           email: values.email,
           details: projectName,
+          turnstileToken,
         }),
       });
 
@@ -62,8 +74,12 @@ export function BetaTesterSignupForm({ projectName }: BetaTesterSignupFormProps)
       toast({
         title: t('success'),
       });
+      setTurnstileToken(null);
+      setTurnstileKey((k) => k + 1);
       form.reset();
     } catch (error) {
+      setTurnstileToken(null);
+      setTurnstileKey((k) => k + 1);
       toast({
         title: t('error'),
         variant: 'destructive',
@@ -95,7 +111,12 @@ export function BetaTesterSignupForm({ projectName }: BetaTesterSignupFormProps)
                 </FormItem>
               )}
             />
-            <Button type="submit" className="w-full" disabled={isSubmitting}>
+            <TurnstileField key={turnstileKey} onTokenChange={setTurnstileToken} />
+            <Button
+              type="submit"
+              className="w-full"
+              disabled={isSubmitting || !turnstileToken}
+            >
               {isSubmitting ? t('submitting') : t('submit')}
             </Button>
           </form>

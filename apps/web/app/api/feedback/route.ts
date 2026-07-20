@@ -1,16 +1,23 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { notifySlackOps } from "@/lib/slack-notify"
+import { verifyTurnstileToken } from "@/lib/turnstile"
 
 export async function POST(request: NextRequest) {
   try {
-    const { type, email, details } = (await request.json()) as {
+    const { type, email, details, turnstileToken } = (await request.json()) as {
       type?: string
       email?: string
       details?: string
+      turnstileToken?: string
     }
 
     if (!email || !details) {
       return NextResponse.json({ error: "Email and details are required." }, { status: 400 })
+    }
+
+    const turnstile = await verifyTurnstileToken(turnstileToken, request)
+    if (!turnstile.ok) {
+      return NextResponse.json({ error: turnstile.error }, { status: turnstile.status })
     }
 
     const kind =
