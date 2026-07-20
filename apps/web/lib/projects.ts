@@ -25,7 +25,9 @@ export interface Project {
   imageQuery: string
   adoptingOrganizations?: {
     name: string
-    logoUrl: string
+    logoUrl?: string
+    website?: string
+    note?: string
   }[]
   liveSavings?: {
     label: string
@@ -43,7 +45,7 @@ export interface Project {
   }[]
 }
 
-// Sample projects - replace with your actual projects
+// Campaign catalog — fundingRaised/backers stay at 0 until wired to Stripe webhooks + storage.
 export const projects: Project[] = [
   {
     id: "proj_001",
@@ -55,60 +57,60 @@ export const projects: Project[] = [
     whoItHelps:
       "Food banks, shelters, community centers, and any organization that relies on volunteers. Especially valuable for orgs managing 50+ volunteers.",
     fundingGoal: 15000,
-    fundingRaised: 8750,
-    backers: 47,
-    monthlyBackers: 12,
+    fundingRaised: 0,
+    backers: 0,
+    monthlyBackers: 0,
     status: "active",
     category: "Operations",
     impactMetrics: [
-      { label: "Hours Saved Monthly", value: "120+" },
-      { label: "Volunteer Retention", value: "+35%" },
-      { label: "Organizations Ready to Use", value: "50+" },
+      { label: "Target orgs (first release)", value: "10+" },
+      { label: "Hours saved goal / month", value: "100+" },
+      { label: "License", value: "Open source" },
     ],
     fundingTiers: [
       {
         name: "Supporter",
         amount: 50,
         description: "Help us build essential features",
-        benefits: ["Name on supporters page", "Monthly progress updates"],
+        benefits: ["Progress updates by email", "Listed as an early backer"],
       },
       {
         name: "Builder",
         amount: 250,
         description: "Fund a specific feature sprint",
-        benefits: ["All Supporter benefits", "Early access to new features", "Quarterly impact reports"],
+        benefits: ["All Supporter benefits", "Early access when beta opens"],
       },
       {
         name: "Champion",
         amount: 1000,
         description: "Major impact on development",
-        benefits: ["All Builder benefits", "Logo on project page", "Direct line to dev team"],
+        benefits: ["All Builder benefits", "Roadmap input with the team"],
       },
       {
         name: "Founding Sponsor",
         amount: 5000,
         description: "Named sponsorship opportunity",
-        benefits: ["All Champion benefits", "Named feature dedication", "Speaking opportunity at launch"],
+        benefits: ["All Champion benefits", "Named recognition on project materials"],
       },
     ],
     githubUrl: "https://github.com/spark901/volunteer-scheduler",
     imageQuery: "volunteer management app dashboard modern",
     adoptingOrganizations: [
-      { name: "Memphis Food Bank", logoUrl: "/placeholder-logo.png" },
-      { name: "Shelter Memphis", logoUrl: "/placeholder-logo.png" },
-      { name: "Community Center", logoUrl: "/placeholder-logo.png" },
+      {
+        name: "RiseTN",
+        website: "https://risetn.org",
+        note: "Memphis mobile services — volunteer & program coordination",
+      },
+      {
+        name: "Restore Corps (Freed Life)",
+        website: "https://restorecorps.org",
+        note: "West TN anti-trafficking care — volunteer & program scheduling",
+      },
     ],
-    liveSavings: {
-      label: "Total Hours Saved Across All Orgs",
-      baseValue: 12450,
-      incrementAmount: 1,
-      intervalMs: 5000,
-      suffix: " hrs",
-    },
     milestones: [
-      { title: "Core Framework", targetAmount: 3000, status: "completed", description: "Base infrastructure and auth" },
-      { title: "Beta Release", targetAmount: 7500, status: "completed", description: "Mobile-responsive volunteer views" },
-      { title: "Admin Portal", targetAmount: 12000, status: "in-progress", description: "Nonprofit dashboard and analytics" },
+      { title: "Core Framework", targetAmount: 3000, status: "pending", description: "Base infrastructure and auth" },
+      { title: "Beta Release", targetAmount: 7500, status: "pending", description: "Mobile-responsive volunteer views" },
+      { title: "Admin Portal", targetAmount: 12000, status: "pending", description: "Nonprofit dashboard and analytics" },
       { title: "v1.0 Launch", targetAmount: 15000, status: "pending", description: "Public release with data exports" },
     ],
   },
@@ -122,55 +124,50 @@ export const projects: Project[] = [
     whoItHelps:
       "Small to mid-size nonprofits managing multiple grants, especially those without dedicated grant writers or development staff.",
     fundingGoal: 25000,
-    fundingRaised: 25000,
-    backers: 89,
-    monthlyBackers: 23,
-    status: "funded",
+    fundingRaised: 0,
+    backers: 0,
+    monthlyBackers: 0,
+    status: "active",
     category: "Fundraising",
     impactMetrics: [
-      { label: "Grant Success Rate", value: "+28%" },
-      { label: "Admin Time Saved", value: "15 hrs/week" },
-      { label: "Currently in Beta", value: "12 orgs" },
+      { label: "Grants tracked (goal)", value: "Multi-grant" },
+      { label: "Admin time saved (goal)", value: "Hours/week" },
+      { label: "License", value: "Open source" },
     ],
     fundingTiers: [
       {
         name: "Supporter",
         amount: 100,
-        description: "Support ongoing maintenance",
-        benefits: ["Name on supporters page", "Monthly progress updates"],
+        description: "Support core grant workflow",
+        benefits: ["Progress updates by email", "Listed as an early backer"],
       },
       {
         name: "Builder",
         amount: 500,
-        description: "Fund feature enhancements",
-        benefits: ["All Supporter benefits", "Early access to new features", "Quarterly impact reports"],
+        description: "Fund feature development",
+        benefits: ["All Supporter benefits", "Early access when beta opens"],
       },
       {
         name: "Champion",
         amount: 2500,
         description: "Major development support",
-        benefits: ["All Builder benefits", "Logo on project page", "Advisory input on roadmap"],
+        benefits: ["All Builder benefits", "Roadmap input with the team"],
       },
       {
         name: "Founding Sponsor",
         amount: 10000,
         description: "Named sponsorship opportunity",
-        benefits: ["All Champion benefits", "Named module dedication", "Featured case study"],
+        benefits: ["All Champion benefits", "Named recognition on project materials"],
       },
     ],
     githubUrl: "https://github.com/spark901/grant-tracker",
     imageQuery: "grant management software nonprofit dashboard",
-    adoptingOrganizations: [
-      { name: "Education First", logoUrl: "/placeholder-logo.png" },
-      { name: "Green Earth", logoUrl: "/placeholder-logo.png" },
+    milestones: [
+      { title: "Application tracker", targetAmount: 6000, status: "pending", description: "Deadlines, statuses, documents" },
+      { title: "Reporting basics", targetAmount: 14000, status: "pending", description: "Outcome reports for funders" },
+      { title: "Beta with pilot orgs", targetAmount: 20000, status: "pending", description: "Real-world nonprofit pilots" },
+      { title: "v1.0 Launch", targetAmount: 25000, status: "pending", description: "Public open-source release" },
     ],
-    liveSavings: {
-      label: "Funding Secured to Date",
-      baseValue: 2450000,
-      incrementAmount: 10,
-      intervalMs: 10000,
-      prefix: "$",
-    },
   },
   {
     id: "proj_003",
@@ -182,44 +179,50 @@ export const projects: Project[] = [
     whoItHelps:
       "Any nonprofit that needs to report outcomes to funders, boards, or the community. Especially valuable for organizations collecting data across multiple programs.",
     fundingGoal: 20000,
-    fundingRaised: 3200,
-    backers: 18,
-    monthlyBackers: 5,
+    fundingRaised: 0,
+    backers: 0,
+    monthlyBackers: 0,
     status: "active",
     category: "Reporting",
     impactMetrics: [
-      { label: "Report Generation Time", value: "-80%" },
-      { label: "Funder Satisfaction", value: "+45%" },
-      { label: "Data Sources Supported", value: "15+" },
+      { label: "Report time (goal)", value: "Minutes, not days" },
+      { label: "Audience", value: "Boards & funders" },
+      { label: "License", value: "Open source" },
     ],
     fundingTiers: [
       {
         name: "Supporter",
         amount: 75,
         description: "Help us build core visualizations",
-        benefits: ["Name on supporters page", "Monthly progress updates"],
+        benefits: ["Progress updates by email", "Listed as an early backer"],
       },
       {
         name: "Builder",
         amount: 350,
         description: "Fund a chart type or integration",
-        benefits: ["All Supporter benefits", "Early access to new features", "Quarterly impact reports"],
+        benefits: ["All Supporter benefits", "Early access when beta opens"],
       },
       {
         name: "Champion",
         amount: 1500,
         description: "Major feature development",
-        benefits: ["All Builder benefits", "Logo on project page", "Custom integration priority"],
+        benefits: ["All Builder benefits", "Roadmap input with the team"],
       },
       {
         name: "Founding Sponsor",
         amount: 7500,
         description: "Named sponsorship opportunity",
-        benefits: ["All Champion benefits", "Named dashboard theme", "Launch event recognition"],
+        benefits: ["All Champion benefits", "Named recognition on project materials"],
       },
     ],
     githubUrl: "https://github.com/spark901/impact-dashboard",
     imageQuery: "data analytics dashboard nonprofit impact metrics",
+    milestones: [
+      { title: "Core charts", targetAmount: 5000, status: "pending", description: "Essential impact visualizations" },
+      { title: "Data connectors", targetAmount: 12000, status: "pending", description: "Import from common nonprofit tools" },
+      { title: "Shareable reports", targetAmount: 16000, status: "pending", description: "Board-ready exports" },
+      { title: "v1.0 Launch", targetAmount: 20000, status: "pending", description: "Public open-source release" },
+    ],
   },
   {
     id: "proj_004",
@@ -231,49 +234,153 @@ export const projects: Project[] = [
     whoItHelps:
       "Membership organizations, alumni networks, professional associations, and community groups looking for an alternative to expensive proprietary platforms.",
     fundingGoal: 30000,
-    fundingRaised: 12500,
-    backers: 34,
-    monthlyBackers: 8,
+    fundingRaised: 0,
+    backers: 0,
+    monthlyBackers: 0,
     status: "active",
     category: "Community",
     impactMetrics: [
-      { label: "Member Engagement", value: "+60%" },
-      { label: "Platform Cost Savings", value: "$5K/year" },
-      { label: "Beta Communities", value: "8" },
+      { label: "Modules (goal)", value: "Forums · Events · Directory" },
+      { label: "Cost model", value: "Self-host friendly" },
+      { label: "License", value: "Open source" },
     ],
     fundingTiers: [
       {
         name: "Supporter",
         amount: 100,
         description: "Support community features",
-        benefits: ["Name on supporters page", "Monthly progress updates"],
+        benefits: ["Progress updates by email", "Listed as an early backer"],
       },
       {
         name: "Builder",
         amount: 500,
         description: "Fund a module development",
-        benefits: ["All Supporter benefits", "Early access to new features", "Quarterly impact reports"],
+        benefits: ["All Supporter benefits", "Early access when beta opens"],
       },
       {
         name: "Champion",
         amount: 2000,
         description: "Major platform development",
-        benefits: ["All Builder benefits", "Logo on project page", "Theme customization support"],
+        benefits: ["All Builder benefits", "Roadmap input with the team"],
       },
       {
         name: "Founding Sponsor",
         amount: 10000,
         description: "Named sponsorship opportunity",
-        benefits: ["All Champion benefits", "Named feature module", "Founding member recognition"],
+        benefits: ["All Champion benefits", "Named recognition on project materials"],
       },
     ],
     githubUrl: "https://github.com/spark901/community-hub",
     imageQuery: "community platform app modern social network",
+    adoptingOrganizations: [
+      {
+        name: "Restore Corps (Freed Life)",
+        website: "https://restorecorps.org",
+        note: "Community education & survivor-support engagement in West TN",
+      },
+      {
+        name: "RiseTN",
+        website: "https://risetn.org",
+        note: "Neighborhood programming & partner coordination in Memphis",
+      },
+    ],
+    milestones: [
+      { title: "Member directory", targetAmount: 8000, status: "pending", description: "Profiles and basic membership" },
+      { title: "Events + forums", targetAmount: 18000, status: "pending", description: "Core engagement modules" },
+      { title: "White-label theming", targetAmount: 24000, status: "pending", description: "Org branding support" },
+      { title: "v1.0 Launch", targetAmount: 30000, status: "pending", description: "Public open-source release" },
+    ],
+  },
+  {
+    id: "proj_general",
+    slug: "general",
+    name: "General Fund",
+    tagline: "Flexible support for whatever tools need it most",
+    description:
+      "Contribute to Spark901's shared capacity—engineering time, hosting, security, and maintenance across the open-source catalog. When you are not sure which tool to pick, the General Fund keeps the studio shipping durable public infrastructure for nonprofits.",
+    whoItHelps:
+      "Every mission-driven organization that will use Spark901 tools over time. Flexible gifts fill gaps between tool-specific campaigns so work does not stall when one project is fully funded and another is just starting.",
+    fundingGoal: 25000,
+    fundingRaised: 0,
+    backers: 0,
+    monthlyBackers: 0,
+    status: "active",
+    category: "Studio",
+    impactMetrics: [
+      { label: "Allocation", value: "Studio capacity" },
+      { label: "Transparency", value: "/transparency" },
+      { label: "Legal status", value: "LLC (not 501c3)" },
+    ],
+    fundingTiers: [
+      {
+        name: "Supporter",
+        amount: 25,
+        description: "Keep the lights on for shared infrastructure",
+        benefits: ["Progress updates by email", "Listed as a General Fund backer"],
+      },
+      {
+        name: "Builder",
+        amount: 100,
+        description: "Fund a week of focused engineering capacity",
+        benefits: ["All Supporter benefits", "Priority updates on where gifts landed"],
+      },
+      {
+        name: "Champion",
+        amount: 500,
+        description: "Underwrite a meaningful sprint across tools",
+        benefits: ["All Builder benefits", "Roadmap input with the team"],
+      },
+      {
+        name: "Studio Sponsor",
+        amount: 2500,
+        description: "Named recognition for flexible studio support",
+        benefits: ["All Champion benefits", "Named recognition on studio materials"],
+      },
+    ],
+    githubUrl: "https://github.com/spark901",
+    imageQuery: "memphis skyline community technology studio",
+    milestones: [
+      {
+        title: "Hosting & security baseline",
+        targetAmount: 5000,
+        status: "pending",
+        description: "Stable hosting, monitoring, and hardening for public tools",
+      },
+      {
+        title: "Cross-tool maintenance",
+        targetAmount: 12000,
+        status: "pending",
+        description: "Shared libraries, docs, and dependency upkeep",
+      },
+      {
+        title: "Next tool sprint buffer",
+        targetAmount: 20000,
+        status: "pending",
+        description: "Capacity to start the next highest-need tool without waiting",
+      },
+      {
+        title: "Annual studio capacity",
+        targetAmount: 25000,
+        status: "pending",
+        description: "Flexible runway for Memphis-rooted open infrastructure",
+      },
+    ],
   },
 ]
 
+export const GENERAL_FUND_SLUG = "general"
+
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((p) => p.slug === slug)
+}
+
+export function getGeneralFund(): Project | undefined {
+  return getProjectBySlug(GENERAL_FUND_SLUG)
+}
+
+/** Tool campaigns only — excludes the studio General Fund. */
+export function getToolProjects(): Project[] {
+  return projects.filter((p) => p.slug !== GENERAL_FUND_SLUG)
 }
 
 export function getProjectsByStatus(status: Project["status"]): Project[] {

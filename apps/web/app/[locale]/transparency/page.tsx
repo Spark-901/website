@@ -1,19 +1,27 @@
 import type { Metadata } from "next"
 import { TransparencyClient } from "./transparency-client"
 import { locales } from "@/i18n/config"
+import { createPageMetadata, isLocale } from "@/lib/seo"
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
 
-export const metadata: Metadata = {
-  title: "Transparency",
-  description:
-    "We believe in radical transparency. See exactly how your funding is allocated and how Spark901 operates.",
-  openGraph: {
-    title: "Transparency | Spark901",
-    description: "See exactly how your funding makes an impact. Every dollar is tracked and reported.",
-  },
+type Props = { params: Promise<{ locale: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: raw } = await params
+  const locale = isLocale(raw) ? raw : "en"
+  const isEs = locale === "es"
+
+  return createPageMetadata({
+    locale,
+    path: "/transparency",
+    title: isEs ? "Transparencia" : "Transparency",
+    description: isEs
+      ? "Creemos en la transparencia radical. Mira cómo se asignan los fondos y cómo opera Spark901."
+      : "We believe in radical transparency. See exactly how your funding is allocated and how Spark901 operates.",
+  })
 }
 
 export default function TransparencyPage() {

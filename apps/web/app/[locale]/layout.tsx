@@ -3,10 +3,20 @@ import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { NextIntlClientProvider } from "next-intl"
-import { getLocale, getMessages } from "next-intl/server"
+import { getMessages, setRequestLocale } from "next-intl/server"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { locales } from "@/i18n/config"
+import { JsonLd } from "@/components/json-ld"
+import { locales, type Locale } from "@/i18n/config"
+import { brand } from "@/lib/brand"
+import {
+  SITE_URL,
+  absoluteUrl,
+  createPageMetadata,
+  organizationJsonLd,
+  websiteJsonLd,
+  isLocale,
+} from "@/lib/seo"
 import "./globals.css"
 
 const _geist = Geist({ subsets: ["latin"] })
@@ -16,128 +26,84 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://spark901.org"),
-  title: {
-    default: "Spark901 | Code for Good. Powered in Memphis.",
-    template: "%s | Spark901",
-  },
-  description:
-    "Open-source software infrastructure that helps nonprofits and community organizations scale their impact—faster, cheaper, and sustainably.",
-  keywords: [
-    "nonprofit technology",
-    "open source",
-    "social impact",
-    "Memphis",
-    "community",
-    "software",
-    "civic tech",
-    "nonprofit software",
-    "volunteer management",
-    "grant tracking",
-  ],
-  authors: [{ name: "Spark901", url: "https://spark901.org" }],
-  creator: "Spark901",
-  publisher: "Spark901",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    alternateLocale: "es_US",
-    url: "https://spark901.org",
-    siteName: "Spark901",
-    title: "Spark901 | Code for Good. Powered in Memphis.",
-    description:
-      "Open-source software infrastructure that helps nonprofits and community organizations scale their impact.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Spark901 - Code for Good. Powered in Memphis.",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Spark901 | Code for Good. Powered in Memphis.",
-    description:
-      "Open-source software infrastructure that helps nonprofits and community organizations scale their impact.",
-    images: ["/og-image.png"],
-    creator: "@spark901",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "https://spark901.org",
-    languages: {
-      en: "https://spark901.org",
-      es: "https://spark901.org/es",
-    },
-  },
-    generator: 'v0.app'
-}
-
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#3A9AD9" },
-    { media: "(prefers-color-scheme: dark)", color: "#1a1a2e" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#121212" },
   ],
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
 }
 
-function OrganizationJsonLd() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Spark901",
-    url: "https://spark901.org",
-    logo: "https://spark901.org/logo.png",
-    description:
-      "Open-source software infrastructure that helps nonprofits and community organizations scale their impact.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Memphis",
-      addressRegion: "TN",
-      addressCountry: "US",
-    },
-    sameAs: ["https://github.com/spark901", "https://twitter.com/spark901", "https://linkedin.com/company/spark901"],
-  }
-
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+type LayoutProps = {
+  children: React.ReactNode
+  params: Promise<{ locale: string }>
 }
 
-export default async function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  const locale = await getLocale()
+export async function generateMetadata({ params }: LayoutProps): Promise<Metadata> {
+  const { locale: raw } = await params
+  const locale: Locale = isLocale(raw) ? raw : "en"
+  const messages = (await import(`../../messages/${locale}.json`)).default
+  const base = createPageMetadata({
+    locale,
+    path: "/",
+    title: messages.metadata.title,
+    description: messages.metadata.description,
+    absoluteTitle: true,
+  })
+
+  return {
+    ...base,
+    metadataBase: new URL(SITE_URL),
+    applicationName: brand.name,
+    authors: [{ name: brand.name, url: SITE_URL }],
+    creator: brand.name,
+    publisher: brand.name,
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    keywords: [
+      "nonprofit technology",
+      "open source",
+      "social impact",
+      "Memphis",
+      "civic tech",
+      "nonprofit software",
+      "volunteer management",
+      "grant tracking",
+      "901",
+    ],
+    icons: {
+      icon: [
+        { url: brand.logo.icon, type: "image/svg+xml" },
+        { url: brand.logo.png192, type: "image/png", sizes: "192x192" },
+        { url: brand.logo.png512, type: "image/png", sizes: "512x512" },
+      ],
+      apple: [{ url: brand.logo.apple, sizes: "180x180", type: "image/png" }],
+    },
+    manifest: "/manifest.json",
+    title: {
+      default: messages.metadata.title,
+      template: `%s | ${brand.name}`,
+    },
+  }
+}
+
+export default async function LocaleLayout({ children, params }: LayoutProps) {
+  const { locale: raw } = await params
+  const locale = isLocale(raw) ? raw : "en"
+  setRequestLocale(locale)
   const messages = await getMessages()
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <head>
-        <OrganizationJsonLd />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <JsonLd data={organizationJsonLd()} />
+        <JsonLd data={websiteJsonLd()} />
+        <link rel="image_src" href={absoluteUrl(brand.logo.og)} />
         <script
           dangerouslySetInnerHTML={{
             __html: `

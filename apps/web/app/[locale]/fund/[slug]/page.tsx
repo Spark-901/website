@@ -1,27 +1,39 @@
 import Link from "next/link"
 import type { Metadata } from "next"
-import { getTranslations } from "next-intl/server"
+import { getTranslations, setRequestLocale } from "next-intl/server"
 import { notFound } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { getProjectBySlug, projects } from "@/lib/projects"
-import { FundingForm } from "@/components/funding-form"
+import { GENERAL_FUND_SLUG, getProjectBySlug, projects } from "@/lib/projects"
+import { ProjectFundingPanel } from "@/components/project-funding-panel"
 import { OrganizationDirectory } from "@/components/organization-directory"
 import { LiveSavingsCounter } from "@/components/live-savings-counter"
 import { DevelopmentMilestones } from "@/components/development-milestones"
 import { GitHubActivity } from "@/components/github-activity"
 import { GiftToolDialog } from "@/components/gift-tool-dialog"
 import { BetaTesterSignupForm } from "@/components/beta-tester-signup-form"
+import { ProjectCover } from "@/components/project-cover"
+import { JsonLd } from "@/components/json-ld"
 import { locales } from "@/i18n/config"
 import { isFeatureEnabled } from "@/lib/features"
-import { ArrowLeft, Check, Zap, Users, Target, Shield, Flame } from "lucide-react"
+import { getProjectFundingStats } from "@/lib/stripe-stats"
+import {
+  breadcrumbJsonLd,
+  createPageMetadata,
+  isLocale,
+  softwareApplicationJsonLd,
+} from "@/lib/seo"
+import { ArrowLeft, Users, Target, Shield, Flame } from "lucide-react"
+import { SparkLogo } from "@/components/spark-logo"
 import { Github } from "@/components/ui/brand-icons"
 
 export function generateStaticParams() {
   const params = []
   for (const locale of locales) {
     for (const project of projects) {
+      // Dedicated route: app/[locale]/fund/general/page.tsx
+      if (project.slug === GENERAL_FUND_SLUG) continue
       params.push({
         locale,
         slug: project.slug,
@@ -32,73 +44,50 @@ export function generateStaticParams() {
 }
 
 interface ProjectPageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ slug: string; locale: string }>
 }
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const { slug } = await params
+  const { slug, locale: raw } = await params
+  const locale = isLocale(raw) ? raw : "en"
   const project = getProjectBySlug(slug)
 
   if (!project) {
-    return {
-      title: "Project Not Found",
-    }
+    return { title: "Project Not Found" }
   }
 
-  return {
+  return createPageMetadata({
+    locale,
+    path: `/fund/${project.slug}`,
     title: project.name,
     description: project.description,
-    openGraph: {
-      title: `${project.name} | Spark901`,
-      description: project.tagline,
-      type: "article",
-      images: [
-        {
-          url: `/placeholder.svg?height=630&width=1200&query=${encodeURIComponent(project.imageQuery)}`,
-          width: 1200,
-          height: 630,
-          alt: project.name,
-        },
-      ],
+    ogTitle: `${project.name} | Spark901`,
+    ogDescription: project.tagline,
+    type: "article",
+    image: {
+      url: "/og-image.png",
+      alt: `${project.name} — ${project.tagline}`,
     },
-    twitter: {
-      card: "summary_large_image",
-      title: `${project.name} | Spark901`,
-      description: project.tagline,
-    },
-  }
-}
-
-function ProjectJsonLd({ project }: { project: ReturnType<typeof getProjectBySlug> }) {
-  if (!project) return null
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: project.name,
-    description: project.description,
-    brand: {
-      "@type": "Organization",
-      name: "Spark901",
-    },
-    offers: {
-      "@type": "Offer",
-      price: project.fundingTiers[0]?.amount || 50,
-      priceCurrency: "USD",
-      availability: project.status === "funded" ? "https://schema.org/SoldOut" : "https://schema.org/InStock",
-    },
-  }
-
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+  })
 }
 
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
-  const { slug } = await params
-  const project = getProjectBySlug(slug)
+  const { slug, locale: raw } = await params
+  const locale = isLocale(raw) ? raw : "en"
+  setRequestLocale(locale)
+  const baseProject = getProjectBySlug(slug)
   const t = await getTranslations("projectDetail")
 
-  if (!project) {
+  if (!baseProject) {
     notFound()
+  }
+
+  const stripeStats = await getProjectFundingStats(baseProject.slug)
+  const project = {
+    ...baseProject,
+    fundingRaised: stripeStats.fundingRaised,
+    backers: stripeStats.backers,
+    monthlyBackers: stripeStats.monthlyBackers,
   }
 
   const isAdoptionTrackerEnabled = isFeatureEnabled("ADOPTION_TRACKER")
@@ -112,7 +101,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
   return (
     <>
-      <ProjectJsonLd project={project} />
+      <JsonLd data={softwareApplicationJsonLd(project, locale)} />
+      <JsonLd
+        data={breadcrumbJsonLd(
+          [
+            { name: "Home", path: "/" },
+            { name: "Fund a Tool", path: "/fund" },
+            { name: project.name, path: `/fund/${project.slug}` },
+          ],
+          locale,
+        )}
+      />
       <div className="px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="mx-auto max-w-6xl">
           {/* Back Link */}
@@ -128,11 +127,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             {/* Main Content */}
             <div className="lg:col-span-2">
               {/* Hero Image */}
-              <div className="relative aspect-video overflow-hidden rounded-xl bg-muted">
-                <img
-                  src={`/.jpg?height=400&width=800&query=${encodeURIComponent(project.imageQuery)}`}
-                  alt={`Screenshot of ${project.name}`}
-                  className="h-full w-full object-cover"
+              <div className="relative overflow-hidden rounded-xl bg-muted">
+                <ProjectCover
+                  name={project.name}
+                  category={project.category}
+                  label={`Cover for ${project.name}: ${project.tagline}`}
                 />
                 <Badge
                   className={`absolute right-4 top-4 ${
@@ -170,7 +169,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               {/* What It Does */}
               <section className="mt-8" aria-labelledby="what-it-does">
                 <h2 id="what-it-does" className="flex items-center gap-2 text-xl font-semibold text-foreground">
-                  <Zap className="h-5 w-5 text-primary" aria-hidden="true" />
+                  <SparkLogo variant="mark" markTone="amber" size={20} />
                   {t("whatItDoes")}
                 </h2>
                 <p className="mt-3 leading-relaxed text-muted-foreground">{project.description}</p>
@@ -218,38 +217,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 </div>
               </section>
 
-              {/* Funding Tiers */}
-              <section className="mt-8" aria-labelledby="funding-tiers">
-                <h2 id="funding-tiers" className="text-xl font-semibold text-foreground">
-                  {t("fundingTiers")}
-                </h2>
-                <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                  {project.fundingTiers.map((tier, index) => (
-                    <Card
-                      key={index}
-                      className={`transition-all hover:shadow-md ${index === project.fundingTiers.length - 1 ? "border-accent bg-accent/5" : ""}`}
-                    >
-                      <CardHeader className="pb-2">
-                        <div className="flex items-center justify-between">
-                          <CardTitle className="text-lg">{tier.name}</CardTitle>
-                          <span className="text-xl font-bold text-primary">${tier.amount.toLocaleString()}</span>
-                        </div>
-                        <p className="text-sm text-muted-foreground">{tier.description}</p>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2">
-                          {tier.benefits.map((benefit, i) => (
-                            <li key={i} className="flex items-start gap-2 text-sm">
-                              <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                              <span className="text-muted-foreground">{benefit}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </section>
+              {!isFunded && (
+                <ProjectFundingPanel
+                  project={project}
+                  fundingTiersLabel={t("fundingTiers")}
+                  variant="tiers"
+                />
+              )}
 
               {/* GitHub Activity */}
               {isAlivenessSignalsEnabled && project.githubUrl && (
@@ -260,7 +234,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             {/* Sidebar */}
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-6">
-                {/* Funding Progress Card */}
+                {/* Funding Progress Card — live from Stripe */}
                 <Card className={isAlmostFunded ? "border-accent" : ""}>
                   <CardContent className="p-6">
                     <div className="text-center">
@@ -280,7 +254,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                     >
                       {progressPercentage.toFixed(0)}% funded
                     </p>
-                    <p className="mt-1 text-center text-xs text-muted-foreground">{project.backers} backers</p>
+                    <p className="mt-1 text-center text-xs text-muted-foreground">
+                      {project.backers} backers
+                      {project.monthlyBackers > 0 ? ` · ${project.monthlyBackers} monthly` : ""}
+                    </p>
+                    <p className="mt-2 text-center text-[11px] text-muted-foreground">
+                      Totals refresh from Stripe about every minute.
+                    </p>
                   </CardContent>
                 </Card>
 
@@ -293,19 +273,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 )}
 
                 {!isFunded ? (
-                  <Card id="fund">
-                    <CardHeader>
-                      <CardTitle className="text-lg">{t("fundingTiers")}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <FundingForm
-                        projectSlug={slug}
-                        projectTitle={project.name}
-                        backers={project.backers}
-                        monthlyBackers={project.monthlyBackers}
-                      />
-                    </CardContent>
-                  </Card>
+                  <ProjectFundingPanel
+                    project={project}
+                    fundingTiersLabel={t("fundingTiers")}
+                    variant="sidebar"
+                  />
                 ) : (
                   <Card>
                     <CardContent className="p-6">

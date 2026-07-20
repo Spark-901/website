@@ -7,6 +7,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import type { Project } from "@/lib/projects"
+import { ProjectCover } from "@/components/project-cover"
 import { ArrowRight, Users, Flame } from "lucide-react"
 
 interface ProjectCardProps {
@@ -23,12 +24,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <Card className="group flex flex-col overflow-hidden transition-all hover:shadow-lg">
-      <div className="relative aspect-video overflow-hidden bg-muted">
-        <img
-          src={`/.jpg?height=200&width=400&query=${encodeURIComponent(project.imageQuery)}`}
-          alt={`Preview of ${project.name}`}
-          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
+      <div className="relative overflow-hidden bg-muted transition-transform duration-300 group-hover:scale-[1.02]">
+        <ProjectCover name={project.name} category={project.category} />
         <Badge
           className={`absolute right-3 top-3 ${
             isFunded ? "bg-accent text-accent-foreground" : "bg-primary text-primary-foreground"

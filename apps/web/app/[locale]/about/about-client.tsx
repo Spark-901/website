@@ -4,7 +4,8 @@ import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Code2, Users, MapPin, Heart, Zap } from "lucide-react"
+import { ArrowRight, Code2, Users, MapPin, Heart } from "lucide-react"
+import { SparkLogo } from "@/components/spark-logo"
 import { Github } from "@/components/ui/brand-icons"
 import { MemphisNonprofitHubStats } from "@/components/memphis-nonprofit-hub-stats"
 
@@ -184,7 +185,7 @@ export function AboutClient() {
       {/* CTA */}
       <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8" aria-labelledby="join-cta">
         <div className="mx-auto max-w-3xl text-center">
-          <Zap className="mx-auto h-12 w-12 text-primary" aria-hidden="true" />
+          <SparkLogo variant="icon" size={48} className="mx-auto" />
           <h2 id="join-cta" className="mt-4 text-balance text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
             Join the movement
           </h2>
