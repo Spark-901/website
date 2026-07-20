@@ -298,7 +298,7 @@ export function buildForGood() {
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <a href="mailto:hello@spark901.org">Contact Us</a>
+              <a href="mailto:hello@spark901.com">Contact Us</a>
             </Button>
           </div>
         </div>

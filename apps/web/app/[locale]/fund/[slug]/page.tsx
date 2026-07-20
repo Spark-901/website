@@ -5,7 +5,7 @@ import { notFound } from "next/navigation"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
-import { getProjectBySlug, projects } from "@/lib/projects"
+import { GENERAL_FUND_SLUG, getProjectBySlug, projects } from "@/lib/projects"
 import { ProjectFundingPanel } from "@/components/project-funding-panel"
 import { OrganizationDirectory } from "@/components/organization-directory"
 import { LiveSavingsCounter } from "@/components/live-savings-counter"
@@ -32,6 +32,8 @@ export function generateStaticParams() {
   const params = []
   for (const locale of locales) {
     for (const project of projects) {
+      // Dedicated route: app/[locale]/fund/general/page.tsx
+      if (project.slug === GENERAL_FUND_SLUG) continue
       params.push({
         locale,
         slug: project.slug,

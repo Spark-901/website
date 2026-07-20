@@ -76,7 +76,7 @@ const catalog = [
     name: "Fund: Volunteer Scheduler",
     description:
       "One-time or monthly contribution funding Spark901's open-source Volunteer Scheduler for nonprofits. Contributions are not tax-deductible.",
-    url: "https://spark901.org/fund/volunteer-scheduler",
+    url: "https://spark901.com/fund/volunteer-scheduler",
     statement_descriptor: "SPARK901 VOL",
     metadata: {
       project_slug: "volunteer-scheduler",
@@ -89,7 +89,7 @@ const catalog = [
     name: "Fund: Grant Tracker Pro",
     description:
       "Contribution funding Spark901's open-source Grant Tracker Pro for nonprofits. Contributions are not tax-deductible.",
-    url: "https://spark901.org/fund/grant-tracker",
+    url: "https://spark901.com/fund/grant-tracker",
     statement_descriptor: "SPARK901 GRANT",
     metadata: {
       project_slug: "grant-tracker",
@@ -102,7 +102,7 @@ const catalog = [
     name: "Fund: Impact Dashboard",
     description:
       "Contribution funding Spark901's open-source Impact Dashboard for nonprofits. Contributions are not tax-deductible.",
-    url: "https://spark901.org/fund/impact-dashboard",
+    url: "https://spark901.com/fund/impact-dashboard",
     statement_descriptor: "SPARK901 IMPACT",
     metadata: {
       project_slug: "impact-dashboard",
@@ -115,7 +115,7 @@ const catalog = [
     name: "Fund: Community Hub",
     description:
       "Contribution funding Spark901's open-source Community Hub for nonprofits. Contributions are not tax-deductible.",
-    url: "https://spark901.org/fund/community-hub",
+    url: "https://spark901.com/fund/community-hub",
     statement_descriptor: "SPARK901 HUB",
     metadata: {
       project_slug: "community-hub",
@@ -128,7 +128,7 @@ const catalog = [
     name: "Spark901 General Fund",
     description:
       "General contribution supporting Spark901 open-source tools for nonprofits. Not restricted to a single project. Contributions are not tax-deductible.",
-    url: "https://spark901.org/fund",
+    url: "https://spark901.com/fund",
     statement_descriptor: "SPARK901",
     metadata: {
       project_slug: "general",
