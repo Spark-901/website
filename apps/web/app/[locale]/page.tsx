@@ -6,8 +6,9 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { ArrowRight, Code, Users, TrendingUp, Zap, Building2, Heart, Layers, Shield, CheckCircle2 } from "lucide-react"
+import { ArrowRight, Code, Users, TrendingUp, Building2, Heart, Layers, Shield, CheckCircle2 } from "lucide-react"
 import { brand } from "@/lib/brand"
+import { SparkLogo } from "@/components/spark-logo"
 
 export default function HomePage() {
   const t = useTranslations("home")
@@ -42,7 +43,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-gradient-to-b from-primary/5 to-background px-4 py-20 sm:px-6 sm:py-32 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <Badge variant="secondary" className="mb-4 gap-2 bg-primary/10 text-primary hover:bg-primary/10">
-            <Zap className="h-3.5 w-3.5" aria-hidden="true" />
+            <SparkLogo variant="icon" size={14} className="rounded-sm" />
             {t("hero.tagline")}
           </Badge>
           <h1 className="text-balance text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
@@ -68,7 +69,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground">
             <span className="flex items-center gap-1">
               <Shield className="h-3.5 w-3.5 text-primary" aria-hidden="true" />
-              100% to development
+              Transparent funding
             </span>
             <span className="flex items-center gap-1">
               <CheckCircle2 className="h-3.5 w-3.5 text-primary" aria-hidden="true" />

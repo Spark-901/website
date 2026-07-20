@@ -1,8 +1,8 @@
-import { Card, CardContent } from "@/components/ui/card"
-
 interface Organization {
   name: string
-  logoUrl: string
+  logoUrl?: string
+  website?: string
+  note?: string
 }
 
 interface OrganizationDirectoryProps {
@@ -18,18 +18,40 @@ export function OrganizationDirectory({ organizations, title }: OrganizationDire
       <h2 id="org-directory-title" className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
         {title}
       </h2>
-      <div className="mt-4 flex flex-wrap gap-6 grayscale opacity-70">
-        {organizations.map((org, index) => (
-          <div key={index} className="flex items-center gap-2">
-            <img
-              src={org.logoUrl}
-              alt={`${org.name} logo`}
-              className="h-8 w-8 object-contain"
-            />
-            <span className="text-sm font-medium">{org.name}</span>
-          </div>
+      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+        {organizations.map((org) => (
+          <li key={org.name} className="rounded-lg border border-border bg-card/50 px-4 py-3">
+            <div className="flex items-center gap-3">
+              {org.logoUrl ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={org.logoUrl} alt="" className="h-9 w-9 rounded object-contain" />
+              ) : (
+                <span
+                  className="flex h-9 w-9 items-center justify-center rounded bg-primary/10 text-xs font-bold text-primary"
+                  aria-hidden="true"
+                >
+                  {org.name.slice(0, 2).toUpperCase()}
+                </span>
+              )}
+              <div className="min-w-0">
+                {org.website ? (
+                  <a
+                    href={org.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-foreground underline-offset-2 hover:underline"
+                  >
+                    {org.name}
+                  </a>
+                ) : (
+                  <p className="font-medium text-foreground">{org.name}</p>
+                )}
+                {org.note && <p className="text-xs text-muted-foreground">{org.note}</p>}
+              </div>
+            </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   )
 }

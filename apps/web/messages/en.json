@@ -40,7 +40,7 @@
       },
       "step2": {
         "title": "Fund the Build",
-        "description": "Contribute any amount—one-time or monthly. 100% goes to development. No overhead fees."
+        "description": "Contribute any amount—one-time or monthly. See /transparency for how funds are allocated."
       },
       "step3": {
         "title": "Watch It Multiply",
@@ -55,7 +55,7 @@
       "title": "You don't need to code to build technology that changes lives.",
       "subtitle": "Join {count}+ supporters funding the future of nonprofit tech.",
       "button": "Fund a Tool Today",
-      "guarantee": "100% of contributions go to development"
+      "guarantee": "Contributions fund open-source tools — see Transparency for the breakdown"
     }
   },
   "fundATool": {
@@ -81,10 +81,10 @@
     "viewCode": "View the Code",
     "sponsorName": "Add your name or dedication (optional)",
     "securePayment": "Secure, encrypted payment",
-    "guarantee": "100% goes to building this tool",
+    "guarantee": "Your contribution funds building this specific tool",
     "backers": "{count} people have funded this project",
     "monthlySupporter": "Join {count} monthly supporters",
-    "adoptingOrganizationsTitle": "Trusted by leading nonprofits",
+    "adoptingOrganizationsTitle": "Organizations using Spark901 tools",
     "milestones": "Development Milestones",
     "projectActivity": "Project Activity",
     "latestCommits": "Latest Commits",
@@ -163,10 +163,13 @@
     "oneTime": "One-time",
     "monthly": "Monthly",
     "monthlyBadge": "Most Impact",
+    "monthlySupporter": "Join {count} other monthly supporters",
+    "monthlyCancelAnytime": "Cancel anytime from the Stripe billing portal after checkout.",
     "yourContribution": "Your contribution",
     "perMonth": "/month",
-    "allGoesDirect": "100% goes directly to building {project}.",
-    "submitButton": "Complete Funding",
+    "allGoesDirect": "Your contribution funds building {project}.",
+    "taxDisclaimer": "Spark901 is an LLC. Contributions are not tax-deductible.",
+    "submitButton": "Continue to secure checkout",
     "processing": "Processing...",
     "minimumAmount": "Minimum contribution is $5",
     "secureNotice": "Secure 256-bit SSL encryption",
@@ -236,13 +239,31 @@
     "viewAll": "View All"
   },
   "thankYou": {
-    "title": "You're Incredible!",
-    "subtitle": "Your contribution to {project} is building technology that empowers communities.",
+    "title": "You're incredible!",
+    "titleVerified": "Thank you for funding this tool",
+    "titleNamed": "Thank you, {name}!",
+    "subtitle": "Your contribution to <project></project> is building technology that empowers communities.",
+    "subtitleVerified": "Your {amount} contribution to <project></project> is helping build open-source infrastructure for nonprofits.",
+    "summaryTitle": "Contribution summary",
+    "summaryName": "Name",
+    "summaryAmount": "Amount",
+    "summaryProject": "Project",
+    "summaryFrequency": "Frequency",
+    "summaryDate": "Date",
+    "summaryEmail": "Receipt email",
+    "frequencyOneTime": "One-time",
+    "frequencyMonthly": "Monthly",
     "impact": "You're part of the movement",
+    "impactOneTime": "One-time contributions are non-refundable and go toward building this tool.",
+    "impactRecurring": "Your monthly support renews automatically. You can cancel anytime from the billing portal.",
     "receipt": "A receipt has been sent to your email.",
-    "share": "Share This Project",
-    "explore": "Fund Another Tool",
-    "questions": "Questions about your contribution?"
+    "receiptTo": "Stripe receipt sent to {email}",
+    "taxNote": "Spark901 is an LLC. Contributions are not tax-deductible, but they fund permanent public infrastructure.",
+    "manageMonthly": "Manage monthly contribution",
+    "share": "Share this project",
+    "explore": "Fund another tool",
+    "questions": "Questions about your contribution?",
+    "contact": "Contact us"
   },
   "feedback": {
     "suggestTool": {
