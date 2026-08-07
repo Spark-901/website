@@ -8,25 +8,29 @@
  *
  * ## Why the ledger write lives in here
  *
- * On 2026-08-06 a real inbound submission was lost with zero trace. The site
- * was posting to a Slack **Workflow trigger** that declares no variables, so
- * Slack accepted the payload (HTTP 200 `{"ok":true}`), threw it away, and
- * posted an empty message. The route had already returned `success: true` to
- * the submitter, and Slack was the only place the data was ever written.
+ * Until 2026-08-07 the site kept NO durable record of inbound events: routes
+ * returned `success: true` to the submitter and Slack was the only place the
+ * data was ever written. Blank messages appeared in `#spark901` on 2026-07-20
+ * and 2026-08-06, and with no record on our side there was no way to tell a
+ * failed notification apart from a lost submission — which is the actual
+ * defect, whether or not any specific message was a real lead.
  *
- * So notification is no longer allowed to be the system of record. Every call
- * records to DynamoDB FIRST, sends SECOND, and writes the delivery outcome
- * back onto the stored item THIRD. Putting that here rather than in each route
- * means all six event types are covered by one code path and a new event type
- * cannot forget to do it.
+ * (A blank message means the trigger received an EMPTY payload; the workflow
+ * itself renders correctly when sent the shape below. Verified 2026-08-07.)
+ *
+ * So notification is no longer the system of record. Every call records to
+ * DynamoDB FIRST, sends SECOND, and writes the delivery outcome back onto the
+ * stored item THIRD. Putting that here rather than in each route means all six
+ * event types are covered by one code path and a new event type cannot forget
+ * to do it.
  *
  * ## Two transports
  *
  * - `hooks.slack.com/triggers/…` — Workflow Builder trigger. Sends flat
- *   `{ eventType, details, metadata }` variables. **Only renders if the
- *   workflow declares those variables**; otherwise it silently posts blank.
- * - `hooks.slack.com/services/…` — classic incoming webhook. Sends Block Kit
- *   and always renders. **Prefer this.**
+ *   `{ eventType, details, metadata }` variables, which the Spark901 ops
+ *   workflow declares. Renders as long as the payload is well-formed.
+ * - `hooks.slack.com/services/…` — classic incoming webhook. Sends Block Kit,
+ *   and renders without depending on a workflow's variable definitions.
  */
 
 import { createLogger } from "@/lib/logger"
@@ -68,8 +72,6 @@ export type SlackOpsEvent = {
 const log = createLogger({ service: "spark901-web" }).child({
   component: "slack-notify",
 })
-
-let warnedWorkflowTrigger = false
 
 function resolveWebhookUrl(explicit?: string | null): string | null {
   return (
@@ -166,14 +168,6 @@ export async function notifySlackOps(
   }
 
   const usingTrigger = isWorkflowTrigger(webhookUrl)
-
-  if (usingTrigger && !warnedWorkflowTrigger) {
-    warnedWorkflowTrigger = true
-    log.warn(
-      "Notifying via a Slack Workflow trigger. Slack will post a BLANK message unless the workflow declares eventType/details/metadata as trigger variables. Prefer a classic incoming webhook (hooks.slack.com/services/…) via SLACK_OPS_WEBHOOK_URL.",
-      { eventType: event.eventType },
-    )
-  }
 
   const body = usingTrigger
     ? {
