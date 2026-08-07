@@ -1,10 +1,15 @@
 import { revalidateTag } from "next/cache"
 import { type NextRequest, NextResponse } from "next/server"
 import type Stripe from "stripe"
+import { createLogger } from "@/lib/logger"
 import { notifySlackOps } from "@/lib/slack-notify"
 import { isStripeConfigured, requireStripe } from "@/lib/stripe"
 
 export const runtime = "nodejs"
+
+const log = createLogger({ service: "spark901-web" }).child({
+  component: "api.webhooks.stripe",
+})
 
 function formatUsdFromCents(cents: number | null | undefined): string {
   if (cents == null) return "unknown"
@@ -17,7 +22,8 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   const email = session.customer_details?.email || session.customer_email || "unknown"
   const name = session.customer_details?.name || "unknown"
 
-  console.info("[stripe] checkout.session.completed", {
+  log.info("Stripe checkout.session.completed", {
+    stripeEvent: "checkout.session.completed",
     sessionId: session.id,
     project,
     frequency,
@@ -69,7 +75,8 @@ async function handleInvoicePaid(invoice: Stripe.Invoice) {
       ? invoiceRecord.subscription
       : invoiceRecord.subscription?.id
 
-  console.info("[stripe] invoice.paid (renewal)", {
+  log.info("Stripe invoice.paid (renewal)", {
+    stripeEvent: "invoice.paid",
     invoiceId: invoice.id,
     subscriptionId: sub,
     amountPaid: invoice.amount_paid,
@@ -89,7 +96,8 @@ async function handleInvoicePaid(invoice: Stripe.Invoice) {
 }
 
 async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
-  console.info("[stripe] customer.subscription.deleted", {
+  log.info("Stripe customer.subscription.deleted", {
+    stripeEvent: "customer.subscription.deleted",
     subscriptionId: subscription.id,
     project: subscription.metadata?.projectSlug,
   })
@@ -115,7 +123,9 @@ export async function POST(request: NextRequest) {
 
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET
   if (!webhookSecret) {
-    console.error("STRIPE_WEBHOOK_SECRET is not set.")
+    log.error("STRIPE_WEBHOOK_SECRET is not set", undefined, {
+      route: "/api/webhooks/stripe",
+    })
     return NextResponse.json({ error: "Webhook secret is not configured." }, { status: 503 })
   }
 
@@ -131,7 +141,13 @@ export async function POST(request: NextRequest) {
   try {
     event = stripe.webhooks.constructEvent(payload, signature, webhookSecret)
   } catch (err) {
-    console.error("Webhook signature verification failed:", err)
+    // NOTE: `err` is a StripeSignatureVerificationError, which carries the raw
+    // request body on `.payload` and the signature header on `.header`.
+    // `serializeError` deliberately captures neither — do not widen this to
+    // dump the error object, which is what the previous console.error did.
+    log.error("Stripe webhook signature verification failed", err, {
+      route: "/api/webhooks/stripe",
+    })
     return NextResponse.json({ error: "Invalid signature." }, { status: 400 })
   }
 
@@ -150,7 +166,11 @@ export async function POST(request: NextRequest) {
         break
     }
   } catch (err) {
-    console.error("Webhook handler error:", err)
+    log.error("Stripe webhook handler failed", err, {
+      route: "/api/webhooks/stripe",
+      stripeEvent: event.type,
+      eventId: event.id,
+    })
     return NextResponse.json({ error: "Webhook handler failed." }, { status: 500 })
   }
 

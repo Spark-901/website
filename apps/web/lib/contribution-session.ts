@@ -1,5 +1,10 @@
 import type Stripe from "stripe"
+import { createLogger } from "@/lib/logger"
 import { isStripeConfigured, requireStripe } from "@/lib/stripe"
+
+const log = createLogger({ service: "spark901-web" }).child({
+  component: "lib.contribution-session",
+})
 
 export type ContributionDetails = {
   verified: boolean
@@ -83,7 +88,10 @@ export async function loadContributionDetails(
       sessionId: session.id,
     }
   } catch (error) {
-    console.error("Contribution session lookup failed:", error)
+    log.error("Contribution session lookup failed", error, {
+      sessionId,
+      expectedProjectSlug,
+    })
     return null
   }
 }

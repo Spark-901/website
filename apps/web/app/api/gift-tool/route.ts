@@ -1,6 +1,11 @@
 import { type NextRequest, NextResponse } from "next/server"
+import { createLogger } from "@/lib/logger"
 import { notifySlackOps } from "@/lib/slack-notify"
 import { verifyTurnstileToken } from "@/lib/turnstile"
+
+const log = createLogger({ service: "spark901-web" }).child({
+  component: "api.gift-tool",
+})
 
 export async function POST(request: NextRequest) {
   try {
@@ -39,7 +44,9 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error("Gift tool submission error:", error)
+    log.error("Gift a Tool submission failed", error, {
+      route: "/api/gift-tool",
+    })
     return NextResponse.json({ error: "Failed to submit request." }, { status: 500 })
   }
 }

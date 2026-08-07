@@ -6,6 +6,12 @@
  * Requires a GITHUB_TOKEN for higher rate limits.
  */
 
+import { createLogger } from "@/lib/logger";
+
+const log = createLogger({ service: "spark901-web" }).child({
+  component: "lib.github",
+});
+
 export interface GitHubCommit {
   sha: string;
   message: string;
@@ -57,7 +63,12 @@ export async function fetchRecentCommits(githubUrl: string, limit = 5): Promise<
     );
 
     if (!response.ok) {
-      console.error(`GitHub API error: ${response.status} ${response.statusText}`);
+      log.error("GitHub API error fetching commits", undefined, {
+        owner,
+        repo,
+        status: response.status,
+        statusText: response.statusText,
+      });
       return [];
     }
 
@@ -70,7 +81,7 @@ export async function fetchRecentCommits(githubUrl: string, limit = 5): Promise<
       url: item.html_url,
     }));
   } catch (error) {
-    console.error("Error fetching commits:", error);
+    log.error("Failed to fetch GitHub commits", error, { owner, repo });
     return [];
   }
 }
@@ -96,7 +107,12 @@ export async function fetchRecentResolvedIssues(githubUrl: string, limit = 5): P
     );
 
     if (!response.ok) {
-      console.error(`GitHub API error: ${response.status} ${response.statusText}`);
+      log.error("GitHub API error fetching resolved issues", undefined, {
+        owner,
+        repo,
+        status: response.status,
+        statusText: response.statusText,
+      });
       return [];
     }
 
@@ -112,7 +128,7 @@ export async function fetchRecentResolvedIssues(githubUrl: string, limit = 5): P
         closedAt: item.closed_at,
       }));
   } catch (error) {
-    console.error("Error fetching resolved issues:", error);
+    log.error("Failed to fetch GitHub resolved issues", error, { owner, repo });
     return [];
   }
 }

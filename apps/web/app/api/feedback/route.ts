@@ -1,6 +1,11 @@
 import { type NextRequest, NextResponse } from "next/server"
+import { createLogger } from "@/lib/logger"
 import { notifySlackOps } from "@/lib/slack-notify"
 import { verifyTurnstileToken } from "@/lib/turnstile"
+
+const log = createLogger({ service: "spark901-web" }).child({
+  component: "api.feedback",
+})
 
 export async function POST(request: NextRequest) {
   try {
@@ -58,7 +63,9 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error("Feedback submission error:", error)
+    log.error("Feedback submission failed", error, {
+      route: "/api/feedback",
+    })
     return NextResponse.json(
       { error: "Failed to submit feedback. Please try again later." },
       { status: 500 },

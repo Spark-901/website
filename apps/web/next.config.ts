@@ -1,8 +1,10 @@
 import type { NextConfig } from "next"
 import createNextIntlPlugin from "next-intl/plugin"
 
-// Slack Workflow URL is hardcoded in lib/slack-notify.ts (SLACK_OPS_WEBHOOK_URL_DEFAULT).
-// Env overrides remain optional — feature flags no longer require separate Slack vars.
+// Slack notifications require SLACK_OPS_WEBHOOK_URL to be set per environment.
+// The URL is NOT hardcoded — this repo is public, and a literal webhook URL here
+// is an open write endpoint into our Slack. If it is unset, notification is
+// skipped and the event is still recorded in the DynamoDB ops ledger.
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts")
 

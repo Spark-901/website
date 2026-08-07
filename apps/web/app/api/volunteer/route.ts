@@ -1,7 +1,12 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { z } from "zod"
+import { createLogger } from "@/lib/logger"
 import { notifySlackOps } from "@/lib/slack-notify"
 import { verifyTurnstileToken } from "@/lib/turnstile"
+
+const log = createLogger({ service: "spark901-web" }).child({
+  component: "api.volunteer",
+})
 
 const ALLOWED_SKILLS = [
   "engineering",
@@ -88,7 +93,9 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error("Volunteer submission error:", error)
+    log.error("Volunteer submission failed", error, {
+      route: "/api/volunteer",
+    })
     return NextResponse.json(
       { error: "Failed to submit. Please try again later." },
       { status: 500 },

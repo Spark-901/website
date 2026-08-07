@@ -1,0 +1,78 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Spark901 ops event ledger - durable single-table record of every inbound site event (feedback, beta signup, tool suggestion, volunteer signup, gift-a-tool request, Stripe contributions) plus error/fatal log entries. Slack is the notification; this table is the record.",
+  "Parameters": {
+    "TableName": {
+      "Type": "String",
+      "Default": "spark901-ops-events",
+      "Description": "Name of the DynamoDB table. Must match the SPARK901_OPS_TABLE env var on Vercel.",
+      "MinLength": 3,
+      "MaxLength": 255,
+      "AllowedPattern": "^[A-Za-z0-9_.-]+$"
+    },
+    "EnvironmentTag": {
+      "Type": "String",
+      "Default": "Production",
+      "AllowedValues": ["Production", "Preview", "Development"],
+      "Description": "Value for the Environment tag on the table."
+    }
+  },
+  "Resources": {
+    "Spark901OpsEventsTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "TableName": { "Ref": "TableName" },
+        "BillingMode": "PAY_PER_REQUEST",
+        "AttributeDefinitions": [
+          { "AttributeName": "pk", "AttributeType": "S" },
+          { "AttributeName": "sk", "AttributeType": "S" },
+          { "AttributeName": "GSI1PK", "AttributeType": "S" },
+          { "AttributeName": "GSI1SK", "AttributeType": "S" }
+        ],
+        "KeySchema": [
+          { "AttributeName": "pk", "KeyType": "HASH" },
+          { "AttributeName": "sk", "KeyType": "RANGE" }
+        ],
+        "GlobalSecondaryIndexes": [
+          {
+            "IndexName": "GSI1",
+            "KeySchema": [
+              { "AttributeName": "GSI1PK", "KeyType": "HASH" },
+              { "AttributeName": "GSI1SK", "KeyType": "RANGE" }
+            ],
+            "Projection": { "ProjectionType": "ALL" }
+          }
+        ],
+        "SSESpecification": {
+          "SSEEnabled": true
+        },
+        "Tags": [
+          { "Key": "Application", "Value": "Spark901" },
+          { "Key": "Component", "Value": "ops-event-ledger" },
+          { "Key": "Environment", "Value": { "Ref": "EnvironmentTag" } }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "TableName": {
+      "Description": "Name of the DynamoDB table. Set as SPARK901_OPS_TABLE on Vercel.",
+      "Value": { "Ref": "Spark901OpsEventsTable" }
+    },
+    "TableArn": {
+      "Description": "ARN of the table. Use as ${TABLE_ARN} in iam-policy-vercel-writer.json.",
+      "Value": { "Fn::GetAtt": ["Spark901OpsEventsTable", "Arn"] }
+    },
+    "FeedIndexArn": {
+      "Description": "ARN of the GSI1 time-ordered feed index.",
+      "Value": {
+        "Fn::Join": [
+          "",
+          [{ "Fn::GetAtt": ["Spark901OpsEventsTable", "Arn"] }, "/index/GSI1"]
+        ]
+      }
+    }
+  }
+}

@@ -1,4 +1,9 @@
 import { type NextRequest } from "next/server"
+import { createLogger } from "@/lib/logger"
+
+const log = createLogger({ service: "spark901-web" }).child({
+  component: "lib.turnstile",
+})
 
 const SITEVERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify"
 
@@ -34,7 +39,7 @@ export async function verifyTurnstileToken(
 
   const secret = process.env.SPARK901_TURNSTILE_SECRET_KEY
   if (!secret) {
-    console.error("SPARK901_TURNSTILE_SECRET_KEY is not configured.")
+    log.error("SPARK901_TURNSTILE_SECRET_KEY is not configured")
     return {
       ok: false,
       status: 503,
@@ -59,19 +64,23 @@ export async function verifyTurnstileToken(
     })
 
     if (!response.ok) {
-      console.error("Turnstile siteverify HTTP error:", response.status)
+      log.error("Turnstile siteverify HTTP error", undefined, {
+        status: response.status,
+      })
       return { ok: false, status: 502, error: "Verification failed. Please try again." }
     }
 
     const result = (await response.json()) as SiteverifyResponse
     if (!result.success) {
-      console.warn("Turnstile verification rejected:", result["error-codes"])
+      log.warn("Turnstile verification rejected", {
+        errorCodes: result["error-codes"] ?? [],
+      })
       return { ok: false, status: 400, error: "Verification failed. Please try again." }
     }
 
     return { ok: true }
   } catch (error) {
-    console.error("Turnstile verification error:", error)
+    log.error("Turnstile verification request failed", error)
     return { ok: false, status: 502, error: "Verification failed. Please try again." }
   }
 }
