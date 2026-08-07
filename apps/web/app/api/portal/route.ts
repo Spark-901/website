@@ -1,5 +1,10 @@
 import { type NextRequest, NextResponse } from "next/server"
+import { createLogger } from "@/lib/logger"
 import { getSiteOrigin, isStripeConfigured, requireStripe } from "@/lib/stripe"
+
+const log = createLogger({ service: "spark901-web" }).child({
+  component: "api.portal",
+})
 
 /**
  * Creates a Stripe Customer Portal session so monthly donors can
@@ -43,7 +48,9 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ url: portal.url })
   } catch (error) {
-    console.error("Customer portal error:", error)
+    log.error("Stripe billing portal session creation failed", error, {
+      route: "/api/portal",
+    })
     return NextResponse.json(
       {
         error:

@@ -1,5 +1,6 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { brand } from "@/lib/brand"
+import { createLogger } from "@/lib/logger"
 import { getProjectBySlug } from "@/lib/projects"
 import {
   CONTRIBUTION_MAX_USD,
@@ -9,6 +10,10 @@ import {
   shouldUseInlineProductData,
 } from "@/lib/stripe-catalog"
 import { getSiteOrigin, isStripeConfigured, requireStripe } from "@/lib/stripe"
+
+const log = createLogger({ service: "spark901-web" }).child({
+  component: "api.checkout",
+})
 
 type CheckoutBody = {
   projectSlug?: string
@@ -189,7 +194,13 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ url: session.url, sessionId: session.id })
   } catch (error) {
-    console.error("Checkout error:", error)
+    log.error("Stripe checkout session creation failed", error, {
+      route: "/api/checkout",
+      projectSlug,
+      frequency,
+      amountUsd: amount,
+      stripeMode: isStripeTestMode() ? "test" : "live",
+    })
     const message =
       error instanceof Error && error.message.includes("terms_of_service")
         ? "Stripe Checkout needs Terms of Service URL in Public details before contributions can be accepted."

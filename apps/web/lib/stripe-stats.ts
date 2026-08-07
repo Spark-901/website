@@ -1,7 +1,12 @@
 import { unstable_cache } from "next/cache"
+import { createLogger } from "@/lib/logger"
 import type { Project } from "@/lib/projects"
 import { getStripeProductId, isStripeTestMode, type StripeFundableSlug } from "@/lib/stripe-catalog"
 import { isStripeConfigured, requireStripe } from "@/lib/stripe"
+
+const log = createLogger({ service: "spark901-web" }).child({
+  component: "lib.stripe-stats",
+})
 
 export type ProjectFundingStats = {
   fundingRaised: number
@@ -94,7 +99,10 @@ export async function getProjectFundingStats(projectSlug: string): Promise<Proje
   try {
     return await cached()
   } catch (error) {
-    console.error(`Stripe stats failed for ${projectSlug}:`, error)
+    log.error("Stripe funding stats lookup failed", error, {
+      projectSlug,
+      stripeMode: mode,
+    })
     return EMPTY
   }
 }

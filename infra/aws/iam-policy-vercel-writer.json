@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Spark901OpsLedgerWriteTable",
+      "Effect": "Allow",
+      "Action": [
+        "dynamodb:PutItem",
+        "dynamodb:UpdateItem",
+        "dynamodb:GetItem",
+        "dynamodb:Query"
+      ],
+      "Resource": "${TABLE_ARN}"
+    },
+    {
+      "Sid": "Spark901OpsLedgerQueryFeedIndex",
+      "Effect": "Allow",
+      "Action": ["dynamodb:Query"],
+      "Resource": "${TABLE_ARN}/index/GSI1"
+    }
+  ]
+}
