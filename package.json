@@ -2,6 +2,7 @@
   "name": "spark-901-monorepo",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.9.2",
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -10,7 +11,8 @@
     "dev": "turbo dev --parallel",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
-    "type-check": "turbo type-check"
+    "type-check": "turbo type-check",
+    "validate": "turbo validate:i18n validate:content validate:brand"
   },
   "devDependencies": {
     "turbo": "^2.9.14",

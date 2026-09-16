@@ -12,6 +12,16 @@
     "type-check": {
       "outputs": []
     },
+    "validate:i18n": {
+      "outputs": []
+    },
+    "validate:content": {
+      "outputs": []
+    },
+    "validate:brand": {
+      "dependsOn": ["build"],
+      "outputs": []
+    },
     "dev": {
       "cache": false,
       "persistent": true

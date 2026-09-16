@@ -8,6 +8,9 @@
     "lint": "eslint .",
     "start": "next start",
     "type-check": "tsc --noEmit",
+    "validate:i18n": "node scripts/validate-i18n-parity.mjs",
+    "validate:content": "node scripts/validate-no-fake-content.mjs",
+    "validate:brand": "node scripts/validate-brand-render.mjs",
     "stripe:setup-sandbox": "node scripts/setup-stripe-sandbox.mjs",
     "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks/stripe",
     "stripe:set-production": "node scripts/set-vercel-stripe-production.mjs"
