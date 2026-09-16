@@ -5,37 +5,23 @@ import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { ArrowRight, Code, Users, TrendingUp, Building2, Heart, Layers, Shield, CheckCircle2 } from "lucide-react"
+import {
+  ArrowRight,
+  Code,
+  Users,
+  TrendingUp,
+  Building2,
+  Heart,
+  Layers,
+  Shield,
+  CheckCircle2,
+  MessageSquareHeart,
+} from "lucide-react"
 import { brand } from "@/lib/brand"
 import { SparkLogo } from "@/components/spark-logo"
 
 export default function HomePage() {
   const t = useTranslations("home")
-
-  const testimonials = [
-    {
-      name: "Sarah Mitchell",
-      role: "Executive Director",
-      org: "Memphis Food Bank",
-      quote: "Spark901's volunteer scheduler saved us 20 hours a week. That's time we now spend feeding families.",
-      avatar: "/professional-woman-headshot.png",
-    },
-    {
-      name: "Marcus Thompson",
-      role: "Program Manager",
-      org: "Youth Empowerment Memphis",
-      quote: "Finally, technology built for organizations like ours. No expensive consultants, no hidden fees.",
-      avatar: "/professional-black-man-headshot.png",
-    },
-    {
-      name: "Dr. Linda Chen",
-      role: "Board Chair",
-      org: "Community Health Initiative",
-      quote: "One donation to Spark901 helps more nonprofits than any grant I've ever made.",
-      avatar: "/professional-asian-woman-headshot.jpg",
-    },
-  ]
 
   return (
     <div className="flex flex-col">
@@ -200,39 +186,23 @@ export default function HomePage() {
       </section>
 
       <section className="px-4 py-20 sm:px-6 sm:py-24 lg:px-8" aria-labelledby="testimonials-title">
-        <div className="mx-auto max-w-7xl">
+        <div className="mx-auto max-w-3xl text-center">
+          <MessageSquareHeart className="mx-auto h-10 w-10 text-accent" aria-hidden="true" />
           <h2
             id="testimonials-title"
-            className="text-center text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+            className="mt-4 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           >
             {t("testimonials.title")}
           </h2>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {testimonials.map((testimonial) => (
-              <Card key={testimonial.name} className="border-none bg-card shadow-sm">
-                <CardContent className="p-6">
-                  <p className="text-pretty leading-relaxed text-muted-foreground">"{testimonial.quote}"</p>
-                  <div className="mt-6 flex items-center gap-3">
-                    <Avatar className="h-12 w-12">
-                      <AvatarImage src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.name} />
-                      <AvatarFallback>
-                        {testimonial.name
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")}
-                      </AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="font-semibold text-foreground">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {testimonial.role}, {testimonial.org}
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <p className="mx-auto mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground">
+            {t("testimonials.subtitle")}
+          </p>
+          <Button asChild size="lg" className="mt-8 gap-2 bg-accent text-accent-foreground shadow-lg hover:bg-accent/90">
+            <a href={`mailto:${brand.email}?subject=${encodeURIComponent("Our story with a Spark901 tool")}`}>
+              {t("testimonials.cta")}
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </a>
+          </Button>
         </div>
       </section>
 

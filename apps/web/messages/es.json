@@ -49,8 +49,9 @@
       }
     },
     "testimonials": {
-      "title": "Con la confianza de líderes de Memphis",
-      "cta": "Únete hoy"
+      "title": "Apenas estamos comenzando — ayúdanos a construir nuestra trayectoria",
+      "subtitle": "Spark901 es joven. Si una de nuestras herramientas le ha ahorrado tiempo o dinero a tu organización, nos encantaría contar tu historia aquí a medida que crecemos.",
+      "cta": "Comparte tu historia"
     },
     "cta": {
       "title": "No necesitas saber programar para financiar tecnología que cambia vidas.",
