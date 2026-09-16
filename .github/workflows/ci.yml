@@ -1,0 +1,79 @@
+name: CI
+
+# There was no CI at all before this file — lint/type-check/build never ran on a
+# PR, which is how a broken logo and fabricated testimonials both shipped to
+# production unnoticed. Every job here is a required check; add its name to the
+# branch protection rule for `main` once this lands.
+
+on:
+  pull_request:
+    branches: [main, develop, staging]
+  push:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+
+  type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run type-check
+
+  validate-i18n-parity:
+    name: "validate: every locale has matching translation keys"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run --workspace=web validate:i18n
+
+  validate-no-fake-content:
+    name: "validate: no hardcoded testimonials or stock placeholder photos"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run --workspace=web validate:content
+
+  build-and-validate-brand:
+    name: "build + validate: brand logo colors actually render"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run --workspace=web build
+        env:
+          # Build-time env vars the app expects to exist (values are dummies —
+          # this job only needs the build to succeed and produce compiled CSS,
+          # it never talks to a real Stripe/Turnstile/AWS account).
+          STRIPE_SECRET_KEY: sk_test_dummy
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: 1x00000000000000000000AA
+          SPARK901_TURNSTILE_SECRET_KEY: 1x0000000000000000000000000000000AA
+      - run: npm run --workspace=web validate:brand
