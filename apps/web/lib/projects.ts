@@ -9,8 +9,14 @@ export interface Project {
   fundingRaised: number
   backers: number
   monthlyBackers: number
-  status: "active" | "funded" | "in-development"
+  status: "active" | "funded" | "in-development" | "completed"
   category: string
+  /** True when the initial build was funded by Spark901/WTC itself, not by donors — say so, it's the credibility story. */
+  selfFunded?: boolean
+  /** ISO date or plain label (e.g. "July 2026") — when this shipped to production, for "already done" projects. */
+  deployedSince?: string
+  /** Cross-link: the Hugging Face org/model page for this project, once published. Omit until it's real — never link a page that doesn't exist yet. */
+  huggingFaceUrl?: string
   impactMetrics: {
     label: string
     value: string
@@ -289,6 +295,86 @@ export const projects: Project[] = [
       { title: "Events + forums", targetAmount: 18000, status: "pending", description: "Core engagement modules" },
       { title: "White-label theming", targetAmount: 24000, status: "pending", description: "Org branding support" },
       { title: "v1.0 Launch", targetAmount: 30000, status: "pending", description: "Public open-source release" },
+    ],
+  },
+  {
+    id: "proj_005",
+    slug: "ai-ml-classifiers",
+    name: "AI/ML Classification Platform",
+    tagline: "14 production AI features, built in-house, fully self-funded — 4 now going open source",
+    description:
+      "14 AI-assisted features running in production today, built and paid for entirely by the studio itself — no grant, no client billing, no donor dollars. Four run on our own trained classifiers (TF-IDF + gradient-boosting, served as fast deterministic ONNX inference) instead of a per-call LLM — cheap and predictable at volume, and the best of them scores 0.978 F1 in production. The other ten currently run on an LLM call or a hand-built heuristic while we replace them, one at a time, with the same cheap self-hosted approach. We're retraining the four already-proven classifiers on privacy-safe data so the code and weights can ship fully open source on GitHub and Hugging Face — proof a small, self-funded team can build and run real production AI, not just talk about it.",
+    whoItHelps:
+      "Any small org — nonprofit or not — buried in inbound email, support tickets, or vendor noise that can't justify per-call LLM pricing at volume. This is the blueprint for a cheap, boring, reliable classifier instead of a slow, expensive one.",
+    fundingGoal: 8000,
+    fundingRaised: 0,
+    backers: 0,
+    monthlyBackers: 0,
+    status: "completed",
+    selfFunded: true,
+    deployedSince: "July 2026",
+    category: "AI/ML",
+    impactMetrics: [
+      { label: "AI features in production", value: "14" },
+      { label: "Running on self-hosted classifiers", value: "4" },
+      { label: "Best F1 score", value: "0.978" },
+      { label: "Funded by", value: "Spark901 / WTC, self-funded" },
+    ],
+    fundingTiers: [
+      {
+        name: "Supporter",
+        amount: 25,
+        description: "Help fund the privacy-safe retraining pass",
+        benefits: ["Progress updates by email", "Listed as an early backer"],
+      },
+      {
+        name: "Builder",
+        amount: 100,
+        description: "Fund a week of retraining/eval work",
+        benefits: ["All Supporter benefits", "Early access to the Hugging Face release"],
+      },
+      {
+        name: "Champion",
+        amount: 500,
+        description: "Underwrite the full open-source publish",
+        benefits: ["All Builder benefits", "Roadmap input on the next model to open source"],
+      },
+      {
+        name: "Founding Sponsor",
+        amount: 2500,
+        description: "Named sponsorship of the open-source AI initiative",
+        benefits: ["All Champion benefits", "Named recognition on project materials"],
+      },
+    ],
+    // githubUrl / huggingFaceUrl intentionally omitted — nothing is public yet. Add both
+    // the moment code lands on GitHub and the first model lands on Hugging Face; never
+    // point these at a page that doesn't exist.
+    imageQuery: "machine learning classifier dashboard production ai",
+    milestones: [
+      {
+        title: "Privacy-safe retrain",
+        targetAmount: 2000,
+        status: "pending",
+        description: "Retrain each classifier on redacted/synthetic data so weights are safe to publish",
+      },
+      {
+        title: "Code + model cards on GitHub",
+        targetAmount: 4000,
+        status: "pending",
+        description: "Public repo, documented architecture, reproducible training pipeline",
+      },
+      {
+        title: "First model on Hugging Face",
+        targetAmount: 6000,
+        status: "pending",
+        description: "Publish the first cleared model with a full model card",
+      },
+      {
+        title: "Full 4-model suite published",
+        targetAmount: 8000,
+        status: "pending",
+        description: "All four production classifiers open sourced, cross-linked from this page",
+      },
     ],
   },
   {
