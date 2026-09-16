@@ -19,8 +19,9 @@
 
 import { readdirSync, readFileSync } from "node:fs"
 import { join, extname } from "node:path"
+import { fileURLToPath } from "node:url"
 
-const WEB_ROOT = new URL("..", import.meta.url).pathname
+const WEB_ROOT = fileURLToPath(new URL("..", import.meta.url))
 const SCAN_DIRS = ["app", "components"]
 const EXCLUDE_DIR_NAMES = new Set(["node_modules", ".next", ".git", "ui", "__fixtures__", "__mocks__"])
 

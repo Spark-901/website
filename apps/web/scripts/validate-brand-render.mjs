@@ -14,8 +14,9 @@
 
 import { readdirSync, readFileSync, existsSync } from "node:fs"
 import { join } from "node:path"
+import { fileURLToPath, pathToFileURL } from "node:url"
 
-const WEB_ROOT = new URL("..", import.meta.url).pathname
+const WEB_ROOT = fileURLToPath(new URL("..", import.meta.url))
 
 // Every fill-* class SparkIcon/SparkMark (components/spark-logo.tsx) can emit for a
 // custom brand token. If this list drifts from spark-logo.tsx, update both together.
@@ -36,8 +37,6 @@ function checkOrphanedGlobalsCss() {
   // Fail loudly if that shape ever recurs, before it even reaches the render check.
   const appDir = join(WEB_ROOT, "app")
   const allGlobals = findCssFiles(WEB_ROOT).filter((f) => f.endsWith("globals.css"))
-  const sourceFiles = findCssFiles(WEB_ROOT, []) // no-op, kept for symmetry
-  void sourceFiles
   const tsxFiles = []
   ;(function walk(dir) {
     for (const entry of readdirSync(dir, { withFileTypes: true })) {
@@ -52,7 +51,7 @@ function checkOrphanedGlobalsCss() {
   for (const f of tsxFiles) {
     const content = readFileSync(f, "utf8")
     const m = content.match(/import\s+["']([^"']*globals\.css)["']/)
-    if (m) imported.add(new URL(m[1], `file://${f}`).pathname)
+    if (m) imported.add(fileURLToPath(new URL(m[1], pathToFileURL(f))))
   }
 
   const orphans = allGlobals.filter((f) => !imported.has(f))
