@@ -1,0 +1,384 @@
+{
+  "metadata": {
+    "title": "Spark901 | 用代码行善。源自孟菲斯。",
+    "description": "开源软件基础设施，帮助非营利组织和社区团体更快、更省钱、更可持续地扩大影响力。"
+  },
+  "nav": {
+    "home": "首页",
+    "fundATool": "资助一个工具",
+    "generalFund": "通用基金",
+    "whyFund": "为什么资助",
+    "about": "关于我们",
+    "transparency": "透明度",
+    "volunteer": "志愿者",
+    "partnerWithUs": "与我们合作"
+  },
+  "home": {
+    "hero": {
+      "tagline": "用代码行善。源自孟菲斯。",
+      "headline": "资助那些赋能非营利组织的工具",
+      "description": "您的支持将建立永久性的开源基础设施，帮助数百个组织持续做更多好事——永远。",
+      "cta": "立即资助一个工具",
+      "secondaryCta": "了解运作方式",
+      "socialProof": "已有超过{count}人加入这场运动"
+    },
+    "stats": {
+      "nonprofitsHelped": "已赋能的非营利组织",
+      "openSourceTools": "已构建的工具",
+      "communityMembers": "社区成员",
+      "fundingRaised": "本年度已筹集"
+    },
+    "impact": {
+      "title": "一个工具。数百家非营利组织。无限的影响力。",
+      "description": "传统捐赠只能帮助一个组织一次。而科技资助创造的基础设施能持续为数百个组织带来价值——这就是复利式的影响力。",
+      "cta": "浏览项目"
+    },
+    "howItWorks": {
+      "title": "实现持久影响力的三个步骤",
+      "step1": {
+        "title": "选择您的项目",
+        "description": "浏览我们用通俗易懂的语言介绍的项目目录，没有技术术语，只有清晰的影响力说明。"
+      },
+      "step2": {
+        "title": "资助开发",
+        "description": "支持任意金额——一次性或按月均可。资金分配详情请见「透明度」页面。"
+      },
+      "step3": {
+        "title": "见证影响力成倍增长",
+        "description": "您的投入将为服务数百个组织的工具提供动力。实时追踪您的影响力。"
+      }
+    },
+    "testimonials": {
+      "title": "我们才刚刚起步 — 帮助我们建立成功案例",
+      "subtitle": "Spark901 还很年轻。如果我们的某个工具为贵机构节省了时间或资金，我们很乐意在这里分享您的故事，见证我们的成长。",
+      "cta": "分享您的故事"
+    },
+    "cta": {
+      "title": "您无需会编程，也能建设改变生活的技术。",
+      "subtitle": "加入超过{count}位支持者，共同资助非营利科技的未来。",
+      "button": "今天就资助一个工具",
+      "guarantee": "捐款用于资助开源工具 — 具体明细请见「透明度」页面"
+    }
+  },
+  "fundATool": {
+    "title": "资助一个工具",
+    "description": "选择一个让您产生共鸣的项目。您捐出的每一美元都在构建为社会公益服务的永久性基础设施。",
+    "filterAll": "所有项目",
+    "filterActive": "需要资助",
+    "filterFunded": "已完成资助",
+    "fundingGoal": "目标金额",
+    "raised": "已筹集",
+    "fundThis": "资助此项目",
+    "viewDetails": "了解更多",
+    "backersCount": "{count}位支持者",
+    "urgency": "仅差${amount}就能达成目标！",
+    "almostThere": "即将完成资助！"
+  },
+  "projectDetail": {
+    "whatItDoes": "项目内容",
+    "whoItHelps": "受益对象",
+    "fundingTiers": "选择您的支持力度",
+    "impactMetrics": "您的影响力",
+    "fundNow": "立即资助",
+    "viewCode": "查看代码",
+    "sponsorName": "添加您的姓名或留言（可选）",
+    "securePayment": "安全加密支付",
+    "guarantee": "您的捐款将用于开发这个具体的工具",
+    "backers": "已有{count}人资助了这个项目",
+    "monthlySupporter": "加入{count}位月度支持者",
+    "adoptingOrganizationsTitle": "专为这样的组织而打造",
+    "milestones": "开发里程碑",
+    "projectActivity": "项目动态",
+    "latestCommits": "最新代码提交",
+    "resolvedIssues": "已解决的问题",
+    "viewOnGithub": "在GitHub上查看",
+    "noCommits": "未找到最近的代码提交。",
+    "noIssues": "未找到最近解决的问题。",
+    "milestoneGoal": "目标"
+  },
+  "whyFund": {
+    "title": "为什么要资助开源技术？",
+    "subtitle": "投资社会公益最明智的方式。",
+    "problem": {
+      "title": "问题所在",
+      "description": "非营利组织将40%的预算浪费在过时且价格过高的软件上。它们理应得到更好的选择。"
+    },
+    "solution": {
+      "title": "Spark901的解决方案",
+      "description": "我们专为社会公益组织打造免费的开源工具。只需资助一次，便可持续提供帮助。"
+    },
+    "compounding": {
+      "title": "复利效应",
+      "description": "与一次性花完的传统捐赠不同，科技资助创造的是永久性基础设施。每一美元都在持续创造价值——永远。"
+    },
+    "comparison": {
+      "traditional": "传统捐赠",
+      "traditionalDesc": "1,000美元只能帮助一个组织开展一个项目",
+      "tech": "Spark901科技资助",
+      "techDesc": "1,000美元能永久帮助100多个组织"
+    }
+  },
+  "memphisNonprofitHub": {
+    "title": "孟菲斯是非营利组织的聚集地",
+    "description": "中南部地区拥有非凡的使命密度。Spark901是Digital Delta的一部分——这是一群本地开发者，他们相信优秀的软件应该赋能非营利组织，而不是将其抛在身后。",
+    "per10kSuffix": "（每万人）",
+    "densityCaption": "美国主要都市区中排名第一",
+    "densityBody": "按人口比例计算，孟菲斯的非营利组织数量在美国主要都市区中排名第一——这个生态系统需要为真实使命而打造的工具。",
+    "orgsCaption": "免税非营利组织数量",
+    "orgsBody": "孟菲斯地区共有超过6,500家此类组织，支撑着粮食保障、医疗、青少年项目、艺术等诸多领域。",
+    "jobsCaption": "支持的就业岗位",
+    "jobsBody": "这些组织共同管理着超过{billions}十亿美元的资产——这样的工作理应拥有可靠、现代化的基础设施。"
+  },
+  "about": {
+    "title": "关于Spark901",
+    "mission": "我们是一家扎根孟菲斯、以行善为使命的工作室：捐款用于为有需要的组织——尤其是非营利组织——资助高质量的开源软件，让每一份捐赠都持续转化为持久的公共工具，而不是被闭源SaaS所束缚。",
+    "values": {
+      "title": "我们的坚持",
+      "openSource": "始终开源",
+      "openSourceDesc": "每一行代码都公开可见。当您资助我们的工作时，整个行业都将受益。",
+      "community": "社区驱动",
+      "communityDesc": "我们是由相信更好的非营利科技的人们所资助的专业工程师。",
+      "memphis": "以孟菲斯为荣",
+      "memphisDesc": "孟菲斯是非营利组织的聚集地——我们身处Digital Delta，致力于打造能让这个生态系统发挥更大作用的技术。"
+    }
+  },
+  "transparency": {
+    "title": "彻底的透明度",
+    "subtitle": "精确了解每一美元的去向。",
+    "howFundsUsed": "您的资金如何被使用",
+    "fundsDescription": "100%的捐款都用于工具开发。以下是具体分配：",
+    "development": "开发",
+    "developmentDesc": "工程师薪资、代码审查、测试",
+    "infrastructure": "基础设施",
+    "infrastructureDesc": "托管、安全、可靠性",
+    "community": "社区",
+    "communityDesc": "文档、支持、活动",
+    "operations": "运营",
+    "operationsDesc": "法务、会计、行政",
+    "openSourceNote": "所有代码均在GitHub上公开。欢迎随时审查。",
+    "legalNote": "Spark901是一家有限责任公司（LLC），并非501(c)(3)非营利组织。捐款不可抵税，但会资助永久性的公共基础设施。"
+  },
+  "generalFund": {
+    "badge": "工作室运营能力",
+    "title": "通用基金",
+    "tagline": "为最需要的工具提供灵活支持",
+    "description": "为Spark901的共享运营能力提供支持——包括整个开源目录的工程时间、托管、安全和维护。如果您不确定该资助哪个工具，通用基金能让工作室持续为非营利组织构建持久的公共基础设施。",
+    "catalogBlurb": "不确定该资助哪个工具？支持整个目录共享的工程、托管和维护工作。",
+    "cta": "捐助通用基金",
+    "backToCatalog": "返回所有项目",
+    "whoItHelpsTitle": "受益对象",
+    "whoItHelps": "每一个未来会使用Spark901工具的使命驱动型组织。灵活的捐赠能填补各个专项资助活动之间的资金空白，确保一个项目完成资助后，另一个项目能顺利启动，而不会中断。",
+    "allocationTitle": "捐款如何使用",
+    "allocationBody": "通用基金的捐款首先用于支撑工作室的运营能力，然后流向最需要关注的工具和基础设施。具体分配模型请见「透明度」页面。",
+    "transparencyLink": "查看资金分配方式",
+    "raisedOf": "已筹集，目标${goal}",
+    "percentFunded": "已完成{percent}%",
+    "backersLine": "{backers}位支持者·{monthly}位月度支持者",
+    "totalsNote": "总额每分钟左右从Stripe刷新一次。",
+    "guarantee": "您的捐款将用于支持Spark901工作室的运营能力和开源工具。",
+    "taxNote": "Spark901是一家有限责任公司（LLC），并非501(c)(3)非营利组织。捐款不可抵税。"
+  },
+  "funding": {
+    "selectAmount": "选择您的捐款金额",
+    "customAmount": "自定义金额",
+    "frequency": "捐款频率",
+    "oneTime": "一次性",
+    "monthly": "按月",
+    "monthlyBadge": "影响力最大",
+    "monthlySupporter": "加入其他{count}位月度支持者",
+    "monthlyCancelAnytime": "结账后可随时通过Stripe账单门户取消。",
+    "yourContribution": "您的捐款",
+    "perMonth": "/月",
+    "allGoesDirect": "您的捐款将用于{project}的开发建设。",
+    "taxDisclaimer": "Spark901是一家有限责任公司。捐款不可抵税。",
+    "submitButton": "继续前往安全结账",
+    "processing": "处理中...",
+    "minimumAmount": "最低捐款金额为5美元",
+    "secureNotice": "256位SSL安全加密",
+    "stripeNotice": "支付由Stripe处理"
+  },
+  "footer": {
+    "tagline": "用代码行善。源自孟菲斯。",
+    "description": "为致力于行善的组织构建永久性技术基础设施。",
+    "navigation": "浏览",
+    "legal": "法律信息",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "californiaPrivacy": "加州隐私权",
+    "cookiePolicy": "Cookie政策",
+    "digitalAcceptance": "电子同意声明",
+    "fairUse": "合理使用政策",
+    "dpa": "数据处理协议",
+    "aiDisclosure": "AI使用披露",
+    "contact": "联系我们",
+    "copyright": "© {year} Spark901。用心构建于孟菲斯。"
+  },
+  "legal": {
+    "privacy": {
+      "title": "隐私政策",
+      "lastUpdated": "2026年4月10日",
+      "content": "<h2>引言</h2><p>Spark901致力于保护您的隐私。本隐私政策说明了当您使用我们的网站和服务时，我们如何收集、使用和共享有关您的信息。</p><h2>我们收集的信息</h2><p>我们收集您直接提供给我们的信息，例如当您资助某个工具、订阅我们的通讯或联系我们时。这可能包括您的姓名、电子邮件地址，以及通过我们的第三方服务商Stripe处理的支付信息。</p><h2>我们如何使用信息</h2><p>我们使用所收集的信息来提供和改进我们的服务、处理交易、与您沟通，以及确保平台的安全性。</p><h2>信息共享</h2><p>我们不会出售您的个人信息。我们可能会与代表我们执行服务的第三方服务提供商共享信息，例如支付处理和数据托管服务商。</p><h2>您的权利</h2><p>您有权访问、更正或删除您的个人信息。如需行使这些权利，请通过 hello@spark901.com 与我们联系。</p>"
+    },
+    "terms": {
+      "title": "服务条款",
+      "lastUpdated": "2026年4月10日",
+      "content": "<h2>条款的接受</h2><p>访问或使用Spark901，即表示您同意受本服务条款的约束。如果您不同意，请不要使用我们的服务。</p><h2>服务的使用</h2><p>您同意仅将我们的服务用于合法目的，并遵守本条款。您有责任对任何账户信息保密。</p><h2>捐款</h2><p>在Spark901上为资助工具而做出的捐款不可退款。您捐款的100%将用于开源技术的开发和维护。</p><h2>知识产权</h2><p>Spark901平台及其原创内容归Spark901所有。通过我们平台资助的工具将以开源许可证发布。</p><h2>责任限制</h2><p>对于因您使用我们服务而产生的任何间接、附带或后果性损害，Spark901概不负责。</p>"
+    },
+    "californiaPrivacy": {
+      "title": "加州隐私政策",
+      "lastUpdated": "2026年4月10日",
+      "content": "<h2>加州隐私披露</h2><p>根据《加州消费者隐私法》(CCPA)和《加州隐私权法》(CPRA)，加州居民对其个人信息享有特定权利。</p><h2>知情权和访问权</h2><p>您有权要求我们披露我们收集、使用和共享的关于您的个人信息。</p><h2>删除权</h2><p>您有权要求删除Spark901收集的您的个人信息。</p><h2>选择退出权</h2><p>Spark901不会出售您的个人信息。我们也不会为跨情境行为广告目的共享您的个人信息。</p><h2>禁止歧视</h2><p>我们不会因您行使CCPA下的任何权利而歧视您。</p>"
+    },
+    "cookiePolicy": {
+      "title": "Cookie政策",
+      "lastUpdated": "2026年4月10日",
+      "content": "<h2>引言</h2><p>本Cookie政策说明了当您访问我们的网站时，Spark901如何使用Cookie及类似技术来识别您。</p><h2>什么是Cookie？</h2><p>Cookie是您访问网站时存储在您的计算机或移动设备上的小型数据文件。许多网站运营者广泛使用它们，以使其网站能够运行或更高效地运行。</p><h2>我们如何使用Cookie</h2><p>出于技术原因，我们使用Cookie以使我们的网站能够运行。这些被称为“必要”或“严格必需”的Cookie。其他Cookie还能帮助我们追踪和分析用户的兴趣，以提升您在我们网站上的体验。</p><h2>您的选择</h2><p>您可以设置或调整浏览器控件以接受或拒绝Cookie。如果您选择拒绝Cookie，您仍然可以使用我们的网站，但部分功能和页面的访问可能会受到限制。</p>"
+    },
+    "digitalAcceptance": {
+      "title": "电子同意声明",
+      "lastUpdated": "2026年4月10日",
+      "content": "<h2>电子通信</h2><p>使用Spark901，即表示您同意接收我们发送的电子通信。这些通信包括有关您账户的通知、付款确认以及与我们服务相关的其他信息。</p><h2>电子签名同意</h2><p>点击“我同意”或“资助一个工具”，即表示您同意您的电子签名与纸质文件上的实体签名具有同等法律效力。此同意适用于与我们服务相关的所有交易和披露事项。</p><h2>撤回同意</h2><p>您可以随时通过联系 hello@spark901.com 撤回接收电子通信的同意。如果您撤回同意，我们可能会终止您对我们服务的访问权限。</p>"
+    },
+    "fairUse": {
+      "title": "合理使用政策",
+      "lastUpdated": "2026年4月10日",
+      "content": "<h2>可接受的使用</h2><p>Spark901向社区提供平台工具。您同意仅将这些工具用于其预期目的，并以不侵犯他人权利的方式使用。</p><h2>禁止的活动</h2><p>您不得将Spark901用于任何非法、有害或破坏性的活动。这包括但不限于传播恶意软件、未经授权收集个人数据，或任何试图干扰我们平台运行的行为。</p><h2>开源许可证</h2><p>通过Spark901开发的工具和代码将以开源许可证发布。您对这些工具和代码的使用必须遵守相应许可证的条款。</p><h2>举报滥用行为</h2><p>如果您发现任何违反本合理使用政策的平台使用行为，请通过 hello@spark901.com 向我们举报。</p>"
+    },
+    "dpa": {
+      "title": "数据处理协议",
+      "lastUpdated": "2026年4月10日",
+      "content": "<h2>目的</h2><p>本数据处理协议(DPA)规定了Spark901代表我们的用户和合作组织处理个人数据的相关条款。</p><h2>处理义务</h2><p>Spark901仅会按照数据控制者的书面指示，并出于提供我们服务的目的处理个人数据。</p><h2>保密性</h2><p>我们确保获授权处理个人数据的人员已承诺保密，或受适当的法定保密义务约束。</p><h2>安全性</h2><p>Spark901采取适当的技术和组织措施，以确保数据处理风险相适应的安全水平。</p><h2>分包处理方</h2><p>我们会使用某些分包处理方来协助我们的处理活动，例如数据托管和支付处理。我们会维护所有分包处理方的清单，并在有任何变更时发出通知。</p>"
+    },
+    "aiDisclosure": {
+      "title": "AI使用披露",
+      "lastUpdated": "2026年4月10日",
+      "content": "<h2>人工智能的使用</h2><p>Spark901可能会使用人工智能(AI)和机器学习技术来改进我们的平台，并协助开源工具的开发。</p><h2>开发协助</h2><p>我们使用AI工具来帮助工程师编写、审查和测试代码。这使我们能够更快、更高效地为非营利社区构建和部署高质量的工具。</p><h2>透明度</h2><p>我们致力于在AI的使用方面保持透明。如果AI被用于生成内容或做出对用户有重大影响的决策，我们将就该使用提供通知和说明。</p><h2>人工监督</h2><p>所有借助AI开发的代码和功能，都将由我们的专业工程团队进行人工审查和测试，以确保安全性、可靠性和准确性。</p>"
+    }
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "getStarted": "开始使用",
+    "viewAll": "查看全部"
+  },
+  "thankYou": {
+    "title": "您太棒了！",
+    "titleVerified": "感谢您资助这个工具",
+    "titleNamed": "谢谢您，{name}！",
+    "subtitle": "您对<project></project>的捐款正在建设赋能社区的技术。",
+    "subtitleVerified": "您{amount}的捐款正在帮助为非营利组织建设<project></project>的开源基础设施。",
+    "summaryTitle": "捐款摘要",
+    "summaryName": "姓名",
+    "summaryAmount": "金额",
+    "summaryProject": "项目",
+    "summaryFrequency": "频率",
+    "summaryDate": "日期",
+    "summaryEmail": "收据接收邮箱",
+    "frequencyOneTime": "一次性",
+    "frequencyMonthly": "按月",
+    "impact": "您是这场运动的一份子",
+    "impactOneTime": "一次性捐款不可退款，将用于建设这个工具。",
+    "impactRecurring": "您的月度支持将自动续订。您可以随时通过账单门户取消。",
+    "receipt": "收据已发送至您的电子邮箱。",
+    "receiptTo": "Stripe收据已发送至{email}",
+    "taxNote": "Spark901是一家有限责任公司。捐款不可抵税，但会资助永久性的公共基础设施。",
+    "manageMonthly": "管理月度捐款",
+    "share": "分享这个项目",
+    "explore": "资助另一个工具",
+    "questions": "对您的捐款有疑问？",
+    "contact": "联系我们"
+  },
+  "feedback": {
+    "suggestTool": {
+      "title": "建议一个工具",
+      "description": "您的非营利组织面临的最大技术痛点是什么？我们会构建社区真正需要的工具。",
+      "emailLabel": "电子邮箱",
+      "emailPlaceholder": "your@nonprofit.org",
+      "detailsLabel": "描述这个技术痛点",
+      "detailsPlaceholder": "例如：我们很难跨多个站点追踪志愿者的工作时长……",
+      "submit": "提交建议",
+      "submitting": "提交中...",
+      "success": "谢谢！我们已收到您的建议。",
+      "error": "提交失败，请稍后重试。"
+    },
+    "betaSignup": {
+      "title": "加入测试候补名单",
+      "description": "当{project}准备好接受测试时，第一时间通知您。",
+      "emailLabel": "电子邮箱",
+      "emailPlaceholder": "your@nonprofit.org",
+      "submit": "加入名单",
+      "submitting": "加入中...",
+      "success": "您已加入名单！测试开始时我们会联系您。",
+      "error": "加入失败，请稍后重试。"
+    }
+  },
+  "volunteer": {
+    "hero": {
+      "tagline": "为善而建。源自孟菲斯。",
+      "headline": "将您的技能贡献给非营利组织真正在用的开源工具",
+      "description": "工程师、设计师、写作者和导师们——一起帮助我们打造使命驱动型组织每天都依赖的、持续维护的开源软件。"
+    },
+    "benefits": {
+      "heading": "为什么要在Spark901做志愿者",
+      "subheading": "真实的代码，真实的影响，没有无意义的杂务。",
+      "shipOss": {
+        "title": "发布真正的开源项目",
+        "body": "您的贡献将进入采用宽松许可证的公开代码仓库——您的作品具备作品集水准，并将永久留存。"
+      },
+      "realImpact": {
+        "title": "对非营利组织的直接影响",
+        "body": "我们发布的每一个工具都能大规模服务于非营利组织，而非一次性试点。您付出的每一小时都会带来复合的成果。"
+      },
+      "community": {
+        "title": "工程师携手支持非营利组织",
+        "body": "加入一支专注的建设者团队。提供指导、代码审查、以异步协作为先，没有招聘流程的压力。"
+      },
+      "memphisRoots": {
+        "title": "扎根孟菲斯",
+        "body": "作为Digital Delta的一部分，支持着全美最密集的非营利生态系统之一——欢迎远程贡献者加入。"
+      }
+    },
+    "formSection": {
+      "heading": "告诉我们您想如何提供帮助",
+      "subheading": "我们会为您匹配合适的项目，并在一周内与您联系。",
+      "privacyNote": "我们仅使用您的电子邮箱来协调志愿工作。Spark901是一家有限责任公司，并非501(c)(3)非营利组织；我们感激您贡献的时间，但这不可用于抵税。"
+    },
+    "form": {
+      "title": "志愿者报名",
+      "description": "分享您的技能和可支配时间。我们只需要联系您所必需的信息。",
+      "nameLabel": "您的姓名",
+      "namePlaceholder": "王小明",
+      "emailLabel": "电子邮箱",
+      "emailPlaceholder": "you@example.com",
+      "skillsLabel": "您可以在哪些方面提供帮助？",
+      "skillsHelp": "请选择所有适用项。我们会据此为您匹配合适的项目。",
+      "skills": {
+        "engineering": "工程开发",
+        "design": "设计 / 用户体验",
+        "product": "产品 / 项目管理",
+        "writing": "写作 / 文档",
+        "outreach": "推广 / 社区",
+        "mentoring": "指导",
+        "other": "其他"
+      },
+      "availabilityLabel": "每周可支配时间",
+      "availabilityPlaceholder": "请选择您能投入的时间",
+      "availability": {
+        "lt_2_hrs": "每周少于2小时",
+        "2_to_5_hrs": "每周2-5小时",
+        "5_to_10_hrs": "每周5-10小时",
+        "10_plus_hrs": "每周10小时以上"
+      },
+      "profileLabel": "GitHub或作品集链接（可选）",
+      "profilePlaceholder": "https://github.com/your-handle",
+      "profileHelp": "有助于我们为您匹配合适的项目。如果您希望先聊聊，也可以跳过此项。",
+      "messageLabel": "其他信息（可选）",
+      "messagePlaceholder": "您关心的公益议题、您做过的工具、您有空的日子……",
+      "submit": "报名参与",
+      "submitting": "提交中...",
+      "success": "谢谢！我们会在一周内与您联系。",
+      "error": "暂时无法提交，请稍后重试。",
+      "thanksTitle": "报名成功，欢迎加入！",
+      "thanksBody": "我们会评估您的技能，并在一周内为您匹配合适的项目。与此同时，欢迎关注我们的公开代码仓库。"
+    }
+  }
+}

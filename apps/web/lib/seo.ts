@@ -49,6 +49,14 @@ export function absoluteLocalizedUrl(locale: string, path = ""): string {
   return absoluteUrl(localized === "/" ? "" : localized)
 }
 
+/** OpenGraph locale tags (og:locale expects `xx_YY`) for each supported locale. */
+const OG_LOCALE_MAP: Record<Locale, string> = {
+  en: "en_US",
+  es: "es_US",
+  ja: "ja_JP",
+  zh: "zh_CN",
+}
+
 export function languageAlternates(path = ""): Record<string, string> {
   const languages: Record<string, string> = {
     "x-default": absoluteLocalizedUrl(defaultLocale, path),
@@ -119,8 +127,10 @@ export function createPageMetadata({
 }: PageMetadataInput): Metadata {
   const url = absoluteLocalizedUrl(locale, path)
   const images = resolveOgImages(image)
-  const ogLocale = locale === "es" ? "es_US" : "en_US"
-  const alternateLocale = locale === "es" ? "en_US" : "es_US"
+  const ogLocale = OG_LOCALE_MAP[locale as Locale] ?? OG_LOCALE_MAP[defaultLocale]
+  const alternateLocale = locales
+    .filter((loc) => loc !== locale)
+    .map((loc) => OG_LOCALE_MAP[loc])
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -133,7 +143,7 @@ export function createPageMetadata({
     openGraph: {
       type,
       locale: ogLocale,
-      alternateLocale: [alternateLocale],
+      alternateLocale,
       url,
       siteName: SITE_NAME,
       title: ogTitle ?? title,
@@ -205,7 +215,7 @@ export function websiteJsonLd() {
     name: brand.name,
     url: SITE_URL,
     description: brand.tagline,
-    inLanguage: ["en", "es"],
+    inLanguage: [...locales],
     publisher: { "@id": `${SITE_URL}/#organization` },
   }
 }

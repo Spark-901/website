@@ -8,10 +8,18 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { brand } from "@/lib/brand"
 import { loadContributionDetails } from "@/lib/contribution-session"
-import { locales } from "@/i18n/config"
+import { locales, type Locale } from "@/i18n/config"
 import { getProjectBySlug, projects } from "@/lib/projects"
 
 export const dynamic = "force-dynamic"
+
+/** BCP-47 tags for date/time formatting, per supported locale. */
+const DATE_FORMAT_LOCALE: Record<Locale, string> = {
+  en: "en-US",
+  es: "es-US",
+  ja: "ja-JP",
+  zh: "zh-CN",
+}
 
 export function generateStaticParams() {
   const params = []
@@ -62,8 +70,10 @@ export default async function ThankYouPage({ params, searchParams }: ThankYouPag
   const amountLabel = contribution?.amountLabel
   const donorEmail = contribution?.email
   const isRecurring = contribution?.isRecurring ?? false
+  const { isLocale } = await import("@/lib/seo")
+  const dateFormatLocale = DATE_FORMAT_LOCALE[isLocale(locale) ? locale : "en"]
   const contributedAt = contribution?.createdAt
-    ? new Intl.DateTimeFormat(locale === "es" ? "es-US" : "en-US", {
+    ? new Intl.DateTimeFormat(dateFormatLocale, {
         dateStyle: "medium",
         timeStyle: "short",
       }).format(contribution.createdAt)

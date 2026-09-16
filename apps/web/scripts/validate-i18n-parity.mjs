@@ -7,8 +7,9 @@
 
 import { readFileSync, readdirSync } from "node:fs"
 import { join, basename } from "node:path"
+import { fileURLToPath } from "node:url"
 
-const WEB_ROOT = new URL("..", import.meta.url).pathname
+const WEB_ROOT = fileURLToPath(new URL("..", import.meta.url))
 const MESSAGES_DIR = join(WEB_ROOT, "messages")
 const CONFIG_PATH = join(WEB_ROOT, "i18n", "config.ts")
 
