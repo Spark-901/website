@@ -49,8 +49,9 @@
       }
     },
     "testimonials": {
-      "title": "Trusted by Memphis leaders",
-      "cta": "Join them today"
+      "title": "We're just getting started — help us build our track record",
+      "subtitle": "Spark901 is young. If one of our tools has saved your organization time or money, we'd love to feature your story here as we grow.",
+      "cta": "Share your story"
     },
     "cta": {
       "title": "You don't need to code to build technology that changes lives.",
