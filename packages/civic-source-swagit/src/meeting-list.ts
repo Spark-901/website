@@ -1,4 +1,4 @@
-import type { SwagitMeetingListItem, SwagitSourceConfig } from "./types"
+import type { SwagitMeetingListItem, SwagitSourceConfig } from "./types.ts"
 
 /**
  * A real desktop browser UA is required — a bare/no UA or a generic script UA

@@ -12,7 +12,8 @@
     "transparency": "透明性",
     "volunteer": "ボランティア",
     "partnerWithUs": "提携する",
-    "civicArchive": "市民アーカイブ"
+    "civicArchive": "市民アーカイブ",
+    "askTheArchive": "アーカイブに質問"
   },
   "home": {
     "hero": {
@@ -396,6 +397,24 @@
     "watchAt": "{timestamp} から視聴",
     "donateCtaTitle": "この取り組みはあなたのような支援者の寄付で無償提供されています",
     "donateCtaBody": "このアーカイブが地元行政の理解に役立ったなら、より多くの会議の要約や、他のミッドサウス地域の町への展開にご協力ください。",
+    "donateCtaButton": "市民アーカイブを支援する"
+  },
+  "askTheArchive": {
+    "badge": "プルーフ・オブ・コンセプト — 実際に質問してみよう",
+    "title": "アーカイブに質問する",
+    "description": "コリアービル町議会・市長理事会がこれまでに議論した内容について質問してください。実際の会議議事録に基づき、正確な会議とタイムスタンプへの引用付きで回答します。",
+    "inputPlaceholder": "例：電動アシスト自転車のルールについて議論しましたか？",
+    "inputLabel": "コリアービルのBMA会議について質問する",
+    "ask": "質問する",
+    "asking": "質問中…",
+    "turnstileRequired": "質問する前に認証を完了してください。",
+    "questionTooShort": "もう少し具体的な質問を入力してください（4文字以上）。",
+    "genericError": "問題が発生しました。もう一度お試しください。",
+    "citationsHeading": "引用元",
+    "unknownMeeting": "不明な会議",
+    "watchAt": "{timestamp} から見る",
+    "donateCtaTitle": "あなたのような人の支援によって無料で提供できています",
+    "donateCtaBody": "このアーカイブが地域行政の理解に役立ったなら、より多くの会議を要約し、ミッドサウス地域のより多くの町に届けるのを支援してください。",
     "donateCtaButton": "市民アーカイブを支援する"
   }
 }

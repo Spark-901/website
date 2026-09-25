@@ -12,7 +12,8 @@
     "transparency": "透明度",
     "volunteer": "志愿者",
     "partnerWithUs": "与我们合作",
-    "civicArchive": "市民档案"
+    "civicArchive": "市民档案",
+    "askTheArchive": "向档案提问"
   },
   "home": {
     "hero": {
@@ -397,5 +398,23 @@
     "donateCtaTitle": "这项服务因为有像您这样的人资助才得以免费提供",
     "donateCtaBody": "如果这份档案帮助您了解了本地政府的运作，请资助我们总结更多会议，并将这项服务推广到中南部更多城镇。",
     "donateCtaButton": "资助市民档案项目"
+  },
+  "askTheArchive": {
+    "badge": "概念验证 — 提出一个真实问题",
+    "title": "向档案提问",
+    "description": "就科利尔维尔镇市长及镇务委员会讨论过的内容提出问题，获得基于真实会议记录并附引用至确切会议和时间戳的回答。",
+    "inputPlaceholder": "例如：委员会是否讨论过电动自行车规定？",
+    "inputLabel": "就科利尔维尔BMA会议提问",
+    "ask": "提问",
+    "asking": "提问中…",
+    "turnstileRequired": "请在提问前完成验证。",
+    "questionTooShort": "请提出更具体的问题（至少4个字符）。",
+    "genericError": "出现问题，请重试。",
+    "citationsHeading": "来源",
+    "unknownMeeting": "未知会议",
+    "watchAt": "从 {timestamp} 处观看",
+    "donateCtaTitle": "因为有像您这样的支持者，这项服务才得以免费提供",
+    "donateCtaBody": "如果这个档案帮助您了解了当地政府，请支持我们总结更多会议，并将此项目推广到更多中南部城镇。",
+    "donateCtaButton": "资助市民档案"
   }
 }

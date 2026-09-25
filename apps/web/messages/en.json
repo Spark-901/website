@@ -12,7 +12,8 @@
     "transparency": "Transparency",
     "volunteer": "Volunteer",
     "partnerWithUs": "Partner With Us",
-    "civicArchive": "Civic Archive"
+    "civicArchive": "Civic Archive",
+    "askTheArchive": "Ask the Archive"
   },
   "home": {
     "hero": {
@@ -396,6 +397,24 @@
     "watchAt": "Watch at {timestamp}",
     "donateCtaTitle": "This is free because people like you fund it",
     "donateCtaBody": "If this archive helped you understand your local government, help us summarize more meetings and bring this to more Mid-South towns.",
+    "donateCtaButton": "Fund the Civic Archive"
+  },
+  "askTheArchive": {
+    "badge": "Proof of concept — ask a real question",
+    "title": "Ask the Archive",
+    "description": "Ask a question about what Collierville's Board of Mayor and Aldermen has discussed — get an answer grounded in real meeting transcripts, with citations back to the exact meeting and timestamp.",
+    "inputPlaceholder": "e.g. Did the board discuss e-bike rules?",
+    "inputLabel": "Ask a question about a Collierville BMA meeting",
+    "ask": "Ask",
+    "asking": "Asking…",
+    "turnstileRequired": "Please complete the verification before asking.",
+    "questionTooShort": "Please ask a more specific question (at least 4 characters).",
+    "genericError": "Something went wrong. Please try again.",
+    "citationsHeading": "Sources",
+    "unknownMeeting": "Unknown meeting",
+    "watchAt": "Watch at {timestamp}",
+    "donateCtaTitle": "This is free because people like you fund it",
+    "donateCtaBody": "If this helped you understand your local government, help us summarize more meetings and bring this to more Mid-South towns.",
     "donateCtaButton": "Fund the Civic Archive"
   }
 }

@@ -21,6 +21,9 @@ export function Header() {
     ...(isFeatureEnabled("CIVIC_ARCHIVE")
       ? [{ href: "/civic-archive", label: t("civicArchive") }]
       : []),
+    ...(isFeatureEnabled("ASK_THE_ARCHIVE")
+      ? [{ href: "/ask-the-archive", label: t("askTheArchive") }]
+      : []),
     { href: "/why-fund", label: t("whyFund") },
     { href: "/about", label: t("about") },
     { href: "/volunteer", label: t("volunteer") },

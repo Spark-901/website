@@ -36,6 +36,16 @@ export const FEATURE_FLAGS = {
    * downloadable PDFs). See personal-work/goals/collierville-civic-data.md.
    */
   CIVIC_ARCHIVE: process.env.NEXT_PUBLIC_ENABLE_CIVIC_ARCHIVE === "true",
+
+  /**
+   * Enables the "Ask the Archive" Q&A page and its nav link — a
+   * proof-of-concept search box that answers free-text questions about
+   * Collierville BMA meetings, grounded in real transcript content via
+   * rag-gateway, with citations. Demo of Spark901's technical capability,
+   * carries an explicit donate CTA. See
+   * personal-work/goals/collierville-civic-data.md.
+   */
+  ASK_THE_ARCHIVE: process.env.NEXT_PUBLIC_ENABLE_ASK_THE_ARCHIVE === "true",
 } as const;
 
 export type FeatureFlag = keyof typeof FEATURE_FLAGS;

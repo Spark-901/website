@@ -1,5 +1,5 @@
-import { SWAGIT_BROWSER_USER_AGENT } from "./meeting-list"
-import type { StructuredTranscript, SwagitSourceConfig, TranscriptSegment } from "./types"
+import { SWAGIT_BROWSER_USER_AGENT } from "./meeting-list.ts"
+import type { StructuredTranscript, SwagitSourceConfig, TranscriptSegment } from "./types.ts"
 
 export function transcriptUrl(config: SwagitSourceConfig, videoId: number): string {
   return `https://${config.portal}/videos/${videoId}/transcript`

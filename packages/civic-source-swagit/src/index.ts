@@ -3,15 +3,15 @@ export type {
   SwagitMeetingListItem,
   SwagitSourceConfig,
   TranscriptSegment,
-} from "./types"
+} from "./types.ts"
 
 export {
   SWAGIT_BROWSER_USER_AGENT,
   fetchSwagitMeetingList,
   parseMeetingListHtml,
   toIsoDateSlug,
-} from "./meeting-list"
-export type { FetchMeetingListOptions } from "./meeting-list"
+} from "./meeting-list.ts"
+export type { FetchMeetingListOptions } from "./meeting-list.ts"
 
 export {
   fetchStructuredSwagitTranscript,
@@ -19,5 +19,5 @@ export {
   parseSwagitTranscript,
   sourceVideoUrl,
   transcriptUrl,
-} from "./transcript"
-export type { FetchTranscriptOptions } from "./transcript"
+} from "./transcript.ts"
+export type { FetchTranscriptOptions } from "./transcript.ts"
