@@ -11,7 +11,9 @@
     "about": "Nosotros",
     "transparency": "Transparencia",
     "volunteer": "Voluntariado",
-    "partnerWithUs": "Asóciate con Nosotros"
+    "partnerWithUs": "Asóciate con Nosotros",
+    "civicArchive": "Archivo Cívico",
+    "askTheArchive": "Pregunta al Archivo"
   },
   "home": {
     "hero": {
@@ -380,5 +382,41 @@
     "learnMore": "Saber Más",
     "getStarted": "Comenzar",
     "viewAll": "Ver Todo"
+  },
+  "civicArchive": {
+    "badge": "Piloto en vivo — Collierville, TN",
+    "title": "Archivo Cívico de Collierville",
+    "description": "Cada reunión de la Junta de Alcalde y Concejales, resumida en lenguaje sencillo con un PDF descargable — para que veas qué decidió tu gobierno sin ver horas de video.",
+    "multiTownNote": "Diseñado para expandirse a cualquier pueblo del oeste de Tennessee — Collierville es el primero.",
+    "meetingsHeading": "Reuniones",
+    "emptyState": "Todavía no hay resúmenes de reuniones disponibles. Vuelve pronto.",
+    "downloadPdf": "Descargar PDF",
+    "agendaHeading": "Qué pasó",
+    "actionItemsHeading": "Decisiones y acciones",
+    "topicsHeading": "Temas",
+    "watchVideo": "Ver la reunión completa",
+    "watchAt": "Ver en {timestamp}",
+    "donateCtaTitle": "Esto es gratis porque personas como tú lo financian",
+    "donateCtaBody": "Si este archivo te ayudó a entender a tu gobierno local, ayúdanos a resumir más reuniones y a llevar esto a más pueblos del Medio Sur.",
+    "donateCtaButton": "Financiar el Archivo Cívico"
+  },
+  "askTheArchive": {
+    "badge": "Prueba de concepto — haz una pregunta real",
+    "title": "Pregunta al Archivo",
+    "description": "Haz una pregunta sobre lo que la Junta de Alcalde y Concejales de Collierville ha discutido — obtén una respuesta basada en transcripciones reales de las reuniones, con citas al minuto exacto de la reunión correspondiente.",
+    "multiTownNote": "Diseñado para expandirse a cualquier pueblo del oeste de Tennessee — Collierville es el primero.",
+    "inputPlaceholder": "ej. ¿La junta discutió reglas para e-bikes?",
+    "inputLabel": "Haz una pregunta sobre una reunión de la BMA de Collierville",
+    "ask": "Preguntar",
+    "asking": "Preguntando…",
+    "turnstileRequired": "Por favor completa la verificación antes de preguntar.",
+    "questionTooShort": "Por favor haz una pregunta más específica (al menos 4 caracteres).",
+    "genericError": "Algo salió mal. Por favor intenta de nuevo.",
+    "citationsHeading": "Fuentes",
+    "unknownMeeting": "Reunión desconocida",
+    "watchAt": "Ver en {timestamp}",
+    "donateCtaTitle": "Esto es gratis porque personas como tú lo financian",
+    "donateCtaBody": "Si esto te ayudó a entender a tu gobierno local, ayúdanos a resumir más reuniones y a llevar esto a más pueblos del Medio Sur.",
+    "donateCtaButton": "Financiar el Archivo Cívico"
   }
 }

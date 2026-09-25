@@ -1,0 +1,42 @@
+{
+  "meetingId": "2026-07-16_393747",
+  "date": "2026-07-16",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Special Called Meeting — July 16, 2026",
+  "overview": "This special called meeting resolved a legal fight over a proposed Chick-fil-A at Cartwright Place Business Center. A Chancery Court judge (Chancellor JoeDae L. Jenkins) had ruled against the town in a lawsuit brought by the Clara S. Cartwright Exempt Residuary Trust and ordered the town to approve the restaurant's site plan; the town had appealed that ruling, after which the trust's lawyers sought to hold the board in contempt of court. Following the town attorney's advice, the board first approved the Chick-fil-A site plan itself (as the court had ordered, with no discussion allowed per the judge's instructions), then voted to drop the town's appeal, on the condition that the trust's contempt petitions be dismissed and any claim for attorney's fees be waived. During citizen comments, speakers were sharply divided — some urged the board to stop fighting a project they said most residents and town staff supported, while others, including one speaker citing a nearly 500-signature petition, argued serious traffic-safety concerns (including three fatalities at a nearby intersection) had not been adequately addressed.",
+  "agendaItems": [
+    {
+      "item": "1. CALL TO ORDER",
+      "timestamp": "00:00:08",
+      "summary": "Mayor Maureen Frazier called the special called meeting to order. Assistant Town Administrator Adam Hamrick called the roll, with all five aldermen present (their names are garbled in the transcript's captioning of the roll call itself).",
+      "type": "other"
+    },
+    {
+      "item": "3. CITIZENS COMMENTS",
+      "timestamp": "00:00:08",
+      "summary": "Five residents spoke, reflecting a sharp split of opinion. Julianne Booth said she supported the board's prior vote in favor of the project and preferred a Chick-fil-A over other possible uses. Pam Camford said the town should not spend tax dollars defending aldermen's no-votes and that Chick-fil-A had met every requirement asked of it. Mark Underwood, a longtime local development facilitator, urged the board to drop its appeal and approve the site plan, arguing the site would be developed one way or another and that staff's technical review should be trusted. Rachel Wall said she spoke for nearly 500 residents who signed a petition raising safety concerns, described what she called an organized campaign against several board members, and made a pointed remark about the town being \"for sale to the highest bidder\" that the mayor interjected was not an allowed form of comment. Larry Boyd said he and what he believed was a large majority of residents supported the Chick-fil-A and objected to continued spending on litigation over a project town staff, the Design Review Commission, the Planning Commission, and a judge had all approved.",
+      "type": "public-comment"
+    },
+    {
+      "item": "4.B Preliminary Site Plan for Cartwright Place Business Center Planned Development, Phase 6, Lot 2B (Chick-fil-A), Case #233183",
+      "timestamp": "00:05:03",
+      "summary": "Town Attorney Nathan Biggs explained that the Chancery Court's order required the board to approve this site plan with no presentation, no discussion, and no deliberation — only a motion, a second, and a vote. Alderman Hall made the motion to approve, Alderman Robbins seconded, and after a brief procedural exchange in which a board member was reminded no discussion was permitted before the vote, the roll call was taken (the transcript's rendering of each member's individual vote is unclear due to overlapping speech, but the outcome was announced as approved).",
+      "type": "vote",
+      "outcome": "Approved (roll call vote, as required by the court's order)"
+    },
+    {
+      "item": "4.A Discussion and Consideration of the Town's Appeal of the final order issued by Chancellor JoeDae L. Jenkins issued in the Clara S. Cartwright Exempt Residuary Trust v. Town of Collierville and Board of Mayor and Aldermen Case",
+      "timestamp": "00:05:03",
+      "summary": "Town Attorney Nathan Biggs recapped that after the Chancery Court's ruling in favor of the Cartwright Trust, the board had voted to appeal and filed a notice of appeal with the Court of Appeals in Jackson; the Trust's lawyers then filed petitions in Chancery Court seeking to hold the board and town in both civil and criminal contempt. Biggs recommended that any motion to dismiss the town's appeal be made expressly contingent on the Trust dismissing those contempt petitions and waiving any claim for attorney's fees. Alderman Robbins made a motion to dismiss the appeal on those conditions, which was seconded. During discussion, Alderman Marshall read a statement into the record explaining her original position on the underlying development: she cited three fatalities to date at the intersection near the proposed access point (involving Cartwright Road, described in relation to Poplar Avenue and a railroad crossing) and said she had asked for a more comprehensive safety analysis (a road safety audit, crash history analysis, railroad-crossing hazard analysis, and peak-hour traffic simulation) after the town's traffic engineer acknowledged on the record that allowing left turns across four lanes of traffic near the railroad crossing \"could be concerning\" during peak hours; she said this safety concern, not any improper motive, was the basis for her prior vote and support for the appeal. The roll call vote that followed is also difficult to attribute member-by-member in the transcript, but the motion was announced as approved.",
+      "type": "vote",
+      "outcome": "Approved (roll call vote) — the board voted to dismiss its appeal, contingent on the Cartwright Trust dismissing its pending contempt petitions and waiving any attorney's fee claims"
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved the preliminary site plan for the Chick-fil-A at Cartwright Place Business Center, Phase 6, Lot 2B, as ordered by the Chancery Court", "timestamp": "00:05:03" },
+    { "description": "Voted to dismiss the town's appeal of Chancellor Jenkins' ruling, contingent on dismissal of pending contempt petitions and a waiver of attorney's fee claims by the Cartwright Trust", "timestamp": "00:05:03" }
+  ],
+  "topics": ["litigation & legal appeal", "development site plan", "traffic safety", "citizens comments", "chick-fil-a development"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/393747",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

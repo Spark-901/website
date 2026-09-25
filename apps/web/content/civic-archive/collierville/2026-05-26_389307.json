@@ -1,0 +1,79 @@
+{
+  "meetingId": "2026-05-26_389307",
+  "date": "2026-05-26",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Regular Meeting — May 26, 2026",
+  "overview": "The board removed one item from its consent agenda for later consideration, approved buying a replacement garbage truck after one was totaled in an accident (fully covered by insurance), and held a public hearing before approving the ordinance setting the municipal property tax rate for FY2027 at $1.62 (unchanged from the current rate). The board then held a lengthy public hearing — with no vote required that night — on the proposed FY2026-2027 town and Collierville Schools budgets, which include a $5/month sanitation fee increase, a new $5/month street-paving fee, a roughly 3% average pay increase for staff, and a small decline in school enrollment. During citizen comments, a resident renewed a serious complaint about unresolved mold and maintenance problems at her apartment complex, and during the budget hearing another resident suggested the town could save money by picking up recycling and bulk waste less often and offering smaller trash bins.",
+  "agendaItems": [
+    {
+      "item": "Call to Order, Invocation & Pledge of Allegiance",
+      "timestamp": "00:00:04",
+      "summary": "Mayor Maureen Frazier called the meeting to order. Chaplain Mark McCrone gave the invocation and Alderman Charles Hall (noted as celebrating a birthday) led the Pledge of Allegiance. Roll call showed Aldermen Hall, Jordan, Marshall, Stamps, and Robbins present. Note: this transcript (video ID 389307) is not broken out by agenda item in the source data — every segment carries the same generic label — so the item headings below were inferred from the spoken transitions in the text rather than pulled from a structured field.",
+      "type": "other"
+    },
+    {
+      "item": "Approval of Agenda (Additions/Deletions)",
+      "timestamp": "00:00:04",
+      "summary": "Staff asked to remove item 8C from the consent agenda for consideration at the June 8 meeting instead. (A separate recording of this same meeting, video ID 389142, instead states item 8B was the one removed — the two transcripts disagree on the letter, which is flagged here rather than guessed at.) The board approved the agenda with that item removed.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), as amended"
+    },
+    {
+      "item": "Approval of Minutes",
+      "timestamp": "00:00:04",
+      "summary": "The board approved the minutes of the May 11, 2026 Board of Mayor and Aldermen meeting with no changes.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "Special Presentation",
+      "timestamp": "00:00:04",
+      "summary": "The mayor noted there was no special presentation on the agenda this evening.",
+      "type": "other"
+    },
+    {
+      "item": "Citizens Comments",
+      "timestamp": "00:00:04",
+      "summary": "Two residents spoke. Christina Ray, a Laurelwood/Lowell Woods apartment resident (the same resident who raised similar concerns at the May 11 meeting), returned with photos and documents supporting complaints of unresolved mold and unsanitary conditions harming her family's health; she said she does not seek a lawsuit but wants accountability from the property manager (named as Nicky Johnson in the transcript) and the complex's ownership. Town staff said code enforcement and development services have been working with her and have exhausted the remedies available under the town's authority, and asked for patience given required legal timelines. Dr. LaSagna (transcribed elsewhere as \"Lasagna\") Hall, identified as Shelby County's Deputy Chief Administrative Officer, introduced herself as a candidate for Shelby County Clerk.",
+      "type": "public-comment"
+    },
+    {
+      "item": "Consent Agenda",
+      "timestamp": "00:05:02",
+      "summary": "The board approved consent agenda items 8A through 8I, with one item removed earlier in the meeting (see Approval of Agenda above) and no other items pulled for separate presentation.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.A Purchase of an Automated Garbage Truck through a Sourcewell Cooperative Contract",
+      "timestamp": "00:05:02",
+      "summary": "Public Works Director Josh Russell requested approval to purchase a replacement garbage truck (unit 412), which was purchased in FY2025 and totaled in a single-vehicle accident on April 9, 2026 (the driver was uninjured). The insurance company deemed it a total loss and will fully reimburse the town for the purchase of a new truck, which the vendor could deliver within about two weeks. A related budget amendment was included on the consent agenda.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "10.A Ordinance 2026-06 - Second Reading and Public Hearing – An Ordinance to Establish the Municipal Tax Rate for Tax Year 2026 (Fiscal Year 2027) at $1.62 for the Town of Collierville, Tennessee",
+      "timestamp": "00:10:04",
+      "summary": "Revenue and Grant Manager Natasha Irby presented the ordinance setting the FY2027 property tax rate at $1.62, unchanged from the current rate, which the board determined (through prior budget work sessions) is sufficient along with other revenue sources to fund the proposed FY2027 budget. No one from the public spoke at the hearing.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote) on second reading"
+    },
+    {
+      "item": "10.B Resolution 2026-15 - PUBLIC HEARING ONLY - A Resolution to Adopt the Proposed FY2026-2027 Operating Budget, Capital Investment Budget, and Collierville Schools Budget",
+      "timestamp": "00:10:04",
+      "summary": "This was a public hearing only, with the board's actual vote scheduled for June 8, 2026. Collierville Schools Finance Director Anita Floyd presented the schools' budget: projected enrollment of 8,996 students (a decrease from the prior year, attributed mainly to fewer kindergarten-age children), class-size ratios within state limits, a general fund of about $127 million (down from the prior year due to the enrollment decline), a 1% cost-of-living raise plus step increases (up to about 3% combined) for qualifying staff, and a roughly $4 million school nutrition fund balance. The town's budget was then presented (introduced by the town administrator, with the actual presentation given by a staff member referred to only as \"Miss Maynor\"/administrator in the transcript, thanking Finance Director Melissa/Lisa Wells, Budget Officer J.P. Spar, Budget Analyst Ashley Moore, and Grants and Revenue Manager Natasha Irby): a population of about 56,000 across 36.5 square miles, projected FY2027 general fund revenue of $95.1 million against expenditures of $89.5 million, 48% of the budget going to public safety, 23.1% to infrastructure, a roughly $12 million capital investment program (including a Downtown Drainage Phase 5 project, a Burrows Road water/sewer project, and Tom Brooks Park Phase 3 improvements), a $5/month sanitation fee increase (bringing the rate to $32/month), a new $5/month street infrastructure fee to fund additional street paving, and a roughly 3% average pay increase along with two new holidays and a personal day for employees, while maintaining the $1.62 tax rate. Resident Jim Stokes was the only member of the public to speak, suggesting the town could cut costs by collecting recyclables and bulk/yard waste less frequently than weekly trash pickup, by contracting out trash hauling, and by offering smaller trash bins for residents with limited garage space.",
+      "type": "public-comment"
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved the meeting agenda, removing one consent-agenda item to the June 8 meeting", "timestamp": "00:00:04" },
+    { "description": "Approved minutes from the May 11, 2026 meeting", "timestamp": "00:00:04" },
+    { "description": "Approved consent agenda items 8A-8I", "timestamp": "00:05:02" },
+    { "description": "Approved purchase of a replacement automated garbage truck (insurance-reimbursed)", "timestamp": "00:05:02" },
+    { "description": "Approved Ordinance 2026-06 on second reading, setting the FY2027 municipal tax rate at $1.62", "timestamp": "00:10:04" },
+    { "description": "Held a public hearing (no vote) on the proposed FY2026-2027 town and Collierville Schools budgets; a vote is scheduled for June 8, 2026", "timestamp": "00:10:04" }
+  ],
+  "topics": ["budget", "property tax rate", "sanitation & waste collection", "housing & code enforcement", "schools budget", "vehicle purchases", "citizens comments"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/389307",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

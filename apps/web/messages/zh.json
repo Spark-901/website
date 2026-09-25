@@ -11,7 +11,9 @@
     "about": "关于我们",
     "transparency": "透明度",
     "volunteer": "志愿者",
-    "partnerWithUs": "与我们合作"
+    "partnerWithUs": "与我们合作",
+    "civicArchive": "市民档案",
+    "askTheArchive": "向档案提问"
   },
   "home": {
     "hero": {
@@ -380,5 +382,41 @@
       "thanksTitle": "报名成功，欢迎加入！",
       "thanksBody": "我们会评估您的技能，并在一周内为您匹配合适的项目。与此同时，欢迎关注我们的公开代码仓库。"
     }
+  },
+  "civicArchive": {
+    "badge": "实时试点 — 田纳西州科利尔维尔",
+    "title": "科利尔维尔市民档案",
+    "description": "每一次市长及镇务委员会会议，都有通俗易懂的摘要和可下载的PDF——无需观看数小时视频，即可了解政府的决定。",
+    "multiTownNote": "设计初衷是可以扩展到田纳西州西部的任何城镇——科利尔维尔是我们的第一个。",
+    "meetingsHeading": "会议列表",
+    "emptyState": "暂无可用的会议摘要，请稍后再来查看。",
+    "downloadPdf": "下载PDF",
+    "agendaHeading": "会议内容",
+    "actionItemsHeading": "决定与后续行动",
+    "topicsHeading": "主题",
+    "watchVideo": "观看完整会议视频",
+    "watchAt": "从 {timestamp} 开始观看",
+    "donateCtaTitle": "这项服务因为有像您这样的人资助才得以免费提供",
+    "donateCtaBody": "如果这份档案帮助您了解了本地政府的运作，请资助我们总结更多会议，并将这项服务推广到中南部更多城镇。",
+    "donateCtaButton": "资助市民档案项目"
+  },
+  "askTheArchive": {
+    "badge": "概念验证 — 提出一个真实问题",
+    "title": "向档案提问",
+    "description": "就科利尔维尔镇市长及镇务委员会讨论过的内容提出问题，获得基于真实会议记录并附引用至确切会议和时间戳的回答。",
+    "multiTownNote": "设计初衷是可以扩展到田纳西州西部的任何城镇——科利尔维尔是我们的第一个。",
+    "inputPlaceholder": "例如：委员会是否讨论过电动自行车规定？",
+    "inputLabel": "就科利尔维尔BMA会议提问",
+    "ask": "提问",
+    "asking": "提问中…",
+    "turnstileRequired": "请在提问前完成验证。",
+    "questionTooShort": "请提出更具体的问题（至少4个字符）。",
+    "genericError": "出现问题，请重试。",
+    "citationsHeading": "来源",
+    "unknownMeeting": "未知会议",
+    "watchAt": "从 {timestamp} 处观看",
+    "donateCtaTitle": "因为有像您这样的支持者，这项服务才得以免费提供",
+    "donateCtaBody": "如果这个档案帮助您了解了当地政府，请支持我们总结更多会议，并将此项目推广到更多中南部城镇。",
+    "donateCtaButton": "资助市民档案"
   }
 }

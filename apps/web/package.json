@@ -2,6 +2,7 @@
   "name": "web",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -13,10 +14,14 @@
     "validate:brand": "node scripts/validate-brand-render.mjs",
     "stripe:setup-sandbox": "node scripts/setup-stripe-sandbox.mjs",
     "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks/stripe",
-    "stripe:set-production": "node scripts/set-vercel-stripe-production.mjs"
+    "stripe:set-production": "node scripts/set-vercel-stripe-production.mjs",
+    "generate:civic-archive-pdfs": "node --experimental-strip-types scripts/generate-civic-archive-pdfs.ts",
+    "ingest:civic-archive-rag": "node --experimental-strip-types scripts/ingest-civic-archive-rag.ts"
   },
   "dependencies": {
+    "@ai-sdk/amazon-bedrock": "^4.0.183",
     "@aws-sdk/client-dynamodb": "3.1090.0",
+    "@aws-sdk/client-s3": "3.1090.0",
     "@aws-sdk/lib-dynamodb": "3.1090.0",
     "@hookform/resolvers": "^5.4.0",
     "@marsidev/react-turnstile": "^1.5.3",
@@ -47,7 +52,12 @@
     "@radix-ui/react-toggle": "^1.1.10",
     "@radix-ui/react-toggle-group": "^1.1.11",
     "@radix-ui/react-tooltip": "^1.2.8",
+    "@react-pdf/renderer": "^4.4.0",
+    "@spark901/civic-source-swagit": "*",
+    "@spark901/meeting-summary-schema": "*",
+    "@spark901/meeting-summary-ui": "*",
     "@vercel/analytics": "^2.0.1",
+    "ai": "^6.0.291",
     "autoprefixer": "^10.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

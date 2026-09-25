@@ -1,0 +1,72 @@
+{
+  "meetingId": "2026-08-24_398897",
+  "date": "2026-08-24",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Regular Meeting — August 24, 2026",
+  "overview": "Citizen comments dominated this meeting's public attention: multiple residents raised pointed questions about Fire Chief John Sjoberg's departure with a year's severance pay, and one resident used her time to make detailed public allegations that Town Administrator Molly Maynor mishandled her husband's firing from the Public Utilities Division following an internal investigation, tying it to broader concerns about town personnel practices. On routine business, the board received a midpoint update on the Collierville 2050 Comprehensive Plan (five of ten planning chapters complete, on track for adoption review by early 2027), approved a small road-widening easement purchase along Shelby Drive, and approved the town's first conditional use permit under its new drive-thru ordinance — for two \"mobile pickup only\" drive-thru windows (one confirmed for Domino's) at a new building near Houston Levee and Winchester Roads.",
+  "agendaItems": [
+    {
+      "item": "1. CALL TO ORDER & INVOCATION",
+      "timestamp": "00:00:07",
+      "summary": "Mayor Maureen Frazier called the meeting to order. Father Christian Shenoy gave the invocation and Alderman Jewel Jordan led the Pledge of Allegiance. Roll call showed Aldermen Hall, Jordan, Marshall, Stamps, and Robbins present.",
+      "type": "other"
+    },
+    {
+      "item": "4. APPROVAL OF AGENDA (Additions/Deletions)",
+      "timestamp": "00:00:07",
+      "summary": "The mayor asked to move consent-agenda item 8E to be heard separately as a business item, since it required a short presentation.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), with item 8E moved to a standalone business item"
+    },
+    {
+      "item": "5. APPROVAL OF MINUTES",
+      "timestamp": "00:00:07",
+      "summary": "The board approved minutes from an August 10, 2026 work session and the August 17, 2026 regular meeting, with no changes. There was no special presentation this evening.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), both sets of minutes"
+    },
+    {
+      "item": "7. CITIZENS COMMENTS",
+      "timestamp": "00:00:07",
+      "summary": "Six residents spoke (two donated their speaking time to a third to extend her remarks). Jason Leaderfine questioned the town's decision to pay Fire Chief John Sjoberg roughly a year's salary as part of his departure, four years after the board unanimously hired him, and asked for public accountability given he said the reasons remain unexplained. Kim Reese, speaking at length on behalf of her husband (a former Public Utilities Division employee), alleged he was terminated shortly before a planned promotion following an internal investigation she described as procedurally flawed — conducted by outside attorney Lisa Krupicka after a single employee complaint, without HR's usual involvement, and without the accused ever seeing the investigation's findings. She connected her husband's case to the Fire Chief situation, said she and her husband had raised concerns to Mayor Frazier weeks before the Fire Chief matter arose, and referenced a prior lawsuit involving Town Administrator Molly Maynor from before she joined Collierville. These are one resident's allegations as stated at the podium, not findings established by the town or this summary. Liz Dealey urged residents to get more civically engaged (recommending the Leadership Collierville program) rather than rely on negative social media narratives about town leadership. Maria Pizano, of the MVP3 Foundation, shared updates on youth media/arts projects tied to Collierville, including a music video (\"Hillbilly Bible Strut\") and an upcoming song and film project called \"Country Christmas in Collierville.\"",
+      "type": "public-comment"
+    },
+    {
+      "item": "8. CONSENT AGENDA",
+      "timestamp": "00:20:05",
+      "summary": "The board approved consent agenda items 8A through 8O, excluding item 8E (moved to a separate business item). The mayor also thanked local businesses for their donations supporting the library's Summer Reading Program.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "8.E Right-of-Way and Easements Acquisition - Tract 1 - for State Route (SR) 175 (Shelby Drive) Widening Project from Jasper Park to Shelby Point",
+      "timestamp": "00:20:05",
+      "summary": "Staff (Tim Gwaltney) presented an agreement with the Collierville Farms Phase 4 Homeowners Association to purchase a small strip of the HOA's landscaping along Shelby Drive for $956, needed for the ongoing Shelby Drive widening project. A board member relayed a resident's request that the town address a drainage ditch issue near a specific home along the corridor; staff confirmed they were already in contact with the affected property owner about it.",
+      "type": "vote",
+      "outcome": "Approved (roll call vote), with one board member abstaining"
+    },
+    {
+      "item": "9.A Collierville 2050 Comprehensive Plan Mid-Project Update",
+      "timestamp": "00:25:02",
+      "summary": "Community and Economic Development Director Michael Clark introduced project manager Don Thomas of the plan's consulting firm, who gave a midpoint progress update on the Collierville 2050 Comprehensive Plan. Five chapters are complete (Community Snapshot, Community Visioning, Land Use, Housing and Neighborhoods, and Economic Development), one more is nearly ready, and four additional chapters (Transportation, Recreation, Natural Environment, and Livability/Public Services) plus appendices are expected within 6-8 weeks, with full plan adoption review targeted for February/March 2027. Asked what had been most surprising in the community engagement process, Thomas said that in a workshop with about 28-30 Collierville High School student government members, only two said they planned to stay in or return to Collierville as adults — a finding he said the plan needs to address. No vote was required; this was an informational update.",
+      "type": "discussion"
+    },
+    {
+      "item": "10.A Conditional Use Permit for Restaurants or Coffee Shops for Ironwood PD, Area 4, Phase 28 (Grace Court), Case #261529",
+      "timestamp": "00:35:01",
+      "summary": "Planning staff presented the town's first conditional use permit application under the drive-thru ordinance passed in May, for a roughly 10,000-square-foot multi-tenant building (applicant Cole Realty, represented by Jason Shiflett; property owner Central Church, represented by Tim Clay) east of Houston Levee Road and south of Winchester Road. The building will have two \"mobile pickup only\" drive-thru windows — no menu boards, speakers, or in-person payment, since customers order and pay via app and are notified when their order is ready. The southern pickup window is confirmed for Domino's; the northern tenant has not yet been selected. A queuing study of an existing Collierville Domino's mobile-pickup location found a peak of six queued vehicles for about one minute during a Friday evening rush; the site plan provides space for four queuing vehicles plus, as a condition of approval, two dedicated mobile-pickup parking spaces and a designated turnaround area to avoid any spillback onto Houston Levee Road. The Planning Commission recommended approval, and a Design Review Commission waiver request was narrowed from two items to one after design changes; the remaining waiver will return with the final site plan and development agreement at a later meeting.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), subject to the conditions in Exhibit 2"
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved the meeting agenda, moving item 8E to a standalone business item", "timestamp": "00:00:07" },
+    { "description": "Approved minutes from an August 10, 2026 work session and the August 17, 2026 meeting", "timestamp": "00:00:07" },
+    { "description": "Approved consent agenda items 8A-8O (excluding 8E)", "timestamp": "00:20:05" },
+    { "description": "Approved a $956 easement purchase from the Collierville Farms Phase 4 HOA for the Shelby Drive widening project", "timestamp": "00:20:05" },
+    { "description": "Approved the town's first conditional use permit under the new drive-thru ordinance, for two mobile-pickup-only drive-thru windows at Ironwood PD (one confirmed for Domino's)", "timestamp": "00:35:01" }
+  ],
+  "topics": ["fire department leadership", "personnel & HR practices", "citizens comments", "comprehensive plan 2050", "development & drive-thru permits", "road widening", "civic engagement"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/398897",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

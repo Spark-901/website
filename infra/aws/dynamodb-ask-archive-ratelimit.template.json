@@ -1,0 +1,59 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Spark901 civic-archive 'Ask the Archive' rate-limit table - one item per hashed client IP, counting queries toward a per-24h cap. TTL auto-expires old counters.",
+  "Parameters": {
+    "TableName": {
+      "Type": "String",
+      "Default": "spark901-ask-archive-ratelimit",
+      "Description": "Name of the DynamoDB table. Must match the SPARK901_ASK_ARCHIVE_RATELIMIT_TABLE env var on Vercel.",
+      "MinLength": 3,
+      "MaxLength": 255,
+      "AllowedPattern": "^[A-Za-z0-9_.-]+$"
+    },
+    "EnvironmentTag": {
+      "Type": "String",
+      "Default": "Production",
+      "AllowedValues": ["Production", "Preview", "Development"],
+      "Description": "Value for the Environment tag on the table."
+    }
+  },
+  "Resources": {
+    "Spark901AskArchiveRateLimitTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "DeletionPolicy": "Retain",
+      "UpdateReplacePolicy": "Retain",
+      "Properties": {
+        "TableName": { "Ref": "TableName" },
+        "BillingMode": "PAY_PER_REQUEST",
+        "AttributeDefinitions": [
+          { "AttributeName": "ipHash", "AttributeType": "S" }
+        ],
+        "KeySchema": [
+          { "AttributeName": "ipHash", "KeyType": "HASH" }
+        ],
+        "TimeToLiveSpecification": {
+          "AttributeName": "expiresAt",
+          "Enabled": true
+        },
+        "SSESpecification": {
+          "SSEEnabled": true
+        },
+        "Tags": [
+          { "Key": "Application", "Value": "Spark901" },
+          { "Key": "Component", "Value": "civic-archive-ask-ratelimit" },
+          { "Key": "Environment", "Value": { "Ref": "EnvironmentTag" } }
+        ]
+      }
+    }
+  },
+  "Outputs": {
+    "TableName": {
+      "Description": "Name of the DynamoDB table. Set as SPARK901_ASK_ARCHIVE_RATELIMIT_TABLE on Vercel.",
+      "Value": { "Ref": "Spark901AskArchiveRateLimitTable" }
+    },
+    "TableArn": {
+      "Description": "ARN of the table. Use as ${TABLE_ARN} in iam-policy-ask-archive-ratelimit.json.",
+      "Value": { "Fn::GetAtt": ["Spark901AskArchiveRateLimitTable", "Arn"] }
+    }
+  }
+}
