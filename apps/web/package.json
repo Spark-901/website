@@ -81,7 +81,7 @@
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.2",
     "zod": "^4.4.3",
-    "@west-tennessee-consulting/funnel-components": "^1.1.0"
+    "@west-tennessee-consulting/funnel-components": "github:West-Tennessee-Consulting/wtc-shared-packages#funnel-components-dist"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.0",

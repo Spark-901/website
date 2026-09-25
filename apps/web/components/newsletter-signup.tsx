@@ -1,7 +1,17 @@
 "use client"
 
 import { useTranslations } from "next-intl"
-import { EmailCaptureForm } from "@west-tennessee-consulting/funnel-components"
+// Deliberately the SUBPATH export, not the package root. The package root
+// barrel (`@west-tennessee-consulting/funnel-components`) re-exports
+// Hub-CRM-specific modules (`useLeadCapture`, etc.) that statically import
+// sibling WTC-monorepo-only packages (`@west-tennessee-consulting/analytics`,
+// `.../ui`) via `file:../...` deps that don't exist outside that monorepo's
+// workspace — importing the barrel here throws
+// "Cannot find package '@west-tennessee-consulting/analytics'" at runtime.
+// This subpath resolves straight to EmailCaptureForm.js, which has no such
+// dependency (confirmed: `node -e "require(...EmailCaptureForm.js)"` loads
+// clean; requiring the barrel does not).
+import { EmailCaptureForm } from "@west-tennessee-consulting/funnel-components/components/EmailCaptureForm"
 
 /**
  * "Stay up to date" email signup, standalone so it can be dropped anywhere
