@@ -202,6 +202,17 @@
   "footer": {
     "tagline": "Code for Good. Powered in Memphis.",
     "description": "Building permanent technology infrastructure for organizations doing good.",
+    "newsletter": {
+      "title": "Stay up to date",
+      "description": "New tools, funded projects, and ways to help — straight to your inbox.",
+      "placeholder": "Enter your email",
+      "submitLabel": "Subscribe",
+      "submittingLabel": "Subscribing…",
+      "success": "Thanks! You're on the list.",
+      "error": "Sorry, something went wrong. Please try again.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "Please enter a valid email address."
+    },
     "navigation": "Explore",
     "legal": "Legal",
     "privacy": "Privacy Policy",
