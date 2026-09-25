@@ -28,8 +28,8 @@
  * (every other new env var this project introduces IS prefixed — see
  * `lib/bedrock.ts` and `lib/civic-archive-s3.ts`). Using a prefixed name
  * here would just mean Vercel never sends it, defeating the point.
- * `CRON_SECRET` is NOT set anywhere yet — see this file's exported
- * `SYNC_ENV_VARS` for the full list this route needs.
+ * `CRON_SECRET` is LIVE in Vercel as of 2026-09-25 — see this file's
+ * exported `SYNC_ENV_VARS` for the full list this route needs.
  */
 import { type NextRequest, NextResponse } from "next/server"
 import { renderToBuffer } from "@react-pdf/renderer"
@@ -65,14 +65,14 @@ const log = createLogger({ service: "spark901-web" }).child({ component: "api.ci
 const MAX_MEETINGS_PER_RUN = 5
 
 export const SYNC_ENV_VARS = [
-  { name: "CRON_SECRET", purpose: "Vercel's own cron-auth secret (unprefixed by design — see doc comment above)." },
+  { name: "CRON_SECRET", purpose: "Vercel's own cron-auth secret (unprefixed by design — see doc comment above). LIVE." },
   { name: "RAG_GATEWAY_URL", purpose: "rag-gateway base URL — same var Job 1's ask route and ingest script need." },
   { name: "RAG_API_KEY", purpose: "rag-gateway bearer secret — same var Job 1 needs." },
   ...BEDROCK_ENV_VARS,
-  { name: "SPARK901_CIVIC_ARCHIVE_S3_BUCKET", purpose: "S3 bucket name for durable summary JSON + PDF storage." },
-  { name: "SPARK901_AWS_ACCESS_KEY_ID", purpose: "Reused from the existing DynamoDB ops-ledger IAM user (infra/aws/README.md) — needs s3:PutObject added, scoped to the new bucket ARN." },
-  { name: "SPARK901_AWS_SECRET_ACCESS_KEY", purpose: "Secret for that same reused IAM user." },
-  { name: "SPARK901_AWS_REGION", purpose: `Region for both DynamoDB and the new S3 bucket. Defaults to "us-east-1" if unset.` },
+  { name: "SPARK901_CIVIC_ARCHIVE_S3_BUCKET", purpose: `S3 bucket name for durable summary JSON + PDF storage. LIVE: "spark901-civic-archive-pdfs".` },
+  { name: "SPARK901_CIVIC_ARCHIVE_AWS_ACCESS_KEY_ID", purpose: "Access key for civic-archive's dedicated IAM user (spark901-web-civic-archive-storage) — scoped to this S3 bucket + the rate-limit DynamoDB table only. LIVE. NOT the ops-ledger SPARK901_AWS_* trio — see lib/civic-archive-aws.ts." },
+  { name: "SPARK901_CIVIC_ARCHIVE_AWS_SECRET_ACCESS_KEY", purpose: "Secret for that same dedicated IAM user. LIVE." },
+  { name: "SPARK901_CIVIC_ARCHIVE_AWS_REGION", purpose: `Region for both the S3 bucket and the rate-limit table. LIVE: "us-east-1". Defaults to "us-east-1" in code if unset.` },
 ] as const
 
 interface MeetingSyncResult {

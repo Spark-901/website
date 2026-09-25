@@ -22,18 +22,19 @@
  * real, separate follow-up change, out of scope for "build the automation
  * job" — see this project's task report for the full explanation.
  *
- * Credentials: reuses the SAME `SPARK901_AWS_ACCESS_KEY_ID` /
- * `SPARK901_AWS_SECRET_ACCESS_KEY` / `SPARK901_AWS_REGION` trio documented
- * in `infra/aws/README.md` for the DynamoDB ops-ledger writer — mirroring
- * that doc's exact naming convention, per this project's instructions.
- * That dedicated IAM user's policy would need `s3:PutObject` added, scoped
- * to the new bucket's ARN only (same least-privilege posture as the
- * existing DynamoDB policy — no wildcards). A new bucket name is its own
- * var (`SPARK901_CIVIC_ARCHIVE_S3_BUCKET`), mirroring how `SPARK901_OPS_TABLE`
- * names the DynamoDB resource alongside the same shared credential trio.
+ * Credentials: `SPARK901_CIVIC_ARCHIVE_AWS_ACCESS_KEY_ID` /
+ * `SPARK901_CIVIC_ARCHIVE_AWS_SECRET_ACCESS_KEY` / `SPARK901_CIVIC_ARCHIVE_AWS_REGION`
+ * — civic-archive's OWN dedicated IAM user (`spark901-web-civic-archive-storage`),
+ * shared with `lib/civic-archive-ratelimit.ts` (see `lib/civic-archive-aws.ts`
+ * for why this is deliberately NOT the ops-ledger credential trio). Bucket
+ * name is its own var, `SPARK901_CIVIC_ARCHIVE_S3_BUCKET` — LIVE:
+ * `spark901-civic-archive-pdfs` (private, public access fully blocked,
+ * SSE-encrypted). Policy is scoped to exactly `s3:PutObject`/`GetObject` on
+ * this bucket's objects — no wildcards, no other bucket.
  */
 import { S3Client, PutObjectCommand } from "@aws-sdk/client-s3"
 import { createLogger } from "@/lib/logger"
+import { getCivicArchiveAwsClientConfig } from "@/lib/civic-archive-aws"
 
 const log = createLogger({ service: "spark901-web" }).child({ component: "lib.civic-archive-s3" })
 
@@ -47,18 +48,13 @@ export interface CivicArchiveS3Config {
 export function getCivicArchiveS3Config(): CivicArchiveS3Config | null {
   const bucket = process.env.SPARK901_CIVIC_ARCHIVE_S3_BUCKET
   if (!bucket) return null
-  const region = process.env.SPARK901_AWS_REGION ?? "us-east-1"
+  const region = process.env.SPARK901_CIVIC_ARCHIVE_AWS_REGION || "us-east-1"
   return { bucket, region }
 }
 
-function getClient(region: string): S3Client {
+function getClient(): S3Client {
   if (!cachedClient) {
-    const accessKeyId = process.env.SPARK901_AWS_ACCESS_KEY_ID
-    const secretAccessKey = process.env.SPARK901_AWS_SECRET_ACCESS_KEY
-    cachedClient = new S3Client({
-      region,
-      ...(accessKeyId && secretAccessKey ? { credentials: { accessKeyId, secretAccessKey } } : {}),
-    })
+    cachedClient = new S3Client(getCivicArchiveAwsClientConfig())
   }
   return cachedClient
 }
@@ -83,7 +79,7 @@ export async function putCivicArchiveObject(
   contentType: string,
 ): Promise<boolean> {
   try {
-    const client = getClient(config.region)
+    const client = getClient()
     await client.send(
       new PutObjectCommand({
         Bucket: config.bucket,

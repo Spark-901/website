@@ -6,12 +6,19 @@
  * to replace Turnstile's bot defense.
  *
  * Table: `spark901-ask-archive-ratelimit` (name comes from
- * `SPARK901_ASK_ARCHIVE_RATELIMIT_TABLE`). Provisioning runbook + exact
- * schema: `infra/aws/README.md`'s "Ask the Archive rate-limit table" section.
- * Reuses the SAME `spark901-web-ops-ledger` IAM user / access key as
- * `lib/ops-ledger.ts` and `lib/civic-archive-s3.ts` (a second, separately-
- * scoped policy attached to that one user) — see `getSpark901AwsClientConfig`
- * in `lib/ops-ledger.ts`.
+ * `SPARK901_ASK_ARCHIVE_RATELIMIT_TABLE`). Provisioning + exact schema:
+ * `infra/aws/README.md`'s "Civic Archive — dedicated storage" section.
+ *
+ * Credentials: `lib/civic-archive-aws.ts`'s `getCivicArchiveAwsClientConfig`
+ * — civic-archive's OWN dedicated IAM user (`spark901-web-civic-archive-storage`),
+ * confirmed live 2026-09-25, shared with `lib/civic-archive-s3.ts`. NOT
+ * `lib/ops-ledger.ts`'s credential resolver — see `civic-archive-aws.ts`'s
+ * top comment for why that would be the wrong thing to reuse here (the
+ * ops-ledger table/user those vars nominally point at don't actually exist).
+ *
+ * IP hashing reuses `lib/ops-ledger.ts`'s exported `hashIp` directly (same
+ * `SPARK901_IP_HASH_SALT`, same algorithm) — one salted-hash implementation
+ * for the whole site, not two that could quietly drift apart.
  *
  * FAILS OPEN, deliberately, matching this repo's `lib/ops-ledger.ts`
  * convention: an unconfigured table, a missing `SPARK901_IP_HASH_SALT`, or a
@@ -19,11 +26,11 @@
  * Archive. Turnstile is the backstop against automated abuse either way; this
  * module only bounds COST for legitimate traffic.
  */
-import { createHash } from "node:crypto"
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb"
 import { DynamoDBDocumentClient, UpdateCommand } from "@aws-sdk/lib-dynamodb"
 import { createLogger } from "@/lib/logger"
-import { getSpark901AwsClientConfig } from "@/lib/ops-ledger"
+import { getCivicArchiveAwsClientConfig } from "@/lib/civic-archive-aws"
+import { hashIp } from "@/lib/ops-ledger"
 
 const log = createLogger({ service: "spark901-web" }).child({
   component: "lib.civic-archive-ratelimit",
@@ -37,7 +44,6 @@ const WINDOW_SECONDS = 24 * 60 * 60
 
 let client: DynamoDBDocumentClient | null = null
 let warnedMissingTable = false
-let warnedMissingSalt = false
 
 function getTableName(): string | null {
   const table = process.env.SPARK901_ASK_ARCHIVE_RATELIMIT_TABLE?.trim()
@@ -55,39 +61,12 @@ function getTableName(): string | null {
 
 function getClient(): DynamoDBDocumentClient {
   if (!client) {
-    const baseClient = new DynamoDBClient(getSpark901AwsClientConfig())
+    const baseClient = new DynamoDBClient(getCivicArchiveAwsClientConfig())
     client = DynamoDBDocumentClient.from(baseClient, {
       marshallOptions: { convertEmptyValues: false, removeUndefinedValues: true },
     })
   }
   return client
-}
-
-/**
- * Same salted SHA-256 as `lib/ops-ledger.ts`'s `hashIp` — hand-rolled here
- * rather than importing it because this module needs a hard `null` when no
- * salt is configured to mean something slightly different (see
- * `checkAndIncrementRateLimit`'s doc comment): "cannot rate-limit safely" is
- * a distinct case from "chose not to record an IP," even though the
- * underlying hash math is identical. Kept in lockstep with `ops-ledger.ts`
- * on purpose — if that algorithm ever changes, this must change with it.
- */
-function hashClientIp(ip: string): string | null {
-  const salt = process.env.SPARK901_IP_HASH_SALT?.trim()
-  if (!salt) {
-    if (!warnedMissingSalt) {
-      warnedMissingSalt = true
-      log.warn(
-        "SPARK901_IP_HASH_SALT is not set — Ask the Archive rate limiting is disabled (an unsalted IP hash is reversible, so we never compute one).",
-      )
-    }
-    return null
-  }
-  try {
-    return createHash("sha256").update(`${salt}:${ip.trim()}`).digest("hex")
-  } catch {
-    return null
-  }
 }
 
 export type RateLimitDecision =
@@ -115,7 +94,7 @@ export async function checkAndIncrementRateLimit(
     return { limited: false, remaining: null }
   }
 
-  const ipHash = hashClientIp(clientIp)
+  const ipHash = hashIp(clientIp)
   if (!ipHash) return { limited: false, remaining: null }
 
   const nowSeconds = Math.floor(Date.now() / 1000)

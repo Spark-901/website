@@ -201,13 +201,19 @@ function getTableName(): string | null {
 }
 
 /**
- * Resolves the shared Spark901 website IAM user's AWS client config
- * (`spark901-web-ops-ledger` — see `infra/aws/README.md`). Exported so other
- * modules that write to a DIFFERENT table under the SAME reused IAM user
- * (e.g. `lib/civic-archive-s3.ts`'s S3 bucket, `lib/civic-archive-ratelimit.ts`'s
- * rate-limit table) build their own client without re-deriving this
- * resolution order — one IAM user, one place that decides how to find its
- * credentials.
+ * Resolves the ops-ledger IAM user's AWS client config
+ * (`SPARK901_AWS_ACCESS_KEY_ID`/`_SECRET_ACCESS_KEY`/`_REGION`).
+ *
+ * ⚠️ Ops-ledger-specific — do NOT reuse this for a different resource.
+ * Miclain confirmed 2026-09-25 that the `spark901-web-ops-ledger` IAM user
+ * and `spark901-ops-events` table these vars are nominally named for do not
+ * actually exist in any checked AWS account, even though the Vercel env
+ * vars themselves are set. That's a separate gap he's tracking, not fixed
+ * here. Because of that ambiguity, OTHER civic-archive features
+ * (`lib/civic-archive-ratelimit.ts`, `lib/civic-archive-s3.ts`) deliberately
+ * do NOT call this function — they have their own dedicated, confirmed-real
+ * credentials via `lib/civic-archive-aws.ts`. If `recordOpsEvent` itself
+ * ever needs debugging, start by verifying this table/user actually exist.
  *
  * `SPARK901_`-prefixed credentials are primary on purpose: the site's dedicated
  * least-privilege IAM user must never collide with whatever `AWS_*` variables
