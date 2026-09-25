@@ -229,6 +229,17 @@
   "footer": {
     "tagline": "Código para el Bien. Impulsado en Memphis.",
     "description": "Construyendo infraestructura tecnológica de código abierto para el bien social.",
+    "newsletter": {
+      "title": "Mantente al día",
+      "description": "Nuevas herramientas, proyectos financiados y formas de ayudar, directo a tu correo.",
+      "placeholder": "Ingresa tu correo electrónico",
+      "submitLabel": "Suscribirse",
+      "submittingLabel": "Suscribiendo…",
+      "success": "¡Gracias! Ya estás en la lista.",
+      "error": "Lo sentimos, algo salió mal. Por favor, inténtalo de nuevo.",
+      "emailRequired": "Por favor ingresa tu correo electrónico.",
+      "emailInvalid": "Por favor ingresa un correo electrónico válido."
+    },
     "navigation": "Navegación",
     "legal": "Legal",
     "privacy": "Política de Privacidad",

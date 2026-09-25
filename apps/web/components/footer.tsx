@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { Github, Twitter, Linkedin } from "@/components/ui/brand-icons"
 import { SparkLogo } from "@/components/spark-logo"
+import { NewsletterSignup } from "@/components/newsletter-signup"
 import { brand } from "@/lib/brand"
 
 export function Footer() {
@@ -165,6 +166,11 @@ export function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Stay up to date */}
+        <div className="mt-8 border-t border-border pt-8">
+          <NewsletterSignup className="max-w-md" />
         </div>
 
         <div className="mt-8 border-t border-border pt-8">

@@ -202,6 +202,17 @@
   "footer": {
     "tagline": "用代码行善。源自孟菲斯。",
     "description": "为致力于行善的组织构建永久性技术基础设施。",
+    "newsletter": {
+      "title": "获取最新消息",
+      "description": "新工具、资助项目和参与方式，直接发送到您的邮箱。",
+      "placeholder": "输入您的电子邮箱",
+      "submitLabel": "订阅",
+      "submittingLabel": "订阅中…",
+      "success": "感谢！您已成功订阅。",
+      "error": "抱歉，出现了问题，请重试。",
+      "emailRequired": "请输入您的电子邮箱地址。",
+      "emailInvalid": "请输入有效的电子邮箱地址。"
+    },
     "navigation": "浏览",
     "legal": "法律信息",
     "privacy": "隐私政策",
