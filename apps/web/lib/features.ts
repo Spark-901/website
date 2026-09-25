@@ -29,6 +29,13 @@ export const FEATURE_FLAGS = {
    * Enables the "Gift a Tool" / Dedicated Funding feature.
    */
   GIFT_A_TOOL: process.env.NEXT_PUBLIC_ENABLE_GIFT_A_TOOL === "true",
+
+  /**
+   * Enables the Collierville Civic Archive page and its nav link — Spark901's
+   * first live, working product (plain-language BMA meeting summaries +
+   * downloadable PDFs). See personal-work/goals/collierville-civic-data.md.
+   */
+  CIVIC_ARCHIVE: process.env.NEXT_PUBLIC_ENABLE_CIVIC_ARCHIVE === "true",
 } as const;
 
 export type FeatureFlag = keyof typeof FEATURE_FLAGS;

@@ -1,0 +1,109 @@
+{
+  "meetingId": "2026-05-11_387360",
+  "date": "2026-05-11",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Regular Meeting — May 11, 2026",
+  "overview": "The board proclaimed May 2026 as National Historic Preservation Month, heard from residents concerned about a planned development's buffer near Porter Farms and about unsanitary conditions at Laurelwood Apartments, and approved a series of budget amendments and construction contracts — most notably a $10.6 million (plus alternates) contract to expand and renovate the Burch Library, which passed on a 4-1 vote rather than unanimously. The board also raised the fine for repeated false alarms from $25 to $50 and gave final approval to a large package of zoning code changes, after a pool-installation business owner objected at the meeting to a new sealed-engineering-plan requirement and the board agreed, on the spot, to drop that specific requirement before final passage.",
+  "agendaItems": [
+    {
+      "item": "1. CALL TO ORDER & INVOCATION",
+      "timestamp": "00:00:07",
+      "summary": "Dr. James Rosser gave the invocation and Vice Mayor John Stamps led the Pledge of Allegiance. Roll call confirmed a quorum (Hall, Marshall, Stamps, Robbins present).",
+      "type": "other"
+    },
+    {
+      "item": "4. APPROVAL OF AGENDA (Additions/Deletions)",
+      "timestamp": "00:00:07",
+      "summary": "No changes or deletions were proposed to the evening's agenda.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)."
+    },
+    {
+      "item": "5. APPROVAL OF MINUTES",
+      "timestamp": "00:00:07",
+      "summary": "The board approved three sets of prior minutes: the April 27, 2026 work session, the April 27, 2026 Board of Mayor and Aldermen meeting, and the April 30, 2026 work session. No changes or corrections were noted for any of the three.",
+      "type": "vote",
+      "outcome": "All three sets of minutes approved unanimously (roll call vote)."
+    },
+    {
+      "item": "6. SPECIAL PRESENTATION",
+      "timestamp": "00:00:07",
+      "summary": "Mayor Maureen Frazier read and presented a mayoral proclamation declaring May 2026 as National Historic Preservation Month in Collierville, recognizing the Town Square historic district, the Morton Museum of Collierville History, the Heritage Commission, and Main Street Collierville. The proclamation was presented to Planning staff Jamie Gross and Mike Clark, who spoke briefly about the town's historic district charrette week and ongoing planning efforts.",
+      "type": "presentation"
+    },
+    {
+      "item": "7. CITIZENS COMMENTS",
+      "timestamp": "00:05:02",
+      "summary": "Two residents addressed the board. Gustavo Cornets, a Porter Farms Phase 7 resident living adjacent to the proposed Water Tower District Phase Two development, thanked staff and commissions for prior landscaping/screening concessions but asked the town and developer to consider relocating the project's planned trash compactor farther from homes and closer to an existing service/hotel area, citing noise, odor, lighting, and truck-traffic concerns for the wooded buffer area. Christina Ray, a Laurelwood Apartments resident, described unresolved black mold, ventilation, and unsanitary conditions at her income-based apartment complex that she said had caused serious health and financial harm to her family and neighbors; Town Administrator staff said code enforcement would look into the health-related concerns raised, while noting the town has no role in the property's income-based housing calculations.",
+      "type": "public-comment"
+    },
+    {
+      "item": "8. CONSENT AGENDA",
+      "timestamp": "00:15:04",
+      "summary": "The board approved consent agenda items 8.A through 8.H with no items pulled for separate presentation.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)."
+    },
+    {
+      "item": "9.A Resolution 2026-12 - A Resolution to Amend the FY 2026 General Fund, Drug Fund, Water and Sewer Fund, and Capital Investment Program (CIP) Budgets",
+      "timestamp": "00:15:04",
+      "summary": "Budget Officer J.P. Spore presented several budget amendments: a $19,295 donation to CBD for a replacement K-9, a $3,641,403.43 general-fund allocation for the library expansion CIP project (bringing that project's total budget to $12,299,177.23), $16,675 in insurance reimbursement plus a $61,943.38 general-fund-to-drug-fund transfer (total $78,618.38) for a replacement K-9 unit vehicle, $280,000 for Lead and Copper Rule service line inspections (bringing that budget to $850,000), and $50,000 for a change order on Water Treatment Plant No. 3's Clearwell repairs (bringing that budget to $155,000).",
+      "type": "decision",
+      "outcome": "Approved unanimously (roll call vote)."
+    },
+    {
+      "item": "9.B  Review of Bids and Award of Contract for the Collierville Burch Library Expansion and Renovation Project",
+      "timestamp": "00:15:04",
+      "summary": "Deputy Town Administrator Katrina Amos Atkins presented the recommendation to award the library expansion and renovation contract to Alliant Construction Company at a base bid of $10,636,000. The apparent low bidder, Phifer and Associates, was disqualified after acknowledging pricing errors and an inability to complete the work as bid. Three optional alternates were included in the motion: additional landscape screening ($16,452), an outdoor event-space patio ($207,000), and a portico ($259,000), bringing the total to $11,118,452 — about $1 million below earlier cost estimates. The Friends of the Library are separately raising funds toward the project (goal $4 million; nearly $400,000 raised to date).",
+      "type": "vote",
+      "outcome": "Approved 4-1 (roll call vote: Marshall, Stamps, Robbins, and Mayor Frazier voted yes; Alderman Hall voted no)."
+    },
+    {
+      "item": "9.C  Review of Bids and Award of Contract for the Walnut Street Drainage Improvements",
+      "timestamp": "00:25:03",
+      "summary": "Town Engineer Dale Perryman presented the recommendation to award a contract for Walnut Street drainage improvements (between Mulberry and North Walnut Streets), needed to address repeated flooding at the intersection. The low, most-responsive bidder came in at $303,645.40, about $21,955 below the next-lowest bid. Construction is expected to take about 120 days (roughly 3 months), planned for summer with scheduling coordinated around downtown square events.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)."
+    },
+    {
+      "item": "9.D Review of Bids and Award of Contract for Service Line Investigation",
+      "timestamp": "00:25:03",
+      "summary": "Public Utilities Director John Fox presented the recommendation to award a contract to Superior Hydrovac ($832,575) to physically investigate up to 2,677 water service line connections whose materials are currently classified as \"unknown,\" as required for compliance with the EPA/TDEC Lead and Copper Rule Improvements ahead of a November 1, 2027 state deadline. The project's budget was previously increased from $570,000 to $850,000 under Resolution 2026-12 (see above) to cover the higher-than-estimated bid.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)."
+    },
+    {
+      "item": "9.E  Review of Bids and Award of Construction Contract for Johnson Park Boardwalk Renovations",
+      "timestamp": "00:30:06",
+      "summary": "Public Works Director Josh Russell presented the recommendation to award a construction contract to Nabholz Construction to fully rebuild the original (year-2000) section of the Johnson Park boardwalk, including a new ADA-accessible ramp, a raised (20-inch) boardwalk, and a rebuilt gazebo on helical piers. The project required pulling $8,678 from the CIP contingency fund. The board discussed and confirmed the town chose to keep a wood boardwalk material rather than switch to a more permanent material, for a more natural look and to reduce slipperiness.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)."
+    },
+    {
+      "item": "10.A Ordinance 2026-05 -  Second Reading and Public Hearing - An Ordinance to Amend Section §91.25 of the Code of Ordinances of the Town of Collierville Regarding False Alarm Fees",
+      "timestamp": "00:35:03",
+      "summary": "Police Chief Dale Lane presented the second reading of an ordinance raising the penalty for repeated false alarms from $25 to $50 per occurrence for alarm users with three or more false alarms within a 12-month period (the maximum penalty allowed under Tennessee law). The town has averaged over 2,000 false alarms per year for the past four years; Chief Lane noted the single top offender for the prior year (a residence, not a business) generated more than 80 false alarms in one year. No one addressed the board during the public hearing.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote) — second reading."
+    },
+    {
+      "item": "11.A Ordinance 2026-01 - Third and Final Reading -  An Ordinance to Amend Title XV, Chapter 151, of the Town of Collierville Code of Ordinances by Amending §151.003 Definitions; §151.006(C) Fences, Walls and Hedges; §151.008 Traffic Impact Analysis; §151.021 Uses Permitted in Each Zoning District; §151.024 Specific Provisions for Conditional Uses; §151.025 Accessory Uses Permitted in Each Zoning District; §151.026 Temporary Uses, Activities, and Structures; §151.027(D) Site Development Standards for Traditional Zoning Districts; §151.049(A) TN: Traditional Neighborhood District; §151.050(A) MU: Mixed Use District; §151.115 Accessory Off-Street Parking Regulations; §151.116 Accessory Off-Street Loading Regulations; §151.160 Procedures for Planned Development Approval; §151.190 Exterior Lighting; §151.210 Single Family Design Standards; §§151.248-151.249 Design Review Commission; §151.268 Tree Planting Specifications; §151.308 Board of Zoning Appeals; §151.310 Conditional Use Permits; §151.311 Site Plan Review; §151.312 Amendments; §151.313 Vesting; and §151.314 Public Notice, Related to a Variety of Development Standards and Processes",
+      "timestamp": "00:45:02",
+      "summary": "Planning Director Jamie Gross presented the third and final reading of a large package of zoning-code changes, summarizing revisions made since the second reading in response to public comment and an April 30 work session: narrowing the conditional-use-permit requirement for drive-throughs to apply only to coffee shops and restaurants (not other uses like drugstores/dry cleaners); moving site-circulation standards out of the conditional-use section into the general site-plan-review section; removing newly proposed site-plan approval criteria that had drawn concern; requiring only a draft (not final) traffic study 30 days before a development application; providing that inactive planned developments would automatically expire after 3 to 5 years depending on progress; and adding language to prohibit commercial drone-delivery sites within the town. Citizen Steven Williams thanked the board for its collaborative process but reiterated concern that the drive-through conditional-use requirement could discourage new business. Citizen Mark Allen, owner of Mid-South Perfect Pools, objected strongly to a new requirement that residential swimming pool permit applications include a plot plan sealed by a Tennessee-licensed professional (engineer, landscape architect, or surveyor), estimating it would add $2,000–$5,000 in cost per pool and saying he only learned of the change that morning. After discussion, Planning staff and the board agreed to keep the informational plot-plan requirement (addressing real, previously documented drainage complaints from pools) but to strike the requirement that it be sealed by a licensed professional, and to revisit the issue later if drainage problems persist.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), as amended to remove the licensed-professional seal requirement from the swimming pool permit section."
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved Resolution 2026-12, amending the FY2026 General Fund, Drug Fund, Water and Sewer Fund, and CIP budgets (K-9 replacement, library expansion funding, service line inspections, water treatment plant repairs).", "timestamp": "00:15:04" },
+    { "description": "Awarded a $10,636,000 base contract (plus up to $1,118,452 in alternates, totaling $11,118,452) to Alliant Construction for the Burch Library expansion and renovation — approved 4-1, with Alderman Hall dissenting.", "timestamp": "00:15:04" },
+    { "description": "Awarded a $303,645.40 contract for the Walnut Street drainage improvements project.", "timestamp": "00:25:03" },
+    { "description": "Awarded an $832,575 contract to Superior Hydrovac for the water service line investigation project (Lead and Copper Rule compliance).", "timestamp": "00:25:03" },
+    { "description": "Awarded a construction contract to Nabholz Construction for the Johnson Park boardwalk renovation.", "timestamp": "00:30:06" },
+    { "description": "Approved (second reading) raising the repeated-false-alarm penalty from $25 to $50 per occurrence.", "timestamp": "00:35:03" },
+    { "description": "Approved (third and final reading) a package of zoning code amendments to Chapter 151, amended at the meeting to remove a licensed-professional seal requirement for residential swimming pool permit plot plans.", "timestamp": "00:45:02" }
+  ],
+  "topics": ["library", "budget", "public works", "water and sewer", "parks", "public safety", "zoning", "development", "housing", "citizens comments"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/387360",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

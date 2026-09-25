@@ -13,6 +13,15 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   outputFileTracingRoot: "../../",
+  // Local workspace packages under packages/* ship raw TypeScript source
+  // (no build step, matching the wtc-shared-packages / liberty-railways
+  // pattern) — Next must transpile them itself rather than assuming they're
+  // pre-compiled like a normal node_modules dependency.
+  transpilePackages: [
+    "@spark901/civic-source-swagit",
+    "@spark901/meeting-summary-schema",
+    "@spark901/meeting-summary-ui",
+  ],
   images: {
     remotePatterns: [
       {

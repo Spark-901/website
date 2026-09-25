@@ -11,7 +11,8 @@
     "about": "私たちについて",
     "transparency": "透明性",
     "volunteer": "ボランティア",
-    "partnerWithUs": "提携する"
+    "partnerWithUs": "提携する",
+    "civicArchive": "市民アーカイブ"
   },
   "home": {
     "hero": {
@@ -380,5 +381,21 @@
       "thanksTitle": "登録完了です。ようこそ！",
       "thanksBody": "スキルを確認し、1週間以内にマッチするプロジェクトをご連絡します。その間、ぜひ公開リポジトリをフォローしてください。"
     }
+  },
+  "civicArchive": {
+    "badge": "ライブパイロット — テネシー州コリアービル",
+    "title": "コリアービル市民アーカイブ",
+    "description": "町議会・市長理事会のすべての会議を平易な言葉で要約し、PDFでダウンロードできます。何時間もの動画を見なくても、行政の決定内容がわかります。",
+    "meetingsHeading": "会議一覧",
+    "emptyState": "まだ会議の要約はありません。近日中にご確認ください。",
+    "downloadPdf": "PDFをダウンロード",
+    "agendaHeading": "議事の内容",
+    "actionItemsHeading": "決定事項・対応事項",
+    "topicsHeading": "トピック",
+    "watchVideo": "会議の動画全体を見る",
+    "watchAt": "{timestamp} から視聴",
+    "donateCtaTitle": "この取り組みはあなたのような支援者の寄付で無償提供されています",
+    "donateCtaBody": "このアーカイブが地元行政の理解に役立ったなら、より多くの会議の要約や、他のミッドサウス地域の町への展開にご協力ください。",
+    "donateCtaButton": "市民アーカイブを支援する"
   }
 }

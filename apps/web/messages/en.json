@@ -11,7 +11,8 @@
     "about": "About",
     "transparency": "Transparency",
     "volunteer": "Volunteer",
-    "partnerWithUs": "Partner With Us"
+    "partnerWithUs": "Partner With Us",
+    "civicArchive": "Civic Archive"
   },
   "home": {
     "hero": {
@@ -380,5 +381,21 @@
       "thanksTitle": "You're in. Welcome aboard.",
       "thanksBody": "We'll review your skills and reach out with a project match within a week. If you'd like, follow along in our public repos in the meantime."
     }
+  },
+  "civicArchive": {
+    "badge": "Live pilot — Collierville, TN",
+    "title": "Collierville Civic Archive",
+    "description": "Every Board of Mayor and Aldermen meeting, summarized in plain language with a downloadable PDF — so you can see what your government decided without watching hours of video.",
+    "meetingsHeading": "Meetings",
+    "emptyState": "No meeting summaries are available yet. Check back soon.",
+    "downloadPdf": "Download PDF",
+    "agendaHeading": "What happened",
+    "actionItemsHeading": "Decisions & actions",
+    "topicsHeading": "Topics",
+    "watchVideo": "Watch the full meeting",
+    "watchAt": "Watch at {timestamp}",
+    "donateCtaTitle": "This is free because people like you fund it",
+    "donateCtaBody": "If this archive helped you understand your local government, help us summarize more meetings and bring this to more Mid-South towns.",
+    "donateCtaButton": "Fund the Civic Archive"
   }
 }

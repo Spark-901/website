@@ -1,0 +1,106 @@
+{
+  "meetingId": "2026-08-17_396361",
+  "date": "2026-08-17",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Regular Meeting — August 17, 2026",
+  "overview": "This was a long, emotionally charged meeting. During citizen comments, four residents spoke at length about Fire Chief John Sjoberg's administrative leave, urging the board to be transparent and fair before any decision on his job; town leadership said it could not discuss the personnel matter in detail and cautioned against believing social media rumors. The board then routinely approved a budget amendment, a new garbage truck, a new road tractor, 12 replacement fleet vehicles, and an emergency generator (plus its installation contract) for the municipal court. The meeting's biggest debate was a proposed e-bike and \"micromobility device\" ordinance: after nearly an hour of public comment — including a resident whose wife relies on an e-bike-based mobility device, who argued the ordinance would illegally restrict disabled residents under the Americans with Disabilities Act — the board decided it needed more time and voted to table the ordinance rather than adopt it that night, planning another public hearing at a later date.",
+  "agendaItems": [
+    {
+      "item": "1. CALL TO ORDER & INVOCATION",
+      "timestamp": "00:00:10",
+      "summary": "Mayor Frazier called the meeting to order. Chaplain Terry Hunt gave the invocation and resident Colin Robbins led the Pledge of Allegiance. Roll call showed Aldermen Hall, Jordan, Marshall, Stamps, and Robbins all present.",
+      "type": "other"
+    },
+    {
+      "item": "4. APPROVAL OF AGENDA (Additions/Deletions)",
+      "timestamp": "00:00:10",
+      "summary": "Staff noted a revised board report for a consent item concerning cardiac monitor/defibrillators (the transcript refers to this item inconsistently as both \"8F\" and \"9E\" in the same breath, likely a captioning error). The board approved the agenda with that revised report included.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "5. APPROVAL OF MINUTES",
+      "timestamp": "00:00:10",
+      "summary": "The board approved minutes from a July 27, 2026 joint work session with the Collierville Schools Board, and separately the minutes of the July 27, 2026 Board of Mayor and Aldermen meeting itself, with no changes or corrections requested.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), both sets of minutes"
+    },
+    {
+      "item": "7. CITIZENS COMMENTS",
+      "timestamp": "00:00:10",
+      "summary": "Most comment cards concerned the fire chief's status, not agenda item 10.A (the mayor noted this at the start; the e-bike-related cards were held for that item's public hearing). Four residents addressed the board about Fire Chief John Sjoberg, who is on administrative leave: retired Germantown fire battalion chief James (Alan) Jones, speaking in Sjoberg's defense, described his 48-year career and asked the board to base any decision on documented facts and due process rather than rumor, saying he understood a disagreement over hiring standards preceded the leave and that he'd heard aldermen votes for termination may already exist; a town official responded that it is an HR/personnel matter that cannot be fully discussed publicly and asked residents not to believe what they read on social media, denying having asked for hiring standards to be lowered. Resident Justin Johnson asked the board to slow down and listen to the community before making a decision. Resident William Boone, a longtime employee who said he had previously been terminated under the same personnel system, spoke in support of Sjoberg and of fire department employees generally, criticizing a system where one person (the town administrator) can terminate a long-tenured department head, and asked the board to create an oversight process for such decisions.",
+      "type": "public-comment"
+    },
+    {
+      "item": "8. CONSENT AGENDA",
+      "timestamp": "00:20:01",
+      "summary": "The board approved consent agenda items 8A through 8G with no items pulled for separate presentation.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.A. Resolution 2026-22 - A Resolution to Amend the FY 2027 General Fund, Drug Fund, and Capital Investment Program (CIP) Budgets",
+      "timestamp": "00:20:01",
+      "summary": "Budget Officer J.P. Spar presented a budget amendment covering: a $10,000 Keep Tennessee Beautiful grant for police overtime on traffic saturations; $75,919 of general fund balance for the Municipal Court emergency generator CIP project (bringing that project's total budget to $197,919); $49,576 carried forward to replace the Town Hall IT server room generator (delayed from FY 2026 due to a long equipment lead time); and $26,049 carried forward to outfit a replacement K-9 unit vehicle purchased in FY 2026 but not yet equipped.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.B. Purchase of an Automated Garbage Truck Through a Sourcewell Cooperative Contract",
+      "timestamp": "00:20:01",
+      "summary": "Public Works (Clay Ticer) presented a request to buy a new garbage truck for the Sanitation Division, which currently collects roughly 17,000 tons of garbage and about 2,000 tons of recycling material each year. The truck being replaced (described as a 2013, though the presenter momentarily misspoke a different year) will move into backup status rather than being retired outright.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.C. Purchase of a Road Tractor Through a Sourcewell Cooperative Contract",
+      "timestamp": "00:20:01",
+      "summary": "Public Works presented a request to buy a new road tractor for the Sanitation Division, which uses three primary tractors and one backup to haul garbage and recycling material to the landfill or recycling station. The current 2003 Volvo tractor will move into backup status, and the existing 1996 Ford backup will be surplused once the new tractor is purchased.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.D. Purchase of the FY27 Fleet Vehicles Through a Statewide Cooperative Contract",
+      "timestamp": "00:20:01",
+      "summary": "Public Services presented a consolidated request to purchase 12 replacement fleet vehicles across multiple town divisions through the state's cooperative purchasing contract. Staff explained this year each division submitted its replacement needs to the fleet manager (Alan Hathaway), who evaluates vehicles by mileage, age, and condition, with Public Services then handling quoting and bringing one combined request to the board rather than each division requesting separately.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.E. Purchase of an Emergency Standby Generator for the Municipal Court",
+      "timestamp": "00:25:01",
+      "summary": "Public Works Director Josh Russell explained that the Police Headquarters building (built 1990) originally shared one generator with the Municipal Court; when police got their own new generator in 2018, a 2023 storm outage revealed the Municipal Court was no longer served by any backup power. This purchase (just the generator itself, not installation) was split out from a turnkey Sourcewell project because there is no existing electrical infrastructure or pad at the site; buying it directly through Sourcewell secures a discount versus having a contractor purchase and mark it up. A separate existing generator at Town Hall only backs up the IT server room, not the building itself.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.F. Award of Construction Services Contract for the Municipal Court Emergency Standby Generator Projects",
+      "timestamp": "00:30:03",
+      "summary": "Josh Russell presented the companion contract to install the generator approved in item 9.E — running electrical wiring, transfer switches, and disconnects, then connecting and testing the generator once delivered. The town notified 55 vendors and received 4 bids; A&B Construction submitted the lowest, most responsive bid. To save money, town crews will pour the concrete slab in-house, while the contractor is responsible for the electrical work and its warranty.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "10.A. Ordinance 2026-03 – Second Reading and Public Hearing – An Ordinance to Amend Title VII: Traffic Code, Chapter 71 Traffic Regulations, § 71.15 Bicycle Riders and the Like; Chapter 72 Stopping, Yielding, and Parking, § 72.37 Where Prohibited and § 72.38 Restricted Parking in Residential Zones; Chapter 73: Motorcycles, ATV, and Motor Driven Cycles, §§ 73.01 Scope and Purpose Through 73.04 Exceptions; Title IX: General Regulations, Chapter 90 Public Parks and Facilities, § 90.04 Skateboards and the Like and § 90.05 Damaging Town Property; Chapter 92: Streets and Sidewalks, § 92.39 Driveways and Curb Cuts; Chapter 95: Health and Sanitation, § 95.11 Presence of Vehicles on Lawn a Public Nuisance; Title XI: Business Regulations; and, Chapter 110: Temporary Sales, Door-To-Door Solicitations, and the Like, § 110.22 Mobile Food Vending; Related to Various Topics",
+      "timestamp": "00:30:03",
+      "summary": "Town Planner Jamie Gross presented the second reading of this cleanup ordinance, which the board had approved on first reading July 27. Beyond e-bikes, it also bans parking vehicles on front lawns (requiring a paved surface, with exceptions for large FAR-zoned/agricultural properties and permitted special events), adds rules against box trucks and trailers parked overnight on residential streets, and consolidates food truck rules (allowing them at approved special events, farmers markets, school/church/event-center properties, and private parties). On e-bikes, staff proposed changes from the first-reading version based on board feedback at an earlier work session: removing restrictions for riders over 16, and allowing Class 1 and Class 2 e-bikes on sidewalks, greenbelts, and town facilities when their motors are disengaged (Class 3 would remain restricted to riders 16 and older). During the public hearing, many residents spoke — some asking for tougher enforcement of reckless riding, others objecting that the ordinance banned e-bikes rather than unsafe behavior, that it would leave many neighborhoods (some with 25 mph limits) without any legal street to ride on, or that it would cut off practical routes to the town square. Resident Brian Burns raised a detailed Americans with Disabilities Act (ADA) objection: his wife uses a mobility device built on e-bike components that qualifies as an ADA-protected \"other power-driven mobility device,\" and he argued the ordinance's blanket bans and disengagement requirements would illegally restrict disabled residents without the individualized safety assessment the ADA requires; he asked the board to add a definition for these devices and an ADA \"savings clause\" carve-out similar to the ordinance's existing exemption for town and emergency vehicles. After closing the public hearing, board members said the volume and complexity of the input (including the ADA question and how to define terms like \"residential corridor\") meant more work was needed before adopting the ordinance.",
+      "type": "vote",
+      "outcome": "Tabled (unanimous roll call vote) — the second reading and public hearing were postponed, with staff to revise the ordinance and schedule another public hearing at a date to be determined; the ordinance was not adopted at this meeting"
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved the meeting agenda, including a revised board report for a cardiac monitor/defibrillator consent item", "timestamp": "00:00:10" },
+    { "description": "Approved minutes from the July 27, 2026 joint work session with Collierville Schools and the July 27, 2026 BMA meeting", "timestamp": "00:00:10" },
+    { "description": "Approved consent agenda items 8A-8G", "timestamp": "00:20:01" },
+    { "description": "Approved Resolution 2026-22, amending the FY2027 budget for a police overtime grant, the municipal court generator project, a Town Hall IT server generator, and K-9 vehicle equipment", "timestamp": "00:20:01" },
+    { "description": "Approved purchase of a new automated garbage truck for the Sanitation Division", "timestamp": "00:20:01" },
+    { "description": "Approved purchase of a new road tractor for the Sanitation Division", "timestamp": "00:20:01" },
+    { "description": "Approved purchase of 12 FY27 replacement fleet vehicles across town divisions", "timestamp": "00:20:01" },
+    { "description": "Approved purchase of an emergency standby generator for the Municipal Court", "timestamp": "00:25:01" },
+    { "description": "Awarded a construction services contract to A&B Construction to install the Municipal Court's emergency generator", "timestamp": "00:30:03" },
+    { "description": "Tabled the second reading and public hearing of Ordinance 2026-03 (e-bike/micromobility and related traffic code changes); a revised ordinance and a new public hearing date are still pending", "timestamp": "01:35:01" }
+  ],
+  "topics": ["fire department leadership", "e-bikes & micromobility", "ADA accessibility", "public safety", "budget", "vehicle & fleet purchases", "municipal court", "citizens comments"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/396361",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

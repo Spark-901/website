@@ -11,7 +11,8 @@
     "about": "Nosotros",
     "transparency": "Transparencia",
     "volunteer": "Voluntariado",
-    "partnerWithUs": "Asóciate con Nosotros"
+    "partnerWithUs": "Asóciate con Nosotros",
+    "civicArchive": "Archivo Cívico"
   },
   "home": {
     "hero": {
@@ -380,5 +381,21 @@
     "learnMore": "Saber Más",
     "getStarted": "Comenzar",
     "viewAll": "Ver Todo"
+  },
+  "civicArchive": {
+    "badge": "Piloto en vivo — Collierville, TN",
+    "title": "Archivo Cívico de Collierville",
+    "description": "Cada reunión de la Junta de Alcalde y Concejales, resumida en lenguaje sencillo con un PDF descargable — para que veas qué decidió tu gobierno sin ver horas de video.",
+    "meetingsHeading": "Reuniones",
+    "emptyState": "Todavía no hay resúmenes de reuniones disponibles. Vuelve pronto.",
+    "downloadPdf": "Descargar PDF",
+    "agendaHeading": "Qué pasó",
+    "actionItemsHeading": "Decisiones y acciones",
+    "topicsHeading": "Temas",
+    "watchVideo": "Ver la reunión completa",
+    "watchAt": "Ver en {timestamp}",
+    "donateCtaTitle": "Esto es gratis porque personas como tú lo financian",
+    "donateCtaBody": "Si este archivo te ayudó a entender a tu gobierno local, ayúdanos a resumir más reuniones y a llevar esto a más pueblos del Medio Sur.",
+    "donateCtaButton": "Financiar el Archivo Cívico"
   }
 }

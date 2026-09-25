@@ -1,0 +1,100 @@
+{
+  "meetingId": "2026-06-08_390312",
+  "date": "2026-06-08",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Regular Meeting — June 8, 2026",
+  "overview": "The board finished this budget cycle by giving final approval to the FY2027 property tax rate ($1.62, unchanged) and adopting the full $276 million combined town-and-schools budget for fiscal year 2026-2027, which includes a $5/month sanitation fee increase, a new $5/month street-paving fee, and a 3% average pay increase for employees. It also updated the town's citizen-comment rules to bar political campaign remarks during the public comment period, updated the town's fee schedule, approved a parking lot expansion at the Progress Road Soccer Complex to ease neighboring businesses' overflow-parking complaints, and approved rezoning a small Natchez Street lot to allow a new single-family home with smaller setbacks.",
+  "agendaItems": [
+    {
+      "item": "1. CALL TO ORDER & INVOCATION",
+      "timestamp": "00:00:10",
+      "summary": "Mayor Maureen Frazier called the meeting to order. Chaplain Parker Richardson gave the invocation and Alderman Robbins led the Pledge of Allegiance. Roll call showed Aldermen Hall, Jordan, Marshall, Stamps, and Robbins present.",
+      "type": "other"
+    },
+    {
+      "item": "4. APPROVAL OF AGENDA (Additions/Deletions)",
+      "timestamp": "00:00:10",
+      "summary": "No changes or deletions to the agenda were proposed.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "5. APPROVAL OF MINUTES",
+      "timestamp": "00:00:10",
+      "summary": "The board approved minutes from the May 26, 2026 regular meeting with no changes. There was no special presentation this evening, and no citizen comment cards were received.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "8. CONSENT AGENDA",
+      "timestamp": "00:00:10",
+      "summary": "The board approved consent agenda items 8A through 8H with no items pulled for separate presentation.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.A Approval of Amended Citizen Comments Participation Policy to Prohibit All Campaign or Electioneering Remarks",
+      "timestamp": "00:00:10",
+      "summary": "Town Administrator Molly Maynor presented an amendment to the board's citizen-comment policy (first adopted in 2021, building on a citizen-comment practice dating to 1997) to prohibit campaign or electioneering remarks during the public comment period, after candidates recently used the period to introduce themselves and share campaign platforms. Town legal counsel confirmed the board may impose this restriction as long as it is viewpoint-neutral and reasonable. The citizen comment cards will be updated to reflect the change.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.B Resolution 2026-17 - A Resolution to Amend Resolution 98-28, the Town's Current Fee Schedule",
+      "timestamp": "00:05:01",
+      "summary": "Assistant Town Administrator Adam Hamrick presented the annual update to the town's fee schedule, intended to keep fees aligned with the actual cost of providing services rather than to raise significant new revenue; the proposed changes were reviewed with departments earlier in the process this year and presented at a March 26 work session, with deletions and additions marked in the attached schedule. Staff noted the town is also preparing to comply with a new state law (Public Chapter 140, effective July 1) requiring written justification for certain development fees over $250. The changes are not expected to significantly affect the FY2027 budget.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.C  Resolution 2026-18 - A Resolution to Amend the FY 2026 General Fund and Capital Investment Program (CIP) Budgets",
+      "timestamp": "00:05:01",
+      "summary": "Budget Officer J.P. Spar presented a budget amendment appropriating $55,000 of general fund balance to cover the accepted bid, testing, and contingency costs for the Progress Road Soccer Complex parking lot expansion, bringing that project's total budget to $280,000.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.D Review of Bids and Award of Contract for the Parking Lot Expansion at Progress Road Soccer Field",
+      "timestamp": "00:05:01",
+      "summary": "Town Engineer Dale Perryman presented a request to award a contract expanding parking at the Progress Road Soccer Complex (five soccer fields; the current 41 parking spaces have proven insufficient, leading nearby businesses to report visitors parking on or near their properties). The project includes demolition, milling, grading, drainage pipe, concrete swales and sidewalks, and about 641 tons of asphalt, creating a reconfigured lot with 85 total parking spaces including handicap spaces. Nine vendors requested plans and five bids were received; the lowest, most responsive bid (the contractor's name is unclear in the transcript, rendered as \"the end score,\" possibly a captioning error for a company name) was $247,102.20, about $18,175.87 below the next-lowest bid, with a 90-day completion window and $500/day liquidated damages.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "10.A Ordinance 2026-04 –  Second Reading and PUBLIC HEARING – 253 Natchez Street  An Ordinance Amending the Official Zoning Map of the Town of Collierville by Rezoning 0.38-acres from R-1: Low Density Residential to TN: Traditional Neighborhood Located East of Natchez Park Lane and on the South Side of Natchez Street, Case #260780",
+      "timestamp": "00:10:04",
+      "summary": "Town Planner Sheila Hatchett presented a request from property owner Carson Looney to rezone a 0.38-acre lot from R-1 to TN (Traditional Neighborhood) to allow a new single-family home with smaller setbacks than R-1 permits; the use will remain single-family residential. The property sits within the Historic Overlay, and the Historic District Commission had already granted a Certificate of Appropriateness to demolish the two existing structures on the lot. Staff recommended approval as consistent with the 2010 Downtown Small Area Plan and the 2040 Land Use Plan. No one from the public spoke against it at the hearing (the applicant, present in the audience, gave a thumbs up).",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote) on second reading"
+    },
+    {
+      "item": "11.A Ordinance 2026-06 – Third and Final Reading - An Ordinance to Establish the Municipal Tax Rate for Tax Year 2026 (Fiscal Year 2027) at $1.62 for the Town of Collierville, Tennessee",
+      "timestamp": "00:15:04",
+      "summary": "Finance Director Melissa Wells presented the final reading of the ordinance setting the FY2027 property tax rate at $1.62, unchanged, following several months of board budget work sessions.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote) on third and final reading"
+    },
+    {
+      "item": "12.A Resolution 2026-15 - A Resolution to Adopt the FY 2026-2027 Fiscal Year Annual Operating Budget, Capital Investment Program (CIP) Budget, and Collierville Schools Budget",
+      "timestamp": "00:15:04",
+      "summary": "Town Administrator Molly Maynor presented the final FY2027 budget for adoption, noting a few changes since the May 26 public hearing: a $72,000 revenue adjustment from early retirement of a water/sewer loan; several projects carried forward from FY2026 to FY2027 (mast arm and streetlight painting, a Center Street crosswalk paver improvement, and a road asset project); new funding for a warning-sign maintenance program, retrofitting two school flashers before the school year starts, and a K-9 equipment donation (a net increase of about $412,562 in general fund expenditures); and replacing the previously planned Wolf River Pedestrian Bridge project with a new $3.4 million Wolf River Boulevard Trail and Sidewalk Improvements project, made possible by state funding secured with help from State Representative Kevin Vaughn. Total projected revenue is $95 million against $89.8 million in expenditures, with a $14.8 million capital investment program; the total town budget is $139.2 million and the schools budget $137 million, for a combined $276 million. The budget includes the previously discussed $5/month sanitation fee increase (to $32/month), a 3% average salary increase for employees, two new holidays and a personal day, a new $5/month street infrastructure fee, and maintains the $1.62 tax rate.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved the meeting agenda", "timestamp": "00:00:10" },
+    { "description": "Approved minutes from the May 26, 2026 meeting", "timestamp": "00:00:10" },
+    { "description": "Approved consent agenda items 8A-8H", "timestamp": "00:00:10" },
+    { "description": "Approved an amended citizen comment policy prohibiting campaign/electioneering remarks", "timestamp": "00:00:10" },
+    { "description": "Approved Resolution 2026-17, updating the town's fee schedule", "timestamp": "00:05:01" },
+    { "description": "Approved Resolution 2026-18, a $55,000 budget amendment for the Progress Road Soccer Complex parking lot project", "timestamp": "00:05:01" },
+    { "description": "Awarded a $247,102.20 contract for the Progress Road Soccer Complex parking lot expansion", "timestamp": "00:05:01" },
+    { "description": "Approved rezoning 253 Natchez Street from R-1 to TN on second reading (Ordinance 2026-04)", "timestamp": "00:10:04" },
+    { "description": "Approved the FY2027 municipal tax rate of $1.62 on third and final reading (Ordinance 2026-06)", "timestamp": "00:15:04" },
+    { "description": "Adopted the FY2026-2027 town operating budget, CIP budget, and Collierville Schools budget (Resolution 2026-15), totaling $276 million combined", "timestamp": "00:15:04" }
+  ],
+  "topics": ["budget", "property tax rate", "zoning & rezoning", "parks & recreation", "citizen comment policy", "fees & permits", "historic preservation"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/390312",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

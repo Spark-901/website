@@ -9,6 +9,7 @@ import { LanguageSwitcher } from "./language-switcher"
 import { ThemeToggle } from "./theme-toggle"
 import { Menu } from "lucide-react"
 import { SparkLogo } from "@/components/spark-logo"
+import { isFeatureEnabled } from "@/lib/features"
 
 export function Header() {
   const t = useTranslations("nav")
@@ -17,6 +18,9 @@ export function Header() {
   const navItems = [
     { href: "/", label: t("home") },
     { href: "/fund", label: t("fundATool") },
+    ...(isFeatureEnabled("CIVIC_ARCHIVE")
+      ? [{ href: "/civic-archive", label: t("civicArchive") }]
+      : []),
     { href: "/why-fund", label: t("whyFund") },
     { href: "/about", label: t("about") },
     { href: "/volunteer", label: t("volunteer") },
