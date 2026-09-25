@@ -16,7 +16,15 @@ type SiteverifyResponse = {
   "error-codes"?: string[]
 }
 
-function getClientIp(request: NextRequest): string | undefined {
+/**
+ * Best-effort client IP extraction, Cloudflare/Vercel-proxy aware. Exported
+ * so other modules that need the same client IP for a DIFFERENT purpose
+ * (e.g. `lib/civic-archive-ratelimit.ts` hashing it to key a rate-limit
+ * counter) reuse this exact header-precedence order rather than re-deriving
+ * their own — inconsistent extraction would let a client dodge a rate limit
+ * simply by triggering a different header to be read.
+ */
+export function getClientIp(request: NextRequest): string | undefined {
   return (
     request.headers.get("cf-connecting-ip") ??
     request.headers.get("x-real-ip") ??

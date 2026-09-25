@@ -7,7 +7,8 @@
  *     -> diff against what's already ingested in rag-gateway
  *     -> fetch + structure the new meeting's transcript
  *     -> ingest the transcript into rag-gateway (keeps "Ask the Archive" fresh)
- *     -> summarize + structurally-extract via AWS Bedrock (Claude 3.5 Sonnet)
+ *     -> summarize + structurally-extract via AWS Bedrock (Amazon Nova Lite by
+ *        default — see lib/bedrock.ts for the model choice and fallback ARNs)
  *     -> validate against @spark901/meeting-summary-schema
  *     -> render the summary PDF (reusing Feature #1's PDF layout)
  *     -> upload the summary JSON + PDF to S3 (durable; see lib/civic-archive-s3.ts

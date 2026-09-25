@@ -75,6 +75,9 @@ export function AskTheArchiveClient() {
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
             {t("description")}
           </p>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground/80">
+            {t("multiTownNote")}
+          </p>
 
           <form onSubmit={handleSubmit} className="mx-auto mt-8 flex max-w-xl flex-col gap-4">
             <div className="flex flex-col gap-2 sm:flex-row">

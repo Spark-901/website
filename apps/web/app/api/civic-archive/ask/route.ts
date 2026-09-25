@@ -1,9 +1,10 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { createLogger } from "@/lib/logger"
-import { verifyTurnstileToken } from "@/lib/turnstile"
+import { verifyTurnstileToken, getClientIp } from "@/lib/turnstile"
 import { isFeatureEnabled } from "@/lib/features"
 import { civicArchiveRagProjectId, getRagGatewayClient } from "@/lib/rag-gateway-client"
-import { getAnthropicClient, ASK_THE_ARCHIVE_MODEL } from "@/lib/anthropic"
+import { getBedrockCredentials, synthesizeTextWithBedrock } from "@/lib/bedrock"
+import { checkAndIncrementRateLimit, ASK_THE_ARCHIVE_RATE_LIMIT } from "@/lib/civic-archive-ratelimit"
 import {
   AskTheArchiveRequestSchema,
   parseCivicArchiveRagTitle,
@@ -58,9 +59,28 @@ export async function POST(request: NextRequest) {
   // an LLM synthesis call) — same "protect public forms/lead APIs with
   // Turnstile" convention as this repo's other cost- or abuse-sensitive
   // endpoints (see CLAUDE.md), even though this isn't a lead-capture form.
+  // Verified fresh on EVERY submission (not just once per session) — the
+  // client (`ask-the-archive-client.tsx`) discards its token and remounts
+  // the widget after every request, so a stale/reused token can never reach
+  // here twice.
   const turnstile = await verifyTurnstileToken(turnstileToken, request)
   if (!turnstile.ok) {
     return NextResponse.json({ error: turnstile.error }, { status: turnstile.status })
+  }
+
+  // Rate limit AFTER Turnstile (don't spend a captcha check on a request
+  // that's going to be capped anyway is fine — Turnstile itself is free to
+  // verify) but BEFORE the two calls that actually cost money (rag-gateway
+  // query, Bedrock synthesis). Fails open — see civic-archive-ratelimit.ts.
+  const clientIp = getClientIp(request)
+  const rateLimit = await checkAndIncrementRateLimit(clientIp)
+  if (rateLimit.limited) {
+    return NextResponse.json(
+      {
+        error: `You've reached the limit of ${ASK_THE_ARCHIVE_RATE_LIMIT} questions per day for Ask the Archive. Please check back tomorrow.`,
+      },
+      { status: 429 },
+    )
   }
 
   const ragClient = getRagGatewayClient()
@@ -110,9 +130,9 @@ export async function POST(request: NextRequest) {
     }
   })
 
-  const anthropic = getAnthropicClient()
-  if (!anthropic) {
-    log.error("ANTHROPIC_API_KEY not configured — Ask the Archive cannot synthesize an answer")
+  const bedrockCreds = getBedrockCredentials()
+  if (!bedrockCreds) {
+    log.error("SPARK901_BEDROCK_* not configured — Ask the Archive cannot synthesize an answer")
     return NextResponse.json(
       { error: "Ask the Archive is temporarily unavailable." },
       { status: 503 },
@@ -128,25 +148,14 @@ export async function POST(request: NextRequest) {
 
   let answer: string
   try {
-    const message = await anthropic.messages.create({
-      model: ASK_THE_ARCHIVE_MODEL,
-      max_tokens: 768,
-      system: SYSTEM_PROMPT,
-      messages: [
-        {
-          role: "user",
-          content: `Question: ${question}\n\nTranscript excerpts:\n\n${excerptsBlock}`,
-        },
-      ],
-    })
-    const textBlock = message.content.find((b) => b.type === "text")
-    answer = textBlock && textBlock.type === "text" ? textBlock.text.trim() : ""
-    if (!answer) {
-      throw new Error("Anthropic response contained no text block")
-    }
+    answer = await synthesizeTextWithBedrock(
+      bedrockCreds,
+      SYSTEM_PROMPT,
+      `Question: ${question}\n\nTranscript excerpts:\n\n${excerptsBlock}`,
+    )
   } catch (err) {
     log.error(
-      "Anthropic synthesis call failed",
+      "Bedrock synthesis call failed",
       err instanceof Error ? err : new Error(String(err)),
     )
     return NextResponse.json(

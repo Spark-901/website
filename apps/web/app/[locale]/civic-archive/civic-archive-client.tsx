@@ -28,6 +28,9 @@ export function CivicArchiveClient({ meetings }: CivicArchiveClientProps) {
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
             {t("description")}
           </p>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-muted-foreground/80">
+            {t("multiTownNote")}
+          </p>
         </div>
       </section>
 

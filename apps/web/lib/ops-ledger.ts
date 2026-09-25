@@ -201,7 +201,13 @@ function getTableName(): string | null {
 }
 
 /**
- * Lazy singleton DynamoDB document client.
+ * Resolves the shared Spark901 website IAM user's AWS client config
+ * (`spark901-web-ops-ledger` — see `infra/aws/README.md`). Exported so other
+ * modules that write to a DIFFERENT table under the SAME reused IAM user
+ * (e.g. `lib/civic-archive-s3.ts`'s S3 bucket, `lib/civic-archive-ratelimit.ts`'s
+ * rate-limit table) build their own client without re-deriving this
+ * resolution order — one IAM user, one place that decides how to find its
+ * credentials.
  *
  * `SPARK901_`-prefixed credentials are primary on purpose: the site's dedicated
  * least-privilege IAM user must never collide with whatever `AWS_*` variables
@@ -209,34 +215,40 @@ function getTableName(): string | null {
  * local-development fallback, and past those we fall through to the default
  * credential chain (shared profile, instance role, …).
  */
+export function getSpark901AwsClientConfig(): {
+  region: string
+  credentials?: { accessKeyId: string; secretAccessKey: string }
+} {
+  const region =
+    process.env.SPARK901_AWS_REGION || process.env.AWS_REGION || "us-east-1"
+
+  const accessKeyId =
+    process.env.SPARK901_AWS_ACCESS_KEY_ID || process.env.AWS_ACCESS_KEY_ID
+  const secretAccessKey =
+    process.env.SPARK901_AWS_SECRET_ACCESS_KEY ||
+    process.env.AWS_SECRET_ACCESS_KEY
+
+  const clientConfig: {
+    region: string
+    credentials?: { accessKeyId: string; secretAccessKey: string }
+  } = { region }
+
+  if (accessKeyId && secretAccessKey) {
+    clientConfig.credentials = { accessKeyId, secretAccessKey }
+  } else {
+    // Default credential chain: env, shared credentials file, IAM role, …
+    log.warn(
+      "SPARK901_AWS_ACCESS_KEY_ID / SPARK901_AWS_SECRET_ACCESS_KEY not found. Using default credential chain.",
+    )
+  }
+
+  return clientConfig
+}
+
+/** Lazy singleton DynamoDB document client for the ops-ledger table specifically. */
 function getOpsLedgerClient(): DynamoDBDocumentClient {
   if (!client) {
-    const region =
-      process.env.SPARK901_AWS_REGION ||
-      process.env.AWS_REGION ||
-      "us-east-1"
-
-    const accessKeyId =
-      process.env.SPARK901_AWS_ACCESS_KEY_ID || process.env.AWS_ACCESS_KEY_ID
-    const secretAccessKey =
-      process.env.SPARK901_AWS_SECRET_ACCESS_KEY ||
-      process.env.AWS_SECRET_ACCESS_KEY
-
-    const clientConfig: {
-      region: string
-      credentials?: { accessKeyId: string; secretAccessKey: string }
-    } = { region }
-
-    if (accessKeyId && secretAccessKey) {
-      clientConfig.credentials = { accessKeyId, secretAccessKey }
-    } else {
-      // Default credential chain: env, shared credentials file, IAM role, …
-      log.warn(
-        "SPARK901_AWS_ACCESS_KEY_ID / SPARK901_AWS_SECRET_ACCESS_KEY not found. Using default credential chain.",
-      )
-    }
-
-    const baseClient = new DynamoDBClient(clientConfig)
+    const baseClient = new DynamoDBClient(getSpark901AwsClientConfig())
     client = DynamoDBDocumentClient.from(baseClient, {
       marshallOptions: {
         // Empty strings are legal in DynamoDB but noisy; drop them.
@@ -312,8 +324,13 @@ function sanitizeMetadata(
  *
  * No salt → no IP. An unsalted hash of an IPv4 address is reversible by brute
  * force in seconds (2^32 candidates), so storing one would be storing the IP.
+ *
+ * Exported so other modules that need the SAME privacy-safe IP hash — not to
+ * persist an event, just to key a record by client IP — reuse this exact
+ * salt/algorithm instead of re-deriving their own.
+ * `lib/civic-archive-ratelimit.ts` is the first other caller.
  */
-function hashIp(ip: string | null | undefined): string | null {
+export function hashIp(ip: string | null | undefined): string | null {
   if (!ip) return null
 
   const salt = process.env.SPARK901_IP_HASH_SALT?.trim()
