@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@ai-sdk/amazon-bedrock": "^4.0.183",
+    "@spark901/analytics": "*",
     "@aws-sdk/client-dynamodb": "3.1090.0",
     "@aws-sdk/client-s3": "3.1090.0",
     "@aws-sdk/lib-dynamodb": "3.1090.0",
