@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { getTranslations, setRequestLocale } from "next-intl/server"
 import { LegalPageLayout } from "@/components/legal-page-layout"
+import { CookiePreferencesButton } from "@/components/consent/cookie-preferences-button"
 import { locales } from "@/i18n/config"
 import { isLocale } from "@/lib/seo"
 import { legalPageMetadata } from "@/lib/legal-seo"
@@ -25,6 +26,9 @@ export default async function Page({ params }: Props) {
   return (
     <LegalPageLayout title={t("title")} lastUpdated={t("lastUpdated")}>
       <div dangerouslySetInnerHTML={{ __html: t.raw("content") }} />
+      <div className="mt-6">
+        <CookiePreferencesButton label={t("managePreferences")} />
+      </div>
     </LegalPageLayout>
   )
 }

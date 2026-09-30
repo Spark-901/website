@@ -245,7 +245,8 @@
     "cookiePolicy": {
       "title": "Cookie政策",
       "lastUpdated": "2026年4月10日",
-      "content": "<h2>引言</h2><p>本Cookie政策说明了当您访问我们的网站时，Spark901如何使用Cookie及类似技术来识别您。</p><h2>什么是Cookie？</h2><p>Cookie是您访问网站时存储在您的计算机或移动设备上的小型数据文件。许多网站运营者广泛使用它们，以使其网站能够运行或更高效地运行。</p><h2>我们如何使用Cookie</h2><p>出于技术原因，我们使用Cookie以使我们的网站能够运行。这些被称为“必要”或“严格必需”的Cookie。</p><h2>Google Analytics</h2><p>在您首次访问时显示的Cookie横幅中获得您的同意后，我们会使用Google Analytics（Google LLC）来统计页面浏览量、大致位置、设备和浏览器类型以及引荐网址。Google不会从我们这里收到您的姓名、电子邮件或任何可识别您身份的信息。分析类Cookie默认关闭，仅在您接受后才会加载。</p><h2>您的选择</h2><p>您可以在首次访问时显示的横幅中接受或拒绝分析类Cookie。如需稍后更改选择，请清除浏览器中本网站的Cookie，横幅将重新出现。您也可以在浏览器中设置或调整一般的Cookie控制选项以接受或拒绝Cookie；如果您拒绝Cookie，部分功能可能会受到限制。</p>"
+      "content": "<h2>引言</h2><p>本Cookie政策说明了当您访问我们的网站时，Spark901如何使用Cookie及类似技术来识别您。</p><h2>什么是Cookie？</h2><p>Cookie是您访问网站时存储在您的计算机或移动设备上的小型数据文件。许多网站运营者广泛使用它们，以使其网站能够运行或更高效地运行。</p><h2>我们如何使用Cookie</h2><p>出于技术原因，我们使用Cookie以使我们的网站能够运行。这些被称为“必要”或“严格必需”的Cookie。</p><h2>Google Analytics</h2><p>在您首次访问时显示的Cookie横幅中获得您的同意后，我们会使用Google Analytics（Google LLC）来统计页面浏览量、大致位置、设备和浏览器类型以及引荐网址。Google不会从我们这里收到您的姓名、电子邮件或任何可识别您身份的信息。分析类Cookie默认关闭，仅在您接受后才会加载。</p><h2>您的选择</h2><p>您可以在首次访问时显示的横幅中接受或拒绝分析类Cookie。如需稍后更改选择，请清除浏览器中本网站的Cookie，横幅将重新出现。您也可以在浏览器中设置或调整一般的Cookie控制选项以接受或拒绝Cookie；如果您拒绝Cookie，部分功能可能会受到限制。</p>",
+      "managePreferences": "管理Cookie偏好设置"
     },
     "digitalAcceptance": {
       "title": "电子同意声明",
@@ -266,20 +267,6 @@
       "title": "AI使用披露",
       "lastUpdated": "2026年4月10日",
       "content": "<h2>人工智能的使用</h2><p>Spark901可能会使用人工智能(AI)和机器学习技术来改进我们的平台，并协助开源工具的开发。</p><h2>开发协助</h2><p>我们使用AI工具来帮助工程师编写、审查和测试代码。这使我们能够更快、更高效地为非营利社区构建和部署高质量的工具。</p><h2>透明度</h2><p>我们致力于在AI的使用方面保持透明。如果AI被用于生成内容或做出对用户有重大影响的决策，我们将就该使用提供通知和说明。</p><h2>人工监督</h2><p>所有借助AI开发的代码和功能，都将由我们的专业工程团队进行人工审查和测试，以确保安全性、可靠性和准确性。</p>"
-    },
-    "cookieBanner": {
-      "title": "我们使用Cookie",
-      "body": "我们使用运行本网站所必需的基本Cookie，并且仅在您同意的情况下使用Google Analytics来了解网站的使用情况。详见我们的",
-      "policyLink": "Cookie政策",
-      "manage": "管理",
-      "essentialOnly": "仅基本Cookie",
-      "acceptAll": "全部接受",
-      "essentialLabel": "基本",
-      "essentialDescription": "网站正常运行所必需，无法关闭。",
-      "analyticsLabel": "分析",
-      "analyticsDescription": "Google Analytics — 页面浏览量、大致位置、设备和浏览器类型。默认关闭。",
-      "cancel": "取消",
-      "savePreferences": "保存偏好设置"
     }
   },
   "common": {

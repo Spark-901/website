@@ -272,7 +272,8 @@
     "cookiePolicy": {
       "title": "Política de Cookies",
       "lastUpdated": "10 de abril de 2026",
-      "content": "<h2>Introducción</h2><p>Esta Política de Cookies explica cómo Spark901 utiliza cookies y tecnologías similares para reconocerle cuando visita nuestro sitio web.</p><h2>¿Qué son las cookies?</h2><p>Las cookies son pequeños archivos de datos que se colocan en su computadora o dispositivo móvil cuando visita un sitio web. Son ampliamente utilizados por los propietarios de sitios web para que sus sitios web funcionen, o para que funcionen de manera más eficiente.</p><h2>Cómo usamos las cookies</h2><p>Usamos cookies por razones técnicas para que nuestro sitio web funcione. Estas se denominan cookies 'esenciales' o 'estrictamente necesarias'.</p><h2>Google Analytics</h2><p>Con su consentimiento, otorgado a través del banner de cookies que aparece en su primera visita, utilizamos Google Analytics (Google LLC) para medir las páginas vistas, la ubicación aproximada, el tipo de dispositivo y navegador, y la URL de referencia. Google no recibe su nombre, correo electrónico ni ninguna otra información que lo identifique. Las cookies de análisis están desactivadas de forma predeterminada y solo se cargan después de que usted las acepte.</p><h2>Sus opciones</h2><p>Puede aceptar o rechazar las cookies analíticas en el banner que aparece en su primera visita. Para cambiar su elección más adelante, borre las cookies de este sitio en su navegador, lo que hará que el banner vuelva a aparecer. También puede configurar o modificar los controles de su navegador en general para aceptar o rechazar cookies; si las rechaza, es posible que se restrinja alguna funcionalidad.</p>"
+      "content": "<h2>Introducción</h2><p>Esta Política de Cookies explica cómo Spark901 utiliza cookies y tecnologías similares para reconocerle cuando visita nuestro sitio web.</p><h2>¿Qué son las cookies?</h2><p>Las cookies son pequeños archivos de datos que se colocan en su computadora o dispositivo móvil cuando visita un sitio web. Son ampliamente utilizados por los propietarios de sitios web para que sus sitios web funcionen, o para que funcionen de manera más eficiente.</p><h2>Cómo usamos las cookies</h2><p>Usamos cookies por razones técnicas para que nuestro sitio web funcione. Estas se denominan cookies 'esenciales' o 'estrictamente necesarias'.</p><h2>Google Analytics</h2><p>Con su consentimiento, otorgado a través del banner de cookies que aparece en su primera visita, utilizamos Google Analytics (Google LLC) para medir las páginas vistas, la ubicación aproximada, el tipo de dispositivo y navegador, y la URL de referencia. Google no recibe su nombre, correo electrónico ni ninguna otra información que lo identifique. Las cookies de análisis están desactivadas de forma predeterminada y solo se cargan después de que usted las acepte.</p><h2>Sus opciones</h2><p>Puede aceptar o rechazar las cookies analíticas en el banner que aparece en su primera visita. Para cambiar su elección más adelante, borre las cookies de este sitio en su navegador, lo que hará que el banner vuelva a aparecer. También puede configurar o modificar los controles de su navegador en general para aceptar o rechazar cookies; si las rechaza, es posible que se restrinja alguna funcionalidad.</p>",
+      "managePreferences": "Gestionar preferencias de cookies"
     },
     "digitalAcceptance": {
       "title": "Aceptación Digital",
@@ -293,20 +294,6 @@
       "title": "Divulgación de IA",
       "lastUpdated": "10 de abril de 2026",
       "content": "<h2>Uso de Inteligencia Artificial</h2><p>Spark901 puede utilizar tecnologías de inteligencia artificial (IA) y aprendizaje automático para mejorar nuestra plataforma y ayudar en el desarrollo de herramientas de código abierto.</p><h2>Asistencia al desarrollo</h2><p>Usamos herramientas de IA para ayudar a nuestros ingenieros a escribir, revisar y probar código. Esto nos permite construir y desplegar herramientas de alta calidad de manera más rápida y eficiente para la comunidad sin fines de lucro.</p><h2>Transparencia</h2><p>Estamos comprometidos con la transparencia en nuestro uso de la IA. Si se utiliza la IA para generar contenido o tomar decisiones que afecten significativamente a nuestros usuarios, proporcionaremos aviso y contexto con respecto a ese uso.</p><h2>Supervisión humana</h2><p>Todo el código y las características desarrolladas con la ayuda de la IA están sujetos a revisión y pruebas humanas por parte de nuestro equipo de ingeniería profesional para garantizar la seguridad, confiabilidad y precisión.</p>"
-    },
-    "cookieBanner": {
-      "title": "Usamos cookies",
-      "body": "Usamos cookies esenciales para operar este sitio y, solo con su consentimiento, Google Analytics para ver cómo se utiliza. Consulte nuestra",
-      "policyLink": "Política de Cookies",
-      "manage": "Gestionar",
-      "essentialOnly": "Solo esenciales",
-      "acceptAll": "Aceptar todo",
-      "essentialLabel": "Esenciales",
-      "essentialDescription": "Necesarias para que el sitio funcione. No se pueden desactivar.",
-      "analyticsLabel": "Analítica",
-      "analyticsDescription": "Google Analytics: páginas vistas, ubicación aproximada, tipo de dispositivo y navegador. Desactivado de forma predeterminada.",
-      "cancel": "Cancelar",
-      "savePreferences": "Guardar preferencias"
     }
   },
   "feedback": {

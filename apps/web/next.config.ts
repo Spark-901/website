@@ -18,7 +18,6 @@ const nextConfig: NextConfig = {
   // pattern) — Next must transpile them itself rather than assuming they're
   // pre-compiled like a normal node_modules dependency.
   transpilePackages: [
-    "@spark901/analytics",
     "@spark901/civic-source-swagit",
     "@spark901/meeting-summary-schema",
     "@spark901/meeting-summary-ui",
