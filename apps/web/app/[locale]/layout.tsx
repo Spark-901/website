@@ -2,7 +2,8 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { GoogleAnalytics } from "@spark901/analytics"
+import { AnalyticsGate } from "@/components/consent/analytics-gate"
+import { CookieBanner } from "@/components/consent/cookie-banner"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, setRequestLocale } from "next-intl/server"
 import { Header } from "@/components/header"
@@ -132,10 +133,11 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
               {children}
             </main>
             <Footer />
+            <CookieBanner />
           </div>
         </NextIntlClientProvider>
         <Analytics />
-        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        <AnalyticsGate measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
       </body>
     </html>
   )

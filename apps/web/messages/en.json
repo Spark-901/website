@@ -230,7 +230,7 @@
     "privacy": {
       "title": "Privacy Policy",
       "lastUpdated": "April 10, 2026",
-      "content": "<h2>Introduction</h2><p>Spark901 is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our website and services.</p><h2>Information We Collect</h2><p>We collect information you provide directly to us, such as when you fund a tool, sign up for our newsletter, or contact us. This may include your name, email address, and payment information processed through our third-party provider, Stripe.</p><h2>How We Use Information</h2><p>We use the information we collect to provide and improve our services, process transactions, communicate with you, and ensure the security of our platform.</p><h2>Sharing of Information</h2><p>We do not sell your personal information. We may share information with third-party service providers who perform services on our behalf, such as payment processing and data hosting.</p><h2>Your Rights</h2><p>You have the right to access, correct, or delete your personal information. Please contact us at hello@spark901.com to exercise these rights.</p>"
+      "content": "<h2>Introduction</h2><p>Spark901 is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our website and services.</p><h2>Information We Collect</h2><p>We collect information you provide directly to us, such as when you fund a tool, sign up for our newsletter, or contact us. This may include your name, email address, and payment information processed through our third-party provider, Stripe.</p><h2>Analytics</h2><p>With your consent, given through the cookie banner, we use Google Analytics (Google LLC) to measure page views, approximate location, device and browser type, and referring URL. Google does not receive your name, email, or payment information from us. See our Cookie Policy for details and how to change your choice.</p><h2>How We Use Information</h2><p>We use the information we collect to provide and improve our services, process transactions, communicate with you, and ensure the security of our platform.</p><h2>Sharing of Information</h2><p>We do not sell your personal information. We may share information with third-party service providers who perform services on our behalf, such as payment processing, data hosting, and — only if you accept analytics cookies — Google Analytics.</p><h2>Your Rights</h2><p>You have the right to access, correct, or delete your personal information. Please contact us at hello@spark901.com to exercise these rights.</p>"
     },
     "terms": {
       "title": "Terms of Service",
@@ -245,7 +245,7 @@
     "cookiePolicy": {
       "title": "Cookie Policy",
       "lastUpdated": "April 10, 2026",
-      "content": "<h2>Introduction</h2><p>This Cookie Policy explains how Spark901 uses cookies and similar technologies to recognize you when you visit our website.</p><h2>What are Cookies?</h2><p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners to make their websites work, or to work more efficiently.</p><h2>How We Use Cookies</h2><p>We use cookies for technical reasons in order for our website to operate. These are referred to as 'essential' or 'strictly necessary' cookies. Other cookies also enable us to track and target the interests of our users to enhance the experience on our website.</p><h2>Your Choices</h2><p>You can set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our website though your access to some functionality and areas of our website may be restricted.</p>"
+      "content": "<h2>Introduction</h2><p>This Cookie Policy explains how Spark901 uses cookies and similar technologies to recognize you when you visit our website.</p><h2>What are Cookies?</h2><p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners to make their websites work, or to work more efficiently.</p><h2>How We Use Cookies</h2><p>We use cookies for technical reasons in order for our website to operate. These are referred to as 'essential' or 'strictly necessary' cookies.</p><h2>Google Analytics</h2><p>With your consent, given through the cookie banner shown on your first visit, we use Google Analytics (Google LLC) to measure page views, approximate location, device and browser type, and referring URL. Google does not receive your name, email, or any other information that identifies you. Analytics cookies are off by default and only load after you accept them.</p><h2>Your Choices</h2><p>You can accept or decline analytics cookies in the banner shown on your first visit. To change your choice later, clear this site's cookies in your browser, which brings the banner back. You can also set or amend your web browser controls generally to accept or refuse cookies; if you reject cookies, some functionality may be restricted.</p>"
     },
     "digitalAcceptance": {
       "title": "Digital Acceptance",
@@ -266,6 +266,20 @@
       "title": "AI Disclosure",
       "lastUpdated": "April 10, 2026",
       "content": "<h2>Use of Artificial Intelligence</h2><p>Spark901 may use artificial intelligence (AI) and machine learning technologies to improve our platform and assist in the development of open-source tools.</p><h2>Development Assistance</h2><p>We use AI tools to help our engineers write, review, and test code. This allows us to build and deploy high-quality tools faster and more efficiently for the nonprofit community.</p><h2>Transparency</h2><p>We are committed to transparency in our use of AI. If AI is used to generate content or make decisions that significantly impact our users, we will provide notice and context regarding that use.</p><h2>Human Oversight</h2><p>All code and features developed with the assistance of AI are subject to human review and testing by our professional engineering team to ensure security, reliability, and accuracy.</p>"
+    },
+    "cookieBanner": {
+      "title": "We use cookies",
+      "body": "We use essential cookies to run this site, and — only with your consent — Google Analytics to see how it's used. See our",
+      "policyLink": "Cookie Policy",
+      "manage": "Manage",
+      "essentialOnly": "Essential only",
+      "acceptAll": "Accept all",
+      "essentialLabel": "Essential",
+      "essentialDescription": "Required for the site to function. Cannot be turned off.",
+      "analyticsLabel": "Analytics",
+      "analyticsDescription": "Google Analytics — page views, approximate location, device and browser type. Off by default.",
+      "cancel": "Cancel",
+      "savePreferences": "Save preferences"
     }
   },
   "common": {
