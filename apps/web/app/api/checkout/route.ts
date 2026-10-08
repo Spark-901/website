@@ -1,6 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server"
 import { brand } from "@/lib/brand"
 import { createLogger } from "@/lib/logger"
+import { isLocale } from "@/lib/seo"
 import { getProjectBySlug } from "@/lib/projects"
 import {
   CONTRIBUTION_MAX_USD,
@@ -145,7 +146,8 @@ export async function POST(request: NextRequest) {
       phone_number_collection: { enabled: false },
       allow_promotion_codes: true,
       submit_type: isRecurring ? undefined : "donate",
-      locale: locale === "es" ? "es" : "en",
+      // Our supported locale codes (en/es/ja/zh) map 1:1 onto Stripe Checkout's locale enum.
+      locale: isLocale(locale) ? locale : "en",
       line_items: [
         {
           price_data: priceData,

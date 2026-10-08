@@ -1,0 +1,93 @@
+{
+  "meetingId": "2026-07-27_394572",
+  "date": "2026-07-27",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Regular Meeting — July 27, 2026",
+  "overview": "The board gave first-reading approval to a new e-bike and \"micromobility device\" ordinance, banning e-bikes, skateboards, and hoverboards from the Greenbelt trail, sidewalks, lawns, and public facilities while allowing them on streets posted 40 mph or lower, after a debate over where young riders could safely ride and citing a nationwide surge in emergency-room visits tied to these devices. The board also denied a business owner's request to keep large white rock mulch landscaping that violates design guidelines, approved a $85,207 land purchase to help widen Shelby Drive, adopted next year's street repaving list, and approved a temporary emergency deal to keep recycling processing running after the town's regular recycling vendor ran into operational trouble. A mayoral proclamation honored the late Trey Erwin, a former Collierville High School athlete, on what would have been his 30th birthday.",
+  "agendaItems": [
+    {
+      "item": "1. CALL TO ORDER",
+      "timestamp": "00:00:07",
+      "summary": "Mayor Frazier called the meeting to order. Chaplain Parker Richardson, joined again by his young son, gave the invocation, and Alderman Marshall led the Pledge of Allegiance. The mayor welcomed guest attorney Wayne Schofield II of Burch, Porter & Johnson. Roll call confirmed a quorum with Aldermen Hall, Jordan, Marshall, Stamps, and Robbins present.",
+      "type": "other"
+    },
+    {
+      "item": "4. APPROVAL OF AGENDA (Additions/Deletions)",
+      "timestamp": "00:00:07",
+      "summary": "Staff noted a corrected version of the resolution for item 8.D (a surplus-property item on the consent agenda), removing certain items after review by the finance director. The agenda was approved with that correction.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "5. APPROVAL OF MINUTES",
+      "timestamp": "00:00:07",
+      "summary": "The board approved minutes from the July 13, 2026 regular meeting and the July 16, 2026 special called meeting, with no changes or corrections to either.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "6. SPECIAL PRESENTATION",
+      "timestamp": "00:00:07",
+      "summary": "Mayor Frazier presented a proclamation declaring July 31, 2026 \"Trey Erwin Day,\" honoring former Collierville High School football player Trey Erwin, who died of pancreatic cancer in 2012 just weeks before his 16th birthday. The proclamation, presented to his mother Lisa Erwin, marked what would have been his 30th birthday and encouraged donations to the Collierville Burch Library expansion in his honor, coordinated with the Friends of the Library.",
+      "type": "presentation"
+    },
+    {
+      "item": "7. CITIZENS COMMENTS",
+      "timestamp": "00:05:02",
+      "summary": "Mike Huang (1779 Amber Grove Cove, Wolf River Ranch) described neighborhood erosion problems from deteriorating wood and railroad-tie retaining walls, plus overgrown vegetation on public property behind residents' fences that he said was attracting pests; staff (Mike Clark and Dale Perryman) said they had already inspected the site, confirmed the public storm drain portion was functioning as designed per a third-party engineer, and would set up a neighborhood meeting. Jim Nabors (1006 Katie Cove) asked the board to reconsider reverting a recently changed road (captioned as \"Carver Arlington,\" likely a mis-transcription of the actual road name) back to four lanes and a 40 mph speed limit ahead of the school year. Bryan Jimenez (365 Costco Cove) urged the board to remove the town's Flock automated license-plate-reader cameras, citing privacy and data-tracking concerns and referencing state and federal legislative efforts against the technology; the police chief (captioned as \"Chief Light\") noted he had already discussed the issue with Jimenez but the two continued to disagree.",
+      "type": "public-comment"
+    },
+    {
+      "item": "8. CONSENT AGENDA",
+      "timestamp": "00:15:04",
+      "summary": "Items 8.A through 8.L were approved as a block, with item 8.G (the e-bike ordinance, Ordinance 2026-03 first reading) pulled at a board member's request to be handled as a separate business item at the end of the meeting. The mayor also thanked Keep Tennessee Beautiful for a $10,000 grant supporting a town law-enforcement program.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), with item 8.G moved to new business"
+    },
+    {
+      "item": "9.A Right-of-Way (ROW) and Easements Acquisition for State Route (SR) 175 (Shelby Drive) Widening Project - Jasper Park to Shelby Point",
+      "timestamp": "00:15:04",
+      "summary": "Tim Gwaltney presented a purchase of real estate and easements from the Woodlawn Planned Development HOA for $85,207, part of widening the last remaining two-lane stretch of Shelby Drive (between Houston Levee and Highway 72) into a four-lane, median-divided road with curb, gutter, sidewalk, and bike lanes. The project is fully reimbursable (80% federal funds via the Memphis MPO, 20% state), and this is the first of 15 needed property agreements to be finalized; negotiations continue on the rest, with a goal of full right-of-way certification by March 2027 and construction starting late summer to early fall 2027.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.B Waiver from the Design Guidelines for Rock Mulch at 901 Bowl, Case #260765",
+      "timestamp": "00:20:06",
+      "summary": "Maria de Mesa presented a request from Jose Flores (represented by his son, Jose Flores Jr., who also manages 901 Therapy and 901 Gymnastics in the same building) to keep large white rock mulch landscaping installed after the site's original sod failed to drain and caused mosquito breeding. The Design Review Commission did not recommend the waiver, saying the extensive rock coverage near the building's entrances did not meet the intent of the design guidelines, and staff cited past cases where similar waivers were denied (Southern Security, Glide Express) or approved only with strict limits (a small, capped area of blue river stone at the Water Tower District). Board members expressed sympathy for the applicant, who said replacing a leaking roof was his higher near-term priority, but were concerned about setting a precedent.",
+      "type": "vote",
+      "outcome": "Denied (roll call vote, unanimous) — the rock mulch must be replaced with a compliant alternative (natural mulch, sod, French drains, or smaller limited stone), though the board indicated willingness to work with the applicant on timing"
+    },
+    {
+      "item": "9.C Street Selection List for Fiscal Year 2027 Repaving Program",
+      "timestamp": "00:35:03",
+      "summary": "Assistant Public Works Director Clay Ticer presented the FY2027 street resurfacing list, including a fall phase (The Laurels, Wolf River Ranch Phase 4, South Ridge Subdivision, Longwood Drive) and a spring phase (Maple Bend, Bailey Station, Shea Gardens, Harvest Oaks, Chestnut Hill, the Fleming Road area, a Shelby Drive section, and Powell Road), plus an alternate list. He noted the town is transitioning to a new vendor (Roadway Asset Services) using van-mounted equipment to systematically assess road conditions, expected to be fully operational by Thanksgiving; this year's list was still compiled the traditional way, based on staff observation and resident feedback. The FY27 paving budget is $4,039,500, higher than in past years.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.D Sole Source Agreement for Recyclable Material Processing Services",
+      "timestamp": "00:40:05",
+      "summary": "Public Works Director Josh Russell explained that the town's recycling processor since 2019, West Tennessee Recycling Center in Henderson, TN (which had saved the town nearly $1.5 million in processing fees over seven years compared to its prior vendor), has been struggling operationally — including problems with new robotic equipment and reliance on prison-trustee labor — and told the town in May it could no longer accept its material. The only other processor in the region, FCR (formerly \"Re Community\"), costs about $150 more per ton and would only offer a month-to-month arrangement; the town's procurement division proposed a 90-day agreement instead. Russell warned that if West Tennessee's problems aren't resolved, the town could eventually face processing-fee increases of up to 300%, which would likely require a future budget amendment; the board also discussed contamination standards and possible future changes to what materials the town accepts for recycling.",
+      "type": "vote",
+      "outcome": "Approved 5-1 (Alderman Hall voted no; Stamps, Robbins, Jordan, Marshall, and Mayor Frazier voted yes) — a 90-day sole source agreement with FCR"
+    },
+    {
+      "item": "8.G Ordinance 2026-03 – First Reading – An Ordinance to Amend Title VII: Traffic Code ... Related to Various Topics",
+      "timestamp": "00:50:06",
+      "summary": "Planning Director Jamie Gross presented the e-bike portion of a broader town-code cleanup ordinance, at the board's request limiting discussion to e-bikes (other sections, including mobile food vending, would be discussed later at the public hearing). A new state law effective July 1, 2026 already restricts Class 3 e-bikes (up to 28 mph) to riders 16 and older and lets municipalities further regulate Class 1 and 2 e-bikes (up to 20 mph). The draft ordinance creates an umbrella \"micromobility devices\" category (all e-bike classes, skateboards, hoverboards, etc.) that would be banned from the Greenbelt trail system, public sidewalks, lawns, and public facilities like parks and town hall, but allowed on public streets posted at 40 mph or less. Alderman Jordan raised concern that this would leave many middle-school-age riders, who use these devices to get to and from school, with nowhere legal to ride except streets with relatively high speed limits. The board discussed nationwide safety data cited by a staff/board member (rising emergency-room visits tied to these devices — cited figures included roughly 39,000 visits in 2023 and about 59,000 in 2024, with over 300 deaths) and confirmed that state law already requires helmets for riders under 16 on any bike, scooter, or e-bike. A motion passed amending the draft to require helmets for all riders (not just those under 16) on the streets where micromobility devices would be permitted, and to allow Class 1 e-bikes on sidewalks. The item now moves to a board work session and a public hearing at the August 10, 2026 meeting, with a third and final reading tentatively scheduled for August 27, 2026.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote) — first reading, as amended to add a universal helmet requirement and allow Class 1 e-bikes on sidewalks; further changes possible before the public hearing and final reading"
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved an $85,207 land/easement purchase from the Woodlawn HOA for the Shelby Drive (SR 175) widening project.", "timestamp": "00:15:04" },
+    { "description": "Denied a design-guideline waiver that would have let a Highway 72 commercial building keep large rock-mulch landscaping.", "timestamp": "00:20:06" },
+    { "description": "Approved the FY2027 street repaving list and its $4,039,500 budget.", "timestamp": "00:35:03" },
+    { "description": "Approved a 90-day sole source agreement with FCR for recycling processing after the town's regular recycling vendor could no longer accept material.", "timestamp": "00:40:05" },
+    { "description": "Approved the first reading of Ordinance 2026-03, creating rules for e-bikes and other \"micromobility devices\" (banned from the Greenbelt, sidewalks, and parks; allowed on streets posted 40 mph or less; helmets required for all riders on those streets; Class 1 e-bikes allowed on sidewalks).", "timestamp": "00:50:06" }
+  ],
+  "topics": ["e-bikes", "traffic safety", "recycling", "public works", "zoning", "design guidelines", "road construction", "parks/trails", "public safety"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/394572",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

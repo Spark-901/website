@@ -1,0 +1,65 @@
+{
+  "meetingId": "2026-09-14_400835",
+  "date": "2026-09-14",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Regular Meeting — September 14, 2026",
+  "overview": "The board honored former Shelby County Commissioner David Bradford with a proclamation for his eight years representing District 2. During citizen comments, resident Justin Johnson formally asked the board to authorize an independent investigation into town administration, citing the disputed circumstances of former Fire Chief John Sjoberg's administrative leave and a public-records-sourced claim that Town Administrator Molly Maynor had received 58 payroll overpayments totaling about $14,000.98; a second resident, Liz Dealey, separately raised a reported car-allowance overpayment of more than $10,000 and asked the town to audit its recurring employee payments and add routine board notification for financial discrepancies. The transcript does not record any board discussion or vote in response to either request. On routine business, the board approved a one-year fuel-purchasing contract with Gresham Petroleum Company.",
+  "agendaItems": [
+    {
+      "item": "1. CALL TO ORDER",
+      "timestamp": "00:00:01",
+      "summary": "Mayor Maureen Frazier called the meeting to order. Father Christian gave the invocation and Vice Mayor Stamps led the Pledge of Allegiance. Roll call showed Aldermen Hall, Jordan, Marshall, Stamps, and Robbins present. Deputy Town Administrator Katrina Amos-Atkins led the meeting on the administrative side this evening.",
+      "type": "other"
+    },
+    {
+      "item": "4. APPROVAL OF AGENDA (Additions/Deletions)",
+      "timestamp": "00:00:01",
+      "summary": "No changes to the agenda were proposed.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "5. APPROVAL OF MINUTES",
+      "timestamp": "00:00:01",
+      "summary": "The board approved minutes from an August 24, 2026 work session and the August 24, 2026 regular meeting, with no changes.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), both sets of minutes"
+    },
+    {
+      "item": "6. SPECIAL PRESENTATION",
+      "timestamp": "00:00:01",
+      "summary": "Mayor Frazier presented a proclamation declaring September 14, 2026 \"David Bradford Day,\" honoring former Shelby County Commissioner David Bradford (District 2) for two terms (2018-2026) of service, including his role as a Shelby County Commission chair and his work with the Collierville Planning Commission, the Leadership Collierville Alumni Board, Habitat for Humanity of Greater Memphis, the YMCA of the Mid-South, and New Memphis. In his remarks, Bradford thanked his family and fellow officials, reflected on the responsibility of representing all constituents rather than only supporters, and said his public service was \"not over,\" hinting that an announcement about his next role might come the following day.",
+      "type": "presentation"
+    },
+    {
+      "item": "7. CITIZENS COMMENTS",
+      "timestamp": "00:05:01",
+      "summary": "Two residents spoke. Justin Johnson asked the board to authorize an independent investigation into town administration, saying this was about establishing facts rather than presuming wrongdoing. He said the handling of former Fire Chief John Sjoberg's administrative leave remained unresolved, noting the town administrator alleged Sjoberg used profanity and said he did not report to her, which Sjoberg has denied; he also referenced other current and former employees' concerns about retaliation and inconsistent discipline, a question about whether the town's public information officer acted personally or officially in publishing a column defending the town administrator, and a claim — which he said was based on a public records request — that Town Administrator Molly Maynor received 58 payroll overpayments totaling about $14,000.98, repaid without interest. He asked that any investigation be conducted by an independent investigator, protect participating employees, and have its findings released publicly to the extent the law allows. Liz Dealey separately addressed what she described as a payroll overpayment involving an employee's car allowance — an allowance meant to be paid monthly instead paid every pay period for an extended time, reportedly totaling more than $10,000 by the time it was caught. Rather than assigning blame, she recommended the town conduct a root-cause analysis, audit all employees receiving recurring allowances or reimbursements, review who sets up, enters, and verifies such payments, and establish a routine process for notifying the board of significant financial discrepancies going forward. The transcript does not reflect any board discussion or response to either speaker's request at this meeting.",
+      "type": "public-comment"
+    },
+    {
+      "item": "8. CONSENT AGENDA",
+      "timestamp": "00:15:01",
+      "summary": "The board approved consent agenda items 8A through 8L with no items pulled for separate presentation.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.A Review of Bids and Award of Contract for the Purchase of Diesel Fuel and Gasoline",
+      "timestamp": "00:15:01",
+      "summary": "Public Works Director Josh Russell presented a one-year fuel purchasing contract (with four optional renewal years) to replace the town's expired agreement. The town buys roughly 160,000 gallons of diesel and 200,000 gallons of gasoline annually for its vehicle fleet. Procurement notified 26 vendors and received 7 bids; Gresham Petroleum Company was the lowest apparent bidder, pricing fuel at the daily wholesale (\"rack\") price set by regional supplier Valero, plus a delivery markup of $0.0176 per gallon. Each town department budgets separately for its own fuel costs.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved the meeting agenda", "timestamp": "00:00:01" },
+    { "description": "Approved minutes from an August 24, 2026 work session and the August 24, 2026 meeting", "timestamp": "00:00:01" },
+    { "description": "Proclaimed September 14, 2026 as David Bradford Day", "timestamp": "00:00:01" },
+    { "description": "Approved consent agenda items 8A-8L", "timestamp": "00:15:01" },
+    { "description": "Awarded a one-year fuel purchasing contract (with four renewal options) to Gresham Petroleum Company", "timestamp": "00:15:01" }
+  ],
+  "topics": ["town administration accountability", "citizens comments", "public records & financial oversight", "civic recognition", "fuel purchasing contract"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/400835",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

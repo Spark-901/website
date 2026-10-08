@@ -11,7 +11,9 @@
     "about": "Nosotros",
     "transparency": "Transparencia",
     "volunteer": "Voluntariado",
-    "partnerWithUs": "Asóciate con Nosotros"
+    "partnerWithUs": "Asóciate con Nosotros",
+    "civicArchive": "Archivo Cívico",
+    "askTheArchive": "Pregunta al Archivo"
   },
   "home": {
     "hero": {
@@ -49,8 +51,9 @@
       }
     },
     "testimonials": {
-      "title": "Con la confianza de líderes de Memphis",
-      "cta": "Únete hoy"
+      "title": "Apenas estamos comenzando — ayúdanos a construir nuestra trayectoria",
+      "subtitle": "Spark901 es joven. Si una de nuestras herramientas le ha ahorrado tiempo o dinero a tu organización, nos encantaría contar tu historia aquí a medida que crecemos.",
+      "cta": "Comparte tu historia"
     },
     "cta": {
       "title": "No necesitas saber programar para financiar tecnología que cambia vidas.",
@@ -226,6 +229,17 @@
   "footer": {
     "tagline": "Código para el Bien. Impulsado en Memphis.",
     "description": "Construyendo infraestructura tecnológica de código abierto para el bien social.",
+    "newsletter": {
+      "title": "Mantente al día",
+      "description": "Nuevas herramientas, proyectos financiados y formas de ayudar, directo a tu correo.",
+      "placeholder": "Ingresa tu correo electrónico",
+      "submitLabel": "Suscribirse",
+      "submittingLabel": "Suscribiendo…",
+      "success": "¡Gracias! Ya estás en la lista.",
+      "error": "Lo sentimos, algo salió mal. Por favor, inténtalo de nuevo.",
+      "emailRequired": "Por favor ingresa tu correo electrónico.",
+      "emailInvalid": "Por favor ingresa un correo electrónico válido."
+    },
     "navigation": "Navegación",
     "legal": "Legal",
     "privacy": "Política de Privacidad",
@@ -243,7 +257,7 @@
     "privacy": {
       "title": "Política de Privacidad",
       "lastUpdated": "10 de abril de 2026",
-      "content": "<h2>Introducción</h2><p>Spark901 se compromete a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y compartimos información sobre usted cuando utiliza nuestro sitio web y servicios.</p><h2>Información que recopilamos</h2><p>Recopilamos información que usted nos proporciona directamente, como cuando financia una herramienta, se suscribe a nuestro boletín o nos contacta. Esto puede incluir su nombre, dirección de correo electrónico e información de pago procesada a través de nuestro proveedor externo, Stripe.</p><h2>Cómo usamos la información</h2><p>Usamos la información que recopilamos para proporcionar y mejorar nuestros servicios, procesar transacciones, comunicarnos con usted y garantizar la seguridad de nuestra plataforma.</p><h2>Intercambio de información</h2><p>No vendemos su información personal. Podemos compartir información con proveedores de servicios externos que realizan servicios en nuestro nombre, como el procesamiento de pagos y el alojamiento de datos.</p><h2>Sus derechos</h2><p>Usted tiene derecho a acceder, corregir o eliminar su información personal. Póngase en contacto con nosotros en hello@spark901.com para ejercer estos derechos.</p>"
+      "content": "<h2>Introducción</h2><p>Spark901 se compromete a proteger su privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos y compartimos información sobre usted cuando utiliza nuestro sitio web y servicios.</p><h2>Información que recopilamos</h2><p>Recopilamos información que usted nos proporciona directamente, como cuando financia una herramienta, se suscribe a nuestro boletín o nos contacta. Esto puede incluir su nombre, dirección de correo electrónico e información de pago procesada a través de nuestro proveedor externo, Stripe.</p><h2>Análisis</h2><p>Con su consentimiento, otorgado a través del banner de cookies, utilizamos Google Analytics (Google LLC) para medir las páginas vistas, la ubicación aproximada, el tipo de dispositivo y navegador, y la URL de referencia. Google no recibe de nosotros su nombre, correo electrónico ni información de pago. Consulte nuestra Política de Cookies para más detalles y cómo cambiar su elección.</p><h2>Cómo usamos la información</h2><p>Usamos la información que recopilamos para proporcionar y mejorar nuestros servicios, procesar transacciones, comunicarnos con usted y garantizar la seguridad de nuestra plataforma.</p><h2>Intercambio de información</h2><p>No vendemos su información personal. Podemos compartir información con proveedores de servicios externos que realizan servicios en nuestro nombre, como el procesamiento de pagos, el alojamiento de datos y — únicamente si acepta las cookies analíticas — Google Analytics.</p><h2>Sus derechos</h2><p>Usted tiene derecho a acceder, corregir o eliminar su información personal. Póngase en contacto con nosotros en hello@spark901.com para ejercer estos derechos.</p>"
     },
     "terms": {
       "title": "Términos de Servicio",
@@ -258,7 +272,8 @@
     "cookiePolicy": {
       "title": "Política de Cookies",
       "lastUpdated": "10 de abril de 2026",
-      "content": "<h2>Introducción</h2><p>Esta Política de Cookies explica cómo Spark901 utiliza cookies y tecnologías similares para reconocerle cuando visita nuestro sitio web.</p><h2>¿Qué son las cookies?</h2><p>Las cookies son pequeños archivos de datos que se colocan en su computadora o dispositivo móvil cuando visita un sitio web. Son ampliamente utilizados por los propietarios de sitios web para que sus sitios web funcionen, o para que funcionen de manera más eficiente.</p><h2>Cómo usamos las cookies</h2><p>Usamos cookies por razones técnicas para que nuestro sitio web funcione. Estas se denominan cookies 'esenciales' o 'estrictamente necesarias'. Otras cookies también nos permiten rastrear y dirigir los intereses de nuestros usuarios para mejorar la experiencia en nuestro sitio web.</p><h2>Sus opciones</h2><p>Puede configurar o modificar los controles de su navegador web para aceptar o rechazar cookies. Si decide rechazar las cookies, aún puede usar nuestro sitio web, aunque su acceso a algunas funcionalidades y áreas de nuestro sitio web puede estar restringido.</p>"
+      "content": "<h2>Introducción</h2><p>Esta Política de Cookies explica cómo Spark901 utiliza cookies y tecnologías similares para reconocerle cuando visita nuestro sitio web.</p><h2>¿Qué son las cookies?</h2><p>Las cookies son pequeños archivos de datos que se colocan en su computadora o dispositivo móvil cuando visita un sitio web. Son ampliamente utilizados por los propietarios de sitios web para que sus sitios web funcionen, o para que funcionen de manera más eficiente.</p><h2>Cómo usamos las cookies</h2><p>Usamos cookies por razones técnicas para que nuestro sitio web funcione. Estas se denominan cookies 'esenciales' o 'estrictamente necesarias'.</p><h2>Google Analytics</h2><p>Con su consentimiento, otorgado a través del banner de cookies que aparece en su primera visita, utilizamos Google Analytics (Google LLC) para medir las páginas vistas, la ubicación aproximada, el tipo de dispositivo y navegador, y la URL de referencia. Google no recibe su nombre, correo electrónico ni ninguna otra información que lo identifique. Las cookies de análisis están desactivadas de forma predeterminada y solo se cargan después de que usted las acepte.</p><h2>Sus opciones</h2><p>Puede aceptar o rechazar las cookies analíticas en el banner que aparece en su primera visita. Para cambiar su elección más adelante, borre las cookies de este sitio en su navegador, lo que hará que el banner vuelva a aparecer. También puede configurar o modificar los controles de su navegador en general para aceptar o rechazar cookies; si las rechaza, es posible que se restrinja alguna funcionalidad.</p>",
+      "managePreferences": "Gestionar preferencias de cookies"
     },
     "digitalAcceptance": {
       "title": "Aceptación Digital",
@@ -379,5 +394,41 @@
     "learnMore": "Saber Más",
     "getStarted": "Comenzar",
     "viewAll": "Ver Todo"
+  },
+  "civicArchive": {
+    "badge": "Piloto en vivo — Collierville, TN",
+    "title": "Archivo Cívico de Collierville",
+    "description": "Cada reunión de la Junta de Alcalde y Concejales, resumida en lenguaje sencillo con un PDF descargable — para que veas qué decidió tu gobierno sin ver horas de video.",
+    "multiTownNote": "Diseñado para expandirse a cualquier pueblo del oeste de Tennessee — Collierville es el primero.",
+    "meetingsHeading": "Reuniones",
+    "emptyState": "Todavía no hay resúmenes de reuniones disponibles. Vuelve pronto.",
+    "downloadPdf": "Descargar PDF",
+    "agendaHeading": "Qué pasó",
+    "actionItemsHeading": "Decisiones y acciones",
+    "topicsHeading": "Temas",
+    "watchVideo": "Ver la reunión completa",
+    "watchAt": "Ver en {timestamp}",
+    "donateCtaTitle": "Esto es gratis porque personas como tú lo financian",
+    "donateCtaBody": "Si este archivo te ayudó a entender a tu gobierno local, ayúdanos a resumir más reuniones y a llevar esto a más pueblos del Medio Sur.",
+    "donateCtaButton": "Financiar el Archivo Cívico"
+  },
+  "askTheArchive": {
+    "badge": "Prueba de concepto — haz una pregunta real",
+    "title": "Pregunta al Archivo",
+    "description": "Haz una pregunta sobre lo que la Junta de Alcalde y Concejales de Collierville ha discutido — obtén una respuesta basada en transcripciones reales de las reuniones, con citas al minuto exacto de la reunión correspondiente.",
+    "multiTownNote": "Diseñado para expandirse a cualquier pueblo del oeste de Tennessee — Collierville es el primero.",
+    "inputPlaceholder": "ej. ¿La junta discutió reglas para e-bikes?",
+    "inputLabel": "Haz una pregunta sobre una reunión de la BMA de Collierville",
+    "ask": "Preguntar",
+    "asking": "Preguntando…",
+    "turnstileRequired": "Por favor completa la verificación antes de preguntar.",
+    "questionTooShort": "Por favor haz una pregunta más específica (al menos 4 caracteres).",
+    "genericError": "Algo salió mal. Por favor intenta de nuevo.",
+    "citationsHeading": "Fuentes",
+    "unknownMeeting": "Reunión desconocida",
+    "watchAt": "Ver en {timestamp}",
+    "donateCtaTitle": "Esto es gratis porque personas como tú lo financian",
+    "donateCtaBody": "Si esto te ayudó a entender a tu gobierno local, ayúdanos a resumir más reuniones y a llevar esto a más pueblos del Medio Sur.",
+    "donateCtaButton": "Financiar el Archivo Cívico"
   }
 }

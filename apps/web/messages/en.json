@@ -11,7 +11,9 @@
     "about": "About",
     "transparency": "Transparency",
     "volunteer": "Volunteer",
-    "partnerWithUs": "Partner With Us"
+    "partnerWithUs": "Partner With Us",
+    "civicArchive": "Civic Archive",
+    "askTheArchive": "Ask the Archive"
   },
   "home": {
     "hero": {
@@ -49,8 +51,9 @@
       }
     },
     "testimonials": {
-      "title": "Trusted by Memphis leaders",
-      "cta": "Join them today"
+      "title": "We're just getting started — help us build our track record",
+      "subtitle": "Spark901 is young. If one of our tools has saved your organization time or money, we'd love to feature your story here as we grow.",
+      "cta": "Share your story"
     },
     "cta": {
       "title": "You don't need to code to build technology that changes lives.",
@@ -199,6 +202,17 @@
   "footer": {
     "tagline": "Code for Good. Powered in Memphis.",
     "description": "Building permanent technology infrastructure for organizations doing good.",
+    "newsletter": {
+      "title": "Stay up to date",
+      "description": "New tools, funded projects, and ways to help — straight to your inbox.",
+      "placeholder": "Enter your email",
+      "submitLabel": "Subscribe",
+      "submittingLabel": "Subscribing…",
+      "success": "Thanks! You're on the list.",
+      "error": "Sorry, something went wrong. Please try again.",
+      "emailRequired": "Please enter your email address.",
+      "emailInvalid": "Please enter a valid email address."
+    },
     "navigation": "Explore",
     "legal": "Legal",
     "privacy": "Privacy Policy",
@@ -216,7 +230,7 @@
     "privacy": {
       "title": "Privacy Policy",
       "lastUpdated": "April 10, 2026",
-      "content": "<h2>Introduction</h2><p>Spark901 is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our website and services.</p><h2>Information We Collect</h2><p>We collect information you provide directly to us, such as when you fund a tool, sign up for our newsletter, or contact us. This may include your name, email address, and payment information processed through our third-party provider, Stripe.</p><h2>How We Use Information</h2><p>We use the information we collect to provide and improve our services, process transactions, communicate with you, and ensure the security of our platform.</p><h2>Sharing of Information</h2><p>We do not sell your personal information. We may share information with third-party service providers who perform services on our behalf, such as payment processing and data hosting.</p><h2>Your Rights</h2><p>You have the right to access, correct, or delete your personal information. Please contact us at hello@spark901.com to exercise these rights.</p>"
+      "content": "<h2>Introduction</h2><p>Spark901 is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our website and services.</p><h2>Information We Collect</h2><p>We collect information you provide directly to us, such as when you fund a tool, sign up for our newsletter, or contact us. This may include your name, email address, and payment information processed through our third-party provider, Stripe.</p><h2>Analytics</h2><p>With your consent, given through the cookie banner, we use Google Analytics (Google LLC) to measure page views, approximate location, device and browser type, and referring URL. Google does not receive your name, email, or payment information from us. See our Cookie Policy for details and how to change your choice.</p><h2>How We Use Information</h2><p>We use the information we collect to provide and improve our services, process transactions, communicate with you, and ensure the security of our platform.</p><h2>Sharing of Information</h2><p>We do not sell your personal information. We may share information with third-party service providers who perform services on our behalf, such as payment processing, data hosting, and — only if you accept analytics cookies — Google Analytics.</p><h2>Your Rights</h2><p>You have the right to access, correct, or delete your personal information. Please contact us at hello@spark901.com to exercise these rights.</p>"
     },
     "terms": {
       "title": "Terms of Service",
@@ -231,7 +245,8 @@
     "cookiePolicy": {
       "title": "Cookie Policy",
       "lastUpdated": "April 10, 2026",
-      "content": "<h2>Introduction</h2><p>This Cookie Policy explains how Spark901 uses cookies and similar technologies to recognize you when you visit our website.</p><h2>What are Cookies?</h2><p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners to make their websites work, or to work more efficiently.</p><h2>How We Use Cookies</h2><p>We use cookies for technical reasons in order for our website to operate. These are referred to as 'essential' or 'strictly necessary' cookies. Other cookies also enable us to track and target the interests of our users to enhance the experience on our website.</p><h2>Your Choices</h2><p>You can set or amend your web browser controls to accept or refuse cookies. If you choose to reject cookies, you may still use our website though your access to some functionality and areas of our website may be restricted.</p>"
+      "content": "<h2>Introduction</h2><p>This Cookie Policy explains how Spark901 uses cookies and similar technologies to recognize you when you visit our website.</p><h2>What are Cookies?</h2><p>Cookies are small data files that are placed on your computer or mobile device when you visit a website. They are widely used by website owners to make their websites work, or to work more efficiently.</p><h2>How We Use Cookies</h2><p>We use cookies for technical reasons in order for our website to operate. These are referred to as 'essential' or 'strictly necessary' cookies.</p><h2>Google Analytics</h2><p>With your consent, given through the cookie banner shown on your first visit, we use Google Analytics (Google LLC) to measure page views, approximate location, device and browser type, and referring URL. Google does not receive your name, email, or any other information that identifies you. Analytics cookies are off by default and only load after you accept them.</p><h2>Your Choices</h2><p>You can accept or decline analytics cookies in the banner shown on your first visit. To change your choice later, clear this site's cookies in your browser, which brings the banner back. You can also set or amend your web browser controls generally to accept or refuse cookies; if you reject cookies, some functionality may be restricted.</p>",
+      "managePreferences": "Manage cookie preferences"
     },
     "digitalAcceptance": {
       "title": "Digital Acceptance",
@@ -379,5 +394,41 @@
       "thanksTitle": "You're in. Welcome aboard.",
       "thanksBody": "We'll review your skills and reach out with a project match within a week. If you'd like, follow along in our public repos in the meantime."
     }
+  },
+  "civicArchive": {
+    "badge": "Live pilot — Collierville, TN",
+    "title": "Collierville Civic Archive",
+    "description": "Every Board of Mayor and Aldermen meeting, summarized in plain language with a downloadable PDF — so you can see what your government decided without watching hours of video.",
+    "multiTownNote": "Built to expand to any West Tennessee town — Collierville is our first.",
+    "meetingsHeading": "Meetings",
+    "emptyState": "No meeting summaries are available yet. Check back soon.",
+    "downloadPdf": "Download PDF",
+    "agendaHeading": "What happened",
+    "actionItemsHeading": "Decisions & actions",
+    "topicsHeading": "Topics",
+    "watchVideo": "Watch the full meeting",
+    "watchAt": "Watch at {timestamp}",
+    "donateCtaTitle": "This is free because people like you fund it",
+    "donateCtaBody": "If this archive helped you understand your local government, help us summarize more meetings and bring this to more Mid-South towns.",
+    "donateCtaButton": "Fund the Civic Archive"
+  },
+  "askTheArchive": {
+    "badge": "Proof of concept — ask a real question",
+    "title": "Ask the Archive",
+    "description": "Ask a question about what Collierville's Board of Mayor and Aldermen has discussed — get an answer grounded in real meeting transcripts, with citations back to the exact meeting and timestamp.",
+    "multiTownNote": "Built to expand to any West Tennessee town — Collierville is our first.",
+    "inputPlaceholder": "e.g. Did the board discuss e-bike rules?",
+    "inputLabel": "Ask a question about a Collierville BMA meeting",
+    "ask": "Ask",
+    "asking": "Asking…",
+    "turnstileRequired": "Please complete the verification before asking.",
+    "questionTooShort": "Please ask a more specific question (at least 4 characters).",
+    "genericError": "Something went wrong. Please try again.",
+    "citationsHeading": "Sources",
+    "unknownMeeting": "Unknown meeting",
+    "watchAt": "Watch at {timestamp}",
+    "donateCtaTitle": "This is free because people like you fund it",
+    "donateCtaBody": "If this helped you understand your local government, help us summarize more meetings and bring this to more Mid-South towns.",
+    "donateCtaButton": "Fund the Civic Archive"
   }
 }

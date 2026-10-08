@@ -1,0 +1,88 @@
+name: CI
+
+# There was no CI at all before this file — lint/type-check/build never ran on a
+# PR, which is how a broken logo and fabricated testimonials both shipped to
+# production unnoticed. Add every job name EXCEPT `lint` (see its comment below)
+# to the branch protection rule for `main` once this lands.
+
+on:
+  pull_request:
+    branches: [main, develop, staging]
+  push:
+    branches: [main]
+
+jobs:
+  # `eslint .` (apps/web's own lint script) has never actually worked in this repo —
+  # there is no ESLint config file and no `eslint`/`eslint-config-next` dependency
+  # anywhere in it, on any branch, pre-dating this workflow entirely. Attempting a
+  # from-scratch ESLint 9 + eslint-config-next setup here hit a real upstream
+  # incompatibility (a circular-structure crash in eslint-plugin-react's flat config
+  # via FlatCompat), not just style violations, so it's left as non-blocking rather
+  # than either hiding it or half-fixing it under time pressure. Don't add this job
+  # to branch protection until a real ESLint setup lands as its own tracked PR.
+  lint:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+
+  type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run type-check
+
+  validate-i18n-parity:
+    name: "validate: every locale has matching translation keys"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run --workspace=web validate:i18n
+
+  validate-no-fake-content:
+    name: "validate: no hardcoded testimonials or stock placeholder photos"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run --workspace=web validate:content
+
+  build-and-validate-brand:
+    name: "build + validate: brand logo colors actually render"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run --workspace=web build
+        env:
+          # Build-time env vars the app expects to exist (values are dummies —
+          # this job only needs the build to succeed and produce compiled CSS,
+          # it never talks to a real Stripe/Turnstile/AWS account).
+          STRIPE_SECRET_KEY: sk_test_dummy
+          NEXT_PUBLIC_TURNSTILE_SITE_KEY: 1x00000000000000000000AA
+          SPARK901_TURNSTILE_SECRET_KEY: 1x0000000000000000000000000000000AA
+      - run: npm run --workspace=web validate:brand

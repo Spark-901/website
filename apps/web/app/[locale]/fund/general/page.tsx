@@ -9,7 +9,7 @@ import { JsonLd } from "@/components/json-ld"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { locales } from "@/i18n/config"
+import { locales, type Locale } from "@/i18n/config"
 import { isFeatureEnabled } from "@/lib/features"
 import { GENERAL_FUND_SLUG, getGeneralFund } from "@/lib/projects"
 import {
@@ -26,28 +26,59 @@ export function generateStaticParams() {
 
 type Props = { params: Promise<{ locale: string }> }
 
+const SEO_STRINGS: Record<
+  Locale,
+  { title: string; description?: string; ogTitle: string; ogDescription?: string; imageAlt: string }
+> = {
+  en: {
+    title: "General Fund",
+    ogTitle: "General Fund | Spark901",
+    imageAlt: "Spark901 General Fund",
+  },
+  es: {
+    title: "Fondo General",
+    description:
+      "Apoyo flexible para la capacidad del estudio Spark901: ingeniería, hosting y las herramientas que más lo necesiten.",
+    ogTitle: "Fondo General | Spark901",
+    ogDescription: "Financia la capacidad compartida detrás de las herramientas de código abierto.",
+    imageAlt: "Fondo General de Spark901",
+  },
+  ja: {
+    title: "一般基金",
+    description: "Spark901のスタジオ運営基盤（エンジニアリング、ホスティング、最も必要としているツール）への柔軟な支援。",
+    ogTitle: "一般基金 | Spark901",
+    ogDescription: "オープンソースツールを支える共有基盤に資金を提供します。",
+    imageAlt: "Spark901 一般基金",
+  },
+  zh: {
+    title: "通用基金",
+    description: "为Spark901工作室运营能力提供灵活支持:工程、托管以及最需要的工具。",
+    ogTitle: "通用基金 | Spark901",
+    ogDescription: "资助支撑开源工具背后的共享能力。",
+    imageAlt: "Spark901 通用基金",
+  },
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale: raw } = await params
   const locale = isLocale(raw) ? raw : "en"
-  const isEs = locale === "es"
+  const s = SEO_STRINGS[locale]
   const project = getGeneralFund()
 
   return createPageMetadata({
     locale,
     path: `/fund/${GENERAL_FUND_SLUG}`,
-    title: isEs ? "Fondo General" : "General Fund",
-    description: isEs
-      ? "Apoyo flexible para la capacidad del estudio Spark901: ingeniería, hosting y las herramientas que más lo necesiten."
-      : (project?.description ??
-        "Flexible support for Spark901 studio capacity—engineering, hosting, and whichever tools need it most."),
-    ogTitle: isEs ? "Fondo General | Spark901" : "General Fund | Spark901",
-    ogDescription: isEs
-      ? "Financia la capacidad compartida detrás de las herramientas de código abierto."
-      : (project?.tagline ?? "Flexible support for open-source tools"),
+    title: s.title,
+    description:
+      s.description ??
+      project?.description ??
+      "Flexible support for Spark901 studio capacity—engineering, hosting, and whichever tools need it most.",
+    ogTitle: s.ogTitle,
+    ogDescription: s.ogDescription ?? project?.tagline ?? "Flexible support for open-source tools",
     type: "article",
     image: {
       url: "/og-image.png",
-      alt: isEs ? "Fondo General de Spark901" : "Spark901 General Fund",
+      alt: s.imageAlt,
     },
   })
 }

@@ -1,0 +1,72 @@
+{
+  "meetingId": "2026-06-22_391797",
+  "date": "2026-06-22",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Regular Meeting — June 22, 2026",
+  "overview": "The board recognized the Leadership Collierville Class of 2026 for donating trail-marker safety signs (with emergency location codes) for the Greenbelt trail system, then approved a new 7 Brew drive-thru coffee shop on Poplar Avenue after an unusually detailed traffic review — the site was redesigned with a third queuing lane to hold 35-40 cars on-site and a condition barring any customer stacking onto Poplar Avenue, addressing concerns raised about a nearby coffee shop's traffic problems. The board also approved a change order for this year's street resurfacing contract, whose cost rose due to winter storm damage and rising asphalt prices, meaning some planned \"alternate\" streets will carry over to next year's resurfacing list. This was the board's last meeting before its early-July break for the town's Independence Day celebration.",
+  "agendaItems": [
+    {
+      "item": "1. CALL TO ORDER & INVOCATION",
+      "timestamp": "00:00:06",
+      "summary": "Mayor Maureen Frazier called the meeting to order. Dolores Cobb gave the invocation and Alderman Marshall led the Pledge of Allegiance. Roll call showed Aldermen Hall, Jordan, Marshall, Stamps, and Robbins present.",
+      "type": "other"
+    },
+    {
+      "item": "4. APPROVAL OF AGENDA (Additions/Deletions)",
+      "timestamp": "00:00:06",
+      "summary": "Staff noted a revised board report for item 9.B that had been placed at board members' seats.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), including the corrected report for item 9.B"
+    },
+    {
+      "item": "5. APPROVAL OF MINUTES",
+      "timestamp": "00:00:06",
+      "summary": "The board approved minutes from the June 8, 2026 meeting with no changes. There was no special presentation on the agenda this evening.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "7. CITIZENS COMMENTS",
+      "timestamp": "00:00:06",
+      "summary": "One comment card was received, but it pertained to a specific agenda item and was held for that discussion rather than addressed during general citizen comments; no other comment cards were submitted.",
+      "type": "public-comment"
+    },
+    {
+      "item": "8. CONSENT AGENDA",
+      "timestamp": "00:00:06",
+      "summary": "The board approved consent agenda items 8A through 8R as published, with no items pulled for separate presentation.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "Additional Item",
+      "timestamp": "00:00:06",
+      "summary": "Mayor Frazier recognized the leadership of the Leadership Collierville Class of 2026, who raised money to donate trail-marker signs to the town for the Greenbelt trail system; the signs give each location a code so someone with an emergency can identify their location precisely when calling for help rather than describing a landmark. The mayor also recognized Terry Dean, interim director of Leadership Collierville, whose term in that role was noted as ending soon.",
+      "type": "presentation"
+    },
+    {
+      "item": "9.A Development Agreement and Final Site Plan for 7Brew Drive-Thru Coffee, Case #251189",
+      "timestamp": "00:00:06",
+      "summary": "Town Planner Sheila Hatchett presented a final site plan and development agreement for a 7 Brew drive-thru coffee shop on a 0.18-acre lot on the north side of Poplar Avenue, part of the City Center Shopping Center campus. The existing 4,000-square-foot building will be replaced with a 510-square-foot main building and a 240-square-foot outdoor freezer storage structure; the site will be drive-thru only, with no customer walk-up access or parking, and 4 employee-only parking spaces including one ADA space. A conditional use permit was not required because the application was pending before the town's drive-thru CUP ordinance took effect. The Design Review Commission conditionally recommended a 40-foot front-yard buffer encroachment tied to traffic mitigation; the franchise also modified its design to add masonry, remove roofline neon lighting, and ensure outdoor speakers comply with the noise ordinance. The town's traffic engineer explained the site's single Poplar Avenue access will be restricted to right-in/right-out only (an adjacent driveway will be permanently closed), with additional access through internal cross-connections to Maynard Way and Highway 72 signals. Based on observing 7 Brew's busiest existing location (Olive Branch, MS), the site was redesigned with a third queuing lane to hold roughly 35-40 vehicles on-site (compared to a nearby Dutch Bros location that holds about 19 vehicles across 2 lanes and has experienced queuing onto Poplar). As a condition of approval, the applicant may not allow any customer stacking or queuing onto Poplar Avenue and must close the right-in/right-out driveway and redirect drivers if a spillback risk arises. The development agreement requires a roughly $117,000 letter of credit for public and private improvements. Robert Sloane, representing the property's owner (the Wingo Family Trust) through Shopping Center Group, spoke in support, noting the landlord agreed to permanently close an adjacent driveway to improve cross-access; 7 Brew operator Chad Cornwell was also present to answer questions. Staff recommended approval, finding the project consistent with zoning and design guidelines.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.B  Contract Change Order #1 for the FY26 Street Resurfacing Project GS-26-01568 Change Order 1.pdf",
+      "timestamp": "00:15:04",
+      "summary": "Clay Ticer presented (using a corrected board report distributed that evening) a change order for the FY2026 street resurfacing contract. Unlike past years, the contractor was unable to split the work into fall and spring phases and completed nearly all of it in spring; Winter Storm Fern left precipitation sitting on roadways, requiring extra patching before resurfacing, and rising crude oil prices triggered roughly $54,000 in asphalt-cement price adjustments over the last two billing cycles. The town's base list of streets was completed, but the \"alternate\" streets were not finished this year and will move to the front of next fiscal year's resurfacing list.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved the meeting agenda, including a corrected board report for item 9.B", "timestamp": "00:00:06" },
+    { "description": "Approved minutes from the June 8, 2026 meeting", "timestamp": "00:00:06" },
+    { "description": "Approved consent agenda items 8A-8R", "timestamp": "00:00:06" },
+    { "description": "Approved the final site plan and development agreement for a 7 Brew drive-thru coffee shop on Poplar Avenue, with traffic-mitigation conditions barring queuing onto Poplar Avenue", "timestamp": "00:00:06" },
+    { "description": "Approved Change Order #1 for the FY2026 street resurfacing project, covering storm-related patching and asphalt price increases; unfinished \"alternate\" streets carry over to next fiscal year", "timestamp": "00:15:04" }
+  ],
+  "topics": ["development & site plans", "traffic safety", "street resurfacing", "public recognition", "greenbelt trail safety", "citizens comments"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/391797",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

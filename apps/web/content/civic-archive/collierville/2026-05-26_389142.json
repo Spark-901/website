@@ -1,0 +1,51 @@
+{
+  "meetingId": "2026-05-26_389142",
+  "date": "2026-05-26",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Regular Meeting — May 26, 2026",
+  "overview": "This is a second, separately-ingested recording of the town's May 26, 2026 meeting (a sibling transcript, video ID 389307, covers the same meeting from its actual start). This transcript begins partway through citizens comments and runs through the budget public hearing near the end of the meeting; the earlier business (call to order, approval of the agenda and minutes) is not present in this recording. In the portion captured here, the board removed one item from its consent agenda, approved buying a replacement garbage truck after one was totaled in an accident, approved the ordinance setting the FY2027 municipal tax rate at $1.62 (unchanged), and held a public hearing (no vote required that night) on the proposed FY2026-2027 town and Collierville Schools budgets, which include a $5/month sanitation fee increase and a new $5/month street-paving fee.",
+  "agendaItems": [
+    {
+      "item": "7 CITIZENS COMMENTS",
+      "timestamp": "00:06:27",
+      "summary": "This transcript picks up mid-sentence during a resident's remarks about an unresponsive property manager (matching the substance of Christina Ray's complaint about mold and maintenance issues at her apartment complex, also heard at the May 11, 2026 meeting and in fuller form in the sibling recording of this same meeting). Town staff said code enforcement and development services had been working with her and had exhausted available remedies within their authority. Dr. LaSagna (transcribed here as \"Lasagna\") Hall, identified as Shelby County's Deputy Chief Administrative Officer, then introduced herself as a candidate for Shelby County Clerk.",
+      "type": "public-comment"
+    },
+    {
+      "item": "8 CONSENT AGENDA",
+      "timestamp": "00:06:35",
+      "summary": "The board approved consent agenda items 8A through 8I, with item 8B described in this transcript as having been removed (a sibling recording of this same meeting instead states item 8C was removed — the two transcripts disagree on the letter, flagged here rather than guessed at).",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.A Purchase of an Automated Garbage Truck through a Sourcewell Cooperative Contract",
+      "timestamp": "00:06:35",
+      "summary": "Public Works Director Josh Russell requested approval to purchase a replacement garbage truck (unit 412), purchased in FY2025 and totaled in a single-vehicle accident on April 9, 2026 (the driver was uninjured). The insurance company deemed it a total loss and will fully reimburse the town; the vendor could deliver a replacement within about two weeks. A related budget amendment was included on the consent agenda.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "10.A Ordinance 2026-06 - Second Reading and Public Hearing – An Ordinance to Establish the Municipal Tax Rate for Tax Year 2026 (Fiscal Year 2027) at $1.62 for the Town of Collierville, Tennessee",
+      "timestamp": "00:10:06",
+      "summary": "Revenue and Grant Manager Natasha Irby presented the ordinance setting the FY2027 property tax rate at $1.62, unchanged from the current rate, which prior board budget work sessions determined (along with other revenue) is sufficient to fund the proposed FY2027 budget. No one from the public spoke at the hearing.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote) on second reading"
+    },
+    {
+      "item": "10.B Resolution 2026-15 - PUBLIC HEARING ONLY - A Resolution to Adopt the Proposed FY2026-2027 Operating Budget, Capital Investment Budget, and Collierville Schools Budget",
+      "timestamp": "00:10:06",
+      "summary": "This was a public hearing only, with the board's vote scheduled for June 8, 2026. Town Administrator Molly Maynor introduced Collierville Schools Finance Director Anita Floyd, who presented the schools' budget: projected enrollment of 8,996 students (a decrease from the prior year, attributed mainly to fewer kindergarten-age children), class-size ratios within state limits, a general fund of about $127 million (down from the prior year due to the enrollment decline), and a 1% cost-of-living raise plus step increases (up to about 3% combined) for qualifying staff. The town administrator then presented the town's budget: a population of about 56,000 across 36.5 square miles, projected FY2027 general fund revenue of $95.1 million against expenditures of $89.5 million, 48% of the budget to public safety and 23.1% to infrastructure, a roughly $12 million capital investment program (including a Downtown Drainage Phase 5 project, a Burrows Road water/sewer project, and Tom Brooks Park Phase 3 improvements), a $5/month sanitation fee increase (to $32/month), a new $5/month street infrastructure fee to fund additional paving, and a roughly 3% average staff pay increase, while maintaining the $1.62 tax rate. Resident Jim Stokes was the only member of the public to speak, suggesting the town could cut costs by collecting recyclables and bulk/yard waste less frequently than weekly trash pickup, by contracting out trash hauling, and by offering smaller trash bins. The transcript ends just after the mayor asks whether there is any other business, without an explicit adjournment statement — the sibling recording of this meeting confirms nothing further was raised and the meeting was adjourned.",
+      "type": "public-comment"
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved consent agenda items 8A-8I", "timestamp": "00:06:35" },
+    { "description": "Approved purchase of a replacement automated garbage truck (insurance-reimbursed)", "timestamp": "00:06:35" },
+    { "description": "Approved Ordinance 2026-06 on second reading, setting the FY2027 municipal tax rate at $1.62", "timestamp": "00:10:06" },
+    { "description": "Held a public hearing (no vote) on the proposed FY2026-2027 town and Collierville Schools budgets; a vote is scheduled for June 8, 2026", "timestamp": "00:10:06" }
+  ],
+  "topics": ["budget", "property tax rate", "sanitation & waste collection", "housing & code enforcement", "schools budget", "vehicle purchases", "citizens comments"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/389142",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

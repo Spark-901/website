@@ -2,6 +2,9 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { GoogleAnalytics } from "@west-tennessee-consulting/analytics/GoogleAnalytics"
+import { CookieConsentBanner } from "@west-tennessee-consulting/cookie-consent"
+import { COOKIE_CONSENT_TRANSLATIONS } from "@/lib/cookie-consent-i18n"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, setRequestLocale } from "next-intl/server"
 import { Header } from "@/components/header"
@@ -12,6 +15,7 @@ import { brand } from "@/lib/brand"
 import {
   SITE_URL,
   absoluteUrl,
+  absoluteLocalizedUrl,
   createPageMetadata,
   organizationJsonLd,
   websiteJsonLd,
@@ -133,7 +137,14 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
             <Footer />
           </div>
         </NextIntlClientProvider>
+        <CookieConsentBanner
+          siteName={brand.name}
+          privacyPolicyUrl={absoluteLocalizedUrl(locale, "/cookie-policy")}
+          locale={locale}
+          translations={COOKIE_CONSENT_TRANSLATIONS}
+        />
         <Analytics />
+        <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
       </body>
     </html>
   )

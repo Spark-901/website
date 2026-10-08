@@ -1,0 +1,74 @@
+{
+  "meetingId": "2026-07-13_393298",
+  "date": "2026-07-13",
+  "board": "Board of Mayor and Aldermen",
+  "title": "BMA Regular Meeting — July 13, 2026",
+  "overview": "The board's longest discussion this evening was a request to convert the still-under-construction Hinton Preserve subdivision's planned public streets and sidewalks into private, gated ones — a request both the Planning Commission (4-1) and town staff had recommended denying because it would break a 2022 approval condition requiring permanent public connectivity to neighboring subdivisions and Hinton Park. After extensive debate about safety, emergency-response delays, and what happens if the homeowners' association someday goes broke and can't maintain the private streets, the board approved the change anyway, on the condition that the developer's agreement include long-term funding guarantees for the HOA. The board also reappointed James Lewellen as one of Collierville's newly-authorized voting members on the Memphis Light, Gas and Water board, approved a small rezoning on West South Street to make an oddly-shaped lot buildable, and heard from residents worried about a proposed trash compactor's distance from homes and about cut-through construction traffic in the Porter Farms neighborhood.",
+  "agendaItems": [
+    {
+      "item": "1. CALL TO ORDER & INVOCATION",
+      "timestamp": "00:00:08",
+      "summary": "Mayor Maureen Frazier called the meeting to order. Dr. Eddie Thompson gave the invocation and Alderman Hall led the Pledge of Allegiance. Roll call showed Aldermen Hall, Jordan, Marshall, Stamps, and Robbins present.",
+      "type": "other"
+    },
+    {
+      "item": "4. APPROVAL OF AGENDA (Additions/Deletions)",
+      "timestamp": "00:00:08",
+      "summary": "No changes to the agenda were proposed.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "5. APPROVAL OF MINUTES",
+      "timestamp": "00:00:08",
+      "summary": "The board approved minutes from a June 11, 2026 work session and the June 22, 2026 regular meeting, with no changes. There was no special presentation this evening.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), both sets of minutes"
+    },
+    {
+      "item": "7. CITIZENS COMMENTS",
+      "timestamp": "00:00:08",
+      "summary": "Two residents spoke, both about the Water Tower District Phase 2 development. Barbara Pratt, a Porter Farms resident, reiterated concerns about the proposed trash compactor's distance from homes (roughly 100 feet, versus a recommended 250+ feet), citing pest/rodent attraction, odor, and possible soil/water contamination from leachate runoff, and asked the developer to consider relocating it to the project's northwest corner near an existing hotel compactor instead. Dave Ryan, president of the Porter Farms HOA (representing 44 homes), reported a roughly 400% increase in traffic through the neighborhood tied to Water Tower District construction, said construction-traffic signage has not stopped cut-through drivers despite residents' efforts, and said the HOA plans to formally request stop signs, speed bumps, and truck weight restrictions from the town's traffic engineering department, as well as increased police speed enforcement.",
+      "type": "public-comment"
+    },
+    {
+      "item": "8. CONSENT AGENDA",
+      "timestamp": "00:05:02",
+      "summary": "The board approved consent agenda items 8A through 8F with no items pulled for separate presentation.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "9.A Appointment of Mr. James Lewellen to the MLGW Board of Commissioners",
+      "timestamp": "00:10:01",
+      "summary": "Town Administrator Molly Maynor explained that new state legislation allows utilities serving more than 130,000 customers to add two voting board members appointed by the largest-population municipalities in their service area; for Memphis Light, Gas and Water, that means Collierville and Bartlett. James Lewellen, a former Collierville town administrator who had held an advisory (non-voting) MLGW board seat, was appointed to a three-year voting term beginning July 2026, with the mayor's recommendation reached in consultation with other suburban mayors. Mr. Lewellen was present and confirmed he accepts the appointment.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote)"
+    },
+    {
+      "item": "10.A Ordinance 2026-07 – Second Reading and Public Hearing – South Street Rezoning – An Ordinance Amending the Official Zoning Map of the Town of Collierville by Rezoning 0.801 Acres from R-3: High Density Residential to TN: Traditional Neighborhood Located South of West South Street and East of Sycamore Road, Case #261049",
+      "timestamp": "00:10:01",
+      "summary": "Assistant Town Planner Don Singleton presented a request to rezone four existing-home lots at 171, 177, 181, and 187 West South Street (owned by applicant Sheila McCauley along with James Wilson and Timothy Brunson) from R-3 to TN (Traditional Neighborhood) to obtain smaller, more workable setbacks; the properties will remain single-family. Ms. McCauley plans to demolish and rebuild on her lot, which does not currently meet R-3 setback requirements and would be unbuildable without the rezoning. The properties sit within the local Historic District Overlay (though not eligible for the National Register), so the Historic District Commission will still review any demolition or new construction. Staff found the rezoning consistent with the 2010 Downtown Small Area Plan and the current land use plan, with density remaining unchanged at 4.9 dwelling units per acre and no expected increase in traffic or utility demand. No one from the public spoke at the hearing.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote) on second reading"
+    },
+    {
+      "item": "10.B Resolution 2026-10 - Public Hearing – A Resolution to Amend the Hinton Preserve Planned Development (PD), Case #260830",
+      "timestamp": "00:15:03",
+      "summary": "Planner Allison Edwards presented a request by the developer (Magnolia Homes, represented by engineer John McCarty and Whitney Harvey) to amend the Hinton Preserve Planned Development, originally approved in 2022 for 84 single-family homes with public roads and sidewalks connecting to the adjacent Fleming Gardens and Lockwood subdivisions and to Hinton Park. The amendment would convert those roads and sidewalks to private, gated infrastructure. The Planning Commission voted 4-1 to recommend denial, and staff also recommended denial, citing: harm to vehicular and pedestrian connectivity in a corridor expected to see significant growth (Fleming Road currently carries about 600 average daily trips); violation of a 2022 condition of approval requiring the roads to remain permanently open to the public; conflict with the 2040 Land Use Plan's vision of an interconnected road network; and conflict with subdivision regulations requiring connectivity between adjacent developments. The Fire Marshal's office, represented by Chief Whitt on behalf of Fire Chief John Sjoberg, said the change would negatively affect emergency response time, though the department can operate with the radio-controlled \"click to enter\" gate system already used at other gated subdivisions in town. The applicant proposed keeping the gates open from 6 a.m. to 8 p.m. (matching current Hinton Park hours) to preserve pedestrian and park access, and cited buyer demand for gated communities as the primary reason for the request, along with reduced long-term town maintenance costs since the streets would remain privately owned and maintained. Board members raised extended concerns about what happens if the homeowners' association someday dissolves and cannot maintain the private streets and gates, discussing options like a bond or letter of credit sized to future infrastructure costs; no specific dollar figure was set, with a suggestion that the engineering department study appropriate values later. No one from the public spoke at the hearing.",
+      "type": "vote",
+      "outcome": "Approved unanimously (roll call vote), amended to make approval contingent on the development agreement being revised to include language supporting long-term maintenance funding for the gated community's HOA — approved despite the Planning Commission's 4-1 recommendation of denial and staff's recommendation of denial"
+    }
+  ],
+  "actionItems": [
+    { "description": "Approved the meeting agenda", "timestamp": "00:00:08" },
+    { "description": "Approved minutes from a June 11, 2026 work session and the June 22, 2026 meeting", "timestamp": "00:00:08" },
+    { "description": "Approved consent agenda items 8A-8F", "timestamp": "00:05:02" },
+    { "description": "Appointed James Lewellen to a three-year voting term on the MLGW Board of Commissioners", "timestamp": "00:10:01" },
+    { "description": "Approved rezoning four West South Street lots from R-3 to TN on second reading (Ordinance 2026-07)", "timestamp": "00:10:01" },
+    { "description": "Approved amending the Hinton Preserve Planned Development to allow private, gated streets, contingent on a development agreement amendment ensuring long-term HOA maintenance funding, overriding Planning Commission and staff denial recommendations", "timestamp": "00:15:03" }
+  ],
+  "topics": ["zoning & rezoning", "gated communities & HOAs", "utility board appointment", "traffic & public safety", "emergency response", "development agreements", "citizens comments"],
+  "sourceVideoUrl": "https://colliervilletn.new.swagit.com/videos/393298",
+  "transcriptCaveat": "This summary is based on a transcript compiled from uncorrected closed captioning and may contain errors. It is not an official record of the meeting."
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@spark901/civic-source-swagit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Town-agnostic Swagit meeting-list + transcript-fetch client. TypeScript port of the Python proof-of-concept scripts in personal-work/goals/collierville-civic-data-poc/scripts/ — same endpoints, same parsing rules, same gotchas. Takes a Swagit portal + board config and returns a meeting list, raw transcripts, and structured (agenda-item/timestamp-parsed) transcripts, so a second Swagit-hosted town is a new config value, not new code. Not published to a registry — no build step; consumers import the TypeScript source directly.",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

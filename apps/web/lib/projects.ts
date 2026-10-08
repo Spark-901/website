@@ -292,6 +292,81 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: "proj_005",
+    slug: "civic-archive",
+    name: "Collierville Civic Archive",
+    tagline: "Government transparency, without watching hours of video",
+    description:
+      "Spark901's first live, working tool: a chronological archive of Collierville, TN's Board of Mayor and Aldermen meetings, each with a plain-language summary and a downloadable PDF, so residents can see what their government decided without sitting through hours of meeting video. Built from real, publicly available meeting transcripts, with every summary carrying a clear accuracy caveat and a link back to the source video.",
+    whoItHelps:
+      "Collierville residents who want to know what their town government did without attending or watching every meeting. Designed to extend to other Mid-South towns (Germantown and Bartlett are next) once this pilot proves out.",
+    fundingGoal: 12000,
+    fundingRaised: 0,
+    backers: 0,
+    monthlyBackers: 0,
+    status: "active",
+    category: "Civic Tech",
+    impactMetrics: [
+      { label: "Meetings summarized (launch)", value: "12" },
+      { label: "Town", value: "Collierville, TN" },
+      { label: "License", value: "Open source" },
+    ],
+    fundingTiers: [
+      {
+        name: "Supporter",
+        amount: 25,
+        description: "Help keep the archive running and up to date",
+        benefits: ["Progress updates by email", "Listed as an early backer"],
+      },
+      {
+        name: "Builder",
+        amount: 100,
+        description: "Fund automated ingestion of new meetings",
+        benefits: ["All Supporter benefits", "Early access to new towns as they launch"],
+      },
+      {
+        name: "Champion",
+        amount: 500,
+        description: "Fund a second town's civic archive",
+        benefits: ["All Builder benefits", "Roadmap input with the team"],
+      },
+      {
+        name: "Founding Sponsor",
+        amount: 2500,
+        description: "Named sponsorship opportunity",
+        benefits: ["All Champion benefits", "Named recognition on project materials"],
+      },
+    ],
+    githubUrl: "https://github.com/Spark-901/website",
+    imageQuery: "town hall meeting government transparency records",
+    milestones: [
+      {
+        title: "Collierville pilot",
+        targetAmount: 0,
+        status: "completed",
+        description: "12 real BMA meetings summarized, extracted, and available as downloadable PDFs, shipped at no dedicated funding cost",
+      },
+      {
+        title: "Automated ingestion",
+        targetAmount: 3000,
+        status: "pending",
+        description: "New meetings pulled, summarized, and published automatically as they happen",
+      },
+      {
+        title: "Second town",
+        targetAmount: 7000,
+        status: "pending",
+        description: "Germantown or Bartlett added as a second civic archive",
+      },
+      {
+        title: "Ask the Archive",
+        targetAmount: 12000,
+        status: "pending",
+        description: "A search box that answers questions about past meetings with citations back to the transcript",
+      },
+    ],
+  },
+  {
     id: "proj_general",
     slug: "general",
     name: "General Fund",
