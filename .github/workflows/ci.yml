@@ -11,6 +11,19 @@ on:
   push:
     branches: [main]
 
+# `npm ci` pulls private @west-tennessee-consulting/* packages (analytics,
+# cookie-consent) from GitHub Packages; the committed .npmrc reads the token from
+# NODE_AUTH_TOKEN. The default GITHUB_TOKEN cannot be used: those packages are
+# private and owned by the West-Tennessee-Consulting org, and a GITHUB_TOKEN
+# minted for a Spark-901 repo can't read another org's private packages (the
+# package "Manage Actions access" list only accepts same-org repos). So CI needs
+# a classic PAT with ONLY `read:packages`, from an account that can read
+# West-Tennessee-Consulting packages, stored as the `WTC_PACKAGES_READ_TOKEN`
+# secret on this repo (or the Spark-901 org). Same PAT value as the
+# `NODE_AUTH_TOKEN` Vercel env var — see wtc-shared-packages' README.
+env:
+  NODE_AUTH_TOKEN: ${{ secrets.WTC_PACKAGES_READ_TOKEN }}
+
 jobs:
   # `eslint .` (apps/web's own lint script) has never actually worked in this repo —
   # there is no ESLint config file and no `eslint`/`eslint-config-next` dependency
@@ -29,6 +42,12 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Check GitHub Packages token is configured
+        run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "::error::WTC_PACKAGES_READ_TOKEN secret is not set (or not available to this run, e.g. a fork PR). npm ci needs it to read private @west-tennessee-consulting/* packages from GitHub Packages. See the comment at the top of ci.yml."
+            exit 1
+          fi
       - run: npm ci
       - run: npm run lint
 
@@ -40,6 +59,12 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Check GitHub Packages token is configured
+        run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "::error::WTC_PACKAGES_READ_TOKEN secret is not set (or not available to this run, e.g. a fork PR). npm ci needs it to read private @west-tennessee-consulting/* packages from GitHub Packages. See the comment at the top of ci.yml."
+            exit 1
+          fi
       - run: npm ci
       - run: npm run type-check
 
@@ -52,6 +77,12 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Check GitHub Packages token is configured
+        run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "::error::WTC_PACKAGES_READ_TOKEN secret is not set (or not available to this run, e.g. a fork PR). npm ci needs it to read private @west-tennessee-consulting/* packages from GitHub Packages. See the comment at the top of ci.yml."
+            exit 1
+          fi
       - run: npm ci
       - run: npm run --workspace=web validate:i18n
 
@@ -64,6 +95,12 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Check GitHub Packages token is configured
+        run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "::error::WTC_PACKAGES_READ_TOKEN secret is not set (or not available to this run, e.g. a fork PR). npm ci needs it to read private @west-tennessee-consulting/* packages from GitHub Packages. See the comment at the top of ci.yml."
+            exit 1
+          fi
       - run: npm ci
       - run: npm run --workspace=web validate:content
 
@@ -76,6 +113,12 @@ jobs:
         with:
           node-version: 22
           cache: npm
+      - name: Check GitHub Packages token is configured
+        run: |
+          if [ -z "$NODE_AUTH_TOKEN" ]; then
+            echo "::error::WTC_PACKAGES_READ_TOKEN secret is not set (or not available to this run, e.g. a fork PR). npm ci needs it to read private @west-tennessee-consulting/* packages from GitHub Packages. See the comment at the top of ci.yml."
+            exit 1
+          fi
       - run: npm ci
       - run: npm run --workspace=web build
         env:
