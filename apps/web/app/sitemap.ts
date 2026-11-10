@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { GENERAL_FUND_SLUG, projects } from "@/lib/projects"
+import { toolPages } from "@/lib/tool-pages"
 import { locales } from "@/i18n/config"
 import {
   SEO_ROUTES,
@@ -17,6 +18,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: route.changeFrequency,
         priority: route.priority,
+      })
+    }
+
+    for (const tool of toolPages) {
+      entries.push({
+        url: absoluteLocalizedUrl(locale, `/tools/${tool.slug}`),
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.8,
       })
     }
 
